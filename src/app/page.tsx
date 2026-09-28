@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { ProductsSection } from "@/components/home/ProductsSection";
+import { TherapeuticAreasSection } from "@/components/home/TherapeuticAreasSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,9 @@ export default function HomePage() {
 
       {/* Products Section with Video Background, Interactive Slide Drawer Tabs & Full Suite Showcase */}
       <ProductsSection />
+
+      {/* Therapeutic Areas Section with 3D Flip Showcase Cards & Full 20 Subpages Directory */}
+      <TherapeuticAreasSection />
     </div>
   );
 }

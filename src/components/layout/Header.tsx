@@ -49,11 +49,12 @@ export function Header() {
                   <Image
                     src="/logo.png"
                     alt="TruMinds Clinical Logo"
-                    width={180}
+                    width={172}
                     height={48}
                     quality={100}
                     unoptimized
                     className="h-9 sm:h-10 md:h-12 w-auto object-contain"
+                    style={{ width: "auto" }}
                     priority
                   />
                 </div>

@@ -45,11 +45,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <Image
                 src="/logo.png"
                 alt="TruMinds Clinical"
-                width={160}
-                height={42}
+                width={115}
+                height={32}
                 quality={100}
                 unoptimized
                 className="h-8 w-auto object-contain"
+                style={{ width: "auto" }}
                 priority
               />
             </div>

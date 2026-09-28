@@ -27,9 +27,10 @@ export function Footer() {
               <Image
                 src="/logo.png"
                 alt="TruMinds Clinical Logo"
-                width={260}
-                height={65}
+                width={187}
+                height={52}
                 className="h-12 sm:h-13 w-auto object-contain"
+                style={{ width: "auto" }}
               />
             </Link>
 

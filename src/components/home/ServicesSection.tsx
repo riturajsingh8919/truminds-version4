@@ -265,52 +265,92 @@ export function ServicesSection() {
     >
       {/* =========================================================================
           AMBIENT BACKGROUND SHAPES & TRUMINDS LOGO BRANDING
-          Curved organic arches & flowing ribbons matching reference dark layout
+          Rich, soft organic arches & flowing neural ribbons with subtle elegance
           ========================================================================= */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-        {/* Soft Radial Ambient Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-125 bg-linear-to-b from-[#0068a5]/15 to-transparent rounded-full blur-3xl opacity-60" />
+        {/* Soft Radial Ambient Glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-125 bg-radial from-[#0068a5]/20 to-transparent rounded-full blur-3xl opacity-40" />
+        <div className="absolute -top-32 -right-32 w-150 h-150 bg-radial from-[#0068a5]/25 via-[#0284c7]/10 to-transparent rounded-full blur-3xl opacity-45" />
+        <div className="absolute -bottom-32 -left-32 w-150 h-150 bg-radial from-[#0284c7]/20 via-[#0068a5]/10 to-transparent rounded-full blur-3xl opacity-40" />
 
-        {/* Top-Right Massive Organic TruMinds Curve (Inspired by logo arch) */}
+        {/* Top-Right Massive Organic TruMinds Curve (Subtle, elegant gradient + gentle border) */}
         <svg
-          className="absolute -top-24 -right-24 w-150 sm:w-187.5 lg:w-225 h-auto text-[#0F2847]/40 fill-current opacity-70"
-          viewBox="0 0 800 800"
+          className="absolute -top-16 -right-16 w-137.5 sm:w-175 lg:w-212.5 h-auto opacity-40"
+          viewBox="0 0 1200 970"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M 400 50 C 600 50, 750 200, 750 400 C 750 600, 580 750, 420 700 C 260 650, 180 500, 240 380 C 300 260, 200 50, 400 50 Z" />
+          <defs>
+            <linearGradient id="servGradTop" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#0068a5" stopOpacity="0.30" />
+              <stop offset="50%" stopColor="#0284c7" stopOpacity="0.15" />
+              <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
+            </linearGradient>
+            <linearGradient id="servStrokeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.45" />
+              <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#0068a5" stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 60 520 C 45 610 65 700 130 750 C 195 800 270 765 340 700 C 420 625 500 580 600 580 C 700 580 780 625 860 700 C 930 765 1005 800 1070 750 C 1135 700 1155 610 1140 520 C 1120 380 1060 250 950 160 C 850 80 730 40 600 40 C 470 40 350 80 250 160 C 140 250 80 380 60 520 Z"
+            fill="url(#servGradTop)"
+            stroke="url(#servStrokeTop)"
+            strokeWidth="2"
+          />
         </svg>
 
         {/* Bottom-Left Flowing Organic Wave Ribbon */}
         <svg
-          className="absolute -bottom-36 -left-36 w-137.5 sm:w-175 lg:w-212.5 h-auto text-[#061e38]/60 fill-current opacity-60"
-          viewBox="0 0 800 800"
+          className="absolute -bottom-24 -left-24 w-125 sm:w-162.5 lg:w-200 h-auto opacity-35"
+          viewBox="0 0 1200 970"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M 50 400 C 50 200, 220 50, 420 100 C 620 150, 700 320, 640 480 C 580 640, 400 750, 200 700 C 80 660, 50 550, 50 400 Z" />
+          <defs>
+            <linearGradient id="servGradBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
+              <stop offset="50%" stopColor="#0068a5" stopOpacity="0.12" />
+              <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
+            </linearGradient>
+            <linearGradient id="servStrokeBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.40" />
+              <stop offset="50%" stopColor="#0284c7" stopOpacity="0.20" />
+              <stop offset="100%" stopColor="#004a98" stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 60 520 C 45 610 65 700 130 750 C 195 800 270 765 340 700 C 420 625 500 580 600 580 C 700 580 780 625 860 700 C 930 765 1005 800 1070 750 C 1135 700 1155 610 1140 520 C 1120 380 1060 250 950 160 C 850 80 730 40 600 40 C 470 40 350 80 250 160 C 140 250 80 380 60 520 Z"
+            fill="url(#servGradBottom)"
+            stroke="url(#servStrokeBottom)"
+            strokeWidth="2"
+            transform="rotate(180 600 485)"
+          />
         </svg>
 
-        {/* Subtle Neural Network Arcs & Connected Nodes in TruMinds Blue */}
+        {/* Distinct Neural Network Arcs & Connected Nodes in Brand Cyan/Blue */}
         <svg
-          className="absolute inset-0 w-full h-full opacity-10"
+          className="absolute inset-0 w-full h-full opacity-25"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M 100 200 Q 400 100 800 280 T 1500 150"
+            d="M 80 220 Q 420 90 850 290 T 1550 160"
+            fill="none"
+            stroke="#38bdf8"
+            strokeWidth="1.5"
+            strokeDasharray="8 8"
+          />
+          <path
+            d="M 180 820 Q 680 640 1220 760"
             fill="none"
             stroke="#0284c7"
             strokeWidth="1.5"
-            strokeDasharray="6 6"
+            strokeDasharray="6 10"
           />
-          <path
-            d="M 200 800 Q 700 650 1200 750"
-            fill="none"
-            stroke="#0068a5"
-            strokeWidth="1.5"
-            strokeDasharray="4 8"
-          />
-          <circle cx="400" cy="100" r="4" fill="#0284c7" />
-          <circle cx="800" cy="280" r="5" fill="#0068a5" />
-          <circle cx="700" cy="650" r="4" fill="#0284c7" />
+          <circle cx="420" cy="90" r="5" fill="#38bdf8" />
+          <circle cx="850" cy="290" r="6" fill="#0284c7" />
+          <circle cx="680" cy="640" r="5" fill="#38bdf8" />
+          <circle cx="1220" cy="760" r="6" fill="#0284c7" />
         </svg>
       </div>
 
