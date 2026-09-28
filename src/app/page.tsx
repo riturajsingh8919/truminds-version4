@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
+import { ServicesSection } from "@/components/home/ServicesSection";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,9 @@ export default function HomePage() {
 
       {/* About Section with Molecular Organic Parallax Image */}
       <AboutSection />
+
+      {/* Services Section with 2x2 Interactive Animated Cards & Dark Brand Theme */}
+      <ServicesSection />
     </div>
   );
 }
