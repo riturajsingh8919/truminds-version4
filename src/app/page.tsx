@@ -2,6 +2,7 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
+import { ProductsSection } from "@/components/home/ProductsSection";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,10 @@ export default function HomePage() {
 
       {/* Services Section with 2x2 Interactive Animated Cards & Dark Brand Theme */}
       <ServicesSection />
+
+      {/* Products Section with Video Background, Interactive Slide Drawer Tabs & Full Suite Showcase */}
+      <ProductsSection />
     </div>
   );
 }
+
