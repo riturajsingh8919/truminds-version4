@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, X } from "lucide-react";
 
 interface ProductTab {
   id: string;
@@ -65,6 +65,30 @@ export function ProductsSection() {
   const [hoveredTab, setHoveredTab] = useState<number | null>(null);
   const [pinnedTab, setPinnedTab] = useState<number | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const tabScrollRef = useRef<HTMLDivElement>(null);
+  const tabButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Monitor scroll overflow on mobile for edge gradient indicators
+  const checkScrollState = () => {
+    if (!tabScrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = tabScrollRef.current;
+    setCanScrollLeft(scrollLeft > 8);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 8);
+  };
+
+  useEffect(() => {
+    const el = tabScrollRef.current;
+    if (!el) return;
+    checkScrollState();
+    el.addEventListener("scroll", checkScrollState, { passive: true });
+    window.addEventListener("resize", checkScrollState);
+    return () => {
+      el.removeEventListener("scroll", checkScrollState);
+      window.removeEventListener("resize", checkScrollState);
+    };
+  }, []);
 
   // Clear timeout on unmount
   useEffect(() => {
@@ -114,6 +138,16 @@ export function ProductsSection() {
   const handleTabClick = (idx: number) => {
     setPinnedTab((prev) => (prev === idx ? null : idx));
     setHoveredTab(idx);
+
+    // Smooth scroll the clicked tab into view on mobile
+    const btn = tabButtonRefs.current[idx];
+    if (btn && tabScrollRef.current) {
+      btn.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
   };
 
   return (
@@ -121,7 +155,7 @@ export function ProductsSection() {
       {/* =========================================================================
           TOP BANNER: 3D Video Background + Interactive Sliding Cards & Tabs
           ========================================================================= */}
-      <div className="relative min-h-125 sm:min-h-135 lg:min-h-140 w-full flex flex-col justify-start overflow-visible bg-[#060e1f] text-white pt-16 sm:pt-20 pb-20 sm:pb-24">
+      <div className="relative min-h-120 sm:min-h-135 lg:min-h-140 w-full flex flex-col justify-start overflow-visible bg-[#060e1f] text-white pt-14 sm:pt-20 pb-20 sm:pb-24">
         {/* Background Ambient Video using /products.mp4 with reduced scrim */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
           <video
@@ -142,7 +176,7 @@ export function ProductsSection() {
         </div>
 
         {/* Section Headline Over Video */}
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center mb-8 sm:mb-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center mb-6 sm:mb-8 md:mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-primary-light text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
             <Sparkles className="w-3.5 h-3.5 text-accent" />
             eClinical Software Suite
@@ -169,9 +203,10 @@ export function ProductsSection() {
             ======================================================================= */}
         <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 z-30 w-full">
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative">
-            {/* HOVER SLIDE DRAWER:
+            {/* HOVER / TAP SLIDE DRAWER:
                 - Positioned directly above the tabs with pb-3 sm:pb-4 padding bridge
-                - Keeps mouse event active when transitioning to "Read More" button */}
+                - Keeps mouse event active when transitioning to "Read More" button
+                - Mobile friendly with close button and tap dismiss */}
             <div
               onMouseEnter={handleDrawerMouseEnter}
               onMouseLeave={handleDrawerMouseLeave}
@@ -187,7 +222,7 @@ export function ProductsSection() {
                 return (
                   <div
                     key={product.id}
-                    className={`w-full rounded-2xl bg-[#0c1e36]/95 backdrop-blur-xl border border-white/20 p-5 sm:p-6 lg:p-7 text-white shadow-2xl transition-all duration-300 ${
+                    className={`w-full rounded-2xl bg-[#0c1e36]/95 backdrop-blur-xl border border-white/20 p-4 sm:p-6 lg:p-7 text-white shadow-2xl transition-all duration-300 ${
                       isCurrent ? "block" : "hidden"
                     }`}
                   >
@@ -196,18 +231,29 @@ export function ProductsSection() {
                         <span className="text-[11px] uppercase tracking-wider font-bold text-accent bg-accent/15 px-2.5 py-0.5 rounded-full border border-accent/25">
                           {product.badge}
                         </span>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setPinnedTab(null);
+                            setHoveredTab(null);
+                          }}
+                          className="p-1 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                          aria-label="Close details"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
                       </div>
 
-                      <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-white tracking-tight leading-snug">
                         {product.title}
                       </h3>
 
-                      <p className="mt-2 text-slate-300 text-[13.5px] sm:text-[14.5px] leading-relaxed font-normal max-w-4xl">
+                      <p className="mt-2 text-slate-300 text-[13px] sm:text-[14.5px] leading-relaxed font-normal max-w-4xl">
                         {product.description}
                       </p>
                     </div>
 
-                    <div className="pt-3 border-t border-white/15 mt-3 flex items-center justify-between">
+                    <div className="pt-3 border-t border-white/15 mt-3 flex items-center justify-between flex-wrap gap-2">
                       <Link
                         href={product.link}
                         className="inline-flex items-center gap-2 font-bold text-[#38bdf8] hover:text-white transition-colors text-sm group/btn cursor-pointer py-1"
@@ -217,6 +263,16 @@ export function ProductsSection() {
                         </span>
                         <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform duration-200 text-[#38bdf8] group-hover/btn:text-white" />
                       </Link>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setPinnedTab(null);
+                          setHoveredTab(null);
+                        }}
+                        className="text-xs text-slate-400 hover:text-slate-200 transition-colors cursor-pointer"
+                      >
+                        Close preview ✕
+                      </button>
                     </div>
                   </div>
                 );
@@ -224,25 +280,47 @@ export function ProductsSection() {
             </div>
 
             {/* 5-ITEM HORIZONTAL TAB BAR
-                Sits exactly half on video, half on bottom section */}
-            <div className="bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200/90 p-1.5 sm:p-2">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/80">
+                - Desktop: 5-column grid sitting exactly 50% on video, 50% on bottom section
+                - Mobile: Sleek single-row horizontal swipe bar with edge fades and snap navigation
+                - Height remains strictly ~50px across all viewports, preventing any lower content overlap */}
+            <div className="relative bg-white text-slate-900 rounded-2xl shadow-2xl border border-slate-200/90 p-1.5 sm:p-2">
+              {/* Left fade hint for mobile swipe */}
+              <div
+                className={`pointer-events-none absolute left-1.5 top-1.5 bottom-1.5 w-6 bg-linear-to-r from-white via-white/80 to-transparent z-10 rounded-l-xl transition-opacity duration-200 md:hidden ${
+                  canScrollLeft ? "opacity-100" : "opacity-0"
+                }`}
+              />
+
+              {/* Right fade hint for mobile swipe */}
+              <div
+                className={`pointer-events-none absolute right-1.5 top-1.5 bottom-1.5 w-8 bg-linear-to-l from-white via-white/80 to-transparent z-10 rounded-r-xl transition-opacity duration-200 md:hidden ${
+                  canScrollRight ? "opacity-100" : "opacity-0"
+                }`}
+              />
+
+              <div
+                ref={tabScrollRef}
+                className="flex md:grid md:grid-cols-5 items-stretch divide-x divide-slate-100 md:divide-slate-200/80 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
+              >
                 {PRODUCT_TABS.map((product, idx) => {
                   const isActive = activeIndex === idx;
 
                   return (
                     <button
                       key={product.id}
+                      ref={(el) => {
+                        tabButtonRefs.current[idx] = el;
+                      }}
                       onMouseEnter={() => handleTabMouseEnter(idx)}
                       onMouseLeave={handleTabMouseLeave}
                       onClick={() => handleTabClick(idx)}
-                      className={`px-2.5 sm:px-3 lg:px-4 py-3 sm:py-3.5 text-center transition-all duration-300 cursor-pointer rounded-xl flex flex-col items-center justify-center ${
+                      className={`shrink-0 md:shrink flex-1 px-4 sm:px-3 lg:px-4 py-3 sm:py-3.5 text-center transition-all duration-300 cursor-pointer rounded-xl flex flex-col items-center justify-center snap-start ${
                         isActive
                           ? "bg-slate-50 text-primary font-bold shadow-xs"
                           : "text-slate-700 hover:text-primary font-semibold hover:bg-slate-50/60"
                       }`}
                     >
-                      <span className="text-[11.5px] sm:text-[12px] lg:text-[12.5px] uppercase tracking-wider font-bold leading-tight block">
+                      <span className="text-[11.5px] sm:text-[12px] lg:text-[12.5px] uppercase tracking-wider font-bold leading-tight whitespace-nowrap block">
                         {product.tabLabel}
                       </span>
                       <span
@@ -263,10 +341,10 @@ export function ProductsSection() {
 
       {/* =========================================================================
           BOTTOM SECTION: Clean, balanced executive editorial layout
-          - pt-20 sm:pt-24 gives plenty of breathing room below the 27px tab overlap
-          - Zero collision with the "UNIFIED CLINICAL ARCHITECTURE" badge
+          - pt-24 sm:pt-28 lg:pt-32 gives plenty of breathing room below the tab overlap
+          - Guaranteed ZERO collision with the "UNIFIED CLINICAL ARCHITECTURE" badge
           ========================================================================= */}
-      <div className="pt-20 sm:pt-24 pb-20 sm:pb-24 bg-[#F8FAFC]">
+      <div className="pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 bg-[#F8FAFC]">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4">
