@@ -7,7 +7,7 @@ export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section className="relative h-[75vh] min-h-130 md:h-[78vh] lg:h-[80vh] w-full flex items-center overflow-hidden bg-[#060e1f] text-white pt-24 pb-12">
+    <section className="relative h-[75vh] min-h-130 lg:h-[85vh] w-full flex items-center overflow-hidden bg-[#060e1f] text-white pt-24 pb-12">
       {/* Background Ambient 3D Video - Full Bleed on All Devices (Zero Cuts/Edges) */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video

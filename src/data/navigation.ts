@@ -20,16 +20,16 @@ export const NAVIGATION_DATA: NavItem[] = [
     title: "Products",
     slug: "/products",
   },
-  {
-    title: "Giving Back",
-    slug: "/giving-back",
-  },
+  // {
+  //   title: "Giving Back",
+  //   slug: "/giving-back",
+  // },
   {
     title: "Careers",
     slug: "/careers",
   },
-  {
-    title: "Resources",
-    slug: "/resources",
-  },
+  // {
+  //   title: "Resources",
+  //   slug: "/resources",
+  // },
 ];

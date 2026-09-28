@@ -86,7 +86,8 @@ export function GetStartedSection() {
   const [selectedTherapeutic, setSelectedTherapeutic] = useState<string[]>([
     "Oncology & Hematology",
   ]);
-  const [selectedStudyType, setSelectedStudyType] = useState<string>("Phase II");
+  const [selectedStudyType, setSelectedStudyType] =
+    useState<string>("Phase II");
   const [selectedNeeds, setSelectedNeeds] = useState<string[]>([
     "Statistical programming (SAS / R)",
     "Clinical data management",
@@ -115,13 +116,13 @@ export function GetStartedSection() {
   // Toggle helpers
   const toggleTherapeutic = (item: string) => {
     setSelectedTherapeutic((prev) =>
-      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item],
     );
   };
 
   const toggleNeed = (item: string) => {
     setSelectedNeeds((prev) =>
-      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item],
     );
   };
 
@@ -224,12 +225,24 @@ export function GetStartedSection() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="startGradTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="startGradTop"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#0068a5" stopOpacity="0.45" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
               <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
             </linearGradient>
-            <linearGradient id="startStrokeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="startStrokeTop"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.55" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.30" />
               <stop offset="100%" stopColor="#0068a5" stopOpacity="0.05" />
@@ -251,12 +264,24 @@ export function GetStartedSection() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="startGradBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+            <linearGradient
+              id="startGradBottom"
+              x1="100%"
+              y1="100%"
+              x2="0%"
+              y2="0%"
+            >
               <stop offset="0%" stopColor="#0284c7" stopOpacity="0.40" />
               <stop offset="50%" stopColor="#0068a5" stopOpacity="0.20" />
               <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
             </linearGradient>
-            <linearGradient id="startStrokeBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+            <linearGradient
+              id="startStrokeBottom"
+              x1="100%"
+              y1="100%"
+              x2="0%"
+              y2="0%"
+            >
               <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.50" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
               <stop offset="100%" stopColor="#004a98" stopOpacity="0.05" />
@@ -298,7 +323,7 @@ export function GetStartedSection() {
       </div>
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* =========================================================================
             WHITE INTERACTIVE MULTI-STEP CARD
             ========================================================================= */}
@@ -322,8 +347,8 @@ export function GetStartedSection() {
                         currentStep === 1
                           ? "bg-primary text-white shadow-md shadow-primary/25 scale-105"
                           : currentStep > 1
-                          ? "bg-primary/90 text-white"
-                          : "bg-slate-200 text-slate-600"
+                            ? "bg-primary/90 text-white"
+                            : "bg-slate-200 text-slate-600"
                       }`}
                     >
                       {currentStep > 1 ? (
@@ -360,8 +385,8 @@ export function GetStartedSection() {
                         currentStep === 2
                           ? "bg-primary text-white shadow-md shadow-primary/25 scale-105"
                           : currentStep > 2
-                          ? "bg-primary/90 text-white"
-                          : "bg-slate-200 text-slate-600"
+                            ? "bg-primary/90 text-white"
+                            : "bg-slate-200 text-slate-600"
                       }`}
                     >
                       {currentStep > 2 ? (
@@ -630,7 +655,10 @@ export function GetStartedSection() {
                   STEP 3 CONTENT: GET STARTED (CONTACT FORM)
                   ===================================================================== */}
               {currentStep === 3 && (
-                <form onSubmit={handleSubmit} className="space-y-6 animate-fadeIn">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6 animate-fadeIn"
+                >
                   {/* Selected Summary Pill for context */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 mb-2">
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-1.5">

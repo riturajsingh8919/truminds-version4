@@ -2,7 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, MapPin, Briefcase, Calendar, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Briefcase,
+  Calendar,
+  Sparkles,
+} from "lucide-react";
 
 interface JobOpening {
   id: string;
@@ -213,7 +219,7 @@ export function CareersSection() {
       </div>
 
       {/* Main Content Container */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* =========================================================================
             SECTION HEADER (Matching reference "Join our team" style)
             ========================================================================= */}
@@ -259,8 +265,8 @@ export function CareersSection() {
                           job.badgeColor === "hot"
                             ? "bg-[#ff5722] text-white"
                             : job.badgeColor === "new"
-                            ? "bg-emerald-600 text-white"
-                            : "bg-primary text-white"
+                              ? "bg-emerald-600 text-white"
+                              : "bg-primary text-white"
                         }`}
                       >
                         {job.badge}

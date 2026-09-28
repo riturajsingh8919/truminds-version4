@@ -221,6 +221,7 @@ export function TherapeuticAreasSection() {
       <div className="w-full container mx-auto px-4 sm:px-6 relative z-10">
         {/* =========================================================================
             SECTION HEADER
+            Updated with original TruMinds heading (removed Intego copied text)
             ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#38bdf8] text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
@@ -229,8 +230,8 @@ export function TherapeuticAreasSection() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.15]">
-            Excellence Across Every{" "}
-            <span className="text-[#38bdf8]">Therapeutic Area</span>
+            Therapeutic Areas &amp;{" "}
+            <span className="text-[#38bdf8]">Specialized Domains</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">
@@ -242,7 +243,7 @@ export function TherapeuticAreasSection() {
 
         {/* =========================================================================
             8 EXPANSIVE SHOWCASE CARDS (4 Columns x 2 Rows)
-            Ultra-Premium Gradient Glassmorphic Drawer Animation (NO FLIP)
+            Clean White Solid Drawer (No Gradient) + Single-Line Title + Smooth Hover
             ========================================================================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {SHOWCASE_AREAS.map((area, index) => {
@@ -252,7 +253,7 @@ export function TherapeuticAreasSection() {
               <div
                 key={area.id}
                 onClick={() => toggleTouchCard(area.id)}
-                className="group relative h-105 sm:h-112.5 lg:h-117.5 w-full rounded-2xl overflow-hidden cursor-pointer select-none bg-[#0B192C] border border-white/10 shadow-[0_12px_36px_rgba(0,0,0,0.45)] hover:border-[#38bdf8]/50 hover:shadow-[0_20px_50px_rgba(0,104,165,0.35)] transition-all duration-500 flex flex-col justify-end"
+                className="group relative h-97.5 sm:h-103.75 lg:h-107.5 w-full rounded-2xl overflow-hidden cursor-pointer select-none bg-[#0B192C] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:border-[#38bdf8]/50 hover:shadow-[0_20px_45px_rgba(0,104,165,0.25)] transition-all duration-500"
               >
                 {/* 1. Full Medical Image Layer with Cinematic Zoom */}
                 <div className="absolute inset-0 w-full h-full">
@@ -262,82 +263,75 @@ export function TherapeuticAreasSection() {
                     fill
                     loading="eager"
                     priority={index < 4}
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    className="object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  {/* Subtle Dark Vignette & Brand Gradient Tint over the photo */}
-                  <div className="absolute inset-0 bg-linear-to-t from-[#0B192C] via-[#0B192C]/40 to-black/20 pointer-events-none group-hover:opacity-90 transition-opacity duration-500" />
+                  {/* Subtle Dark Vignette & Gradient over the photo */}
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/15 to-transparent pointer-events-none group-hover:opacity-60 transition-opacity duration-500" />
                 </div>
 
-                {/* 2. Top-Right Subtle Category Watermark Pill */}
-                <div className="absolute top-4 right-4 z-20 pointer-events-none">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md text-slate-300 border border-white/10">
-                    {area.category.split(" ")[0]}
-                  </span>
-                </div>
-
-                {/* 3. Ultra-Premium Glassmorphic Sliding Drawer (No White BG - Pure Brand Gradient) */}
+                {/* 2. Solid White Bottom Drawer (NO GRADIENT, Centered Single-Line Title, Equal Spacing) */}
                 <div
-                  className={`relative z-20 w-full p-5 sm:p-6 rounded-b-2xl bg-linear-to-b from-[#0F2847]/95 via-[#0B192C]/95 to-[#0068a5]/80 backdrop-blur-xl border-t border-white/15 shadow-[0_-8px_30px_rgba(0,0,0,0.5)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-linear-to-r before:from-transparent before:via-[#38bdf8]/70 before:to-transparent ${
+                  className={`absolute inset-x-0 bottom-0 z-20 bg-white text-slate-900 rounded-2xl shadow-[0_-8px_25px_rgba(0,0,0,0.15)] border-t border-slate-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform ${
                     isTouchActive
-                      ? "max-h-[85%] translate-y-0"
-                      : "max-h-27.5 group-hover:max-h-[85%] translate-y-0"
+                      ? "translate-y-0"
+                      : "translate-y-[calc(100%-64px)] group-hover:translate-y-0"
                   }`}
                 >
-                  {/* Card Header Information */}
-                  <div>
-                    {/* Category Tag */}
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-bold text-[#38bdf8] uppercase tracking-wider flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" />
-                        {area.category}
-                      </span>
-                      {/* Interactive Arrow Indicator */}
-                      <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-slate-300 group-hover:bg-[#0068a5] group-hover:text-white transition-colors duration-300">
-                        <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
-                      </span>
-                    </div>
-
-                    {/* Headline */}
-                    <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug group-hover:text-white">
+                  {/* Always-visible Header Bar: ONLY Title + Arrow with EQUAL top & bottom padding */}
+                  <div className="h-16 px-5 flex items-center justify-between">
+                    <h3
+                      title={area.title}
+                      className="text-[15px] sm:text-[15.5px] lg:text-base font-bold text-slate-900 tracking-tight leading-tight whitespace-nowrap overflow-hidden text-ellipsis group-hover:text-primary transition-colors flex-1 min-w-0 mr-3"
+                    >
                       {area.title}
                     </h3>
-
-                    {/* Luminous Accent Divider on Hover */}
-                    <div className="w-10 h-0.5 bg-linear-to-r from-[#38bdf8] to-transparent my-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                    {/* Rich Clinical Description (Smooth Fade & Slide-in) */}
-                    <div
-                      className={`overflow-hidden transition-all duration-500 ${
-                        isTouchActive
-                          ? "opacity-100 max-h-40 mt-1"
-                          : "opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-1"
-                      }`}
-                    >
-                      <p className="text-slate-200 text-[13px] sm:text-[13.5px] leading-relaxed font-normal">
-                        {area.description}
-                      </p>
-                    </div>
+                    <span className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-primary group-hover:text-white transition-colors duration-300 shrink-0">
+                      <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform duration-200" />
+                    </span>
                   </div>
 
-                  {/* Read More Link (Visible on Hover / Active) */}
-                  <div
-                    className={`pt-3 border-t border-white/10 mt-3 transition-all duration-300 ${
-                      isTouchActive
-                        ? "opacity-100 flex"
-                        : "opacity-0 hidden group-hover:opacity-100 group-hover:flex"
-                    }`}
-                  >
-                    <Link
-                      href={area.link}
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#38bdf8] hover:text-white transition-colors cursor-pointer group/btn py-0.5"
+                  {/* Expanded Body Content (Smoothly revealed on hover / touch) */}
+                  <div className="px-5 pb-5 pt-0">
+                    {/* Luminous Primary Accent Line on Hover */}
+                    <div
+                      className={`w-10 h-0.5 bg-primary mb-3 transition-opacity duration-300 ${
+                        isTouchActive
+                          ? "opacity-100"
+                          : "opacity-0 group-hover:opacity-100"
+                      }`}
+                    />
+
+                    {/* Rich Clinical Description */}
+                    <p
+                      className={`text-slate-600 text-[12.5px] sm:text-[13px] leading-relaxed font-normal line-clamp-3 mb-3.5 transition-opacity duration-300 delay-75 ${
+                        isTouchActive
+                          ? "opacity-100"
+                          : "opacity-0 group-hover:opacity-100"
+                      }`}
                     >
-                      <span className="underline decoration-[#38bdf8]/40 hover:decoration-white underline-offset-4">
-                        Explore Specialized Area
-                      </span>
-                      <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform duration-200" />
-                    </Link>
+                      {area.description}
+                    </p>
+
+                    {/* Read More Link */}
+                    <div
+                      className={`pt-2.5 border-t border-slate-100 flex items-center justify-between transition-opacity duration-300 delay-100 ${
+                        isTouchActive
+                          ? "opacity-100"
+                          : "opacity-0 group-hover:opacity-100"
+                      }`}
+                    >
+                      <Link
+                        href={area.link}
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-bold text-primary hover:text-primary-hover transition-colors cursor-pointer group/btn py-0.5"
+                      >
+                        <span className="underline decoration-primary/40 group-hover/btn:decoration-primary underline-offset-4">
+                          Explore Specialized Area
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 transform group-hover/btn:translate-x-1.5 transition-transform duration-200 text-primary" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -353,7 +347,7 @@ export function TherapeuticAreasSection() {
             href="/therapeutic-areas"
             className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-linear-to-r from-primary to-accent hover:from-primary-hover hover:to-accent text-white font-bold text-sm sm:text-base tracking-wide transition-all duration-300 shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer active:scale-95 group border border-white/15"
           >
-            <span>View All 20 Therapeutic Areas</span>
+            <span>View All Therapeutic Areas</span>
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform duration-200" />
           </Link>
         </div>

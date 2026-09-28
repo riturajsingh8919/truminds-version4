@@ -75,10 +75,10 @@ export function Header() {
                   <Link
                     key={item.slug}
                     href={item.slug}
-                    className={`text-[13.5px] xl:text-[14.5px] font-medium tracking-wide transition-colors ${
+                    className={`text-sm xl:text-lg font-bold tracking-wide transition-colors ${
                       isActive
                         ? "text-white font-semibold"
-                        : "text-white/85 hover:text-white"
+                        : "text-white hover:text-white/85"
                     }`}
                   >
                     {item.title}

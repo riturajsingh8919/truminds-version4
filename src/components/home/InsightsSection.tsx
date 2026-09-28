@@ -177,7 +177,7 @@ export function InsightsSection() {
       </div>
 
       {/* Main Content Container */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* =========================================================================
             SECTION HEADER (Matching reference "Intego Insights" style)
             ========================================================================= */}
@@ -192,9 +192,8 @@ export function InsightsSection() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-            Strategic perspectives, conference keynotes, and clinical
-            biometrics intelligence from our global biostatisticians and trial
-            leaders.
+            Strategic perspectives, conference keynotes, and clinical biometrics
+            intelligence from our global biostatisticians and trial leaders.
           </p>
         </div>
 
