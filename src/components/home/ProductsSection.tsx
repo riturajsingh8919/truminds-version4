@@ -184,7 +184,7 @@ export function ProductsSection() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.16]">
             TruForm™ Unified{" "}
-            <span className="text-[#38bdf8]">eClinical Platform</span>
+            <span className="text-second">eClinical Platform</span>
           </h2>
 
           <p className="mt-3.5 text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-xs">
@@ -256,12 +256,12 @@ export function ProductsSection() {
                     <div className="pt-3 border-t border-white/15 mt-3 flex items-center justify-between flex-wrap gap-2">
                       <Link
                         href={product.link}
-                        className="inline-flex items-center gap-2 font-bold text-[#38bdf8] hover:text-white transition-colors text-sm group/btn cursor-pointer py-1"
+                        className="inline-flex items-center gap-2 font-bold text-second hover:text-white transition-colors text-sm group/btn cursor-pointer py-1"
                       >
-                        <span className="underline decoration-[#38bdf8]/40 group-hover/btn:decoration-white underline-offset-4">
+                        <span className="underline decoration-second/40 group-hover/btn:decoration-white underline-offset-4">
                           Read More
                         </span>
-                        <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform duration-200 text-[#38bdf8] group-hover/btn:text-white" />
+                        <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform duration-200 text-second group-hover/btn:text-white" />
                       </Link>
                       <button
                         onClick={(e) => {

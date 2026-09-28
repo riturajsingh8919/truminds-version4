@@ -224,14 +224,14 @@ export function TherapeuticAreasSection() {
             Updated with original TruMinds heading (removed Intego copied text)
             ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#38bdf8] text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-[#38bdf8]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-second text-xs font-semibold uppercase tracking-wider mb-4 backdrop-blur-md">
+            <Sparkles className="w-3.5 h-3.5 text-second" />
             Specialized Clinical Domains
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.15]">
             Therapeutic Areas &amp;{" "}
-            <span className="text-[#38bdf8]">Specialized Domains</span>
+            <span className="text-second">Specialized Domains</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">
@@ -253,7 +253,7 @@ export function TherapeuticAreasSection() {
               <div
                 key={area.id}
                 onClick={() => toggleTouchCard(area.id)}
-                className="group relative h-97.5 sm:h-103.75 lg:h-107.5 w-full rounded-2xl overflow-hidden cursor-pointer select-none bg-[#0B192C] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:border-[#38bdf8]/50 hover:shadow-[0_20px_45px_rgba(0,104,165,0.25)] transition-all duration-500"
+                className="group relative h-97.5 sm:h-103.75 lg:h-107.5 w-full rounded-2xl overflow-hidden cursor-pointer select-none bg-[#0B192C] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:border-second/50 hover:shadow-[0_20px_45px_rgba(0,104,165,0.25)] transition-all duration-500"
               >
                 {/* 1. Full Medical Image Layer with Cinematic Zoom */}
                 <div className="absolute inset-0 w-full h-full">

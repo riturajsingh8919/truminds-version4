@@ -7,7 +7,7 @@ export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section className="relative h-[75vh] min-h-130 lg:h-[85vh] w-full flex items-center overflow-hidden bg-[#060e1f] text-white pt-24 pb-12">
+    <section className="relative h-[75vh] min-h-130 lg:h-[85vh] xl:h-[90vh] w-full flex items-center overflow-hidden bg-[#060e1f] text-white pt-24 pb-12">
       {/* Background Ambient 3D Video - Full Bleed on All Devices (Zero Cuts/Edges) */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
@@ -38,11 +38,11 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full">
         <div className="max-w-4xl xl:max-w-5xl">
           {/* Main Hero Headline - Guaranteed 3 Lines Layout */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[66px] xl:text-[72px] font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.08]">
-            <span className="block">The biometrics CRO</span>
-            <span className="block">empowering</span>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[66px] xl:text-[82px] font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.08]">
+            <span className="block">Contract Research</span>
+            <span className="block">Organization Partner</span>
             <span className="block sm:whitespace-nowrap">
-              data-driven decisions
+              for All Your Services
             </span>
           </h1>
 

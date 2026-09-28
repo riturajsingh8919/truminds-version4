@@ -281,12 +281,24 @@ export function ServicesSection() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="servGradTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="servGradTop"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#0068a5" stopOpacity="0.30" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.15" />
               <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
             </linearGradient>
-            <linearGradient id="servStrokeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="servStrokeTop"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.45" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.25" />
               <stop offset="100%" stopColor="#0068a5" stopOpacity="0.05" />
@@ -308,12 +320,24 @@ export function ServicesSection() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="servGradBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+            <linearGradient
+              id="servGradBottom"
+              x1="100%"
+              y1="100%"
+              x2="0%"
+              y2="0%"
+            >
               <stop offset="0%" stopColor="#0284c7" stopOpacity="0.25" />
               <stop offset="50%" stopColor="#0068a5" stopOpacity="0.12" />
               <stop offset="100%" stopColor="#0B192C" stopOpacity="0.02" />
             </linearGradient>
-            <linearGradient id="servStrokeBottom" x1="100%" y1="100%" x2="0%" y2="0%">
+            <linearGradient
+              id="servStrokeBottom"
+              x1="100%"
+              y1="100%"
+              x2="0%"
+              y2="0%"
+            >
               <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.40" />
               <stop offset="50%" stopColor="#0284c7" stopOpacity="0.20" />
               <stop offset="100%" stopColor="#004a98" stopOpacity="0.05" />
@@ -367,7 +391,7 @@ export function ServicesSection() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.16]">
             Contract Research Organization{" "}
-            <span className="text-[#38bdf8]">Services &amp; Solutions</span>
+            <span className="text-second">Services &amp; Solutions</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">

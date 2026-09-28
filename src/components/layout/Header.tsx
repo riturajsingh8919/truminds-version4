@@ -91,7 +91,7 @@ export function Header() {
             <div className="hidden min-[1180px]:flex items-center">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/40 hover:border-white text-white font-medium text-sm tracking-wide hover:bg-white/10 active:scale-95 transition-all duration-300"
+                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-white/40 hover:border-white text-white font-bold text-sm xl:text-lg tracking-wide hover:bg-white/10 active:scale-95 transition-all duration-300"
               >
                 Contact Us
               </Link>
