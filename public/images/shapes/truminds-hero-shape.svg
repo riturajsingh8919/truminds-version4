@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1200" height="970" viewBox="0 0 1200 970" fill="none">
+  <title>TruMinds Smooth Organic Hero Shape</title>
+  <desc>Mathematically seamless, continuous G2 curvature. Reusable clip paths for main image and foreground focal circle.</desc>
+
+  <defs>
+    <!-- Smooth Seamless Main Arch Path -->
+    <path id="heroPath" d="
+      M 60 520
+      C 45 610 65 700 130 750
+      C 195 800 270 765 340 700
+      C 420 625 500 580 600 580
+      C 700 580 780 625 860 700
+      C 930 765 1005 800 1070 750
+      C 1135 700 1155 610 1140 520
+      C 1120 380 1060 250 950 160
+      C 850 80 730 40 600 40
+      C 470 40 350 80 250 160
+      C 140 250 80 380 60 520 Z
+    "/>
+
+    <clipPath id="mainImageClip" clipPathUnits="userSpaceOnUse">
+      <use href="#heroPath"/>
+    </clipPath>
+
+    <clipPath id="frontCircleClip" clipPathUnits="userSpaceOnUse">
+      <circle cx="600" cy="660" r="250"/>
+    </clipPath>
+
+    <linearGradient id="blueAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0068a5"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <filter id="softElevation" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#001833" flood-opacity="0.14"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#001833" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Blue accent behind the image (offset for 3D depth) -->
+  <g id="blue-accent" transform="translate(18, 14)">
+    <use href="#heroPath" fill="url(#blueAccentGrad)"/>
+  </g>
+
+  <!-- Main photo silhouette -->
+  <g id="main-shape" filter="url(#softElevation)">
+    <use href="#heroPath" fill="#ffffff"/>
+  </g>
+
+  <!-- Foreground circle frame -->
+  <g id="circle-frame" filter="url(#softElevation)">
+    <circle cx="600" cy="660" r="266" fill="#ffffff"/>
+    <circle cx="600" cy="660" r="258" fill="none" stroke="#ffffff" stroke-width="16"/>
+  </g>
+</svg>
