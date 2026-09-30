@@ -38,7 +38,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full">
         <div className="max-w-4xl xl:max-w-5xl">
           {/* Main Hero Headline - Guaranteed 3 Lines Layout */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[66px] xl:text-[82px] font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.08]">
+          <h1 className="text-[34px] sm:text-[55px] md:text-[82px] lg:text-[75px] xl:text-[95px] font-bold text-white tracking-tight leading-[1.1] sm:leading-[1.08]">
             <span className="block">Contract Research</span>
             <span className="block">Organization Partner</span>
             <span className="block sm:whitespace-nowrap">
