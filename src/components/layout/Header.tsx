@@ -66,9 +66,10 @@ export function Header() {
             src="/logo.png"
             alt="TruMinds Clinical"
             width={205}
-            height={58}
+            height={57}
             priority
             className="h-auto w-46.25 xl:w-51.25"
+            style={{ height: "auto" }}
           />
         </Link>
         <nav
