@@ -4,6 +4,8 @@ These are illustrative stock photographs. They do not depict TruMinds staff, cli
 
 All images were downloaded from individual Pexels pages marked free to use, under the [Pexels license](https://www.pexels.com/license/). Images are cropped for layout only.
 
+The homepage background video is [Mikhail Nilov's laboratory team footage](https://www.pexels.com/video/people-talking-together-in-laboratory-8852579/) from Pexels, used under the same license. The hero photograph remains as its poster and fallback.
+
 | Local file | Photographer | Source |
 | --- | --- | --- |
 | hero-team.jpg | Tima Miroshnichenko | https://www.pexels.com/photo/doctors-working-together-on-a-research-5452228/ |

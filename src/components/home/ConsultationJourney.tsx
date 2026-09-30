@@ -138,11 +138,12 @@ export function ConsultationJourney() {
   const choice =
     "inline-flex min-h-11 cursor-pointer items-center gap-2.5 border border-[#d8e6e9] bg-white px-4 py-2 text-sm font-semibold text-[#294c5e] transition hover:border-[#009e9d] has-checked:border-[#009e9d] has-checked:bg-[#e7f7f6]";
   const pill =
-    "min-h-10 border border-[#d8e6e9] px-4 py-2 text-sm font-semibold text-[#294c5e] transition hover:border-[#009e9d]";
+    "min-h-10 cursor-pointer border border-[#d8e6e9] px-4 py-2 text-sm font-semibold text-[#294c5e] transition hover:border-[#009e9d]";
   const actionRow =
     "mt-8 flex items-center justify-between gap-3 border-t border-[#e3ebee] pt-6";
   const back =
-    "inline-flex items-center gap-2 text-sm font-bold text-[#477084] hover:text-[#0068a5]";
+    "inline-flex cursor-pointer items-center gap-2 text-sm font-bold text-[#477084] hover:text-[#0068a5]";
+  const actionButton = `${tealButton} cursor-pointer`;
   return (
     <section
       id="consultation"
@@ -218,7 +219,7 @@ export function ConsultationJourney() {
               >
                 {companyTypes.map(({ label, icon: Icon }) => (
                   <button
-                    className={`flex min-h-24 flex-col items-center justify-center gap-2 border p-2 text-sm font-bold transition ${company === label ? "border-[#00a8a8] bg-[#e5f7f6] text-[#006d7e]" : "border-[#d9e7ea] bg-white text-[#34586a] hover:border-[#00a8a8]"}`}
+                    className={`flex min-h-24 cursor-pointer flex-col items-center justify-center gap-2 border p-2 text-sm font-bold transition ${company === label ? "border-[#00a8a8] bg-[#e5f7f6] text-[#006d7e]" : "border-[#d9e7ea] bg-white text-[#34586a] hover:border-[#00a8a8]"}`}
                     type="button"
                     onClick={() => setCompany(label)}
                     aria-pressed={company === label}
@@ -239,7 +240,7 @@ export function ConsultationJourney() {
                 {focusAreas.map((area) => (
                   <label className={choice} key={area}>
                     <input
-                      className="accent-[#009e9d]"
+                      className="cursor-pointer accent-[#009e9d]"
                       type="checkbox"
                       checked={selectedFocus.includes(area)}
                       onChange={() =>
@@ -283,7 +284,7 @@ export function ConsultationJourney() {
               )}
               <div className={actionRow}>
                 <span className="text-xs text-[#78939f]">Step 1 of 3</span>
-                <button className={tealButton} type="button" onClick={next}>
+                <button className={actionButton} type="button" onClick={next}>
                   Continue <ArrowRight size={18} />
                 </button>
               </div>
@@ -305,7 +306,7 @@ export function ConsultationJourney() {
                 {needs.map((need) => (
                   <label className={choice} key={need}>
                     <input
-                      className="accent-[#009e9d]"
+                      className="cursor-pointer accent-[#009e9d]"
                       type="checkbox"
                       checked={selectedNeeds.includes(need)}
                       onChange={() =>
@@ -355,7 +356,7 @@ export function ConsultationJourney() {
                 >
                   <ArrowLeft size={18} /> Back
                 </button>
-                <button className={tealButton} type="button" onClick={next}>
+                <button className={actionButton} type="button" onClick={next}>
                   Continue <ArrowRight size={18} />
                 </button>
               </div>
@@ -457,8 +458,8 @@ export function ConsultationJourney() {
                 >
                   <ArrowLeft size={18} /> Back
                 </button>
-                <button className={tealButton} type="submit">
-                  Open email draft <ArrowRight size={18} />
+                <button className={actionButton} type="submit">
+                  Submit <ArrowRight size={18} />
                 </button>
               </div>
             </form>

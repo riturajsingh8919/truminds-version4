@@ -192,17 +192,29 @@ export function HeroSection() {
       aria-labelledby="home-title"
       className="relative isolate flex min-h-190 items-end overflow-hidden bg-[#07192e] text-white md:min-h-[min(850px,86vh)] md:items-center"
     >
-      <div className="absolute inset-0 -z-20 overflow-hidden md:left-[42%]">
+      <div className="absolute inset-0 -z-20 overflow-hidden">
         <Image
           src={photo + "hero-team.jpg"}
           alt=""
           fill
           priority
-          sizes="(max-width: 800px) 100vw, 58vw"
-          className="object-cover object-[center_26%] md:object-[center_43%] motion-safe:animate-[pulse_14s_ease-in-out_infinite]"
+          sizes="100vw"
+          className="object-cover object-center"
         />
+        <video
+          className="absolute inset-0 h-full w-full object-cover object-[58%_center] md:object-center motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/editorial/hero-team.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/clinical-research-hero.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,25,46,.12),rgba(7,25,46,.58)_38%,#07192e_82%)] md:bg-[linear-gradient(90deg,#07192e_0%,#07192e_32%,rgba(7,25,46,.92)_48%,rgba(7,25,46,.25)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,25,46,.55),rgba(7,25,46,.65)_38%,#07192e_100%)] md:bg-[linear-gradient(90deg,#07192e_0%,rgba(7,25,46,.96)_26%,rgba(7,25,46,.66)_55%,rgba(7,25,46,.24)_100%)]" />
       <div className={`${shell} relative z-10 pb-16 pt-64 md:py-28`}>
         <Eyebrow light>TruMinds Clinical</Eyebrow>
         <h1
@@ -227,11 +239,6 @@ export function HeroSection() {
           >
             Explore our services
           </Link>
-        </div>
-        <div className="mt-14 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/30 pt-5 text-[.7rem] font-bold tracking-wider text-[#c6d8e2] uppercase md:mt-20">
-          <span>01 / Clinical research</span>
-          <span>02 / Specialist teams</span>
-          <span>03 / Connected technology</span>
         </div>
       </div>
       <Link

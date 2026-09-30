@@ -34,7 +34,7 @@ export function Header() {
     <header className="sticky top-0 z-80 bg-white shadow-[0_1px_0_#dce8eb]">
       <div className="hidden border-b border-[#e2ecee] bg-[#eef5f6] sm:block">
         <div
-          className={`${shell} flex min-h-9 items-center justify-between text-[.68rem] font-bold tracking-wider text-[#4e7080] uppercase`}
+          className={`${shell} flex min-h-10 items-center justify-between text-[15px] font-bold tracking-wide text-[#4e7080]`}
         >
           <span>Clinical research, connected.</span>
           <nav
@@ -78,7 +78,7 @@ export function Header() {
         >
           {mainLinks.map((item) => (
             <Link
-              className="whitespace-nowrap text-[clamp(.74rem,.83vw,.91rem)] font-bold text-[#1f4055] transition-colors hover:text-[#007e91]"
+              className="whitespace-nowrap text-[15px] font-bold text-[#1f4055] transition-colors hover:text-[#007e91]"
               href={item.href}
               key={item.label}
             >
@@ -87,7 +87,7 @@ export function Header() {
           ))}
         </nav>
         <Link
-          className="hidden min-h-11 shrink-0 items-center justify-center gap-2.5 bg-[#0068a5] px-5 text-sm font-bold text-white transition-colors hover:bg-[#004a79] min-[1181px]:inline-flex"
+          className="hidden min-h-11 shrink-0 items-center justify-center gap-2.5 bg-[#0068a5] px-5 text-[15px] font-bold text-white transition-colors hover:bg-[#004a79] min-[1181px]:inline-flex"
           href="/#consultation"
         >
           Contact <ArrowRight size={17} aria-hidden="true" />
