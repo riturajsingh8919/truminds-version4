@@ -34,7 +34,7 @@ export function Header() {
     <header className="sticky top-0 z-80 bg-white shadow-[0_1px_0_#dce8eb]">
       <div className="hidden border-b border-[#e2ecee] bg-[#eef5f6] sm:block">
         <div
-          className={`${shell} flex min-h-10 items-center justify-between text-[15px] font-bold tracking-wide text-[#4e7080]`}
+          className={`${shell} flex min-h-10 items-center justify-between text-[12px] font-bold tracking-wide text-[#4e7080]`}
         >
           <span>Clinical research, connected.</span>
           <nav
