@@ -120,7 +120,7 @@ export function NonProfitVisual({
       </svg>
       <div
         ref={imageFrameRef}
-        className="absolute inset-0 bg-[#d4e3e9]"
+        className="absolute inset-0 overflow-hidden bg-[#d4e3e9]"
         style={{
           maskImage,
           maskPosition: "center",
