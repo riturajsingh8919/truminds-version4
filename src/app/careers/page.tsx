@@ -13,14 +13,12 @@ export default function CareersPage() {
   return (
     <>
       <InteriorHero
-        eyebrow="Careers"
         title="Build what comes next."
         description="Join work that brings clinical expertise, technology and care together."
         image="/images/editorial/hero-team.jpg"
         imageAlt="Medical professionals working together"
       />
       <InteriorStory
-        kicker="Careers at TruMinds"
         title="Your expertise can move research forward."
         paragraphs={[
           "TruMinds Clinical works across clinical operations, data management, statistical programming and specialized staffing. If you are looking for a role in life sciences, explore the openings published on our current careers site.",

@@ -6,7 +6,7 @@ import {
   InteriorContact,
   InteriorHero,
 } from "@/components/layout/InteriorPage";
-import { bodyCopy, eyebrow, eyebrowLine, shell } from "@/lib/site-styles";
+import { bodyCopy, shell } from "@/lib/site-styles";
 
 export const metadata: Metadata = {
   title: "Resources & Insights | TruMinds Clinical",
@@ -18,7 +18,6 @@ const topics = [
   {
     id: "clinical-data",
     number: "01",
-    category: "Clinical data",
     title: "Making clinical data ready for the next decision",
     image: "/images/editorial/resources.jpg",
     alt: "Researcher examining a sample with a microscope",
@@ -32,7 +31,6 @@ const topics = [
   {
     id: "study-delivery",
     number: "02",
-    category: "Study delivery",
     title: "The value of connected clinical operations",
     image: "/images/editorial/services-fsp.jpg",
     alt: "Researchers discussing their work in a laboratory",
@@ -46,7 +44,6 @@ const topics = [
   {
     id: "technology",
     number: "03",
-    category: "Technology",
     title: "Where technology can simplify trial work",
     image: "/images/editorial/services-ai.jpg",
     alt: "Clinical researchers working at a computer",
@@ -63,7 +60,6 @@ export default function ResourcesPage() {
   return (
     <>
       <InteriorHero
-        eyebrow="Resources & insights"
         title="Ideas for better research."
         description="Perspectives on the people, processes and technology behind confident clinical decisions."
         image="/images/editorial/about-lab.jpg"
@@ -71,10 +67,7 @@ export default function ResourcesPage() {
       />
       <section className="py-20">
         <div className={shell}>
-          <p className={eyebrow}>
-            <span className={eyebrowLine} />
-            Explore perspectives
-          </p>
+          <h2 className="sr-only">Explore perspectives</h2>
           <div className="grid gap-3 md:grid-cols-3">
             {topics.map((topic) => (
               <Link
@@ -115,10 +108,7 @@ export default function ResourcesPage() {
                 />
               </div>
               <div>
-                <span className="text-xs font-extrabold tracking-widest text-[#008795] uppercase">
-                  {topic.number} / {topic.category}
-                </span>
-                <h2 className="mt-4 text-[clamp(2rem,3.2vw,3.5rem)] leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
+                <h2 className="text-[clamp(2rem,3.2vw,3.5rem)] leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
                   {topic.title}
                 </h2>
                 <p className="mt-6 text-xl leading-relaxed text-[#294b5d]">

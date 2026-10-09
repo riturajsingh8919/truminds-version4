@@ -9,6 +9,7 @@ import {
   TherapeuticSection,
 } from "@/components/home/HomeContent";
 import { ConsultationJourney } from "@/components/home/ConsultationJourney";
+import { GlobalPresenceSection } from "@/components/home/GlobalPresenceSection";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <PurposeSection />
       <ConsultationJourney />
       <InsightsSection />
+      <GlobalPresenceSection />
     </>
   );
 }
