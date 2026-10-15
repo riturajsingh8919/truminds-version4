@@ -19,7 +19,7 @@ export function AnimatedPillLink({
   return (
     <Link
       href={href}
-      className={`group relative isolate inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border-2 text-xs font-black tracking-[.07em] uppercase focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#008b9c] ${
+      className={`group relative isolate inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border-2 text-sm font-bold tracking-[.025em] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#008b9c] sm:text-base ${
         isDark
           ? "border-[#0068a5] bg-[#0068a5]"
           : "border-white bg-white"

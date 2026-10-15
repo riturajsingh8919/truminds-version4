@@ -1,5 +1,5 @@
-import { ArrowUpRight, Globe2, Layers3, Move, Network, UsersRound } from "lucide-react";
-import { DraggableGlobe } from "@/components/home/DraggableGlobe";
+import { ArrowUpRight, Globe2, Layers3, Network, UsersRound } from "lucide-react";
+import { WorldPresenceMap } from "@/components/home/WorldPresenceMap";
 import { section, shell, title } from "@/lib/site-styles";
 
 const capabilities = [
@@ -72,13 +72,8 @@ export function GlobalPresenceSection() {
           </div>
         </div>
 
-        <div className="relative isolate mx-auto flex w-full max-w-155 flex-col items-center lg:mx-0 lg:justify-self-end">
-          <div className="pointer-events-none absolute inset-x-[6%] top-[14%] -z-10 aspect-square rounded-full bg-[radial-gradient(circle,rgba(207,236,239,.62)_0%,rgba(238,248,249,.47)_43%,transparent_70%)] blur-2xl" />
-          <DraggableGlobe />
-          <div className="-mt-2 inline-flex items-center gap-2 rounded-full border border-[#dbe9ed] bg-white/85 px-4 py-2 text-sm font-medium text-[#527486] shadow-[0_10px_30px_rgba(14,57,78,.06)] backdrop-blur-sm sm:-mt-5">
-            <Move size={15} strokeWidth={1.7} aria-hidden="true" />
-            Drag to explore connected markets
-          </div>
+        <div id="markets-we-serve" className="relative isolate mx-auto w-full scroll-mt-28 lg:mx-0 lg:justify-self-end">
+          <WorldPresenceMap />
         </div>
       </div>
     </section>

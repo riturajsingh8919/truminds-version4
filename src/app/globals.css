@@ -17,8 +17,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-sans);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-light: var(--primary-light);
@@ -48,7 +48,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family:
-    var(--font-geist-sans),
+    var(--font-ibm-plex-sans),
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -56,6 +56,31 @@ body {
     Roboto,
     sans-serif;
   overflow-x: hidden;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+@keyframes map-ripple {
+  0% { transform: scale(.42); opacity: .7; }
+  75%, 100% { transform: scale(1.8); opacity: 0; }
+}
+
+.map-ripple {
+  animation: map-ripple 2.2s ease-out infinite;
+}
+
+@keyframes map-route-flow {
+  to { stroke-dashoffset: -64; }
+}
+
+.map-route-flow {
+  animation: map-route-flow 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-route-flow { animation: none; }
 }
 
 /* Custom smooth scrollbar for mega menus and mobile drawer */
@@ -85,6 +110,23 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.leadership-slide {
+  flex: 0 0 88%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .leadership-slide {
+    flex-basis: calc((100% - 1.25rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .leadership-slide {
+    flex-basis: calc((100% - 2.5rem) / 3);
+  }
 }
 
 /* Mega menu animations */

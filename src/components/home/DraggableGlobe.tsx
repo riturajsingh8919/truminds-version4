@@ -4,7 +4,7 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 
 const DRAG_SPEED = 0.005;
-const ROTATION_SPEED = 0.00016;
+const ROTATION_SPEED = 0.00013;
 const countries = [
   { name: "United States", location: [38.9, -77.0] as [number, number] },
   { name: "Canada", location: [43.7, -79.4] as [number, number] },
@@ -71,21 +71,21 @@ export function DraggableGlobe() {
       phi: phiRef.current,
       theta: thetaRef.current,
       dark: 0,
-      diffuse: 1.15,
-      mapSamples: 14000,
-      mapBrightness: 1.65,
-      baseColor: [0.12, 0.35, 0.43],
-      markerColor: [0.02, 0.56, 0.61],
-      glowColor: [0.81, 0.94, 0.96],
-      markers: countries.map(({ location }) => ({ location, size: 0.055 })),
+      diffuse: 1.3,
+      mapSamples: 18000,
+      mapBrightness: 2.8,
+      baseColor: [0.16, 0.43, 0.56],
+      markerColor: [0.0, 0.58, 0.69],
+      glowColor: [0.84, 0.95, 0.98],
+      markers: countries.map(({ location }) => ({ location, size: 0.065 })),
       arcs: [
         { from: countries[0].location, to: countries[1].location },
         { from: countries[0].location, to: countries[2].location },
         { from: countries[1].location, to: countries[2].location },
         { from: countries[2].location, to: countries[3].location },
       ],
-      arcColor: [0.05, 0.5, 0.59],
-      arcWidth: 0.65,
+      arcColor: [0.06, 0.55, 0.66],
+      arcWidth: 0.8,
       arcHeight: 0.12,
     });
     const globeWrapper = canvas.parentElement;
@@ -128,7 +128,9 @@ export function DraggableGlobe() {
           label.style.top = `${y}px`;
           label.style.transform = `translate(calc(-50% + ${offset.x}px), calc(-100% - 13px + ${offset.y}px))`;
           label.style.opacity =
-            position.visible && position.x > 0.14 && position.x < 0.86 ? "1" : "0";
+            position.visible && hover.active && distance < 58 && position.x > 0.14 && position.x < 0.86
+              ? "1"
+              : "0";
         });
       }
       lastFrame = time;
@@ -191,6 +193,12 @@ export function DraggableGlobe() {
         }}
         onPointerDown={(event) => {
           if (event.button !== 0) return;
+          const bounds = event.currentTarget.getBoundingClientRect();
+          hoverRef.current = {
+            x: event.clientX - bounds.left,
+            y: event.clientY - bounds.top,
+            active: true,
+          };
           pointerRef.current = {
             id: event.pointerId,
             x: event.clientX,

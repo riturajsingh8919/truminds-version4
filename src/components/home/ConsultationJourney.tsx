@@ -63,7 +63,7 @@ const choiceIdle =
 const field =
   "mt-2 block min-h-14 w-full rounded-xl border border-[#c8d9e0] bg-[#f7fafb] px-4 py-3 text-base font-medium text-[#0a2b40] outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:font-normal placeholder:text-[#849ba5] hover:border-[#93bdcd] focus:border-[#0068a5] focus:bg-white focus:shadow-[0_0_0_3px_rgba(0,104,165,.12)]";
 const primaryAction =
-  "group inline-flex min-h-12 cursor-pointer items-center justify-center gap-3 rounded-full bg-[#0068a5] px-6 py-2.5 text-base font-semibold text-white shadow-[0_8px_20px_rgba(0,104,165,.15)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-[#005480] hover:shadow-[0_12px_25px_rgba(0,104,165,.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
+  "group inline-flex min-h-14 cursor-pointer items-center justify-center gap-3 rounded-full bg-[#0068a5] px-7 py-3 text-base font-semibold text-white shadow-[0_8px_20px_rgba(0,104,165,.15)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-[#005480] hover:shadow-[0_12px_25px_rgba(0,104,165,.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
 const backAction =
   "inline-flex cursor-pointer items-center gap-2 text-base font-semibold text-[#476b7c] transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]";
 const stepHeading =
@@ -135,6 +135,8 @@ export function ConsultationJourney() {
   const [selectedNeeds, setSelectedNeeds] = useState<string[]>([]);
   const [engagement, setEngagement] = useState("");
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [contact, setContact] = useState({
     name: "",
     organization: "",
@@ -185,33 +187,43 @@ export function ConsultationJourney() {
     setStep(step + 1);
   }
 
-  function openEmail(event: React.FormEvent<HTMLFormElement>) {
+  async function submitEnquiry(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const body = [
-      "Hello TruMinds Clinical,",
-      "",
-      "I would like to discuss a clinical research project.",
-      "",
+    setSubmitting(true);
+    setError("");
+    const details = [
       "Organization type: " + company,
       "Areas of focus: " + selectedFocus.join(", "),
       "Study phase: " + phase,
       "Support needed: " + selectedNeeds.join(", "),
       "Engagement: " + engagement,
       "",
-      "Name: " + contact.name.trim(),
-      "Organization: " + contact.organization.trim(),
-      "Email: " + contact.email.trim(),
-      "Phone: " + (contact.phone.trim() || "Not provided"),
-      "",
       "Project details:",
       contact.message.trim() ||
         "I would welcome a conversation about my project.",
     ].join("\n");
-    window.location.href =
-      "mailto:services@trumindsclinical.com?subject=" +
-      encodeURIComponent("New clinical research enquiry") +
-      "&body=" +
-      encodeURIComponent(body);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "consultation",
+          name: contact.name,
+          email: contact.email,
+          organization: contact.organization,
+          phone: contact.phone,
+          interest: selectedNeeds.join(", "),
+          message: details,
+        }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Unable to send your request.");
+      setSubmitted(true);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Unable to send your request. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -226,8 +238,8 @@ export function ConsultationJourney() {
             How to <span className="text-[#0068a5]">get started.</span>
           </h2>
           <p className="max-w-125 text-base leading-relaxed text-[#47687b] md:text-lg">
-            Tell us about your study and the support you need. Your choices
-            become an email draft you can review and send to our team.
+            Tell us about your study and the support you need. Submit your
+            request and our team will get in touch.
           </p>
         </div>
 
@@ -235,7 +247,7 @@ export function ConsultationJourney() {
           aria-label="Enquiry progress"
           className="mt-7 rounded-2xl border border-[#dce8ec] bg-[#eef4f6] p-1.5 sm:p-2"
         >
-          <ol className="grid grid-cols-3 gap-1 sm:gap-2">
+          <ol className="grid grid-cols-3 gap-2 sm:gap-4">
             {steps.map((label, index) => {
               const stage = index + 1;
               const current = stage === step;
@@ -250,7 +262,7 @@ export function ConsultationJourney() {
                       setStep(stage);
                     }}
                     aria-current={current ? "step" : undefined}
-                    className={`flex min-h-15 w-full items-center justify-center gap-2 rounded-xl border border-transparent px-2 py-3 text-center transition-[background-color,color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] sm:gap-3 sm:px-5 ${current ? "bg-white text-[#0a2038] shadow-[0_5px_18px_rgba(13,57,76,.1)]" : complete ? "cursor-pointer text-[#2a596a] hover:bg-white/75 hover:text-[#0068a5]" : "cursor-not-allowed text-[#8ba2ae]"}`}
+                    className={`flex min-h-16 w-full items-center justify-center gap-2 rounded-xl border border-transparent px-2 py-3 text-center transition-[background-color,color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] sm:gap-3 sm:px-5 ${current ? "bg-white text-[#0a2038] shadow-[0_5px_18px_rgba(13,57,76,.1)]" : complete ? "cursor-pointer text-[#2a596a] hover:bg-white/75 hover:text-[#0068a5]" : "cursor-not-allowed text-[#8ba2ae]"}`}
                   >
                     <span
                       className={`grid size-7 shrink-0 place-items-center rounded-full text-xs font-bold sm:size-9 sm:text-sm ${current ? "bg-[#0068a5] text-white" : complete ? "bg-[#d5efee] text-[#006b7e]" : "bg-white/70 text-[#8299a4]"}`}
@@ -261,7 +273,7 @@ export function ConsultationJourney() {
                         String(stage).padStart(2, "0")
                       )}
                     </span>
-                    <span className="text-sm leading-tight font-semibold sm:text-base">
+                    <span className="text-base leading-tight font-semibold sm:text-lg">
                       {label}
                     </span>
                   </button>
@@ -487,7 +499,7 @@ export function ConsultationJourney() {
           )}
 
           {step === 3 && (
-            <form onSubmit={openEmail} className={stepLayout}>
+            <form onSubmit={submitEnquiry} className={stepLayout}>
               <div className={stepHeader}>
                 <h3
                   ref={headingRef}
@@ -574,10 +586,8 @@ export function ConsultationJourney() {
                     placeholder="Tell us about your goals or timeline"
                   />
                 </label>
-                <p className="mt-6 max-w-170 text-base leading-relaxed text-[#587684]">
-                  Your email application will open with this request ready to
-                  review and send. Nothing is submitted from this page.
-                </p>
+                {submitted && <p className="mt-6 text-base font-semibold text-[#007f91]" role="status">Thank you. Your enquiry has been submitted.</p>}
+                {error && <p className="mt-6 text-base font-semibold text-[#a12f39]" role="alert">{error}</p>}
                 <div className="mt-8 flex items-center justify-between gap-4 border-t border-[#d9e5e9] pt-6">
                   <button
                     className={backAction}
@@ -586,8 +596,8 @@ export function ConsultationJourney() {
                   >
                     <ArrowLeft size={18} aria-hidden="true" /> Back
                   </button>
-                  <button className={primaryAction} type="submit">
-                    Prepare email
+                  <button className={primaryAction} type="submit" disabled={submitting || submitted}>
+                    {submitting ? "Submitting…" : submitted ? "Submitted" : "Submit"}
                     <ArrowRight
                       className="transition-transform duration-300 group-hover:translate-x-1"
                       size={19}

@@ -8,13 +8,13 @@ import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { shell } from "@/lib/site-styles";
 
 const mainLinks = [
-  { label: "About Us", href: "/#about-us" },
+  { label: "About Us", href: "/about-us" },
   { label: "Services", href: "/#services" },
   { label: "Therapeutic Areas", href: "/#therapeutic-areas" },
   { label: "Products", href: "/#truform" },
   { label: "Giving Back", href: "/giving-back" },
   { label: "Resources", href: "/resources" },
-  { label: "Contact Us", href: "/#consultation" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 const givingBackLinks = [
   {
@@ -99,7 +99,7 @@ export function Header() {
                 }}
               >
                 <Link
-                  className={`${givingBackOpen ? "text-[#007e91]" : "text-[#1f4055]"} whitespace-nowrap text-base font-bold transition-colors hover:text-[#007e91]`}
+                  className={`${givingBackOpen ? "text-[#007e91]" : "text-[#1f4055]"} whitespace-nowrap text-[1.05rem] font-semibold tracking-[.015em] transition-colors hover:text-[#007e91]`}
                   href={item.href}
                   onClick={() => setGivingBackOpen(false)}
                 >
@@ -155,7 +155,7 @@ export function Header() {
               />
             ) : (
               <Link
-                className="whitespace-nowrap text-base font-bold text-[#1f4055] transition-colors hover:text-[#007e91]"
+                className="whitespace-nowrap text-[1.05rem] font-semibold tracking-[.015em] text-[#1f4055] transition-colors hover:text-[#007e91]"
                 href={item.href}
                 key={item.label}
               >

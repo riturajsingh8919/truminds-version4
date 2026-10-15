@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, HeartHandshake } from "lucide-react";
+import { ArrowRight, ArrowUpRight, HandHeart, HeartHandshake, HeartPulse, UsersRound, GraduationCap } from "lucide-react";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { AboutImageMosaic } from "@/components/home/AboutImageMosaic";
 import { AiServicesCarousel } from "@/components/home/AiServicesCarousel";
@@ -96,12 +96,12 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,31,45,.78)_0%,rgba(4,31,45,.68)_38%,rgba(4,31,45,.30)_60%,transparent_82%)] max-md:bg-[linear-gradient(90deg,rgba(4,31,45,.76),rgba(4,31,45,.58))]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-linear-to-t from-[#073344]/60 to-transparent" />
       <div
-        className={`${shell} relative z-10 flex min-h-130 items-center py-20 sm:min-h-145 sm:py-24 lg:min-h-[clamp(520px,65svh,690px)] lg:py-28`}
+        className={`${shell} relative z-10 flex min-h-130 items-center pt-28 pb-16 sm:min-h-145 sm:pt-32 sm:pb-20 lg:min-h-[clamp(520px,65svh,690px)] lg:pt-36 lg:pb-24`}
       >
         <div className="w-full min-w-0 max-w-290">
           <h1
             id="home-title"
-            className="text-[clamp(1.75rem,8vw,3.25rem)] leading-[1.04] font-semibold tracking-[-.045em] text-white text-shadow-[0_2px_20px_rgba(4,31,45,.16)] md:text-[clamp(3.5rem,5.6vw,6.25rem)]"
+            className="text-[clamp(1.75rem,8vw,3.25rem)] leading-[1.06] font-semibold tracking-[-.028em] text-white text-shadow-[0_2px_20px_rgba(4,31,45,.16)] md:text-[clamp(3.5rem,5.6vw,6.25rem)]"
           >
             <span className="block whitespace-nowrap">Your partner in</span>
             <span className="block whitespace-nowrap">clinical research.</span>
@@ -117,6 +117,12 @@ export function HeroSection() {
               variant="light"
               size="large"
             />
+            <AnimatedPillLink
+              href="/#contact"
+              label="Talk to Our Experts"
+              variant="dark"
+              size="large"
+            />
           </div>
         </div>
       </div>
@@ -127,7 +133,7 @@ export function HeroSection() {
         >
           {heroStats.map((stat) => (
             <li
-              className="flex min-h-14 flex-col justify-center gap-1 border-r border-white/20 px-3 first:pl-0 last:border-r-0 sm:px-6 lg:flex-row lg:items-baseline lg:justify-start lg:gap-3 lg:px-9"
+              className="flex min-h-14 flex-col justify-center gap-1 border-r border-white/20 px-3 first:pl-0 last:border-r-0 sm:px-6 lg:flex-row lg:items-center lg:justify-start lg:gap-3 lg:px-9"
               key={stat.label}
             >
               <span className="whitespace-nowrap text-[clamp(1.15rem,2.2vw,1.9rem)] leading-tight font-semibold tracking-[-.035em] text-white">
@@ -161,7 +167,7 @@ export function AboutSection() {
           <div className="max-w-150">
             <h2
               id="about-title"
-              className="text-[clamp(2.45rem,3.25vw,3.65rem)] leading-[1.08] font-semibold tracking-[-.052em] text-[#0a2038]"
+              className="text-[clamp(2.45rem,3.25vw,3.65rem)] leading-[1.12] font-semibold tracking-[-.025em] text-[#0a2038]"
             >
               Experience that moves
               <br />
@@ -174,7 +180,7 @@ export function AboutSection() {
               clarity.
             </p>
             <div className="mt-6">
-              <TextLink href="/#services">Explore how we work</TextLink>
+              <AnimatedPillLink href="/about-us" label="Learn More" variant="dark" size="large" />
             </div>
             <dl className="mt-11 grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-x-8 sm:gap-y-8">
               {proof.map((item) => (
@@ -203,10 +209,10 @@ export function ServicesSection() {
     <section
       id="services"
       aria-labelledby="services-title"
-      className={`${section} bg-[#08253d]`}
+      className="bg-[#08253d] py-16 md:py-18 xl:py-20"
     >
       <div className={shell}>
-        <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <h2 id="services-title" className={`${title} text-white`}>
               The right expertise,
@@ -267,13 +273,6 @@ export function PlatformSection() {
 }
 
 export function TherapeuticSection() {
-  const stagger = [
-    "xl:translate-y-0",
-    "sm:translate-y-5 xl:translate-y-8",
-    "xl:translate-y-3",
-    "sm:translate-y-5 xl:translate-y-10",
-  ];
-
   return (
     <section
       id="therapeutic-areas"
@@ -294,10 +293,10 @@ export function TherapeuticSection() {
             working. Our teams shape the research around those needs.
           </p>
         </div>
-        <div className="grid gap-5 pb-10 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
-          {therapeuticAreas.map((area, index) => (
+        <div className="grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
+          {therapeuticAreas.map((area) => (
             <div
-              className={`relative min-w-0 hover:z-20 ${stagger[index % stagger.length]}`}
+              className="relative min-w-0 hover:z-20"
               key={area.title}
             >
               <TherapeuticAreaCard
@@ -316,6 +315,12 @@ export function TherapeuticSection() {
 }
 
 export function GivingBackSection() {
+  const initiatives = [
+    { title: "Non-Profit Research Organizations", icon: HeartPulse, href: "/giving-back#non-profit-research-organizations" },
+    { title: "Employee Volunteer Programs", icon: HandHeart, href: "/giving-back#employee-volunteer-programs" },
+    { title: "Community Outreach", icon: UsersRound, href: "/giving-back#community-outreach" },
+    { title: "Mentorship Programs", icon: GraduationCap, href: "/giving-back#mentorship-programs" },
+  ];
   return (
     <section
       id="giving-back"
@@ -323,7 +328,7 @@ export function GivingBackSection() {
       className="bg-white"
     >
       <div
-        className={`${shell} grid items-center gap-10 py-20 md:grid-cols-2 md:gap-16 md:py-28`}
+        className={`${shell} grid items-center gap-10 py-16 md:grid-cols-2 md:gap-16 md:py-20`}
       >
         <div className="min-w-0 w-full">
           <AboutImageMosaic
@@ -349,6 +354,15 @@ export function GivingBackSection() {
             connection and opportunity.
           </p>
           <TextLink href="/giving-back">Explore Giving Back</TextLink>
+        </div>
+        <div className="grid gap-3 sm:col-span-2 sm:grid-cols-2 xl:grid-cols-4">
+          {initiatives.map(({ title: initiativeTitle, icon: Icon, href }) => (
+            <Link key={initiativeTitle} href={href} className="group flex items-center gap-4 rounded-2xl border border-[#d7e9eb] bg-[#f4f9f9] p-5 text-[#123a4d] transition-[background-color,transform,border-color] hover:-translate-y-1 hover:border-[#a6d9de] hover:bg-white focus-visible:outline-2 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
+              <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-white text-[#007e91]"><Icon size={23} strokeWidth={1.7} aria-hidden="true" /></span>
+              <span className="text-base font-semibold leading-snug">{initiativeTitle}</span>
+              <ArrowUpRight className="ml-auto shrink-0 text-[#007e91]" size={18} aria-hidden="true" />
+            </Link>
+          ))}
         </div>
       </div>
     </section>

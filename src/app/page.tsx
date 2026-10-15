@@ -4,12 +4,12 @@ import {
   HeroSection,
   InsightsSection,
   PlatformSection,
-  PurposeSection,
   ServicesSection,
   TherapeuticSection,
 } from "@/components/home/HomeContent";
 import { ConsultationJourney } from "@/components/home/ConsultationJourney";
 import { GlobalPresenceSection } from "@/components/home/GlobalPresenceSection";
+import { LeadershipSection } from "@/components/home/LeadershipSection";
 
 export default function HomePage() {
   return (
@@ -20,7 +20,7 @@ export default function HomePage() {
       <PlatformSection />
       <TherapeuticSection />
       <GivingBackSection />
-      <PurposeSection />
+      <LeadershipSection />
       <ConsultationJourney />
       <InsightsSection />
       <GlobalPresenceSection />
