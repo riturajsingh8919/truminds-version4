@@ -18,7 +18,7 @@ export function TherapeuticAreaCard({
   href,
 }: TherapeuticAreaCardProps) {
   return (
-    <Link href={href} aria-label={`Explore ${title}: ${description}`} className="group relative isolate block transform-gpu overflow-hidden rounded-[1.75rem] bg-white text-[#0a2038] shadow-[0_18px_38px_rgba(0,8,25,.25)] ring-1 ring-white/10 [transform:perspective(1000px)_rotateX(0deg)_rotateY(0deg)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:shadow-[0_32px_65px_rgba(0,8,25,.42)] hover:[transform:perspective(1000px)_rotateX(2deg)_rotateY(-2deg)_translateY(-10px)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbdf] focus-visible:[transform:perspective(1000px)_rotateX(2deg)_rotateY(-2deg)_translateY(-10px)] motion-reduce:transform-none motion-reduce:transition-none">
+    <Link href={href} aria-label={`Explore ${title}: ${description}`} className="copy-on-light group relative isolate block transform-gpu overflow-hidden rounded-[1.75rem] bg-white text-[#0a2038] shadow-[0_18px_38px_rgba(0,8,25,.25)] ring-1 ring-white/10 [transform:perspective(1000px)_rotateX(0deg)_rotateY(0deg)] transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(.2,.7,.2,1)] hover:shadow-[0_32px_65px_rgba(0,8,25,.42)] hover:[transform:perspective(1000px)_rotateX(2deg)_rotateY(-2deg)_translateY(-10px)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbdf] focus-visible:[transform:perspective(1000px)_rotateX(2deg)_rotateY(-2deg)_translateY(-10px)] motion-reduce:transform-none motion-reduce:transition-none">
       <div className="relative aspect-[4/5] overflow-hidden bg-[#12384d]">
         <Image
           src={image}
@@ -30,10 +30,10 @@ export function TherapeuticAreaCard({
         />
       </div>
       <div className="relative z-10 -mt-4 flex min-h-38 flex-col justify-center rounded-t-[1.25rem] bg-white px-5 py-5 text-center sm:px-6">
-        <h3 className="text-[clamp(1.2rem,1.65vw,1.5rem)] leading-tight font-semibold tracking-[-.025em]">
+        <h3 className="text-xl xl:text-2xl leading-tight font-semibold tracking-[-.025em]">
           {title}
         </h3>
-        <p className="mt-2 line-clamp-2 text-base leading-[1.45] text-[#597185]">
+        <p className="mt-2 line-clamp-2 text-lg leading-[1.45] text-[#597185]">
           {description}
         </p>
       </div>
@@ -43,10 +43,10 @@ export function TherapeuticAreaCard({
       >
         <div className="my-auto translate-y-5 opacity-0 transition-[opacity,translate] duration-500 delay-150 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none">
           <span className="mb-6 block h-1 w-12 rounded-full bg-[#00aaa9]" />
-          <strong className="block text-[clamp(1.75rem,2.1vw,2.25rem)] leading-tight font-semibold tracking-[-.04em]">
+          <strong className="block text-3xl xl:text-4xl leading-tight font-semibold tracking-[-.04em]">
             {title}
           </strong>
-          <p className="mt-5 text-base leading-relaxed text-[#38546a]">
+          <p className="mt-5 text-lg leading-relaxed text-[#38546a]">
             {description}
           </p>
         </div>

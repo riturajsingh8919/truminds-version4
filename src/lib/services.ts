@@ -6,9 +6,9 @@ export const services = [
       "Clinical operations, biometrics, safety and regulatory expertise across the development journey.",
     hoverDescription:
       "Bring the essential parts of a clinical program together, from study planning and site operations to biometrics, safety and regulatory support. Connected teams keep decisions clear as your study moves forward.",
-    image: "/images/editorial/services-cro.jpg",
-    imageAlt: "Clinicians reviewing a study together",
-    imagePosition: "50% center",
+    image: "/services/full-service-cro.jpg",
+    imageAlt: "Healthcare professionals working together in a clinical setting",
+    imagePosition: "50% top",
     overview:
       "Clinical programs move through many decisions, disciplines and handoffs. Full-service support brings those parts into one coordinated way of working.",
     approach:
@@ -26,9 +26,9 @@ export const services = [
       "Purposeful technology that helps teams work with clinical data more clearly and efficiently.",
     hoverDescription:
       "Turn complex trial information into clearer workflows and more useful insight. Our connected digital capabilities support data capture, review and reporting throughout the study lifecycle.",
-    image: "/images/editorial/services-ai.jpg",
-    imageAlt: "Clinical researchers reviewing information at a computer",
-    imagePosition: "45% center",
+    image: "/services/truminds-ai.jpg",
+    imageAlt: "Researchers working with robotic technology in a laboratory",
+    imagePosition: "50% top",
     overview:
       "Clinical technology is most useful when it helps people understand and act on the information in front of them.",
     approach:
@@ -46,9 +46,9 @@ export const services = [
       "Specialist teams that work alongside yours, with the flexibility to adapt as programs evolve.",
     hoverDescription:
       "Add the right expertise where your program needs it most. Our functional service teams work alongside yours, align with existing processes and adapt as study priorities change.",
-    image: "/images/editorial/services-fsp.jpg",
-    imageAlt: "Scientists discussing research in a laboratory",
-    imagePosition: "58% center",
+    image: "/services/fsp-services.jpg",
+    imageAlt: "Clinician checking a patient's blood pressure",
+    imagePosition: "50% top",
     overview:
       "Some programs need focused capability within an existing operating model. Functional service support lets teams expand capacity without losing continuity.",
     approach:
@@ -66,9 +66,9 @@ export const services = [
       "Experienced clinical and technical professionals matched to the work that matters most.",
     hoverDescription:
       "Find experienced professionals for the work in front of you. We connect clinical and technical talent with study teams so capacity, continuity and specialist skills stay in step with demand.",
-    image: "/images/editorial/services-staffing.jpg",
-    imageAlt: "Doctor speaking with a patient in a clinical office",
-    imagePosition: "52% center",
+    image: "/services/clinical-staffing.jpg",
+    imageAlt: "Clinical care team standing together with a clipboard",
+    imagePosition: "50% top",
     overview:
       "The right people make complex study work more manageable. Clinical staffing starts with understanding the role, the team and the stage of the program.",
     approach:

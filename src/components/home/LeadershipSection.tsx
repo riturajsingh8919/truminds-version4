@@ -91,11 +91,11 @@ export function LeadershipSection() {
   const selected = selectedIndex === null ? null : leadership[selectedIndex];
 
   return (
-    <section id="leadership-team" aria-labelledby="leadership-title" className={`${section} bg-[#f2f8f9]`}>
+    <section id="leadership-team" aria-labelledby="leadership-title" className={`${section} copy-on-light bg-[#f2f8f9]`}>
       <div className={shell}>
         <div className="mb-9 flex flex-wrap items-end justify-between gap-x-10 gap-y-7 md:mb-11">
           <div>
-            <span className="text-sm font-semibold tracking-[.16em] text-[#008a98] uppercase">The people behind TruMinds</span>
+            <span className="text-lg font-medium tracking-[.08em] text-[#006b78] uppercase">The people behind TruMinds</span>
             <h2 id="leadership-title" className={`${title} mt-3`}>Leadership <span className="text-[#0068a5]">team.</span></h2>
             <p className="mt-5 max-w-170 text-lg leading-relaxed text-[#4d6b7d]">Meet the leaders guiding our clinical research, technology and partnerships. Explore their stories and the experience they bring to our work.</p>
           </div>
@@ -130,16 +130,16 @@ export function LeadershipSection() {
               <div className="h-1 bg-linear-to-r from-[#00a7a9] via-[#007d9f] to-[#0068a5]" aria-hidden="true" />
               <div className="flex min-h-66 flex-1 flex-col p-6 sm:p-7">
                 <h3 className="text-[1.45rem] leading-tight font-semibold tracking-[-.025em] text-[#0b3043]">{leader.name}</h3>
-                <p className="mt-2 min-h-11 text-sm leading-snug font-semibold text-[#007d91] sm:text-base">{leader.role}</p>
-                <p className="mt-3 line-clamp-2 text-[.95rem] leading-relaxed text-[#617b88]">{leader.summary}</p>
-                <button type="button" onClick={(event) => openBio(index, event.currentTarget)} className="mt-auto inline-flex w-fit cursor-pointer items-center gap-2 pt-5 text-sm font-bold text-[#0068a5] transition-[gap,color] duration-300 hover:gap-3 hover:text-[#004d78] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0068a5]">View biography <ArrowUpRight size={18} aria-hidden="true" /></button>
+                <p className="mt-2 min-h-11 text-lg leading-snug font-medium text-[#007d91]">{leader.role}</p>
+                <p className="mt-3 line-clamp-2 text-lg leading-relaxed text-[#617b88]">{leader.summary}</p>
+                <button type="button" onClick={(event) => openBio(index, event.currentTarget)} className="mt-auto inline-flex min-h-12 w-fit cursor-pointer items-center gap-2 pt-5 text-lg font-medium text-[#0068a5] transition-[gap,color] duration-300 hover:gap-3 hover:text-[#004d78] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0068a5]">View biography <ArrowUpRight size={20} aria-hidden="true" /></button>
               </div>
             </article>
           ))}
         </div>
 
         <div className="mt-4 flex items-center justify-between gap-6">
-          <p className="text-sm font-semibold tracking-[.08em] text-[#527184] tabular-nums" aria-live="polite">{String(position.index + 1).padStart(2, "0")}–{String(Math.min(leadership.length, position.index + position.visible)).padStart(2, "0")} <span className="mx-1 text-[#94afba]">/</span> {String(leadership.length).padStart(2, "0")}</p>
+          <p className="text-lg font-medium tracking-[.08em] text-[#527184] tabular-nums" aria-live="polite">{String(position.index + 1).padStart(2, "0")}–{String(Math.min(leadership.length, position.index + position.visible)).padStart(2, "0")} <span className="mx-1 text-[#94afba]">/</span> {String(leadership.length).padStart(2, "0")}</p>
           <div className="h-1.5 w-32 overflow-hidden rounded-full bg-[#d2e4e9] sm:w-48" aria-hidden="true"><div className="h-full rounded-full bg-[#008ea3] transition-[width] duration-300" style={{ width: `${((position.index + position.visible) / leadership.length) * 100}%` }} /></div>
         </div>
       </div>
@@ -154,7 +154,7 @@ export function LeadershipSection() {
         onClick={(event) => {
           if (event.target === event.currentTarget) dialogRef.current?.close();
         }}
-        className="fixed inset-0 m-auto w-[min(960px,calc(100vw-32px))] max-w-none overflow-hidden rounded-[1.75rem] border border-[#c5dce3] bg-white p-0 text-[#12364a]  backdrop:bg-[#031e31]/70 backdrop:backdrop-blur-[5px]"
+        className="copy-on-light fixed inset-0 m-auto w-[min(960px,calc(100vw-32px))] max-w-none overflow-hidden rounded-[1.75rem] border border-[#c5dce3] bg-white p-0 text-[#12364a]  backdrop:bg-[#031e31]/70 backdrop:backdrop-blur-[5px]"
       >
         {selected && (
           <>
@@ -164,14 +164,14 @@ export function LeadershipSection() {
                 <div className="relative aspect-square overflow-hidden rounded-[1.2rem] bg-[#d5e8ed] ">
                   <Image src={selected.image} alt={`Portrait of ${selected.name}`} fill sizes="(max-width: 767px) 85vw, 340px" className="object-cover object-top" />
                 </div>
-                <p className="mt-5 hidden text-sm font-semibold tracking-[.16em] text-[#008a98] uppercase md:block">TruMinds leadership</p>
+                <p className="mt-5 hidden text-lg font-medium tracking-[.08em] text-[#006b78] uppercase md:block">TruMinds leadership</p>
               </div>
               <div className="px-6 pt-5 pb-9 sm:px-9 md:px-10 md:pt-16 md:pb-12">
-                <span className="text-xs font-bold tracking-[.18em] text-[#008a98] uppercase">Leadership profile</span>
-                <h3 id="leadership-dialog-title" className="mt-3 pr-9 text-[clamp(1.8rem,3vw,2.6rem)] leading-tight font-semibold tracking-[-.035em] text-[#0a2e43]">{selected.name}</h3>
+                <span className="text-lg font-medium tracking-[.08em] text-[#006b78] uppercase">Leadership profile</span>
+                <h3 id="leadership-dialog-title" className="mt-3 pr-9 text-3xl md:text-4xl xl:text-[42px] leading-tight font-semibold tracking-[-.035em] text-[#0a2e43]">{selected.name}</h3>
                 <p className="mt-2 text-lg font-semibold text-[#007f91]">{selected.role}</p>
                 <div className="mt-6 h-px bg-[#d5e5e9]" aria-hidden="true" />
-                <div className="mt-6 space-y-5 text-base leading-[1.75] text-[#496676]">
+                <div className="mt-6 space-y-5 text-lg leading-[1.75] text-[#496676]">
                   {selected.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 </div>
               </div>

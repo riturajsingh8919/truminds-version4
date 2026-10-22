@@ -80,7 +80,7 @@ export function Header() {
           />
         </Link>
         <nav
-          className="hidden flex-1 items-center justify-end gap-[clamp(13px,1.25vw,24px)] min-[1181px]:flex 2xl:gap-7"
+          className="hidden flex-1 items-center justify-end gap-3 xl:gap-5 min-[1181px]:flex 2xl:gap-7"
           aria-label="Main navigation"
         >
           {mainLinks.map((item) =>
@@ -99,7 +99,7 @@ export function Header() {
                 }}
               >
                 <Link
-                  className={`${givingBackOpen ? "text-[#007e91]" : "text-[#1f4055]"} whitespace-nowrap text-[1.05rem] font-semibold tracking-[.015em] transition-colors hover:text-[#007e91]`}
+                  className={`${givingBackOpen ? "text-[#007e91]" : "text-[#1f4055]"} whitespace-nowrap text-lg font-medium tracking-[.015em] transition-colors hover:text-[#007e91]`}
                   href={item.href}
                   onClick={() => setGivingBackOpen(false)}
                 >
@@ -107,14 +107,14 @@ export function Header() {
                 </Link>
                 <button
                   type="button"
-                  className="ml-1 flex size-7 items-center justify-center rounded-full text-[#1f4055] transition-colors hover:bg-[#e9f5f5] hover:text-[#007e91] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008b9c]"
+                  className="ml-1 flex size-11 items-center justify-center rounded-full text-[#1f4055] transition-colors hover:bg-[#e9f5f5] hover:text-[#007e91] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008b9c]"
                   aria-label="Toggle Giving Back menu"
                   aria-expanded={givingBackOpen}
                   aria-controls="giving-back-submenu"
                   onClick={() => setGivingBackOpen(!givingBackOpen)}
                 >
                   <ChevronDown
-                    size={16}
+                    size={20}
                     className={`transition-transform duration-300 motion-reduce:transition-none ${givingBackOpen ? "rotate-180" : ""}`}
                     aria-hidden="true"
                   />
@@ -127,7 +127,7 @@ export function Header() {
                   <div className="overflow-hidden rounded-xl border border-[#dce8eb] bg-white/95 p-2 shadow-[0_22px_55px_rgba(7,35,55,.17)] ring-1 ring-white/80 backdrop-blur-xl">
                     {givingBackLinks.map((subitem) => (
                       <Link
-                        className="group relative flex min-h-14 items-center gap-3 rounded-lg px-4 py-2.5 text-base font-semibold leading-snug text-[#173b50] transition-[background-color,color] duration-250 hover:bg-[#edf7f7] hover:text-[#007c8b] focus-visible:bg-[#edf7f7] focus-visible:outline-2 focus-visible:outline-[#008b9c] motion-reduce:transition-none"
+                        className="group relative flex min-h-14 items-center gap-3 rounded-lg px-4 py-2.5 text-lg font-medium leading-snug text-[#173b50] transition-[background-color,color] duration-250 hover:bg-[#edf7f7] hover:text-[#007c8b] focus-visible:bg-[#edf7f7] focus-visible:outline-2 focus-visible:outline-[#008b9c] motion-reduce:transition-none"
                         href={subitem.href}
                         key={subitem.label}
                         onClick={() => setGivingBackOpen(false)}
@@ -155,7 +155,7 @@ export function Header() {
               />
             ) : (
               <Link
-                className="whitespace-nowrap text-[1.05rem] font-semibold tracking-[.015em] text-[#1f4055] transition-colors hover:text-[#007e91]"
+                className="whitespace-nowrap text-lg font-medium tracking-[.015em] text-[#1f4055] transition-colors hover:text-[#007e91]"
                 href={item.href}
                 key={item.label}
               >
@@ -189,14 +189,14 @@ export function Header() {
             <div key={item.label}>
               <div className="flex min-h-13 items-center border-b border-[#e5eef0]">
                 <Link
-                  className="flex min-h-13 flex-1 items-center gap-4 text-base font-bold text-[#153950]"
+                  className="flex min-h-13 flex-1 items-center gap-4 text-lg font-medium text-[#153950]"
                   href={item.href}
                   onClick={() => {
                     setOpen(false);
                     setMobileGivingBackOpen(false);
                   }}
                 >
-                  <span className="text-[.65rem] tracking-wider text-[#009a9e]">
+                  <span className="text-lg font-medium tracking-wider text-[#009a9e]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   {item.label}
@@ -230,7 +230,7 @@ export function Header() {
                 >
                   {givingBackLinks.map((subitem) => (
                     <Link
-                      className="block py-3 pr-4 text-base font-semibold text-[#31576a]"
+                      className="block py-3 pr-4 text-lg font-medium text-[#31576a]"
                       href={subitem.href}
                       key={subitem.label}
                       onClick={() => {

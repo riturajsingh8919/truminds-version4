@@ -250,7 +250,7 @@ export function DraggableGlobe() {
             ref={(element) => {
               labelsRef.current[index] = element;
             }}
-            className="absolute inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-[#b9dce3] bg-white/93 px-3 py-1.5 text-xs font-semibold text-[#0b4056] opacity-0 shadow-[0_8px_24px_rgba(12,62,82,.16)] backdrop-blur-sm transition-opacity duration-300 will-change-transform sm:text-sm motion-reduce:transition-none"
+            className="absolute inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-[#b9dce3] bg-white/93 px-3 py-1.5 text-lg font-medium text-[#0b4056] opacity-0 shadow-[0_8px_24px_rgba(12,62,82,.16)] backdrop-blur-sm transition-opacity duration-300 will-change-transform motion-reduce:transition-none"
           >
             <span className="relative size-2 shrink-0 rounded-full bg-[#008ba0]">
               <span className="absolute inset-0 rounded-full bg-[#008ba0] opacity-70 animate-ping motion-reduce:animate-none" />

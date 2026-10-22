@@ -54,51 +54,51 @@ export default async function AiServicePage({ params }: PageProps) {
         <div className={`${shell} py-16 md:py-28`}>
           <Link
             href="/#truform"
-            className="mb-16 inline-flex items-center gap-2 text-base text-white/80 transition-colors hover:text-white"
+            className="mb-16 inline-flex items-center gap-2 text-lg font-medium text-white/80 transition-colors hover:text-white"
           >
             <ArrowLeft size={18} aria-hidden="true" /> All TruMinds AI services
           </Link>
-          <p className="text-sm font-bold tracking-[.18em] text-[#7de0df] uppercase">
+          <p className="text-lg font-medium tracking-[.08em] text-[#7de0df] uppercase">
             TruMinds AI / {service.number}
           </p>
-          <h1 className="mt-5 max-w-200 text-[clamp(3rem,6vw,6rem)] leading-[1.02] font-semibold tracking-[-.055em]">
+          <h1 className="mt-5 max-w-200 text-5xl md:text-6xl xl:text-8xl leading-[1.02] font-semibold tracking-[-.055em]">
             {service.title}
           </h1>
-          <p className="mt-7 max-w-170 text-[clamp(1.15rem,1.7vw,1.5rem)] leading-relaxed text-[#d5e7ec]">
+          <p className="mt-7 max-w-170 text-lg leading-relaxed text-[#d5e7ec]">
             {service.shortDescription}
           </p>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="copy-on-light py-20 md:py-28">
         <div className={`${shell} grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-24`}>
-          <h2 className="text-[clamp(2.3rem,3.5vw,3.7rem)] leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
+          <h2 className="text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
             From information
             <br />
             <span className="text-[#0068a5]">to understanding.</span>
           </h2>
           <div>
-            <p className="text-xl leading-relaxed text-[#203d52]">{service.intro}</p>
-            <p className="mt-6 text-base leading-[1.8] text-[#587084]">{service.body}</p>
+            <p className="text-lg leading-relaxed text-[#203d52]">{service.intro}</p>
+            <p className="mt-6 text-lg leading-[1.8] text-[#587084]">{service.body}</p>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#f2f8f9] py-20 md:py-28">
+      <section className="copy-on-light bg-[#f2f8f9] py-20 md:py-28">
         <div className={shell}>
-          <h2 className="max-w-190 text-[clamp(2.2rem,3.4vw,3.6rem)] leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
+          <h2 className="max-w-190 text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
             Built for the way study teams work.
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {service.highlights.map((highlight, index) => (
               <div className="rounded-[1.5rem] border border-[#dcebed] bg-white p-7 shadow-[0_16px_35px_rgba(5,50,74,.06)] md:p-8" key={highlight.title}>
-                <span className="text-sm font-bold text-[#008f9a]">
+                <span className="text-lg font-medium text-[#006b78]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-12 text-2xl font-semibold tracking-tight text-[#0a2038]">
                   {highlight.title}
                 </h3>
-                <p className="mt-4 text-base leading-relaxed text-[#587084]">
+                <p className="mt-4 text-lg leading-relaxed text-[#587084]">
                   {highlight.text}
                 </p>
               </div>
@@ -110,10 +110,10 @@ export default async function AiServicePage({ params }: PageProps) {
       <section className="py-20 md:py-28">
         <div className={shell}>
           <div className="flex flex-wrap items-end justify-between gap-5">
-            <h2 className="text-[clamp(2.2rem,3.4vw,3.6rem)] leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
+            <h2 className="text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold tracking-[-.05em] text-[#0a2038]">
               Explore more TruMinds AI services.
             </h2>
-            <Link href="/#truform" className="inline-flex items-center gap-2 border-b border-[#0068a5] pb-2 text-base font-semibold text-[#0068a5] hover:text-[#004f80]">
+            <Link href="/#truform" className="inline-flex items-center gap-2 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] hover:text-[#004f80]">
               View all services <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
@@ -129,7 +129,7 @@ export default async function AiServicePage({ params }: PageProps) {
                 <span className="relative z-10 flex w-full items-end justify-between gap-4">
                   <span>
                     <strong className="block text-2xl font-semibold">{item.title}</strong>
-                    <span className="mt-2 block max-w-100 text-base leading-snug text-white/85">{item.shortDescription}</span>
+                    <span className="mt-2 block max-w-100 text-lg font-medium leading-snug text-white/85">{item.shortDescription}</span>
                   </span>
                   <ArrowUpRight className="size-7 shrink-0 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true" />
                 </span>

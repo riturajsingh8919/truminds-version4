@@ -1,8 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, HandHeart, HeartHandshake, HeartPulse, UsersRound, GraduationCap } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Building2,
+  FlaskConical,
+  Globe2,
+  HandHeart,
+  HeartHandshake,
+  HeartPulse,
+  UsersRound,
+  GraduationCap,
+} from "lucide-react";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
-import { AboutImageMosaic } from "@/components/home/AboutImageMosaic";
+import { ConnectedDataImage } from "@/components/home/ConnectedDataImage";
 import { AiServicesCarousel } from "@/components/home/AiServicesCarousel";
 import { NonProfitVisual } from "@/components/home/NonProfitVisual";
 import { ServiceCard } from "@/components/home/ServiceCard";
@@ -11,7 +23,6 @@ import { services } from "@/lib/services";
 import { therapeuticAreas } from "@/lib/therapeutic-areas";
 import { lede, section, shell, textLink, title } from "@/lib/site-styles";
 
-const photo = "/images/editorial/";
 const heroStats = [
   { value: "25+", label: "Years" },
   { value: "Phase I–IV", label: "Experience" },
@@ -22,7 +33,7 @@ const insights = [
     category: "Clinical data",
     title: "Making clinical data ready for the next decision",
     description: "How clear data standards support more confident study teams.",
-    image: "resources.jpg",
+    image: "/blog-1.jpg",
     imagePosition: "center",
     href: "/resources#clinical-data",
   },
@@ -31,8 +42,8 @@ const insights = [
     title: "The value of connected clinical operations",
     description:
       "Why coordination across functions matters from study startup to submission.",
-    image: "services-fsp.jpg",
-    imagePosition: "52% center",
+    image: "/blog-2.jpg",
+    imagePosition: "center",
     href: "/resources#study-delivery",
   },
   {
@@ -40,8 +51,8 @@ const insights = [
     title: "Where technology can simplify trial work",
     description:
       "Practical opportunities to reduce manual steps in clinical research.",
-    image: "services-ai.jpg",
-    imagePosition: "55% center",
+    image: "/blog-3.jpg",
+    imagePosition: "center",
     href: "/resources#technology",
   },
 ];
@@ -66,7 +77,7 @@ export function HeroSection() {
     <section
       id="home"
       aria-labelledby="home-title"
-      className="relative isolate overflow-hidden bg-[#073344] text-white"
+      className="relative isolate flex flex-col overflow-hidden bg-[#073344] text-white lg:h-[calc(100svh-5.125rem)]"
     >
       <div className="absolute inset-0 -z-20 overflow-hidden">
         <Image
@@ -87,30 +98,27 @@ export function HeroSection() {
           poster="/images/hero/modern-molecular-poster.jpg"
           aria-hidden="true"
         >
-          <source
-            src="/modern-3d-molecular-structure-connecting-animation-2026-10-03-17-06-57-utc.mp4"
-            type="video/mp4"
-          />
+          <source src="/videos/main-hero.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,31,45,.78)_0%,rgba(4,31,45,.68)_38%,rgba(4,31,45,.30)_60%,transparent_82%)] max-md:bg-[linear-gradient(90deg,rgba(4,31,45,.76),rgba(4,31,45,.58))]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-linear-to-t from-[#073344]/60 to-transparent" />
       <div
-        className={`${shell} relative z-10 flex min-h-130 items-center pt-28 pb-16 sm:min-h-145 sm:pt-32 sm:pb-20 lg:min-h-[clamp(520px,65svh,690px)] lg:pt-36 lg:pb-24`}
+        className={`${shell} home-hero-content relative z-10 flex min-h-130 items-center pt-28 pb-16 sm:min-h-145 sm:pt-32 sm:pb-20 lg:min-h-0 lg:flex-1 lg:py-6 xl:py-10 2xl:py-14`}
       >
         <div className="w-full min-w-0 max-w-290">
           <h1
             id="home-title"
-            className="text-[clamp(1.75rem,8vw,3.25rem)] leading-[1.06] font-semibold tracking-[-.028em] text-white text-shadow-[0_2px_20px_rgba(4,31,45,.16)] md:text-[clamp(3.5rem,5.6vw,6.25rem)]"
+            className="home-hero-heading text-3xl sm:text-4xl leading-[1.06] font-semibold tracking-[-.028em] text-white text-shadow-[0_2px_20px_rgba(4,31,45,.16)] md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
           >
             <span className="block whitespace-nowrap">Your partner in</span>
             <span className="block whitespace-nowrap">clinical research.</span>
           </h1>
-          <p className="mt-7 max-w-152 text-xl leading-[1.65] font-bold text-white">
+          <p className="home-hero-description mt-7 max-w-152 leading-[1.65] text-white lg:mt-5 xl:mt-7 text-base lg:text-xl">
             Clinical operations, biometrics and connected technology—bringing
             the right expertise to every stage of your study.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="home-hero-actions mt-9 flex flex-wrap items-center gap-3 sm:gap-4 lg:mt-6 xl:mt-8">
             <AnimatedPillLink
               href="/#services"
               label="Explore our services"
@@ -126,9 +134,9 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="relative z-10 border-t border-white/20 bg-[#063043]/80 backdrop-blur-md">
+      <div className="home-hero-stats relative z-10 border-t border-white/20 bg-[#063043]/80 backdrop-blur-md">
         <ul
-          className={`${shell} grid grid-cols-3 py-5 md:py-6`}
+          className={`${shell} grid grid-cols-3 py-5 md:py-6 lg:py-3 xl:py-5`}
           aria-label="TruMinds Clinical highlights"
         >
           {heroStats.map((stat) => (
@@ -136,10 +144,10 @@ export function HeroSection() {
               className="flex min-h-14 flex-col justify-center gap-1 border-r border-white/20 px-3 first:pl-0 last:border-r-0 sm:px-6 lg:flex-row lg:items-center lg:justify-start lg:gap-3 lg:px-9"
               key={stat.label}
             >
-              <span className="whitespace-nowrap text-[clamp(1.15rem,2.2vw,1.9rem)] leading-tight font-semibold tracking-[-.035em] text-white">
+              <span className="whitespace-nowrap text-lg sm:text-xl lg:text-2xl 2xl:text-3xl leading-tight font-semibold tracking-[-.035em] text-white">
                 {stat.value}
               </span>
-              <span className="text-base font-medium text-[#e0f0f2]">
+              <span className="text-lg font-medium text-[#e0f0f2]">
                 {stat.label}
               </span>
             </li>
@@ -152,51 +160,97 @@ export function HeroSection() {
 
 export function AboutSection() {
   const proof = [
-    { value: "25+", label: "Years of combined clinical expertise" },
+    {
+      value: "25+",
+      label: "Years of combined clinical expertise",
+      icon: Award,
+    },
     {
       value: "6 / 10",
       label: "Top pharmaceutical companies served",
+      icon: Building2,
     },
-    { value: "I–IV", label: "Clinical trial phases supported" },
-    { value: "4", label: "Life sciences markets served" },
+    {
+      value: "I–IV",
+      label: "Clinical trial phases supported",
+      icon: FlaskConical,
+    },
+    { value: "4", label: "Life sciences markets served", icon: Globe2 },
   ];
+
   return (
-    <section id="about-us" aria-labelledby="about-title" className={section}>
+    <section
+      id="about-us"
+      aria-labelledby="about-title"
+      className={`${section} copy-on-light`}
+    >
       <div className={shell}>
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,.94fr)_minmax(0,1.06fr)] lg:gap-8 xl:gap-16">
-          <div className="max-w-150">
+          <div className="relative">
             <h2
               id="about-title"
-              className="text-[clamp(2.45rem,3.25vw,3.65rem)] leading-[1.12] font-semibold tracking-[-.025em] text-[#0a2038]"
+              className="text-4xl md:text-5xl xl:text-6xl leading-[1.12] font-semibold tracking-tight text-[#0a2038]"
             >
-              Experience that moves
-              <br />
+              Experience that moves{" "}
               <span className="text-[#0068a5]">research forward.</span>
             </h2>
-            <p className="mt-7 max-w-140 text-[clamp(1.075rem,1.25vw,1.23rem)] leading-[1.65] text-[#38546a]">
+            <p className="mt-7 max-w-140 text-lg leading-[1.65] text-[#38546a]">
               TruMinds Clinical brings clinical operations, biometrics and
               specialist teams together across phases I–IV. We shape the right
               expertise around each study so research moves forward with
               clarity.
             </p>
             <div className="mt-6">
-              <AnimatedPillLink href="/about-us" label="Learn More" variant="dark" size="large" />
+              <AnimatedPillLink
+                href="/about-us"
+                label="Learn More"
+                variant="dark"
+                size="large"
+              />
             </div>
-            <dl className="mt-11 grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-x-8 sm:gap-y-8">
-              {proof.map((item) => (
-                <div className="flex flex-col" key={item.label}>
-                  <dt className="order-2 mt-2 max-w-52 text-base leading-snug text-[#587084]">
-                    {item.label}
-                  </dt>
-                  <dd className="order-1 text-[clamp(2.25rem,3.8vw,3.5rem)] leading-none font-semibold tracking-[-.06em] text-[#0068a5]">
-                    {item.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <div className="mt-10 grid max-w-150 gap-3 sm:grid-cols-2">
+              {proof.map(({ value, label, icon: Icon }, index) => {
+                const featured = index === 0;
+
+                return (
+                  <div
+                    className={`group relative flex min-h-40 flex-col justify-between overflow-hidden rounded-2xl border p-5 transition-[transform,border-color,background-color,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_14px_28px_rgba(9,45,69,.12)] motion-reduce:transform-none motion-reduce:transition-none sm:min-h-44 ${featured ? "border-[#092d45] bg-[#092d45] hover:border-[#58d5d6] hover:bg-[#0b3850]" : "border-[#d4e5e9] bg-[#f6fafb] hover:border-[#86cbd5] hover:bg-[#eef8fa]"}`}
+                    key={label}
+                  >
+                    <span
+                      className={`absolute top-0 left-0 h-1 w-0 transition-[width] duration-300 group-hover:w-full motion-reduce:transition-none ${featured ? "bg-[#54d1d0]" : "bg-[#0068a5]"}`}
+                      aria-hidden="true"
+                    />
+                    <div className="flex items-start justify-between gap-4">
+                      <span
+                        className={`grid size-11 shrink-0 place-items-center rounded-xl border transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none ${featured ? "border-white/20 bg-white/10 text-[#9be8e5]" : "border-[#cce5ea] bg-[#e6f3f5] text-[#0068a5]"}`}
+                      >
+                        <Icon size={23} strokeWidth={1.7} aria-hidden="true" />
+                      </span>
+                      <span
+                        className={`mt-1 h-0.5 w-7 rounded-full transition-[width] duration-300 group-hover:w-11 motion-reduce:transition-none ${featured ? "bg-[#54d1d0]" : "bg-[#9dcbd4]"}`}
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div className="mt-5">
+                      <strong
+                        className={`block text-3xl leading-none font-semibold tracking-tight ${featured ? "text-white" : "text-[#0068a5]"}`}
+                      >
+                        {value}
+                      </strong>
+                      <span
+                        className={`mt-2 block text-lg font-medium leading-snug ${featured ? "text-[#d2e7ed]" : "text-black"}`}
+                      >
+                        {label}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <div className="min-w-0 w-full lg:justify-self-end">
-            <AboutImageMosaic />
+            <ConnectedDataImage />
           </div>
         </div>
       </div>
@@ -220,7 +274,7 @@ export function ServicesSection() {
               <span className="text-[#6addd8]">at every stage.</span>
             </h2>
           </div>
-          <p className="max-w-97.5 text-base leading-relaxed text-[#b8c9d7] md:text-lg">
+          <p className="max-w-97.5 text-lg leading-relaxed text-[#b8c9d7]">
             From full-service delivery to embedded specialist teams, we shape
             our support around the needs of your study.
           </p>
@@ -249,18 +303,18 @@ export function PlatformSection() {
     <section
       id="truform"
       aria-labelledby="platform-title"
-      className={`${section} overflow-hidden bg-[#f2f8f9]`}
+      className={`${section} copy-on-light overflow-hidden bg-[#f2f8f9]`}
     >
       <div className={shell}>
         <div className="mx-auto max-w-275 text-center">
           <h2
             id="platform-title"
-            className="text-[clamp(2rem,3.2vw,3.75rem)] leading-[1.08] font-semibold tracking-[-.052em] text-[#0a2038] md:whitespace-nowrap"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.08] font-semibold tracking-[-.052em] text-[#0a2038] md:whitespace-nowrap"
           >
             One connected{" "}
             <span className="text-[#0068a5]">clinical ecosystem.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-200 text-base leading-relaxed text-[#47667b] md:text-lg">
+          <p className="mx-auto mt-6 max-w-200 text-lg leading-relaxed text-[#47667b]">
             Meet TruForm, the connected eClinical platform within TruMinds AI.
             Ten capabilities work together across the clinical trial lifecycle,
             from study setup and data capture through analysis and reporting.
@@ -288,17 +342,14 @@ export function TherapeuticSection() {
               <span className="text-[#6addd8]">across therapeutic areas.</span>
             </h2>
           </div>
-          <p className="max-w-110 text-base leading-relaxed text-[#b8c9d7] md:text-lg">
+          <p className="max-w-110 text-lg leading-relaxed text-[#b8c9d7]">
             Each condition calls for its own questions, endpoints and ways of
             working. Our teams shape the research around those needs.
           </p>
         </div>
         <div className="grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
           {therapeuticAreas.map((area) => (
-            <div
-              className="relative min-w-0 hover:z-20"
-              key={area.title}
-            >
+            <div className="relative min-w-0 hover:z-20" key={area.title}>
               <TherapeuticAreaCard
                 title={area.title}
                 description={area.detail}
@@ -316,25 +367,45 @@ export function TherapeuticSection() {
 
 export function GivingBackSection() {
   const initiatives = [
-    { title: "Non-Profit Research Organizations", icon: HeartPulse, href: "/giving-back#non-profit-research-organizations" },
-    { title: "Employee Volunteer Programs", icon: HandHeart, href: "/giving-back#employee-volunteer-programs" },
-    { title: "Community Outreach", icon: UsersRound, href: "/giving-back#community-outreach" },
-    { title: "Mentorship Programs", icon: GraduationCap, href: "/giving-back#mentorship-programs" },
+    {
+      title: "Non-Profit Research Organizations",
+      description: "Connecting with mission-driven research organizations.",
+      icon: HeartPulse,
+      href: "/giving-back#non-profit-research-organizations",
+    },
+    {
+      title: "Employee Volunteer Programs",
+      description: "Giving our team ways to contribute their time and skills.",
+      icon: HandHeart,
+      href: "/giving-back#employee-volunteer-programs",
+    },
+    {
+      title: "Community Outreach",
+      description: "Bringing people and resources together in our communities.",
+      icon: UsersRound,
+      href: "/giving-back#community-outreach",
+    },
+    {
+      title: "Mentorship Programs",
+      description: "Sharing experience to support the next generation.",
+      icon: GraduationCap,
+      href: "/giving-back#mentorship-programs",
+    },
   ];
   return (
     <section
       id="giving-back"
       aria-labelledby="giving-title"
-      className="bg-white"
+      className="copy-on-light bg-white"
     >
       <div
         className={`${shell} grid items-center gap-10 py-16 md:grid-cols-2 md:gap-16 md:py-20`}
       >
         <div className="min-w-0 w-full">
-          <AboutImageMosaic
-            imageSrc="/images/editorial/giving-back.jpg"
-            imageAlt="Community volunteers sharing supplies"
-            imageAspectRatio={1400 / 933}
+          <ConnectedDataImage
+            imageSrc="/giving-back.jpg"
+            imageAlt="Two healthcare professionals standing together"
+            mirrored
           />
         </div>
         <div>
@@ -355,15 +426,52 @@ export function GivingBackSection() {
           </p>
           <TextLink href="/giving-back">Explore Giving Back</TextLink>
         </div>
-        <div className="grid gap-3 sm:col-span-2 sm:grid-cols-2 xl:grid-cols-4">
-          {initiatives.map(({ title: initiativeTitle, icon: Icon, href }) => (
-            <Link key={initiativeTitle} href={href} className="group flex items-center gap-4 rounded-2xl border border-[#d7e9eb] bg-[#f4f9f9] p-5 text-[#123a4d] transition-[background-color,transform,border-color] hover:-translate-y-1 hover:border-[#a6d9de] hover:bg-white focus-visible:outline-2 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
-              <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-white text-[#007e91]"><Icon size={23} strokeWidth={1.7} aria-hidden="true" /></span>
-              <span className="text-base font-semibold leading-snug">{initiativeTitle}</span>
-              <ArrowUpRight className="ml-auto shrink-0 text-[#007e91]" size={18} aria-hidden="true" />
-            </Link>
-          ))}
-        </div>
+        <nav
+          aria-label="Giving back initiatives"
+          className="grid gap-4 sm:col-span-2 sm:grid-cols-2 xl:grid-cols-4"
+        >
+          {initiatives.map(
+            (
+              { title: initiativeTitle, description, icon: Icon, href },
+              index,
+            ) => (
+              <Link
+                key={initiativeTitle}
+                href={href}
+                className="group relative flex min-h-64 flex-col overflow-hidden rounded-2xl border border-[#d7e7eb] bg-[#f5f9fa] p-6 transition-[border-color,background-color] duration-300 hover:border-[#77b9c5] hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] motion-reduce:transition-none"
+              >
+                <span
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-[#05aeb5] transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none"
+                  aria-hidden="true"
+                />
+                <span className="flex items-start justify-between gap-4">
+                  <span className="grid size-13 shrink-0 place-items-center rounded-xl bg-[#073b56] text-white transition-colors duration-300 group-hover:bg-[#0068a5] group-focus-visible:bg-[#0068a5] motion-reduce:transition-none">
+                    <Icon size={26} strokeWidth={1.6} aria-hidden="true" />
+                  </span>
+                  <span className="text-lg font-medium tracking-wide text-[#46697a]">
+                    0{index + 1} / 04
+                  </span>
+                </span>
+                <span className="mt-7 block flex-1">
+                  <span className="block text-xl leading-snug font-semibold text-[#0a2e43]">
+                    {initiativeTitle}
+                  </span>
+                  <span className="mt-2 block text-lg leading-snug font-medium text-[#304d5c]">
+                    {description}
+                  </span>
+                </span>
+                <span className="mt-6 flex items-center justify-between border-t border-[#d7e7eb] pt-4 text-lg font-medium text-[#0068a5]">
+                  Explore
+                  <ArrowUpRight
+                    size={22}
+                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-x-1 group-focus-visible:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none"
+                    aria-hidden="true"
+                  />
+                </span>
+              </Link>
+            ),
+          )}
+        </nav>
       </div>
     </section>
   );
@@ -374,7 +482,7 @@ export function PurposeSection() {
     <section
       id="non-profit"
       aria-labelledby="purpose-title"
-      className={`${section} bg-gray-100`}
+      className={`${section} copy-on-light bg-gray-100`}
     >
       <div className={shell}>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8 xl:gap-10">
@@ -388,7 +496,7 @@ export function PurposeSection() {
               A wider view of impact starts with people and the communities
               around them.
             </p>
-            <p className="mt-6 max-w-140 text-base leading-[1.8] text-[#587084]">
+            <p className="mt-6 max-w-140 text-lg leading-[1.8] text-[#587084]">
               Our non-profit focus gives the values behind our work a place to
               grow. Learn how people, partnership and access shape the way we
               think about progress beyond clinical research.
@@ -411,7 +519,7 @@ export function InsightsSection() {
     <section
       id="insights"
       aria-labelledby="insights-title"
-      className={`${section} bg-[#f2f7f8]`}
+      className={`${section} copy-on-light bg-[#f2f7f8]`}
     >
       <div className={shell}>
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -433,7 +541,7 @@ export function InsightsSection() {
             >
               <div className="relative aspect-[1.36] overflow-hidden rounded-3xl bg-[#dce9ec] shadow-[0_16px_35px_rgba(9,52,72,.13)] transition-shadow duration-700 group-hover:shadow-[0_24px_48px_rgba(9,52,72,.21)] group-focus-visible:shadow-[0_24px_48px_rgba(9,52,72,.21)] motion-reduce:transition-none">
                 <Image
-                  src={photo + item.image}
+                  src={item.image}
                   alt=""
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1479px) 33vw, 460px"
@@ -445,16 +553,16 @@ export function InsightsSection() {
                 </span>
               </div>
               <div className="relative z-10 mx-3 -mt-4 flex flex-1 flex-col rounded-[1.25rem] border border-[#e0eaed] bg-white px-6 pt-7 pb-6 shadow-[0_14px_32px_rgba(9,52,72,.065)] transition-shadow duration-700 group-hover:shadow-[0_23px_42px_rgba(9,52,72,.13)] group-focus-visible:shadow-[0_23px_42px_rgba(9,52,72,.13)] sm:px-7 motion-reduce:transition-none">
-                <span className="text-xs font-bold tracking-[.14em] text-[#008995] uppercase">
+                <span className="text-lg font-medium tracking-[.08em] text-[#006b78] uppercase">
                   {item.category}
                 </span>
-                <h3 className="mt-4 text-[clamp(1.45rem,1.75vw,1.85rem)] leading-[1.18] font-semibold tracking-[-.035em] text-[#0d2c42] transition-colors duration-300 group-hover:text-[#0068a5] group-focus-visible:text-[#0068a5]">
+                <h3 className="mt-4 text-2xl xl:text-3xl leading-[1.18] font-semibold tracking-[-.035em] text-[#0d2c42] transition-colors duration-300 group-hover:text-[#0068a5] group-focus-visible:text-[#0068a5]">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-[1.65] text-[#607a88]">
+                <p className="mt-4 text-lg leading-[1.65] text-[#607a88]">
                   {item.description}
                 </p>
-                <span className="mt-auto inline-flex items-center gap-2 pt-7 text-base font-semibold text-[#0068a5]">
+                <span className="mt-auto inline-flex items-center gap-2 pt-7 text-lg font-medium text-[#0068a5]">
                   Read perspective
                   <ArrowRight
                     className="transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"

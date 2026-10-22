@@ -75,7 +75,7 @@ export default function ResourcesPage() {
                 href={"#" + topic.id}
                 key={topic.id}
               >
-                <span className="text-xs font-bold text-[#008c98]">
+                <span className="text-lg font-medium text-[#006b78]">
                   {topic.number}
                 </span>
                 <strong className="text-xl leading-snug">{topic.title}</strong>
@@ -91,7 +91,7 @@ export default function ResourcesPage() {
       <div>
         {topics.map((topic, index) => (
           <article
-            className={`scroll-mt-28 py-20 md:py-28 ${index % 2 ? "bg-[#f2f8f9]" : "bg-white"}`}
+            className={`copy-on-light scroll-mt-28 py-20 md:py-28 ${index % 2 ? "bg-[#f2f8f9]" : "bg-white"}`}
             id={topic.id}
             key={topic.id}
           >
@@ -108,10 +108,10 @@ export default function ResourcesPage() {
                 />
               </div>
               <div>
-                <h2 className="text-[clamp(2rem,3.2vw,3.5rem)] leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
                   {topic.title}
                 </h2>
-                <p className="mt-6 text-xl leading-relaxed text-[#294b5d]">
+                <p className="mt-6 text-lg leading-relaxed text-[#294b5d]">
                   {topic.intro}
                 </p>
                 {topic.paragraphs.map((paragraph) => (

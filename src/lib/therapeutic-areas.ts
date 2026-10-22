@@ -2,8 +2,8 @@ export const therapeuticAreas = [
   {
     slug: "oncology-hematology",
     title: "Oncology & Hematology",
-    image: "/images/editorial/area-oncology.jpg",
-    imagePosition: "44% center",
+    image: "/therapeutic/oncology.jpg",
+    imagePosition: "50% top",
     detail: "Study support for evolving therapies and complex clinical endpoints.",
     overview:
       "Oncology and hematology programs often involve changing standards of care, varied patient populations and endpoints that need careful interpretation.",
@@ -18,7 +18,7 @@ export const therapeuticAreas = [
   {
     slug: "cardiovascular",
     title: "Cardiovascular",
-    image: "/images/editorial/area-cardiovascular.jpg",
+    image: "/therapeutic/cardio.jpg",
     imagePosition: "50% center",
     detail: "Thoughtful trial delivery across heart and vascular health.",
     overview:
@@ -34,8 +34,8 @@ export const therapeuticAreas = [
   {
     slug: "neuroscience",
     title: "Neuroscience",
-    image: "/images/editorial/area-neuroscience.jpg",
-    imagePosition: "61% center",
+    image: "/therapeutic/neuroscience.jpg",
+    imagePosition: "50% center",
     detail: "Clearer evidence pathways for neurological and CNS programs.",
     overview:
       "Neuroscience studies can involve nuanced assessments, changing symptoms and outcomes measured over time.",
@@ -50,8 +50,8 @@ export const therapeuticAreas = [
   {
     slug: "immunology",
     title: "Immunology",
-    image: "/images/editorial/area-immunology.jpg",
-    imagePosition: "54% center",
+    image: "/therapeutic/immunology.jpg",
+    imagePosition: "50% top",
     detail: "Adaptive research support for immune-mediated conditions.",
     overview:
       "Immune-mediated conditions can vary widely in presentation, treatment pathways and measures of response.",
@@ -66,8 +66,8 @@ export const therapeuticAreas = [
   {
     slug: "infectious-diseases",
     title: "Infectious Diseases",
-    image: "/images/editorial/area-infectious.jpg",
-    imagePosition: "46% center",
+    image: "/therapeutic/infectious-diseases.jpg",
+    imagePosition: "50% top",
     detail: "Agile study operations for infection and vaccine research.",
     overview:
       "Infectious disease programs may need to respond to changing patterns of disease, enrollment opportunities and time-sensitive assessments.",
@@ -82,8 +82,8 @@ export const therapeuticAreas = [
   {
     slug: "rare-diseases",
     title: "Rare Diseases",
-    image: "/images/editorial/area-rare.jpg",
-    imagePosition: "44% center",
+    image: "/therapeutic/rare.jpg",
+    imagePosition: "50% top",
     detail: "Careful execution when study populations are small and every data point matters.",
     overview:
       "Rare disease research often asks teams to work with small, widely distributed populations and highly specific clinical questions.",
@@ -98,8 +98,8 @@ export const therapeuticAreas = [
   {
     slug: "endocrinology",
     title: "Endocrinology",
-    image: "/images/editorial/area-endocrinology.jpg",
-    imagePosition: "51% center",
+    image: "/therapeutic/endocrinology.jpg",
+    imagePosition: "50% center",
     detail: "Evidence-led support for metabolic and hormonal research.",
     overview:
       "Endocrinology studies often rely on repeat measurements, participant routines and a clear view of change over time.",
@@ -114,8 +114,8 @@ export const therapeuticAreas = [
   {
     slug: "ophthalmology",
     title: "Ophthalmology",
-    image: "/images/editorial/area-ophthalmology.jpg",
-    imagePosition: "58% center",
+    image: "/therapeutic/ophthalmology.jpg",
+    imagePosition: "50% center",
     detail: "Specialist attention to vision outcomes and precise endpoints.",
     overview:
       "Ophthalmology research calls for precise assessments and careful attention to how vision outcomes are measured.",

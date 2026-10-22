@@ -143,17 +143,17 @@ export function AiServicesCarousel() {
                     style={{ objectPosition: service.imagePosition }}
                   />
                   <span className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-[#071f35]/50 to-transparent" />
-                  <span className="absolute top-5 left-5 rounded-full border border-white/40 bg-[#082b44]/55 px-3 py-1.5 text-xs font-bold tracking-[.15em] text-white backdrop-blur-md">
+                  <span className="absolute top-5 left-5 rounded-full border border-white/40 bg-[#082b44]/55 px-3 py-1.5 text-lg font-medium tracking-[.08em] text-white backdrop-blur-md">
                     {service.number} /{" "}
                     {String(aiServices.length).padStart(2, "0")}
                   </span>
                 </div>
                 <div className="relative -mt-4 flex h-[calc(35%+1rem)] flex-col justify-center rounded-t-[1.4rem] bg-white px-5 py-3 sm:px-8 sm:py-5">
-                  <span className="hidden text-xs font-semibold tracking-[.14em] text-[#008d99] uppercase sm:block">
+                  <span className="hidden text-lg font-medium tracking-[.08em] text-[#006b78] uppercase sm:block">
                     TruMinds AI
                   </span>
                   <span className="mt-2 flex items-center justify-between gap-3">
-                    <strong className="text-[clamp(1.5rem,2.2vw,2rem)] leading-tight font-semibold tracking-[-.04em] text-[#0a2038]">
+                    <strong className="text-2xl lg:text-3xl leading-tight font-semibold tracking-[-.04em] text-[#0a2038]">
                       {service.title}
                     </strong>
                     <ArrowUpRight
@@ -161,7 +161,7 @@ export function AiServicesCarousel() {
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="mt-2 line-clamp-2 text-base leading-snug text-[#587084]">
+                  <span className="mt-2 line-clamp-2 text-lg font-medium leading-snug text-[#587084]">
                     {service.shortDescription}
                   </span>
                 </div>
@@ -186,7 +186,7 @@ export function AiServicesCarousel() {
           <ArrowRight size={22} aria-hidden="true" />
         </button>
       </div>
-      <p className="mt-3 text-center text-sm font-semibold tracking-[.2em] text-[#527184] tabular-nums sm:mt-0">
+      <p className="mt-3 text-center text-lg font-medium tracking-[.08em] text-[#527184] tabular-nums sm:mt-0">
         {String(active + 1).padStart(2, "0")}{" "}
         <span className="mx-2 text-[#9bb5c2]">/</span>{" "}
         {String(aiServices.length).padStart(2, "0")}

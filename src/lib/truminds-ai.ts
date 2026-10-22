@@ -5,9 +5,9 @@ export const aiServices = [
     title: "TruForm TLF",
     shortDescription:
       "Bring tables, listings and figures into a clearer, more connected reporting workflow.",
-    image: "/images/products/product-ctms.jpg",
-    imageAlt: "Clinical research team reviewing study information on large displays",
-    imagePosition: "48% center",
+    image: "/products/truform-tlf.jpg",
+    imageAlt: "Laboratory scientists examining samples and recording findings",
+    imagePosition: "50% top",
     intro:
       "TruForm TLF supports the preparation and review of tables, listings and figures for clinical study reporting. It helps teams keep outputs connected to the data and decisions behind them.",
     body:
@@ -33,9 +33,9 @@ export const aiServices = [
     title: "TruForm ADaM",
     shortDescription:
       "Shape analysis-ready datasets with a traceable path from source data to insight.",
-    image: "/images/products/product-biometrics.jpg",
-    imageAlt: "Clinical data specialist examining connected analysis displays",
-    imagePosition: "50% center",
+    image: "/products/truform-adam.jpg",
+    imageAlt: "Laboratory researcher seated beside a microscope",
+    imagePosition: "50% top",
     intro:
       "TruForm ADaM helps clinical data and biostatistics teams prepare analysis-ready datasets with clarity and consistency across the study lifecycle.",
     body:
@@ -61,9 +61,9 @@ export const aiServices = [
     title: "TruForm EDC",
     shortDescription:
       "Capture clinical study data with workflows built for visibility and dependable review.",
-    image: "/images/products/product-edc.jpg",
-    imageAlt: "Clinical trial dashboard in a research laboratory",
-    imagePosition: "50% center",
+    image: "/products/truform-edc.jpg",
+    imageAlt: "Clinician reviewing information on a laptop with a patient",
+    imagePosition: "50% top",
     intro:
       "TruForm EDC gives study teams a connected place to capture, review and manage clinical trial data from the point of entry onward.",
     body:
@@ -89,9 +89,9 @@ export const aiServices = [
     title: "TruForm SDTM",
     shortDescription:
       "Organize study data into consistent standards for clearer downstream use.",
-    image: "/images/resources/blog-cdisc-sdtm.jpg",
-    imageAlt: "Data specialist reviewing clinical dataset transformations",
-    imagePosition: "47% center",
+    image: "/products/truform-sdtm.jpg",
+    imageAlt: "Doctor holding a tablet in a hospital corridor",
+    imagePosition: "50% top",
     intro:
       "TruForm SDTM supports the work of turning collected study information into consistent, reviewable datasets.",
     body:
@@ -108,9 +108,9 @@ export const aiServices = [
     title: "TruForm DocuVault",
     shortDescription:
       "Bring essential study documents into one more organized review workflow.",
-    image: "/images/editorial/resources.jpg",
-    imageAlt: "Researcher examining study materials in a laboratory",
-    imagePosition: "50% center",
+    image: "/products/truform-docuvault.jpg",
+    imageAlt: "Healthcare professional holding a tablet and a medicine container",
+    imagePosition: "50% top",
     intro:
       "TruForm DocuVault helps study teams keep important documents organized and easier to find throughout a program.",
     body:
@@ -127,9 +127,9 @@ export const aiServices = [
     title: "TruForm eConsent",
     shortDescription:
       "Support an informed consent experience that is clear for participants and teams.",
-    image: "/images/products/product-epro.jpg",
-    imageAlt: "Clinician explaining digital study information to a participant",
-    imagePosition: "55% center",
+    image: "/products/truform-econsent.jpg",
+    imageAlt: "Two clinicians reviewing a tablet together",
+    imagePosition: "50% top",
     intro:
       "TruForm eConsent supports the informed consent process with a digital experience designed around clarity and understanding.",
     body:
@@ -146,9 +146,9 @@ export const aiServices = [
     title: "TruForm Adjudication",
     shortDescription:
       "Coordinate independent endpoint review with a more transparent process.",
-    image: "/images/editorial/area-cardiovascular.jpg",
-    imageAlt: "Clinical specialist reviewing cardiovascular research information",
-    imagePosition: "50% center",
+    image: "/products/truform-adjudication.jpg",
+    imageAlt: "Two doctors reviewing clinical records together",
+    imagePosition: "50% top",
     intro:
       "TruForm Adjudication helps teams organize the information and decisions involved in clinical endpoint review.",
     body:
@@ -165,9 +165,9 @@ export const aiServices = [
     title: "TruForm RBQM",
     shortDescription:
       "Focus quality oversight on the signals and risks that matter most.",
-    image: "/images/resources/blog-rbqm.jpg",
-    imageAlt: "Clinical research team reviewing quality and study data",
-    imagePosition: "50% center",
+    image: "/products/truform-rbqm.jpg",
+    imageAlt: "Clinical team reviewing records at a workstation",
+    imagePosition: "50% top",
     intro:
       "TruForm RBQM supports a risk-based approach to clinical trial quality oversight.",
     body:
@@ -184,9 +184,9 @@ export const aiServices = [
     title: "TruForm CTMS",
     shortDescription:
       "Keep study operations, milestones and team activity connected.",
-    image: "/images/products/product-ctms.jpg",
-    imageAlt: "Clinical trial operations team monitoring study progress",
-    imagePosition: "50% center",
+    image: "/products/truform-ctms.jpg",
+    imageAlt: "Doctor working at a desktop computer",
+    imagePosition: "50% top",
     intro:
       "TruForm CTMS helps clinical operations teams manage the moving parts of a study in one connected workflow.",
     body:
@@ -203,9 +203,9 @@ export const aiServices = [
     title: "TruForm RTSM",
     shortDescription:
       "Connect randomization and trial supply workflows as studies evolve.",
-    image: "/images/editorial/services-fsp.jpg",
-    imageAlt: "Clinical research colleagues coordinating study work",
-    imagePosition: "55% center",
+    image: "/products/truform-rtsm.jpg",
+    imageAlt: "Healthcare professional reviewing medicine information with a tablet",
+    imagePosition: "50% top",
     intro:
       "TruForm RTSM brings randomization and trial supply activities into a coordinated study workflow.",
     body:

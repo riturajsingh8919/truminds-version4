@@ -55,26 +55,26 @@ const engagements = [
 const steps = ["Your needs", "Your project", "Get in touch"];
 
 const choiceBase =
-  "inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-full border px-4 py-2.5 text-base font-medium transition-[background-color,border-color,color,transform,box-shadow] duration-300 hover:-translate-y-0.5 focus-within:ring-2 focus-within:ring-[#0068a5] focus-within:ring-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
+  "inline-flex min-h-14 cursor-pointer items-center gap-2.5 rounded-full border px-5 py-3 text-xl font-medium leading-snug transition-[background-color,border-color,color,transform,box-shadow] duration-300 hover:-translate-y-0.5 focus-within:ring-2 focus-within:ring-[#0068a5] focus-within:ring-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
 const choiceActive =
   "border-[#0068a5] bg-[#0068a5] text-white shadow-[0_6px_16px_rgba(0,104,165,.14)]";
 const choiceIdle =
   "border-[#c8d9e0] bg-white text-[#294c5e] hover:border-[#0068a5] hover:bg-[#f5fbfc]";
 const field =
-  "mt-2 block min-h-14 w-full rounded-xl border border-[#c8d9e0] bg-[#f7fafb] px-4 py-3 text-base font-medium text-[#0a2b40] outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:font-normal placeholder:text-[#849ba5] hover:border-[#93bdcd] focus:border-[#0068a5] focus:bg-white focus:shadow-[0_0_0_3px_rgba(0,104,165,.12)]";
+  "mt-2 block min-h-15 w-full rounded-xl border border-[#c8d9e0] bg-[#f7fafb] px-4 py-3 text-lg font-medium text-[#0a2b40] outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:font-medium placeholder:text-[#587181] hover:border-[#93bdcd] focus:border-[#0068a5] focus:bg-white focus:shadow-[0_0_0_3px_rgba(0,104,165,.12)]";
 const primaryAction =
-  "group inline-flex min-h-14 cursor-pointer items-center justify-center gap-3 rounded-full bg-[#0068a5] px-7 py-3 text-base font-semibold text-white shadow-[0_8px_20px_rgba(0,104,165,.15)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-[#005480] hover:shadow-[0_12px_25px_rgba(0,104,165,.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
+  "group inline-flex min-h-15 cursor-pointer items-center justify-center gap-3 rounded-full bg-[#0068a5] px-8 py-3 text-xl font-medium text-white shadow-[0_8px_20px_rgba(0,104,165,.15)] transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-[#005480] hover:shadow-[0_12px_25px_rgba(0,104,165,.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none";
 const backAction =
-  "inline-flex cursor-pointer items-center gap-2 text-base font-semibold text-[#476b7c] transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]";
+  "inline-flex min-h-12 cursor-pointer items-center gap-2 text-xl font-medium text-[#294c5e] transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]";
 const stepHeading =
-  "scroll-mt-32 text-[clamp(1.9rem,2.6vw,2.75rem)] leading-[1.12] font-semibold tracking-[-.045em] text-[#0a2038] outline-none";
+  "scroll-mt-32 text-3xl md:text-4xl xl:text-[44px] leading-[1.12] font-semibold tracking-[-.045em] text-[#0a2038] outline-none";
 const stepLayout = "pt-9 md:pt-12";
 const stepFields = "min-w-0";
 const questionRow =
   "grid gap-4 border-b border-[#e0e9ed] py-7 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10";
-const questionLabel = "text-base font-semibold leading-snug text-[#153b50]";
+const questionLabel = "text-lg font-medium leading-snug text-[#153b50]";
 const stepCount =
-  "shrink-0 text-sm font-bold tracking-[.16em] text-[#0068a5] uppercase";
+  "shrink-0 text-lg font-medium tracking-[.08em] text-[#0068a5] uppercase";
 const stepHeader =
   "flex flex-wrap items-end justify-between gap-x-8 gap-y-3 border-b border-[#d9e7eb] pb-6";
 
@@ -97,9 +97,9 @@ function MultiChoice({
       />
       <span
         aria-hidden="true"
-        className={`grid size-4 place-items-center rounded-full border ${checked ? "border-white bg-white text-[#0068a5]" : "border-[#91b1be]"}`}
+        className={`grid size-5 place-items-center rounded-full border ${checked ? "border-white bg-white text-[#0068a5]" : "border-[#91b1be]"}`}
       >
-        {checked && <Check size={12} strokeWidth={3} />}
+        {checked && <Check size={14} strokeWidth={3} />}
       </span>
       {label}
     </label>
@@ -230,14 +230,14 @@ export function ConsultationJourney() {
     <section
       id="consultation"
       aria-labelledby="consultation-title"
-      className="bg-white py-18 md:py-24 xl:py-28"
+      className="copy-on-light bg-white py-18 md:py-24 xl:py-28"
     >
       <div className={shell}>
         <div className="grid gap-4 border-b border-[#d9e5e9] pb-8 lg:grid-cols-[1.05fr_.95fr] lg:items-end lg:gap-12">
           <h2 id="consultation-title" className={title}>
             How to <span className="text-[#0068a5]">get started.</span>
           </h2>
-          <p className="max-w-125 text-base leading-relaxed text-[#47687b] md:text-lg">
+          <p className="max-w-125 text-lg leading-relaxed text-[#47687b]">
             Tell us about your study and the support you need. Submit your
             request and our team will get in touch.
           </p>
@@ -262,10 +262,10 @@ export function ConsultationJourney() {
                       setStep(stage);
                     }}
                     aria-current={current ? "step" : undefined}
-                    className={`flex min-h-16 w-full items-center justify-center gap-2 rounded-xl border border-transparent px-2 py-3 text-center transition-[background-color,color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] sm:gap-3 sm:px-5 ${current ? "bg-white text-[#0a2038] shadow-[0_5px_18px_rgba(13,57,76,.1)]" : complete ? "cursor-pointer text-[#2a596a] hover:bg-white/75 hover:text-[#0068a5]" : "cursor-not-allowed text-[#8ba2ae]"}`}
+                    className={`flex min-h-18 w-full flex-col items-center justify-center gap-1 rounded-xl border border-transparent px-2 py-3 text-center transition-[background-color,color,box-shadow] duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0068a5] sm:min-h-16 sm:flex-row sm:gap-3 sm:px-5 ${current ? "bg-white text-[#0a2038] shadow-[0_5px_18px_rgba(13,57,76,.1)]" : complete ? "cursor-pointer text-[#2a596a] hover:bg-white/75 hover:text-[#0068a5]" : "cursor-not-allowed text-[#4b6472]"}`}
                   >
                     <span
-                      className={`grid size-7 shrink-0 place-items-center rounded-full text-xs font-bold sm:size-9 sm:text-sm ${current ? "bg-[#0068a5] text-white" : complete ? "bg-[#d5efee] text-[#006b7e]" : "bg-white/70 text-[#8299a4]"}`}
+                      className={`grid size-8 shrink-0 place-items-center rounded-full text-lg font-medium sm:size-9 ${current ? "bg-[#0068a5] text-white" : complete ? "bg-[#d5efee] text-[#006b7e]" : "bg-white/70 text-[#4b6472]"}`}
                     >
                       {complete ? (
                         <Check size={18} aria-hidden="true" />
@@ -273,7 +273,7 @@ export function ConsultationJourney() {
                         String(stage).padStart(2, "0")
                       )}
                     </span>
-                    <span className="text-base leading-tight font-semibold sm:text-lg">
+                    <span className="text-xl font-medium leading-tight">
                       {label}
                     </span>
                   </button>
@@ -331,7 +331,7 @@ export function ConsultationJourney() {
                     <p id="focus-label" className={questionLabel}>
                       Areas of focus
                     </p>
-                    <p className="mt-1 text-sm leading-snug text-[#6c8794]">
+                    <p className="mt-1 text-lg leading-snug text-[#526d7b]">
                       Choose as many as apply
                     </p>
                   </div>
@@ -374,14 +374,14 @@ export function ConsultationJourney() {
 
                 {error && (
                   <p
-                    className="mt-6 text-base font-semibold text-[#a12f39]"
+                    className="mt-6 text-lg font-medium text-[#a12f39]"
                     role="alert"
                   >
                     {error}
                   </p>
                 )}
                 <div className="mt-7 flex items-center justify-between gap-4">
-                  <span className="text-sm font-medium text-[#6c8794]">
+                  <span className="text-lg font-medium text-[#526d7b]">
                     Next: your project
                   </span>
                   <button
@@ -424,7 +424,7 @@ export function ConsultationJourney() {
                     <p id="support-label" className={questionLabel}>
                       Support you need
                     </p>
-                    <p className="mt-1 text-sm leading-snug text-[#6c8794]">
+                    <p className="mt-1 text-lg leading-snug text-[#526d7b]">
                       Choose as many as apply
                     </p>
                   </div>
@@ -467,7 +467,7 @@ export function ConsultationJourney() {
 
                 {error && (
                   <p
-                    className="mt-6 text-base font-semibold text-[#a12f39]"
+                    className="mt-6 text-lg font-medium text-[#a12f39]"
                     role="alert"
                   >
                     {error}
@@ -513,7 +513,7 @@ export function ConsultationJourney() {
 
               <div className={`${stepFields} pt-7`}>
                 <div className="grid gap-x-6 gap-y-6 sm:grid-cols-2">
-                  <label className="text-base font-semibold text-[#153b50]">
+                  <label className="text-lg font-medium text-[#153b50]">
                     Full name
                     <input
                       className={field}
@@ -526,7 +526,7 @@ export function ConsultationJourney() {
                       placeholder="Your name"
                     />
                   </label>
-                  <label className="text-base font-semibold text-[#153b50]">
+                  <label className="text-lg font-medium text-[#153b50]">
                     Organization
                     <input
                       className={field}
@@ -542,7 +542,7 @@ export function ConsultationJourney() {
                       placeholder="Company or organization"
                     />
                   </label>
-                  <label className="text-base font-semibold text-[#153b50]">
+                  <label className="text-lg font-medium text-[#153b50]">
                     Work email
                     <input
                       className={field}
@@ -556,9 +556,9 @@ export function ConsultationJourney() {
                       placeholder="you@company.com"
                     />
                   </label>
-                  <label className="text-base font-semibold text-[#153b50]">
+                  <label className="text-lg font-medium text-[#153b50]">
                     Phone{" "}
-                    <span className="font-normal text-[#6c8794]">
+                    <span className="font-medium text-[#526d7b]">
                       (optional)
                     </span>
                     <input
@@ -573,9 +573,9 @@ export function ConsultationJourney() {
                     />
                   </label>
                 </div>
-                <label className="mt-7 block text-base font-semibold text-[#153b50]">
+                <label className="mt-7 block text-lg font-medium text-[#153b50]">
                   Anything else we should know?{" "}
-                  <span className="font-normal text-[#6c8794]">(optional)</span>
+                  <span className="font-medium text-[#526d7b]">(optional)</span>
                   <textarea
                     className={field}
                     rows={3}
@@ -586,8 +586,8 @@ export function ConsultationJourney() {
                     placeholder="Tell us about your goals or timeline"
                   />
                 </label>
-                {submitted && <p className="mt-6 text-base font-semibold text-[#007f91]" role="status">Thank you. Your enquiry has been submitted.</p>}
-                {error && <p className="mt-6 text-base font-semibold text-[#a12f39]" role="alert">{error}</p>}
+                {submitted && <p className="mt-6 text-lg font-medium text-[#007f91]" role="status">Thank you. Your enquiry has been submitted.</p>}
+                {error && <p className="mt-6 text-lg font-medium text-[#a12f39]" role="alert">{error}</p>}
                 <div className="mt-8 flex items-center justify-between gap-4 border-t border-[#d9e5e9] pt-6">
                   <button
                     className={backAction}

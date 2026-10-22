@@ -30,14 +30,14 @@ export function InteriorHero({
       <div className={`${shell} py-16 md:py-24`}>
         <Link
           href="/"
-          className="mb-12 inline-flex items-center gap-2 text-sm text-white/80 hover:text-white"
+          className="mb-12 inline-flex items-center gap-2 text-lg font-medium text-white/80 hover:text-white"
         >
           <ArrowLeft size={17} aria-hidden="true" /> Back to home
         </Link>
-        <h1 className="max-w-200 text-[clamp(3rem,5.8vw,6.5rem)] leading-[1.02] font-semibold tracking-[-.06em]">
+        <h1 className="max-w-200 text-5xl md:text-6xl xl:text-8xl 2xl:text-[104px] leading-[1.02] font-semibold tracking-[-.06em]">
           {title}
         </h1>
-        <p className="mt-7 max-w-152.5 text-[clamp(1.1rem,1.5vw,1.35rem)] leading-relaxed text-[#d4e4ea]">
+        <p className="mt-7 max-w-152.5 text-lg leading-relaxed text-[#d4e4ea]">
           {description}
         </p>
       </div>
@@ -52,12 +52,12 @@ export function InteriorContact() {
         className={`${shell} flex flex-col justify-between gap-6 py-16 md:flex-row md:items-center`}
       >
         <div>
-          <h2 className="text-[clamp(2rem,3vw,3.2rem)] leading-tight font-semibold tracking-tight text-[#092b41]">
+          <h2 className="text-3xl md:text-4xl xl:text-5xl leading-tight font-semibold tracking-tight text-[#092b41]">
             Let&apos;s keep the conversation moving.
           </h2>
         </div>
         <Link
-          className="inline-flex items-center gap-3 border-b border-[#0068a5] pb-2 font-bold text-[#0068a5]"
+          className="inline-flex items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5]"
           href="/#consultation"
         >
           Get in touch <ArrowRight size={20} aria-hidden="true" />
@@ -78,10 +78,10 @@ export function InteriorStory({
 }) {
   return (
     <>
-      <section className="py-20 md:py-28">
+      <section className="copy-on-light py-20 md:py-28">
         <div className={shell}>
           <div className="mx-auto max-w-187.5">
-            <h2 className="max-w-187.5 text-[clamp(2.2rem,3.3vw,3.7rem)] leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
+            <h2 className="max-w-187.5 text-4xl md:text-5xl xl:text-6xl leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
               {title}
             </h2>
             {paragraphs.map((paragraph) => (
@@ -93,7 +93,7 @@ export function InteriorStory({
         </div>
       </section>
       {values && (
-        <section className="bg-[#f2f8f9] py-20 md:py-24">
+        <section className="copy-on-light bg-[#f2f8f9] py-20 md:py-24">
           <div className={shell}>
             <h2 className="sr-only">Guiding principles</h2>
             <div className="grid gap-5 md:grid-cols-3">
@@ -102,7 +102,7 @@ export function InteriorStory({
                   className="border-t-2 border-[#02aaa8] bg-white p-7"
                   key={value.title}
                 >
-                  <span className="text-xs font-bold text-[#008795]">
+                  <span className="text-lg font-medium text-[#006b78]">
                     0{index + 1}
                   </span>
                   <h3 className="mt-7 text-2xl font-semibold text-[#0a2940]">

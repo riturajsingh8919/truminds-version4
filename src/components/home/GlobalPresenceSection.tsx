@@ -30,7 +30,7 @@ export function GlobalPresenceSection() {
     <section
       id="global-presence"
       aria-labelledby="global-presence-title"
-      className={`${section} relative overflow-hidden border-t border-[#e5eef0] bg-white`}
+      className={`${section} copy-on-light relative overflow-hidden border-t border-[#e5eef0] bg-white`}
     >
       <div className={`${shell} relative grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-18`}>
         <div className="relative z-10">
@@ -63,7 +63,7 @@ export function GlobalPresenceSection() {
                   <h3 className="mt-6 text-xl font-semibold tracking-[-.035em] text-[#0b2c40]">
                     {capability.title}
                   </h3>
-                  <p className="mt-2 text-base leading-[1.55] text-[#5a7484]">
+                  <p className="mt-2 text-lg leading-[1.55] text-[#5a7484]">
                     {capability.description}
                   </p>
                 </div>

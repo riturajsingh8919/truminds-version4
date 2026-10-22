@@ -26,7 +26,7 @@ export default function CareersPage() {
       />
       <div className={`${shell} -mt-12 pb-20 md:pl-[40%]`}>
         <Link
-          className="inline-flex items-center gap-3 border-b border-[#0068a5] pb-2 font-bold text-[#0068a5]"
+          className="inline-flex items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5]"
           href="https://trumindsclinical.com/careers/"
           target="_blank"
           rel="noopener noreferrer"

@@ -47,6 +47,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-size: 18px;
+  font-weight: 500;
   font-family:
     var(--font-ibm-plex-sans),
     system-ui,
@@ -59,7 +61,34 @@ body {
 }
 
 button, input, select, textarea {
-  font: inherit;
+  font-family: inherit;
+}
+
+p, a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.copy-on-light p:not([role="status"]):not([role="alert"]) {
+  color: #000;
+}
+
+@media (min-width: 1024px) and (max-height: 680px) {
+  .home-hero-content { padding-block: 24px; }
+  .home-hero-heading { font-size: 60px; }
+  .home-hero-description { margin-top: 20px; }
+  .home-hero-actions { margin-top: 24px; }
+  .home-hero-stats ul { padding-block: 12px; }
+}
+
+@media (min-width: 1024px) and (max-height: 520px) {
+  .home-hero-stats { display: none; }
+}
+
+@media (min-width: 1024px) and (max-height: 440px) {
+  .home-hero-content { padding-block: 12px; }
+  .home-hero-heading { font-size: 36px; }
+  .home-hero-description, .home-hero-actions { margin-top: 12px; }
 }
 
 @keyframes map-ripple {

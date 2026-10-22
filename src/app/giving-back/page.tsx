@@ -65,9 +65,9 @@ export default function GivingBackPage() {
           },
         ]}
       />
-      <section className="bg-white py-20 md:py-28" aria-labelledby="giving-back-areas-title">
+      <section className="copy-on-light bg-white py-20 md:py-28" aria-labelledby="giving-back-areas-title">
         <div className={shell}>
-          <h2 id="giving-back-areas-title" className="max-w-187.5 text-[clamp(2.2rem,3.3vw,3.7rem)] leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
+          <h2 id="giving-back-areas-title" className="max-w-187.5 text-4xl md:text-5xl xl:text-6xl leading-[1.1] font-semibold tracking-tight text-[#0a2940]">
             Areas of focus
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
