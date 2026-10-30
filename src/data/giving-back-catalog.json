@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "non-profit-research-organizations",
+    "title": "Non-profit Research Organizations",
+    "shortTitle": "Non-profit partnerships",
+    "description": "Connecting research expertise and charitable partnerships with a shared purpose.",
+    "icon": "research",
+    "image": "/images/editorial/non-profit.jpg",
+    "imageAlt": "Volunteers organizing food and supplies at a community table",
+    "imageWidth": 1200,
+    "imageHeight": 1800
+  },
+  {
+    "slug": "employee-volunteer-programs",
+    "title": "Employee Volunteer Programs",
+    "shortTitle": "Employee volunteering",
+    "description": "Bringing our people, time and skills into the wider commitment to give back.",
+    "icon": "volunteer",
+    "image": "/images/editorial/giving-back.jpg",
+    "imageAlt": "Community volunteers distributing supplies outdoors",
+    "imageWidth": 1400,
+    "imageHeight": 933
+  },
+  {
+    "slug": "community-outreach",
+    "title": "Community Outreach",
+    "shortTitle": "Community outreach",
+    "description": "Supporting care, dignity and opportunity in the communities around us.",
+    "icon": "community",
+    "image": "/images/editorial/giving-back.jpg",
+    "imageAlt": "People working together at a community supply distribution table",
+    "imageWidth": 1400,
+    "imageHeight": 933
+  },
+  {
+    "slug": "mentorship-programs",
+    "title": "Mentorship Programs",
+    "shortTitle": "Mentorship and learning",
+    "description": "Sharing knowledge and supporting education, practical skills and independence.",
+    "icon": "mentorship",
+    "image": "/images/career/career-team.jpg",
+    "imageAlt": "Colleagues sharing ideas and reviewing information around a meeting table",
+    "imageWidth": 1376,
+    "imageHeight": 768
+  }
+]

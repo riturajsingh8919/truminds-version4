@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "About Us | TruMinds Clinical",
+    "description": "Meet TruMinds Clinical: global CRO, FSP, clinical staffing and connected eClinical expertise for pharmaceutical, biotechnology, medical device and medical diagnostics organizations."
+  },
+  "hero": {
+    "eyebrow": "About TruMinds Clinical",
+    "title": "Experience that moves",
+    "highlight": "research forward.",
+    "description": "Clinical operations, biometrics and specialist teams, connected around your study. We bring people, science and technology together to support clinical development from Phase I through Phase IV.",
+    "image": "/about-main.jpg",
+    "imageAlt": "Laboratory researchers reviewing a clipboard together",
+    "imageCaption": "People. Science. Shared progress.",
+    "primaryLabel": "Talk to our team",
+    "secondaryLabel": "Meet our leadership"
+  },
+  "navigation": [
+    { "label": "Our story", "href": "#our-story", "icon": "story" },
+    { "label": "Markets we serve", "href": "#markets-we-serve", "icon": "markets" },
+    { "label": "Our approach", "href": "#our-approach", "icon": "approach" },
+    { "label": "Our leadership", "href": "#leadership-team", "icon": "people" }
+  ],
+  "overview": {
+    "eyebrow": "Who we are",
+    "title": "Global expertise.",
+    "highlight": "A shared commitment.",
+    "paragraphs": [
+      "TruMinds Clinical is a trusted global provider of Contract Research Organization (CRO), Functional Service Provider (FSP), and Clinical Staffing solutions for pharmaceutical, biotechnology, CRO, and medical device organizations.",
+      "Supporting Phase I through Phase IV clinical development, we deliver scalable, high-quality services tailored to each client's unique needs.",
+      "Our customized approach combines industry expertise, operational excellence, and specialized talent to help accelerate clinical programs and drive successful outcomes across diverse therapeutic areas through our global presence in the United States, Canada, the United Kingdom, Europe, and India."
+    ],
+    "reachLabel": "Expertise across borders",
+    "regions": ["United States", "Canada", "United Kingdom", "Europe", "India"],
+    "reachLinkLabel": "Explore our global presence",
+    "reachLink": "/#global-presence"
+  },
+  "markets": {
+    "eyebrow": "Markets we serve",
+    "title": "Different challenges.",
+    "highlight": "The same commitment to care.",
+    "description": "We work with organizations across life sciences, shaping our expertise around their clinical programs, specialist teams and research priorities.",
+    "featured": {
+      "title": "Medical Diagnostics",
+      "icon": "diagnostics",
+      "description": "Supporting organizations advancing diagnostic tools and technologies, with clinical research expertise and specialist talent shaped around their programs.",
+      "actionLabel": "Discuss your program"
+    },
+    "items": [
+      {
+        "title": "Pharmaceutical",
+        "icon": "pharma",
+        "description": "Clinical research and biometrics expertise supporting pharmaceutical development from Phase I through Phase IV."
+      },
+      {
+        "title": "Biotechnology",
+        "icon": "biotech",
+        "description": "Flexible clinical and specialist support for organizations advancing innovative therapies."
+      },
+      {
+        "title": "Medical Devices",
+        "icon": "devices",
+        "description": "Clinical, data and technical expertise for organizations developing medical devices and technologies."
+      },
+      {
+        "title": "Contract Research Organizations",
+        "icon": "cro",
+        "description": "Functional expertise and experienced professionals working alongside CRO teams as program needs evolve."
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we work",
+    "title": "The right expertise.",
+    "highlight": "Working as one.",
+    "description": "From full-service delivery to embedded support and connected technology, our work is organized around the questions each program needs to answer and the people responsible for answering them.",
+    "items": [
+      {
+        "icon": "clinical",
+        "title": "Scientific expertise",
+        "description": "Clinical operations, biometrics and regulatory perspectives brought together around each study, from startup through submission and post-marketing activities."
+      },
+      {
+        "icon": "people",
+        "title": "Specialist people",
+        "description": "Experienced professionals and flexible delivery models, shaped around the capabilities a study or development portfolio needs."
+      },
+      {
+        "icon": "technology",
+        "title": "Connected technology",
+        "description": "Our TruForm platform brings automation and AI into the clinical data lifecycle, connecting SDTM, ADaM and final TLF generation."
+      }
+    ],
+    "servicesTitle": "A model that fits your program",
+    "servicesDescription": "Explore the different ways to work with TruMinds.",
+    "serviceLinks": [
+      { "slug": "full-service-cro", "icon": "clinical" },
+      { "slug": "truminds-ai", "icon": "technology" },
+      { "slug": "fsp-services", "icon": "approach" },
+      { "slug": "clinical-staffing", "icon": "people" }
+    ]
+  }
+}

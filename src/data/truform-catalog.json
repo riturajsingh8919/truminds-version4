@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "truform-tlf",
+    "number": "01",
+    "title": "TruForm TLF",
+    "shortDescription": "Bring tables, listings and figures into a clearer, more connected reporting workflow.",
+    "image": "/products/truform-tlf.jpg",
+    "imageAlt": "Laboratory scientists examining samples and recording findings",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-adam",
+    "number": "02",
+    "title": "TruForm ADaM",
+    "shortDescription": "Shape analysis-ready datasets with a traceable path from source data to insight.",
+    "image": "/products/truform-adam.jpg",
+    "imageAlt": "Laboratory researcher seated beside a microscope",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-edc",
+    "number": "03",
+    "title": "TruForm EDC",
+    "shortDescription": "Capture clinical study data with workflows built for visibility and dependable review.",
+    "image": "/products/truform-edc.jpg",
+    "imageAlt": "Clinician reviewing information on a laptop with a patient",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-sdtm",
+    "number": "04",
+    "title": "TruForm SDTM",
+    "shortDescription": "Organize study data into consistent standards for clearer downstream use.",
+    "image": "/products/truform-sdtm.jpg",
+    "imageAlt": "Doctor holding a tablet in a hospital corridor",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-docuvault",
+    "number": "05",
+    "title": "TruForm DocuVault",
+    "shortDescription": "Bring essential study documents into one more organized review workflow.",
+    "image": "/products/truform-docuvault.jpg",
+    "imageAlt": "Healthcare professional holding a tablet and a medicine container",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-econsent",
+    "number": "06",
+    "title": "TruForm eConsent",
+    "shortDescription": "Support an informed consent experience that is clear for participants and teams.",
+    "image": "/products/truform-econsent.jpg",
+    "imageAlt": "Two clinicians reviewing a tablet together",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-adjudication",
+    "number": "07",
+    "title": "TruForm Adjudication",
+    "shortDescription": "Coordinate independent endpoint review with a more transparent process.",
+    "image": "/products/truform-adjudication.jpg",
+    "imageAlt": "Two doctors reviewing clinical records together",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-rbqm",
+    "number": "08",
+    "title": "TruForm RBQM",
+    "shortDescription": "Focus quality oversight on the signals and risks that matter most.",
+    "image": "/products/truform-rbqm.jpg",
+    "imageAlt": "Clinical team reviewing records at a workstation",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-ctms",
+    "number": "09",
+    "title": "TruForm CTMS",
+    "shortDescription": "Keep study operations, milestones and team activity connected.",
+    "image": "/products/truform-ctms.jpg",
+    "imageAlt": "Doctor working at a desktop computer",
+    "imagePosition": "50% top"
+  },
+  {
+    "slug": "truform-rtsm",
+    "number": "10",
+    "title": "TruForm RTSM",
+    "shortDescription": "Connect randomization and trial supply workflows as studies evolve.",
+    "image": "/products/truform-rtsm.jpg",
+    "imageAlt": "Healthcare professional reviewing medicine information with a tablet",
+    "imagePosition": "50% top"
+  }
+]

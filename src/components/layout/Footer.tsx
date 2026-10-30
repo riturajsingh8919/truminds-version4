@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { services } from "@/lib/services";
 import { aiServices } from "@/lib/truminds-ai";
 import { shell } from "@/lib/site-styles";
@@ -10,7 +10,7 @@ const company = [
   { label: "Giving Back", href: "/giving-back" },
   { label: "Non-Profit", href: "/non-profit" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 const explore = [
   { label: "Therapeutic Areas", href: "/#therapeutic-areas" },
@@ -55,8 +55,8 @@ export function Footer() {
   return (
     <footer className="copy-on-light border-t border-[#d7e6ea] bg-white text-[#0b2e42]">
       <div className={shell}>
-        <div className="grid gap-x-8 gap-y-12 py-14 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[1.25fr_.8fr_.95fr_1.2fr_1fr] xl:gap-x-10 xl:py-16">
-          <div className="sm:col-span-2 lg:col-span-4 xl:col-span-1">
+        <div className="grid gap-x-8 gap-y-12 py-14 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,.7fr)_minmax(0,.95fr)_minmax(0,1fr)_minmax(20rem,1.4fr)] xl:gap-x-6 xl:py-16 2xl:gap-x-8">
+          <div className="min-w-0 sm:col-span-2 lg:col-span-3 xl:col-span-1">
             <Link href="/" aria-label="TruMinds Clinical home" className="inline-flex focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">
               <Image src="/logo.png" alt="TruMinds Clinical" width={205} height={57} className="h-auto w-48" />
             </Link>
@@ -75,13 +75,15 @@ export function Footer() {
             <h2 className="mb-2 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Services</h2>
             {serviceLinks.map((item) => <Link key={item.label} href={item.href} className={linkClass}>{item.label}</Link>)}
           </div>
-          <div className="flex flex-col items-start gap-3.5">
-            <h2 className="mb-2 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Contact</h2>
-            <Link href="/#contact" className={linkClass}>Contact Our Team</Link>
-            <a href="mailto:services@trumindsclinical.com" className={`${linkClass} break-all`}>services@trumindsclinical.com</a>
-            <a href="tel:+14698501383" className={linkClass}>+1 (469) 850-1383</a>
-            <p className="flex items-start gap-2 text-lg leading-relaxed text-[#526d7d]"><MapPin className="mt-1 shrink-0 text-[#007f9a]" size={20} aria-hidden="true" /><span>14800 Quorum Dr, Suite 550<br />Dallas, TX 75254</span></p>
-          </div>
+          <section aria-labelledby="footer-contact-title" className="min-w-0 sm:col-span-2 lg:col-span-3 xl:col-span-1">
+            <h2 id="footer-contact-title" className="mb-5 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Contact</h2>
+            <Link href="/contact-us" className={`${linkClass} group mb-5 inline-flex min-h-8 items-center gap-2`}>Contact Our Team<ArrowUpRight size={19} className="shrink-0 text-[#007f9a] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none" aria-hidden="true" /></Link>
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-[minmax(20rem,1.1fr)_minmax(0,.8fr)_minmax(0,1fr)] xl:grid-cols-1">
+              <a href="mailto:services@trumindsclinical.com" className={`${linkClass} flex max-w-full items-start gap-3 md:col-span-2 lg:col-span-1`}><Mail className="mt-0.5 shrink-0 text-[#007f9a]" size={20} strokeWidth={1.7} aria-hidden="true" /><span className="min-w-0 break-normal">services@<wbr />trumindsclinical.com</span></a>
+              <a href="tel:+14698501383" className={`${linkClass} flex items-start gap-3`}><Phone className="mt-0.5 shrink-0 text-[#007f9a]" size={20} strokeWidth={1.7} aria-hidden="true" /><span className="whitespace-nowrap">+1 (469) 850-1383</span></a>
+              <address className="flex min-w-0 items-start gap-3 text-lg font-medium leading-relaxed text-black not-italic"><MapPin className="mt-1 shrink-0 text-[#007f9a]" size={20} strokeWidth={1.7} aria-hidden="true" /><span className="min-w-0"><span className="block">14800 Quorum Dr, <span className="whitespace-nowrap">Suite 550</span></span><span className="block whitespace-nowrap">Dallas, TX 75254</span></span></address>
+            </div>
+          </section>
         </div>
         <nav aria-label="All service pages" className="border-t border-[#dce7eb] py-9">
           <h2 className="mb-5 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Explore every service and solution</h2>

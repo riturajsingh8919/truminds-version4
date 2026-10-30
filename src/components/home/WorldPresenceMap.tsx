@@ -1,42 +1,5 @@
-type FlagCode = "us" | "ca" | "in" | "gb";
-
-type Office = {
-  name: string;
-  flag: FlagCode;
-  address: string[];
-};
-
-const offices: Office[] = [
-  {
-    name: "Texas",
-    flag: "us",
-    address: ["14800 Quorum Dr, Suite 550", "Dallas, TX 75254"],
-  },
-  {
-    name: "New Jersey",
-    flag: "us",
-    address: ["80 Cottontail Ln, Suite 451", "Somerset, NJ 08873"],
-  },
-  {
-    name: "Canada",
-    flag: "ca",
-    address: ["1145 Midland Ave, Suite 9", "Toronto, Ontario, Canada, M1K 4H2."],
-  },
-  {
-    name: "India",
-    flag: "in",
-    address: [
-      "Plot No.13, H.No.2-48/13",
-      "Telecom Nagar, Gachibowli",
-      "Hyderabad, Telangana 500032.",
-    ],
-  },
-  {
-    name: "UK",
-    flag: "gb",
-    address: ["71-75 Shelton Street, Covent Garden", "London, WC2H 9JQ"],
-  },
-];
+import { CountryFlag } from "@/components/common/CountryFlag";
+import { contactOffices as offices } from "@/lib/contact";
 
 const mapMarkets = [
   { name: "United States", x: 23.1, y: 32.8 },
@@ -60,83 +23,7 @@ const landMask = {
   maskRepeat: "no-repeat",
 };
 
-function CountryFlag({ code }: { code: FlagCode }) {
-  const className = "block h-6 w-9 rounded-[2px]";
-
-  if (code === "us") {
-    return (
-      <svg viewBox="0 0 32 22" className={className} aria-hidden="true">
-        <rect width="32" height="22" fill="#fff" />
-        {Array.from({ length: 7 }, (_, index) => (
-          <rect key={index} y={(index * 44) / 13} width="32" height={22 / 13} fill="#bf0a30" />
-        ))}
-        <rect width="13" height="11.85" fill="#21468b" />
-        {Array.from({ length: 9 }, (_, row) =>
-          Array.from({ length: row % 2 ? 5 : 6 }, (_, column) => (
-            <circle
-              key={`${row}-${column}`}
-              cx={1.25 + column * 2.05 + (row % 2 ? 1.02 : 0)}
-              cy={1.1 + row * 1.2}
-              r=".32"
-              fill="#fff"
-            />
-          )),
-        )}
-      </svg>
-    );
-  }
-
-  if (code === "ca") {
-    return (
-      <svg viewBox="0 0 32 22" className={className} aria-hidden="true">
-        <rect width="32" height="22" fill="#fff" />
-        <path d="M0 0h7v22H0zm25 0h7v22h-7z" fill="#d80621" />
-        <path
-          d="m16 3 1.3 3.4 1.8-1.1-.5 2.4 2.5.3-1.8 2.1.7 1.7-3.2-.4-.3 5.1h-1l-.3-5.1-3.2.4.7-1.7-1.8-2.1 2.5-.3-.5-2.4 1.8 1.1z"
-          fill="#d80621"
-        />
-      </svg>
-    );
-  }
-
-  if (code === "in") {
-    return (
-      <svg viewBox="0 0 32 22" className={className} aria-hidden="true">
-        <path d="M0 0h32v7.33H0z" fill="#ff9933" />
-        <path d="M0 7.33h32v7.34H0z" fill="#fff" />
-        <path d="M0 14.67h32V22H0z" fill="#138808" />
-        <circle cx="16" cy="11" r="3" fill="none" stroke="#1a3c8a" strokeWidth=".7" />
-        <circle cx="16" cy="11" r=".55" fill="#1a3c8a" />
-        {Array.from({ length: 12 }, (_, index) => {
-          const angle = (index * Math.PI) / 6;
-          return (
-            <line
-              key={index}
-              x1={16 + Math.cos(angle) * 1.1}
-              y1={11 + Math.sin(angle) * 1.1}
-              x2={16 + Math.cos(angle) * 2.7}
-              y2={11 + Math.sin(angle) * 2.7}
-              stroke="#1a3c8a"
-              strokeWidth=".45"
-            />
-          );
-        })}
-      </svg>
-    );
-  }
-
-  return (
-    <svg viewBox="0 0 32 22" className={className} aria-hidden="true">
-      <rect width="32" height="22" fill="#012169" />
-      <path d="M0 0 32 22M32 0 0 22" stroke="#fff" strokeWidth="5" />
-      <path d="M0 0 32 22M32 0 0 22" stroke="#c8102e" strokeWidth="2" />
-      <path d="M16 0v22M0 11h32" stroke="#fff" strokeWidth="8" />
-      <path d="M16 0v22M0 11h32" stroke="#c8102e" strokeWidth="4" />
-    </svg>
-  );
-}
-
-export function WorldPresenceMap() {
+export function WorldPresenceMap({ showOffices = true }: { showOffices?: boolean }) {
   return (
     <div className="relative isolate mx-auto w-full max-w-180 overflow-hidden rounded-[1.75rem] border border-[#244660] bg-[#081d36] text-white shadow-[0_24px_60px_rgba(7,30,52,.16)]">
       <div
@@ -199,7 +86,7 @@ export function WorldPresenceMap() {
         ))}
       </div>
 
-      <div className="border-t border-white/12 px-5 py-4 sm:px-7 sm:py-5">
+      {showOffices && <div className="border-t border-white/12 px-5 py-4 sm:px-7 sm:py-5">
         <div className="mb-2 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-1">
           <h3 className="text-xl font-semibold text-white">Our locations</h3>
           <span className="text-lg font-medium text-[#aed0de]">5 offices · 4 countries</span>
@@ -219,7 +106,7 @@ export function WorldPresenceMap() {
             </li>
           ))}
         </ul>
-      </div>
+      </div>}
     </div>
   );
 }

@@ -371,25 +371,25 @@ export function GivingBackSection() {
       title: "Non-Profit Research Organizations",
       description: "Connecting with mission-driven research organizations.",
       icon: HeartPulse,
-      href: "/giving-back#non-profit-research-organizations",
+      href: "/giving-back/non-profit-research-organizations",
     },
     {
       title: "Employee Volunteer Programs",
       description: "Giving our team ways to contribute their time and skills.",
       icon: HandHeart,
-      href: "/giving-back#employee-volunteer-programs",
+      href: "/giving-back/employee-volunteer-programs",
     },
     {
       title: "Community Outreach",
       description: "Bringing people and resources together in our communities.",
       icon: UsersRound,
-      href: "/giving-back#community-outreach",
+      href: "/giving-back/community-outreach",
     },
     {
       title: "Mentorship Programs",
       description: "Sharing experience to support the next generation.",
       icon: GraduationCap,
-      href: "/giving-back#mentorship-programs",
+      href: "/giving-back/mentorship-programs",
     },
   ];
   return (

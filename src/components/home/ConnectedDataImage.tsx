@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export function ConnectedDataImage({
   imageSrc = "/about-main.jpg",
@@ -14,7 +14,6 @@ export function ConnectedDataImage({
   mirrored?: boolean;
 }) {
   const imageRef = useRef<HTMLDivElement>(null);
-  const [ready, setReady] = useState(false);
   const maskUrl = mirrored
     ? "/images/shapes/truminds-research-prism-mirror.svg"
     : "/images/shapes/truminds-research-prism.svg";
@@ -34,33 +33,43 @@ export function ConnectedDataImage({
     if (!image) return;
 
     let frame = 0;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const updateFixedImagePosition = () => {
       frame = 0;
       const bounds = image.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return;
       const viewportHeight = window.innerHeight;
-      const imageHeight = Math.max(viewportHeight, 620);
-      const imageWidth = imageHeight * imageAspectRatio;
+      const aspectRatio = imageAspectRatio > 0 ? imageAspectRatio : 1;
+      const travel = reducedMotion.matches ? 0 : Math.min(bounds.height * .06, 32);
+      const imageHeight = Math.max(bounds.height + travel, bounds.width / aspectRatio);
+      const imageWidth = imageHeight * aspectRatio;
+      const minimumTop = bounds.height - imageHeight;
+      const viewportTop = (viewportHeight - imageHeight) / 2 - bounds.top;
+      const imageTop = reducedMotion.matches
+        ? minimumTop / 2
+        : Math.max(minimumTop, Math.min(0, viewportTop));
 
-      // Keep the photo fixed in the viewport while the shaped window scrolls.
-      image.style.backgroundSize = `auto ${imageHeight}px`;
-      image.style.backgroundPosition = `${(bounds.width - imageWidth) / 2}px ${(viewportHeight - imageHeight) / 2 - bounds.top}px`;
+      // Fit the photo to its shape, then bound its fixed-scroll movement so no edge is exposed.
+      image.style.backgroundSize = `${imageWidth}px ${imageHeight}px`;
+      image.style.backgroundPosition = `${(bounds.width - imageWidth) / 2}px ${imageTop}px`;
     };
     const schedulePositionUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(updateFixedImagePosition);
     };
 
     updateFixedImagePosition();
-    setReady(true);
     const resizeObserver = new ResizeObserver(schedulePositionUpdate);
     resizeObserver.observe(image);
     window.addEventListener("scroll", schedulePositionUpdate, { passive: true });
     window.addEventListener("resize", schedulePositionUpdate);
+    reducedMotion.addEventListener("change", schedulePositionUpdate);
 
     return () => {
       window.cancelAnimationFrame(frame);
       resizeObserver.disconnect();
       window.removeEventListener("scroll", schedulePositionUpdate);
       window.removeEventListener("resize", schedulePositionUpdate);
+      reducedMotion.removeEventListener("change", schedulePositionUpdate);
     };
   }, [imageAspectRatio]);
 
@@ -75,11 +84,11 @@ export function ConnectedDataImage({
         ref={imageRef}
         role="img"
         aria-label={imageAlt}
-        className={`absolute inset-[3px] bg-[#cbd5de] bg-no-repeat transition-opacity duration-500 motion-reduce:transition-none ${ready ? "opacity-100" : "opacity-0"}`}
+        className="absolute inset-[3px] bg-[#cbd5de] bg-no-repeat"
         style={{
           ...maskStyle,
           backgroundImage: `url("${imageSrc}")`,
-          backgroundSize: "auto 100vh",
+          backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
       />

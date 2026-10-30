@@ -1,0 +1,1098 @@
+{
+  "source": {
+    "document": "TruMinds Clinical Website Jul 29th_7105.docx",
+    "coverage": {
+      "full-service-cro": "CRO narrative and complete Clinical Operations, Pharmacovigilance & Drug Safety, Medical Affairs and Quality Assurance & Compliance scope from paragraphs 624–746. Existing functions named in the document have concise editorial descriptions.",
+      "truminds-ai": "TruForm platform and product descriptions from paragraphs 330–389. The AI capability section presents platform tools rather than the CRO service list.",
+      "fsp-services": "FSP + CRO delivery model from paragraphs 752–754, with the shared CRO scope requested in paragraph 755.",
+      "clinical-staffing": "No replacement staffing introduction supplied. Existing introduction retained. Shared CRO scope follows paragraph 757."
+    }
+  },
+  "ui": {
+    "homeLabel": "Home",
+    "servicesLabel": "Services",
+    "serviceNavigationLabel": "Explore our services",
+    "primaryAction": "Talk to our team",
+    "capabilitiesAction": "Explore capabilities",
+    "capabilitySelectLabel": "Choose a capability",
+    "capabilityNavigationLabel": "Browse capabilities",
+    "relatedEyebrow": "More ways to work together",
+    "relatedTitle": "The right support,",
+    "relatedHighlight": "around your program.",
+    "relatedDescription": "Explore the other ways TruMinds Clinical can support your team.",
+    "relatedLinkLabel": "Explore service",
+    "sectionNumberLabel": "Capability"
+  },
+  "capabilityGroups": {
+    "clinical": [
+      "clinical-project-management",
+      "clinical-operations",
+      "clinical-data-management",
+      "biostatistics",
+      "statistical-programming",
+      "regulatory-affairs",
+      "pharmacovigilance-drug-safety",
+      "medical-affairs",
+      "quality-assurance-compliance"
+    ],
+    "platform": [
+      "platform-edc",
+      "platform-sdtm",
+      "platform-adam",
+      "platform-tlf",
+      "platform-docuvault",
+      "platform-econsent",
+      "platform-adjudication",
+      "platform-rbqm",
+      "platform-ctms",
+      "platform-rtsm",
+      "platform-epro"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "clinical-project-management",
+      "title": "Clinical Project Management",
+      "icon": "project",
+      "image": "/images/editorial/hero-team.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Keep study activities, teams, vendors and milestones connected.",
+      "paragraphs": [
+        "Clinical Project Management connects the people and activities responsible for study delivery, from planning and startup through study closeout. It supports a shared view of responsibilities, progress and the work ahead."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Study planning and coordination",
+        "Study metrics and performance tracking",
+        "Vendor oversight and management",
+        "Issue escalation and risk mitigation",
+        "Study closeout coordination"
+      ]
+    },
+    {
+      "id": "clinical-operations",
+      "title": "Clinical Operations",
+      "icon": "operations",
+      "image": "/services/full-service-cro.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Support study planning, site delivery, monitoring and closeout.",
+      "paragraphs": [
+        "Our Clinical Operations team provides comprehensive support throughout the planning, execution, management, and closeout of clinical studies across all phases of development. We partner with sponsors, CROs, and investigative sites to ensure efficient study delivery, regulatory compliance, patient safety, and high-quality data collection.",
+        "Our experienced clinical professionals work closely with sponsors and investigative sites to ensure protocol adherence, patient safety, regulatory compliance, and successful study execution. Through proactive communication, operational excellence, and a patient-centric approach, we help accelerate clinical development while maintaining the highest standards of quality and compliance."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Study Startup and Feasibility Assessments",
+        "Site Identification & Selection",
+        "Investigator and Site Qualification Visits",
+        "Site Activation and Regulatory Coordination",
+        "Clinical Trial Monitoring (On-site, Remote, and Hybrid)",
+        "Risk-Based Monitoring (RBM)",
+        "Site Management and Engagement",
+        "Vendor Oversight and Management",
+        "Clinical Project Management",
+        "Patient Recruitment and Retention Support",
+        "Trial Master File (TMF) Management",
+        "Protocol and Amendment Implementation",
+        "Clinical Trial Supplies Coordination",
+        "Subject Safety and Compliance Oversight",
+        "Data Review and Query Resolution Support",
+        "Study Metrics and Performance Tracking",
+        "Issue Escalation and Risk Mitigation",
+        "Audit and Inspection Readiness Support",
+        "Site Closeout Visits",
+        "Study Close-Out Activities",
+        "Clinical Operations Consulting"
+      ],
+      "sourceParagraphs": [
+        633,
+        634,
+        635,
+        636,
+        637,
+        638,
+        639,
+        640,
+        641,
+        642,
+        643,
+        644,
+        645,
+        646,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656
+      ]
+    },
+    {
+      "id": "clinical-data-management",
+      "title": "Clinical Data Management",
+      "icon": "data",
+      "image": "/products/truform-edc.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Connect clinical data collection, review and database readiness.",
+      "paragraphs": [
+        "Clinical Data Management supports the collection, review and organization of clinical study information. Connected workflows help teams follow data queries, maintain visibility into quality and prepare for downstream analysis."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Clinical data collection and review",
+        "Electronic data capture workflows",
+        "Data review and query resolution support",
+        "Data quality oversight",
+        "Database lock preparation"
+      ]
+    },
+    {
+      "id": "biostatistics",
+      "title": "Biostatistics",
+      "icon": "statistics",
+      "image": "/products/truform-adam.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Bring statistical expertise to the evidence each study needs to build.",
+      "paragraphs": [
+        "Biostatistics brings a statistical perspective to clinical development, helping teams connect study objectives, analysis-ready data and the interpretation of study findings."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Statistical input across clinical development",
+        "Analysis planning and dataset review",
+        "Efficacy and safety analyses",
+        "Interpretation of study results",
+        "Statistical reporting support"
+      ]
+    },
+    {
+      "id": "statistical-programming",
+      "title": "Statistical Programming",
+      "icon": "programming",
+      "image": "/products/truform-tlf.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Connect raw data, CDISC standards, analysis datasets and reporting.",
+      "paragraphs": [
+        "Statistical Programming supports the path from raw clinical datasets to standardized SDTM, analysis-ready ADaM and final tables, listings and figures. TruMinds combines experienced programming teams with its proprietary TruForm automation platform."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "CDISC SDTM dataset preparation",
+        "SDTM to ADaM transformation",
+        "Tables, listings and figures",
+        "Programming review and data consistency",
+        "Submission-focused reporting workflows"
+      ],
+      "sourceParagraphs": [
+        627
+      ]
+    },
+    {
+      "id": "regulatory-affairs",
+      "title": "Regulatory Affairs",
+      "icon": "regulatory",
+      "image": "/products/truform-docuvault.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Keep regulatory documentation and submission work connected to the study.",
+      "paragraphs": [
+        "Regulatory Affairs support connects clinical development with the documentation, coordination and review needed for regulatory submissions. It helps teams keep regulatory needs visible as a program moves through development."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Regulatory documentation coordination",
+        "Submission preparation support",
+        "Clinical and regulatory team collaboration",
+        "Documentation review",
+        "Regulatory readiness support"
+      ]
+    },
+    {
+      "id": "pharmacovigilance-drug-safety",
+      "title": "Pharmacovigilance & Drug Safety",
+      "icon": "safety",
+      "image": "/images/editorial/about-lab.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Connect safety surveillance, risk management and lifecycle oversight.",
+      "paragraphs": [
+        "Our Pharmacovigilance and Drug Safety team provides comprehensive safety surveillance, risk management, and regulatory compliance services throughout the entire product lifecycle—from early clinical development through post-marketing surveillance. We help sponsors proactively identify, evaluate, and mitigate safety risks while ensuring compliance with global regulatory requirements and industry standards, including FDA, EMA, MHRA, ICH, and other international health authorities.",
+        "Our experienced safety professionals support the collection, assessment, processing, and reporting of safety information to ensure patient well-being and maintain the benefit-risk profile of investigational and marketed products. Through robust pharmacovigilance systems, advanced signal detection methodologies, and quality-driven processes, we help sponsors maintain regulatory compliance and safeguard patient safety.",
+        "Our team collaborates closely with sponsors, clinical operations teams, medical monitors, and regulatory affairs professionals to ensure timely safety reporting, effective risk management, and continuous compliance throughout the development and commercialization of pharmaceutical, biotechnology, medical device, and combination products. By combining scientific expertise with operational excellence, we help organizations protect patients, meet regulatory expectations, and successfully advance their products to market."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Adverse Event (AE) and Serious Adverse Event (SAE) Processing",
+        "Individual Case Safety Report (ICSR) Management",
+        "Medical Review and Safety Assessment",
+        "Signal Detection and Signal Management",
+        "Aggregate Safety Reporting (DSUR, PSUR/PBRER)",
+        "Risk Management Plans (RMPs)",
+        "Literature Surveillance and Monitoring",
+        "Safety Database Setup, Validation, and Management",
+        "Regulatory Safety Reporting to Global Health Authorities",
+        "Pharmacovigilance System Master File (PSMF) Support",
+        "Development Safety Update Reports (DSURs)",
+        "Periodic Safety Update Reports (PSURs) and PBRERs",
+        "Suspected Unexpected Serious Adverse Reaction (SUSAR) Reporting",
+        "Benefit-Risk Evaluation and Assessment",
+        "Safety Data Reconciliation",
+        "Case Narrative Writing",
+        "Medical Coding (MedDRA and WHO Drug)",
+        "Signal Evaluation and Risk Assessment",
+        "Pharmacovigilance Audits and Gap Assessments",
+        "Quality Management System (QMS) Support",
+        "Standard Operating Procedure (SOP) Development and Maintenance",
+        "Safety Monitoring Committee and Data Monitoring Committee Support",
+        "Vendor Oversight and Pharmacovigilance Compliance Management",
+        "Inspection and Audit Readiness Support",
+        "Post-Marketing Surveillance and Risk Minimization Activities"
+      ],
+      "sourceParagraphs": [
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674,
+        675,
+        676,
+        677,
+        678,
+        679,
+        680,
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687
+      ]
+    },
+    {
+      "id": "medical-affairs",
+      "title": "Medical Affairs",
+      "icon": "medical",
+      "image": "/images/editorial/services-staffing.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Connect scientific evidence with healthcare professionals and stakeholders.",
+      "paragraphs": [
+        "Medical Affairs serves as the critical bridge between clinical development, healthcare professionals, patients, and commercial teams. TruMinds Clinical provides strategic and operational Medical Affairs support to help organizations communicate scientific and clinical evidence, engage key stakeholders, and maximize the value of their products throughout the product lifecycle. Our experienced professionals support both pre-launch and post-launch activities, ensuring scientific integrity, regulatory compliance, and effective stakeholder engagement."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "Medical Affairs Strategy",
+        "Medical Information Services",
+        "Scientific Communications",
+        "Medical Content Development",
+        "Medical Review & Approval",
+        "Publication Planning & Management",
+        "Medical Education Programs",
+        "Key Opinion Leader (KOL) Identification & Engagement",
+        "Advisory Board Management",
+        "Congress & Scientific Meeting Support",
+        "Field Medical / Medical Science Liaison (MSL) Support",
+        "Real-World Evidence (RWE) Programs",
+        "Health Economics & Outcomes Research (HEOR) Support",
+        "Post-Marketing Studies",
+        "Investigator-Initiated Study (IIS) Support",
+        "Medical Writing",
+        "Publication Development",
+        "Scientific Literature Reviews",
+        "Evidence Generation",
+        "Medical Training Programs",
+        "Competitive Intelligence",
+        "Medical Communications",
+        "Stakeholder Engagement"
+      ],
+      "sourceParagraphs": [
+        691,
+        693,
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        715
+      ]
+    },
+    {
+      "id": "quality-assurance-compliance",
+      "title": "Quality Assurance & Compliance",
+      "icon": "quality",
+      "image": "/images/editorial/services-fsp.jpg",
+      "imageAlt": "",
+      "imagePosition": "50% top",
+      "summary": "Strengthen quality systems, risk oversight and inspection readiness.",
+      "paragraphs": [
+        "Maintaining quality and regulatory compliance is essential to successful clinical development and commercialization. Our Quality Assurance (QA) and Compliance professionals help sponsors, CROs, and healthcare organizations establish, maintain, and continuously improve robust quality systems that support regulatory requirements and industry best practices.",
+        "We provide comprehensive quality oversight and compliance solutions designed to ensure adherence to Good Clinical Practice (GCP), Good Pharmacovigilance Practice (GVP), Good Laboratory Practice (GLP), Good Manufacturing Practice (GMP), and applicable global regulatory guidelines. Our experienced QA experts work proactively to identify risks, strengthen quality processes, and support inspection readiness throughout the product lifecycle.",
+        "Our quality professionals collaborate closely with clinical, regulatory, pharmacovigilance, and operational teams to promote a culture of quality and compliance. Through risk-based quality management, proactive oversight, and continuous process improvement, we help organizations minimize compliance risks, maintain regulatory readiness, and achieve successful clinical and regulatory outcomes."
+      ],
+      "scopeTitle": "Services include",
+      "items": [
+        "GCP Audits",
+        "Vendor and Supplier Audits",
+        "Investigator Site Audits",
+        "Internal Quality System Audits",
+        "Pharmacovigilance (PV) Audits",
+        "Clinical Trial Master File (TMF) Audits",
+        "Inspection Readiness Assessments",
+        "Regulatory Inspection Support",
+        "SOP Development, Review, and Maintenance",
+        "Quality Management System (QMS) Design and Implementation",
+        "Compliance Assessments and Gap Analyses",
+        "Corrective and Preventive Action (CAPA) Management",
+        "Root Cause Analysis and Risk Assessments",
+        "Process Improvement Initiatives",
+        "Quality Metrics and Performance Monitoring",
+        "Deviation, Nonconformance, and Change Control Management",
+        "Vendor Qualification and Oversight Programs",
+        "Quality Training Programs and Compliance Education",
+        "Documentation Review and Quality Control",
+        "Data Integrity Assessments",
+        "Regulatory Submission Quality Review",
+        "Computer System Validation (CSV) Support",
+        "Inspection Mock Audits and Readiness Programs",
+        "Continuous Quality Improvement Initiatives"
+      ],
+      "sourceParagraphs": [
+        719,
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746
+      ]
+    },
+    {
+      "id": "platform-edc",
+      "title": "TruForm EDC",
+      "icon": "data",
+      "image": "/products/truform-edc.jpg",
+      "imageAlt": "Clinician reviewing information on a laptop with a patient",
+      "imagePosition": "50% top",
+      "summary": "Intelligent electronic data capture.",
+      "paragraphs": [
+        "TruForm EDC is a next-generation Electronic Data Capture (EDC) platform designed to streamline clinical data collection, improve data quality, and accelerate study execution. Built on a secure, cloud-native architecture, TruForm EDC enables sponsors, CROs, and research sites to efficiently design studies, capture clinical data, manage queries, and monitor study progress in real time.",
+        "The platform combines intuitive study configuration, intelligent edit checks, automated workflows, and seamless integration with other clinical systems to reduce manual effort and improve operational efficiency. With configurable electronic Case Report Forms (eCRFs), role-based security, complete audit trails, and compliance with global regulatory standards including FDA 21 CFR Part 11, ICH-GCP, and GDPR, TruForm EDC provides a scalable solution for Phase I-IV clinical trials.",
+        "Whether managing a single-site study or a large multinational clinical program, TruForm EDC helps organizations reduce study startup timelines, improve data accuracy, minimize data queries, and accelerate database lock."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Configurable electronic Case Report Forms (eCRFs)",
+        "Intelligent edit checks and query management",
+        "Role-based security and audit trails",
+        "Study progress visibility"
+      ],
+      "sourceParagraphs": [
+        337,
+        338,
+        339
+      ],
+      "href": "/truminds-ai/truform-edc",
+      "linkLabel": "Explore TruForm EDC"
+    },
+    {
+      "id": "platform-sdtm",
+      "title": "TruForm SDTM",
+      "icon": "programming",
+      "image": "/products/truform-sdtm.jpg",
+      "imageAlt": "Doctor holding a tablet in a hospital corridor",
+      "imagePosition": "50% top",
+      "summary": "AI-powered CDISC SDTM automation.",
+      "paragraphs": [
+        "TruForm SDTM transforms raw clinical trial data into standardized CDISC Study Data Tabulation Model (SDTM) datasets using intelligent automation and metadata-driven processes. Designed to simplify one of the most time-consuming aspects of clinical programming, the platform significantly reduces manual mapping while ensuring consistency, traceability, and regulatory compliance.",
+        "Leveraging reusable standards, AI-assisted specifications, automated validations, and configurable transformation rules, TruForm SDTM enables sponsors to produce submission-ready datasets faster with improved quality and reduced programming effort.",
+        "The platform supports multiple source systems and provides complete traceability from raw clinical data through standardized datasets, helping organizations accelerate regulatory submissions while maintaining the highest standards of data integrity."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "AI-assisted specifications and automated validation",
+        "Reusable standards and transformation rules",
+        "Multiple source system support",
+        "Raw-data-to-SDTM traceability"
+      ],
+      "sourceParagraphs": [
+        342,
+        343,
+        344
+      ],
+      "href": "/truminds-ai/truform-sdtm",
+      "linkLabel": "Explore TruForm SDTM"
+    },
+    {
+      "id": "platform-adam",
+      "title": "TruForm ADaM",
+      "icon": "statistics",
+      "image": "/products/truform-adam.jpg",
+      "imageAlt": "Laboratory researcher seated beside a microscope",
+      "imagePosition": "50% top",
+      "summary": "Automated analysis-ready dataset generation.",
+      "paragraphs": [
+        "TruForm ADaM is an intelligent platform that automates the creation of CDISC Analysis Data Model (ADaM) datasets from SDTM data. The solution enables statistical programmers and biostatisticians to efficiently generate analysis-ready datasets while maintaining full traceability to source data and regulatory standards.",
+        "Using metadata-driven automation, reusable derivation libraries, and standardized programming frameworks, TruForm ADaM dramatically reduces development time while improving consistency across studies.",
+        "The platform supports complex derivations, analysis flags, population definitions, efficacy and safety analyses, and regulatory-compliant metadata, helping organizations accelerate statistical analyses and submission readiness."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Reusable derivation and metadata libraries",
+        "Analysis flags and population definitions",
+        "Efficacy and safety analysis support",
+        "Traceability to source data"
+      ],
+      "sourceParagraphs": [
+        347,
+        348,
+        349
+      ],
+      "href": "/truminds-ai/truform-adam",
+      "linkLabel": "Explore TruForm ADaM"
+    },
+    {
+      "id": "platform-tlf",
+      "title": "TruForm TLF",
+      "icon": "statistics",
+      "image": "/products/truform-tlf.jpg",
+      "imageAlt": "Laboratory scientists examining samples and recording findings",
+      "imagePosition": "50% top",
+      "summary": "Automated tables, listings and figures.",
+      "paragraphs": [
+        "TruForm TLF is an enterprise reporting platform that automates the generation of high-quality Tables, Listings, and Figures (TLFs) for clinical study reports, integrated summaries, and regulatory submissions.",
+        "By combining reusable templates, metadata-driven reporting, standardized statistical programming, and AI-assisted specifications, the platform minimizes repetitive programming while ensuring consistency and accuracy across studies.",
+        "TruForm TLF produces publication-quality outputs in multiple formats and integrates seamlessly with statistical analysis workflows, enabling organizations to reduce reporting timelines while maintaining compliance with regulatory expectations."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Reusable reporting templates",
+        "Metadata-driven reporting workflows",
+        "AI-assisted specifications",
+        "Clinical study reports and regulatory outputs"
+      ],
+      "sourceParagraphs": [
+        352,
+        353,
+        354
+      ],
+      "href": "/truminds-ai/truform-tlf",
+      "linkLabel": "Explore TruForm TLF"
+    },
+    {
+      "id": "platform-docuvault",
+      "title": "TruForm DocuVault",
+      "icon": "regulatory",
+      "image": "/products/truform-docuvault.jpg",
+      "imageAlt": "Healthcare professional holding a tablet and a medicine container",
+      "imagePosition": "50% top",
+      "summary": "eTMF and clinical document management.",
+      "paragraphs": [
+        "TruForm DocuVault is a comprehensive Electronic Trial Master File (eTMF) and document management platform that centralizes all essential clinical trial documentation within a secure, validated cloud environment.",
+        "The platform enables sponsors and CROs to efficiently create, organize, review, approve, version, archive, and retrieve study documents throughout the entire clinical trial lifecycle. Intelligent workflows, configurable document classifications, electronic signatures, inspection-ready filing structures, and automated completeness checks help ensure continuous TMF quality and regulatory compliance.",
+        "Designed to support remote collaboration across global teams, TruForm DocuVault provides complete visibility into document status while simplifying regulatory inspections and audits."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Document review, approval and version control",
+        "Electronic signatures and filing structures",
+        "Automated completeness checks",
+        "Remote collaboration and inspection visibility"
+      ],
+      "sourceParagraphs": [
+        357,
+        358,
+        359
+      ],
+      "href": "/truminds-ai/truform-docuvault",
+      "linkLabel": "Explore TruForm DocuVault"
+    },
+    {
+      "id": "platform-econsent",
+      "title": "TruForm eConsent",
+      "icon": "team",
+      "image": "/products/truform-econsent.jpg",
+      "imageAlt": "Two clinicians reviewing a tablet together",
+      "imagePosition": "50% top",
+      "summary": "Digital participant consent management.",
+      "paragraphs": [
+        "TruForm eConsent modernizes the informed consent process by replacing paper-based consent forms with an interactive digital experience. Participants can review study information through videos, animations, graphics, and educational content before securely providing electronic consent from virtually anywhere.",
+        "The platform improves participant understanding, enhances engagement, simplifies re-consenting, and ensures complete version control throughout the study lifecycle.",
+        "Sponsors and research sites benefit from centralized consent tracking, automated notifications, electronic signatures, audit trails, multilingual support, and seamless integration with EDC and CTMS platforms."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Interactive participant study information",
+        "Consent tracking and re-consenting",
+        "Electronic signatures and audit trails",
+        "Multilingual support and connected records"
+      ],
+      "sourceParagraphs": [
+        362,
+        363,
+        364
+      ],
+      "href": "/truminds-ai/truform-econsent",
+      "linkLabel": "Explore TruForm eConsent"
+    },
+    {
+      "id": "platform-adjudication",
+      "title": "TruForm Adjudication",
+      "icon": "medical",
+      "image": "/products/truform-adjudication.jpg",
+      "imageAlt": "Two doctors reviewing clinical records together",
+      "imagePosition": "50% top",
+      "summary": "Independent clinical endpoint review.",
+      "paragraphs": [
+        "TruForm Adjudication provides a secure, centralized platform for independent clinical endpoint adjudication across global clinical trials.",
+        "The solution streamlines event submission, committee review, consensus management, and final adjudication through configurable workflows designed to maintain consistency, objectivity, and regulatory compliance.",
+        "Automated case routing, blinded review processes, electronic document management, configurable adjudication forms, and comprehensive audit trails enable organizations to reduce review timelines while improving endpoint quality and operational efficiency."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Event submission and committee review",
+        "Blinded review and automated case routing",
+        "Consensus management and final adjudication",
+        "Configurable forms and audit trails"
+      ],
+      "sourceParagraphs": [
+        367,
+        368,
+        369
+      ],
+      "href": "/truminds-ai/truform-adjudication",
+      "linkLabel": "Explore TruForm Adjudication"
+    },
+    {
+      "id": "platform-rbqm",
+      "title": "TruForm RBQM",
+      "icon": "quality",
+      "image": "/products/truform-rbqm.jpg",
+      "imageAlt": "Clinical team reviewing records at a workstation",
+      "imagePosition": "50% top",
+      "summary": "Risk-based clinical trial quality oversight.",
+      "paragraphs": [
+        "TruForm RBQM is an intelligent Risk-Based Quality Management platform designed to proactively identify, monitor, and mitigate clinical trial risks using centralized monitoring, advanced analytics, and real-time operational intelligence.",
+        "The platform continuously evaluates Key Risk Indicators (KRIs), Key Performance Indicators (KPIs), protocol deviations, enrollment trends, data quality metrics, and site performance to help study teams focus resources where they are needed most.",
+        "Supporting ICH E6(R3) quality management principles, TruForm RBQM enables organizations to reduce operational risk, improve patient safety, enhance data integrity, and optimize monitoring activities through data-driven decision making."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Key Risk Indicator and KPI review",
+        "Centralized monitoring and site performance",
+        "Protocol deviation and enrollment visibility",
+        "Risk-focused quality decisions"
+      ],
+      "sourceParagraphs": [
+        372,
+        373,
+        374
+      ],
+      "href": "/truminds-ai/truform-rbqm",
+      "linkLabel": "Explore TruForm RBQM"
+    },
+    {
+      "id": "platform-ctms",
+      "title": "TruForm CTMS",
+      "icon": "project",
+      "image": "/products/truform-ctms.jpg",
+      "imageAlt": "Doctor working at a desktop computer",
+      "imagePosition": "50% top",
+      "summary": "Connected clinical trial operations.",
+      "paragraphs": [
+        "TruForm CTMS is a comprehensive Clinical Trial Management System that provides complete operational oversight throughout the clinical trial lifecycle.",
+        "The platform enables sponsors and CROs to efficiently manage study planning, site activation, investigator management, subject enrollment, milestone tracking, budgets, contracts, payments, monitoring visits, and study performance from a single centralized environment.",
+        "Real-time dashboards, configurable workflows, automated notifications, and advanced reporting empower study teams to make informed decisions, improve collaboration, and deliver clinical trials on time and within budget."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Study planning and site activation",
+        "Milestones, budgets and contract oversight",
+        "Monitoring visits and study performance",
+        "Real-time dashboards and reporting"
+      ],
+      "sourceParagraphs": [
+        377,
+        378,
+        379
+      ],
+      "href": "/truminds-ai/truform-ctms",
+      "linkLabel": "Explore TruForm CTMS"
+    },
+    {
+      "id": "platform-rtsm",
+      "title": "TruForm RTSM",
+      "icon": "global",
+      "image": "/products/truform-rtsm.jpg",
+      "imageAlt": "Healthcare professional reviewing medicine information with a tablet",
+      "imagePosition": "50% top",
+      "summary": "Randomization and trial supply management.",
+      "paragraphs": [
+        "TruForm RTSM delivers intelligent patient randomization and clinical supply management for modern global clinical trials.",
+        "The platform automates subject randomization, treatment assignment, investigational product inventory, depot management, shipment forecasting, and emergency unblinding while maintaining study integrity and treatment blinding.",
+        "Advanced forecasting algorithms help optimize drug supply, reduce waste, minimize stock shortages, and ensure continuous product availability across all participating clinical sites."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Subject randomization and treatment assignment",
+        "Inventory, depot and shipment workflows",
+        "Supply forecasting and allocation",
+        "Emergency unblinding workflows"
+      ],
+      "sourceParagraphs": [
+        382,
+        383,
+        384
+      ],
+      "href": "/truminds-ai/truform-rtsm",
+      "linkLabel": "Explore TruForm RTSM"
+    },
+    {
+      "id": "platform-epro",
+      "title": "TruForm ePRO",
+      "icon": "team",
+      "image": "/images/products/product-epro.jpg",
+      "imageAlt": "Participant-facing digital clinical study tools",
+      "imagePosition": "50% top",
+      "summary": "Electronic patient-reported outcomes.",
+      "paragraphs": [
+        "TruForm ePRO enables patients to securely report symptoms, treatment experiences, medication adherence, quality-of-life assessments, and other clinical outcomes using smartphones, tablets, or web-based applications.",
+        "Real-time patient data collection improves participant engagement, reduces missing data, eliminates manual transcription errors, and enhances the overall patient experience throughout the study.",
+        "The platform supports multilingual questionnaires, Bring Your Own Device (BYOD), scheduled reminders, offline data capture, wearable integrations, and seamless interoperability with EDC, CTMS, and other clinical systems, enabling sponsors to capture high-quality patient-centered data while improving study compliance and retention."
+      ],
+      "scopeTitle": "Key capabilities",
+      "items": [
+        "Symptoms, quality of life and treatment experience",
+        "Smartphone, tablet and web-based access",
+        "BYOD, offline entry and scheduled reminders",
+        "Multilingual questionnaires and wearable integrations"
+      ],
+      "sourceParagraphs": [
+        387,
+        388,
+        389
+      ]
+    }
+  ],
+  "services": [
+    {
+      "slug": "full-service-cro",
+      "title": "Full-service CRO",
+      "description": "Clinical operations, biometrics, safety and regulatory expertise across the development journey.",
+      "hoverDescription": "Bring the essential parts of a clinical program together, from study planning and site operations to biometrics, safety and regulatory support. Connected teams keep decisions clear as your study moves forward.",
+      "image": "/services/full-service-cro.jpg",
+      "imageAlt": "Healthcare professionals working together in a clinical setting",
+      "imagePosition": "50% top",
+      "detail": {
+        "eyebrow": "Clinical development, connected",
+        "headline": "One partner. A connected clinical journey.",
+        "heroDescription": "Comprehensive clinical research support for Phase I–IV programs, from study startup through regulatory submission and post-marketing activities.",
+        "facts": [
+          {
+            "label": "Development",
+            "value": "Phase I–IV"
+          },
+          {
+            "label": "Reach",
+            "value": "Global delivery"
+          },
+          {
+            "label": "Support",
+            "value": "End to end"
+          }
+        ],
+        "overview": {
+          "eyebrow": "Your clinical research partner",
+          "title": "Scientific depth.",
+          "highlight": "Connected delivery.",
+          "paragraphs": [
+            "TruMinds Clinical is a trusted Contract Research Organization (CRO) providing comprehensive clinical research solutions to pharmaceutical, biotechnology, and medical device companies worldwide. We support Phase I through Phase IV clinical trials across a broad range of therapeutic areas, helping sponsors accelerate development timelines, maintain regulatory compliance, and bring innovative therapies to patients faster.",
+            "Our service delivery model combines scientific expertise, advanced technologies, operational excellence, and a client-centric approach to ensure successful execution of clinical programs from study startup through regulatory submission and post-marketing activities. Whether supporting a single study or an entire development portfolio, TruMinds delivers flexible, scalable, and cost-effective solutions tailored to each client's unique needs.",
+            "Our proprietary in-house automated platform, TRUFORM, is designed to transform raw clinical datasets into standardized SDTM datasets, convert SDTM to ADaM, and generate final TLFs efficiently and accurately. By integrating Artificial Intelligence and automation technologies into the clinical data lifecycle, TruMinds Clinical significantly reduces manual effort, improves data consistency, enhances productivity, and accelerates database lock to submission timelines. Our experienced team is committed to maintaining the highest standards of professionalism, technical expertise, efficient execution, and a collaborative work culture to ensure smooth project flow and timely delivery of results."
+          ],
+          "highlights": [
+            {
+              "icon": "operations",
+              "title": "Clinical expertise",
+              "text": "Clinical, data, safety and regulatory perspectives working together."
+            },
+            {
+              "icon": "platform",
+              "title": "Technology enabled",
+              "text": "Experienced teams supported by TruForm automation."
+            },
+            {
+              "icon": "global",
+              "title": "Global support",
+              "text": "A delivery model shaped around each program."
+            }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "Services we provide",
+          "title": "The expertise your",
+          "highlight": "study needs.",
+          "description": "Explore the clinical, scientific and operational capabilities available across the development journey.",
+          "group": "clinical"
+        },
+        "partnership": {
+          "eyebrow": "Built around your program",
+          "title": "Expertise that works",
+          "highlight": "as one team.",
+          "description": "From a single study to an entire development portfolio, connect the right people, processes and technology around your needs.",
+          "items": [
+            {
+              "icon": "science",
+              "title": "Scientific expertise",
+              "text": "Bring clinical and technical perspectives to the questions each study needs to answer."
+            },
+            {
+              "icon": "platform",
+              "title": "Practical technology",
+              "text": "Connect raw data, standardized datasets and reporting through the TruForm platform."
+            },
+            {
+              "icon": "project",
+              "title": "Coordinated delivery",
+              "text": "Keep teams aligned from study startup through submission and post-marketing activities."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Let’s talk about your study.",
+          "description": "Tell us where your program is today and the support you need next.",
+          "label": "Discuss your study",
+          "href": "#contact"
+        }
+      }
+    },
+    {
+      "slug": "truminds-ai",
+      "title": "TruMinds AI",
+      "description": "Purposeful technology that helps teams work with clinical data more clearly and efficiently.",
+      "hoverDescription": "Turn complex trial information into clearer workflows and more useful insight. Our connected digital capabilities support data capture, review and reporting throughout the study lifecycle.",
+      "image": "/services/truminds-ai.jpg",
+      "imageAlt": "Researchers working with robotic technology in a laboratory",
+      "imagePosition": "50% top",
+      "detail": {
+        "eyebrow": "TruMinds AI · TruForm platform",
+        "headline": "One platform. Every stage of clinical development.",
+        "heroDescription": "An AI-enabled clinical technology ecosystem connecting study startup, data capture, analysis, reporting and trial oversight.",
+        "facts": [
+          {
+            "label": "Platform",
+            "value": "TruForm"
+          },
+          {
+            "label": "Architecture",
+            "value": "Cloud native"
+          },
+          {
+            "label": "Experience",
+            "value": "Connected workflows"
+          }
+        ],
+        "overview": {
+          "eyebrow": "An integrated clinical ecosystem",
+          "title": "Connected information.",
+          "highlight": "Clearer decisions.",
+          "paragraphs": [
+            "TruForm™ is TruMinds Clinical's next-generation, AI-powered Clinical Trial Technology Platform designed to transform the way clinical trials are planned, managed, executed, and submitted. Built to support pharmaceutical, biotechnology, medical device companies, CROs, and research organizations, TruForm provides a fully integrated suite of intelligent software solutions that seamlessly connect every phase of the clinical development lifecycle—from study startup and patient enrollment to database lock, statistical reporting, regulatory submissions, and study closeout.",
+            "Traditional clinical trials often rely on multiple disconnected systems, creating data silos, duplicate data entry, complex integrations, and operational inefficiencies. TruForm eliminates these challenges by bringing together clinical operations, patient engagement, clinical data management, statistical programming, quality management, document management, and regulatory processes into a single unified platform. This integrated approach provides a single source of truth, enabling study teams to collaborate more effectively, improve data quality, reduce operational complexity, and accelerate decision-making throughout the clinical trial lifecycle.",
+            "Designed with flexibility and scalability in mind, TruForm supports studies ranging from early Phase I research to large, global Phase III and Phase IV clinical trials. The platform leverages cloud-native architecture, artificial intelligence, intelligent automation, configurable workflows, reusable standards, and real-time analytics to simplify complex processes while ensuring compliance with global regulatory requirements, including FDA 21 CFR Part 11, ICH-GCP, GDPR, HIPAA, and CDISC standards"
+          ],
+          "highlights": [
+            {
+              "icon": "data",
+              "title": "Connected data",
+              "text": "Bring collection, review and analysis into a shared workflow."
+            },
+            {
+              "icon": "programming",
+              "title": "Intelligent automation",
+              "text": "Reduce repetitive work with reusable standards and metadata."
+            },
+            {
+              "icon": "team",
+              "title": "Team visibility",
+              "text": "Connect clinical, technical and operational perspectives."
+            }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "Explore the TruForm platform",
+          "title": "A connected platform",
+          "highlight": "for your study.",
+          "description": "Explore the tools that connect clinical operations, data, documents, participants and reporting across the trial lifecycle.",
+          "group": "platform"
+        },
+        "partnership": {
+          "eyebrow": "From collection to submission",
+          "title": "Make the data journey",
+          "highlight": "work together.",
+          "description": "TruForm connects related activities so study teams can follow information as it moves between systems, people and decisions.",
+          "items": [
+            {
+              "icon": "data",
+              "title": "Capture and manage",
+              "text": "Connect electronic data capture, participant consent and patient-reported outcomes."
+            },
+            {
+              "icon": "programming",
+              "title": "Standardize and analyze",
+              "text": "Follow the path from raw data through SDTM, ADaM and statistical reporting."
+            },
+            {
+              "icon": "quality",
+              "title": "Oversee and coordinate",
+              "text": "Bring documents, quality signals, clinical operations and trial supply into view."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Connect your clinical technology.",
+          "description": "Share your study workflows and talk through the TruForm capabilities that fit.",
+          "label": "Talk about TruForm",
+          "href": "#contact"
+        }
+      }
+    },
+    {
+      "slug": "fsp-services",
+      "title": "FSP services",
+      "description": "Specialist teams that work alongside yours, with the flexibility to adapt as programs evolve.",
+      "hoverDescription": "Add the right expertise where your program needs it most. Our functional service teams work alongside yours, align with existing processes and adapt as study priorities change.",
+      "image": "/services/fsp-services.jpg",
+      "imageAlt": "Clinician checking a patient's blood pressure",
+      "imagePosition": "50% top",
+      "detail": {
+        "eyebrow": "Functional expertise · Flexible delivery",
+        "headline": "Your team. More capability. Shared direction.",
+        "heroDescription": "Functional Service Provider and hybrid models that combine focused specialist support with the comprehensive capabilities of a CRO.",
+        "facts": [
+          {
+            "label": "Model",
+            "value": "FSP + CRO"
+          },
+          {
+            "label": "Capacity",
+            "value": "Scalable support"
+          },
+          {
+            "label": "Collaboration",
+            "value": "Sponsor aligned"
+          }
+        ],
+        "overview": {
+          "eyebrow": "FSP + CRO delivery model",
+          "title": "Flexible expertise.",
+          "highlight": "Connected to your team.",
+          "paragraphs": [
+            "Our clinical delivery models include Functional Service Provider (FSP) services and Hybrid engagement models that combine the flexibility of an FSP with the comprehensive capabilities of a CRO. This approach enables sponsors to scale resources efficiently, reduce operational costs, and maintain greater control over clinical programs while leveraging TruMinds Clinical’s therapeutic expertise, proven processes, technology solutions, and global delivery capabilities. Whether supporting a single function or an entire clinical development program, our flexible models are tailored to meet each client’s unique requirements.",
+            "Through our FSP+CRO delivery model, clients gain access to highly experienced professionals across Clinical Operations, Clinical Data Management, Biostatistics, Statistical Programming, Medical Writing, Regulatory Affairs, Pharmacovigilance, Quality Assurance, and Clinical Project Management. With a global team and a commitment to quality, compliance, and operational excellence, TruMinds Clinical helps sponsors accelerate development timelines, improve study execution, and achieve successful clinical outcomes across pharmaceutical, biotechnology, medical device, and diagnostic programs."
+          ],
+          "highlights": [
+            {
+              "icon": "scale",
+              "title": "Flexible resources",
+              "text": "Scale functional support around changing program requirements."
+            },
+            {
+              "icon": "team",
+              "title": "Experienced professionals",
+              "text": "Access clinical, scientific and technical specialists."
+            },
+            {
+              "icon": "global",
+              "title": "Global delivery",
+              "text": "Connect therapeutic expertise, processes and technology."
+            }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "Functional expertise",
+          "title": "Specialist support,",
+          "highlight": "where it matters.",
+          "description": "The same broad clinical service capabilities are available through an FSP or hybrid engagement, shaped around the functions your program needs.",
+          "group": "clinical"
+        },
+        "partnership": {
+          "eyebrow": "A model that fits your program",
+          "title": "Scale the expertise.",
+          "highlight": "Keep the connection.",
+          "description": "Support a single function or a wider clinical development program with an engagement tailored to your requirements.",
+          "items": [
+            {
+              "icon": "scale",
+              "title": "Functional flexibility",
+              "text": "Add specialist capacity to the functions your program needs most."
+            },
+            {
+              "icon": "team",
+              "title": "Operational alignment",
+              "text": "Bring experienced professionals into a shared way of working."
+            },
+            {
+              "icon": "platform",
+              "title": "Hybrid capability",
+              "text": "Combine FSP flexibility with CRO processes, technology and delivery expertise."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Shape the right delivery model.",
+          "description": "Tell us which functions need support and how your team works today.",
+          "label": "Discuss FSP support",
+          "href": "#contact"
+        }
+      }
+    },
+    {
+      "slug": "clinical-staffing",
+      "title": "Clinical staffing",
+      "description": "Experienced clinical and technical professionals matched to the work that matters most.",
+      "hoverDescription": "Find experienced professionals for the work in front of you. We connect clinical and technical talent with study teams so capacity, continuity and specialist skills stay in step with demand.",
+      "image": "/services/clinical-staffing.jpg",
+      "imageAlt": "Clinical care team standing together with a clipboard",
+      "imagePosition": "50% top",
+      "detail": {
+        "eyebrow": "Specialist talent · Clinical focus",
+        "headline": "The right people. Ready for the work ahead.",
+        "heroDescription": "Experienced clinical and technical professionals matched to the roles, teams and programs that need them.",
+        "facts": [
+          {
+            "label": "Expertise",
+            "value": "Clinical + technical"
+          },
+          {
+            "label": "Fit",
+            "value": "Role aligned"
+          },
+          {
+            "label": "Support",
+            "value": "Responsive capacity"
+          }
+        ],
+        "overview": {
+          "eyebrow": "Clinical staffing",
+          "title": "Specialist talent.",
+          "highlight": "A thoughtful fit.",
+          "paragraphs": [
+            "The right people make complex study work more manageable. Clinical staffing starts with understanding the role, the team and the stage of the program.",
+            "We focus on matching clinical and technical capability to the work ahead, helping teams maintain momentum as staffing needs change."
+          ],
+          "highlights": [
+            {
+              "icon": "team",
+              "title": "Role alignment",
+              "text": "Match skills and experience to the responsibilities ahead."
+            },
+            {
+              "icon": "project",
+              "title": "Team continuity",
+              "text": "Support collaboration with the people already delivering the study."
+            },
+            {
+              "icon": "scale",
+              "title": "Responsive support",
+              "text": "Adapt specialist capacity as program needs evolve."
+            }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "Expertise across clinical development",
+          "title": "People for every",
+          "highlight": "part of the program.",
+          "description": "Explore the clinical, data, safety, regulatory and quality functions supported by our specialist talent.",
+          "group": "clinical"
+        },
+        "partnership": {
+          "eyebrow": "Built around the role",
+          "title": "Find the expertise.",
+          "highlight": "Support the team.",
+          "description": "Start with the work, the people and the stage of the program to shape the support you need.",
+          "items": [
+            {
+              "icon": "team",
+              "title": "Understand the role",
+              "text": "Connect the required skills and experience to the responsibilities of each assignment."
+            },
+            {
+              "icon": "project",
+              "title": "Build continuity",
+              "text": "Support collaboration with the colleagues and processes already in place."
+            },
+            {
+              "icon": "scale",
+              "title": "Respond to demand",
+              "text": "Keep clinical and technical capacity in step with changing program needs."
+            }
+          ]
+        },
+        "cta": {
+          "title": "Let’s talk about your team.",
+          "description": "Share the roles, capabilities and timing your program needs.",
+          "label": "Discuss staffing needs",
+          "href": "#contact"
+        }
+      }
+    }
+  ]
+}

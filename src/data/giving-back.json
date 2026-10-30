@@ -1,0 +1,436 @@
+{
+  "source": {
+    "file": "TruMinds Clinical Website Jul 29th_7105.docx",
+    "paragraphs": [
+      464,
+      560
+    ],
+    "note": "The document provides the Giving Back statement and eight charitable initiatives. The four existing navigation categories use editorial summaries grounded in these priorities; no named partners, program schedules, impact metrics or application requirements are supplied."
+  },
+  "ui": {
+    "homeLabel": "Home",
+    "givingBackLabel": "Giving Back",
+    "primaryAction": "Connect with our team",
+    "overviewAction": "Our commitment",
+    "initiativesAction": "Explore giving initiatives",
+    "pathwaysAction": "Explore ways to give back",
+    "pathwaysEyebrow": "People, partnerships and purpose",
+    "pathwaysTitle": "Different ways to give.",
+    "pathwaysHighlight": "One shared commitment.",
+    "pathwaysDescription": "Discover the four areas that connect our people and partnerships with our Giving Back purpose.",
+    "pathwaysLink": "Explore this area",
+    "initiativesEyebrow": "Our giving initiatives",
+    "initiativesTitle": "Compassion in action.",
+    "initiativesHighlight": "Support where it matters.",
+    "initiativesDescription": "Explore the causes at the heart of our Giving Back commitment. Open an initiative to see the priorities and activities described in our approach.",
+    "initiativesHint": "Select an initiative to explore its focus.",
+    "focusEyebrow": "Giving priorities",
+    "commitmentEyebrow": "A lasting commitment",
+    "relatedEyebrow": "Keep exploring",
+    "relatedTitle": "More ways to make",
+    "relatedHighlight": "a difference together.",
+    "relatedDescription": "Our giving priorities connect across people, partnerships and community needs.",
+    "backLabel": "Back to Giving Back",
+    "overviewNavigationLabel": "Explore Giving Back areas",
+    "initiativeNavigationLabel": "Giving Back page sections"
+  },
+  "main": {
+    "metadata": {
+      "title": "Giving Back | TruMinds Clinical",
+      "description": "Explore TruMinds Clinical’s commitment to improving lives beyond clinical research through charitable partnerships, community outreach, volunteering and mentorship."
+    },
+    "hero": {
+      "eyebrow": "Giving Back",
+      "title": "Improving lives",
+      "highlight": "beyond clinical research.",
+      "description": "Our commitment to better health begins with people and reaches beyond the study. Together with our employees, clients, partners and communities, we work toward a more compassionate future.",
+      "image": "/giving-back.jpg",
+      "imageAlt": "Two healthcare professionals standing together",
+      "imageWidth": 4000,
+      "imageHeight": 4000
+    },
+    "mission": {
+      "eyebrow": "Our purpose",
+      "title": "Science moves us forward.",
+      "highlight": "Compassion brings us together.",
+      "paragraphs": [
+        "At TruMinds Clinical, our mission extends far beyond delivering exceptional clinical research solutions. Every day, we collaborate with pharmaceutical, biotechnology, medical device, and CRO organizations to accelerate the development of innovative therapies that improve and save lives around the world. While advancing healthcare is at the heart of everything we do, we believe our responsibility reaches beyond science and into the communities where hope, compassion, and support are needed most.",
+        "We believe that the true measure of success is not only the milestones we achieve as a company, but also the positive difference we make in the lives of others. Our growth carries with it a responsibility to give back, and we are committed to sharing our success by dedicating a portion of our revenue to meaningful charitable initiatives that bring hope, restore dignity, and create opportunities for those facing life's greatest challenges. Giving back is not simply a corporate responsibility—it is a reflection of our values, our gratitude, and our commitment to building a more compassionate world."
+      ]
+    },
+    "commitment": {
+      "title": "A commitment that grows",
+      "highlight": "with us.",
+      "paragraphs": [
+        "Through charitable partnerships and community outreach, we strive to support underprivileged children, homeless individuals and families, food banks, shelters, homeless and abandoned animals, individuals who are blind or visually impaired, senior care homes, and communities affected by natural disasters and humanitarian crises. We believe that every child deserves the opportunity to dream, every senior deserves dignity and care, every individual deserves hope and opportunity, and every animal deserves compassion and a safe home.",
+        "As TruMinds Clinical continues to grow, so will our commitment to serving others. We aspire to create a lasting legacy where every milestone we achieve contributes to improving lives beyond clinical research. By working together with our employees, clients, partners, and communities, we hope to inspire kindness, strengthen lives, and build a healthier, more compassionate future for generations to come."
+      ],
+      "quote": "Because advancing science changes lives—but giving back changes the world."
+    },
+    "image": {
+      "src": "/images/editorial/giving-back.jpg",
+      "alt": "Volunteers bringing supplies and practical support to their community",
+      "width": 1400,
+      "height": 933
+    }
+  },
+  "initiatives": [
+    {
+      "id": "meals-nutrition",
+      "title": "Meals & Nutrition Programs",
+      "icon": "meals",
+      "kicker": "",
+      "paragraphs": [
+        "No one should have to worry about where their next meal will come from. TruMinds Clinical supports programs that fight hunger and provide nutritious meals to children, seniors, families, and individuals experiencing hardship."
+      ],
+      "scopeLabel": "Our support includes:",
+      "items": [
+        "Community meal programs",
+        "School meal initiatives",
+        "Senior nutrition programs",
+        "Community kitchens",
+        "Emergency food distribution",
+        "Holiday meal drives"
+      ],
+      "closing": "Our goal is to help ensure that everyone has access to healthy, nutritious food regardless of their circumstances.",
+      "sourceParagraphs": [
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479
+      ]
+    },
+    {
+      "id": "shelters-housing",
+      "title": "Shelters & Housing Support",
+      "icon": "housing",
+      "kicker": "Every person deserves a safe place to call home.",
+      "paragraphs": [
+        "We support organizations that provide shelter, safety, and hope to individuals and families facing homelessness or crisis."
+      ],
+      "scopeLabel": "Our focus includes:",
+      "items": [
+        "Homeless shelters",
+        "Women's shelters",
+        "Children's homes",
+        "Transitional housing",
+        "Emergency housing assistance",
+        "Essential household supplies"
+      ],
+      "closing": "We believe that safe housing is the first step toward rebuilding lives.",
+      "sourceParagraphs": [
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490
+      ]
+    },
+    {
+      "id": "animal-welfare",
+      "title": "Animal Welfare",
+      "icon": "animals",
+      "kicker": "Compassion extends to every living being.",
+      "paragraphs": [
+        "Millions of dogs and cats suffer from abandonment, neglect, hunger, and abuse. TruMinds Clinical is committed to supporting organizations dedicated to rescuing, rehabilitating, and protecting homeless animals."
+      ],
+      "scopeLabel": "Our initiatives include:",
+      "items": [
+        "Animal rescue organizations",
+        "Veterinary medical care",
+        "Shelter improvements",
+        "Food and emergency supplies",
+        "Adoption and foster programs",
+        "Community animal feeding",
+        "Public awareness for responsible pet ownership"
+      ],
+      "closing": "Every animal deserves safety, care, and a loving home.",
+      "sourceParagraphs": [
+        492,
+        493,
+        494,
+        495,
+        496,
+        497,
+        498,
+        499,
+        500,
+        501,
+        502
+      ]
+    },
+    {
+      "id": "food-banks",
+      "title": "Food Banks",
+      "icon": "food",
+      "kicker": "Food banks play an essential role in helping families during difficult times.",
+      "paragraphs": [
+        "We proudly support food banks and nonprofit organizations that provide groceries and essential nutrition to people experiencing food insecurity."
+      ],
+      "scopeLabel": "Our contributions help support:",
+      "items": [
+        "Food pantries",
+        "Grocery distribution",
+        "Community food drives",
+        "Disaster food relief",
+        "Nutritional assistance programs"
+      ],
+      "closing": "Together, we can help reduce hunger and strengthen our communities.",
+      "sourceParagraphs": [
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512
+      ]
+    },
+    {
+      "id": "children-education",
+      "title": "Children & Education",
+      "icon": "education",
+      "kicker": "Every child deserves the opportunity to dream, learn, and succeed.",
+      "paragraphs": [
+        "We are committed to supporting underprivileged, orphaned, and homeless children by helping provide the resources they need for a brighter future."
+      ],
+      "scopeLabel": "Our initiatives include:",
+      "items": [
+        "Educational scholarships",
+        "School supplies and books",
+        "Nutritious meals",
+        "Healthcare and wellness",
+        "Safe housing",
+        "Digital learning opportunities",
+        "Career mentoring and life skills"
+      ],
+      "closing": "Investing in children today creates stronger communities tomorrow.",
+      "sourceParagraphs": [
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524
+      ]
+    },
+    {
+      "id": "blind-visually-impaired",
+      "title": "Empowering the Blind & Visually Impaired",
+      "icon": "accessibility",
+      "kicker": "Vision loss should never limit a person's potential.",
+      "paragraphs": [
+        "We support organizations in India and the United States that empower individuals who are blind or visually impaired through education, technology, vocational training, and independent living programs."
+      ],
+      "scopeLabel": "Our support includes:",
+      "items": [
+        "Braille education",
+        "Assistive technologies",
+        "Computer training",
+        "Orientation and mobility training",
+        "Employment assistance",
+        "Scholarships",
+        "Independent living resources"
+      ],
+      "closing": "We believe everyone deserves the opportunity to live with dignity, independence, and confidence.",
+      "sourceParagraphs": [
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536
+      ]
+    },
+    {
+      "id": "senior-adult-care",
+      "title": "Senior & Adult Care",
+      "icon": "care",
+      "kicker": "The elderly deserve our respect, gratitude, and compassionate care.",
+      "paragraphs": [
+        "Many seniors experience loneliness, financial hardship, or limited access to healthcare. TruMinds Clinical supports adult care homes and senior living communities by helping improve their quality of life."
+      ],
+      "scopeLabel": "Our initiatives include:",
+      "items": [
+        "Medical assistance",
+        "Daily meals",
+        "Prescription medications",
+        "Essential supplies",
+        "Mobility equipment",
+        "Recreational programs",
+        "Wellness activities",
+        "Companion visits"
+      ],
+      "closing": "Every senior deserves to age with dignity, comfort, and respect.",
+      "sourceParagraphs": [
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ]
+    },
+    {
+      "id": "disaster-relief",
+      "title": "Disaster Relief & Humanitarian Assistance",
+      "icon": "relief",
+      "kicker": "When disasters strike, communities need support more than ever.",
+      "paragraphs": [
+        "Whenever possible, TruMinds Clinical partners with trusted nonprofit organizations to provide timely humanitarian assistance during natural disasters, public health emergencies, and other crises."
+      ],
+      "scopeLabel": "Our support may include:",
+      "items": [
+        "Emergency financial assistance",
+        "Food and clean water",
+        "Medical supplies",
+        "Disaster recovery efforts",
+        "Community rebuilding",
+        "Volunteer support"
+      ],
+      "closing": "Helping communities recover is part of our commitment to making the world a better place.",
+      "sourceParagraphs": [
+        551,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "non-profit-research-organizations",
+      "headline": "Shared purpose. Wider possibilities.",
+      "heroDescription": "Our work in clinical research is grounded in improving lives. That purpose also guides how we think about nonprofit partnerships, community support and access to opportunity.",
+      "overview": {
+        "title": "Partnership with purpose.",
+        "highlight": "Care beyond the study.",
+        "paragraphs": [
+          "Non-profit research organizations are part of our wider Giving Back focus. We see partnership as a way to bring people, expertise and a shared commitment to improving lives together.",
+          "The charitable priorities below reflect the causes described in our Giving Back commitment, from education and independence to food security. They help frame conversations about where care and collaboration can make a difference."
+        ]
+      },
+      "focusTitle": "Priorities that guide partnership.",
+      "focusDescription": "Explore the education, access and community support priorities within our wider Giving Back commitment.",
+      "initiativeIds": [
+        "children-education",
+        "blind-visually-impaired",
+        "food-banks"
+      ],
+      "commitment": "Through charitable partnerships and community outreach, we strive to support underprivileged children, homeless individuals and families, food banks, shelters, homeless and abandoned animals, individuals who are blind or visually impaired, senior care homes, and communities affected by natural disasters and humanitarian crises. We believe that every child deserves the opportunity to dream, every senior deserves dignity and care, every individual deserves hope and opportunity, and every animal deserves compassion and a safe home.",
+      "quote": "Because advancing science changes lives—but giving back changes the world.",
+      "ctaTitle": "Start a conversation about partnership.",
+      "ctaDescription": "Tell us about your organization, its purpose and the community needs you are working to address.",
+      "ctaLabel": "Connect with our team"
+    },
+    {
+      "slug": "employee-volunteer-programs",
+      "headline": "Time and skills. A shared purpose.",
+      "heroDescription": "Our people are part of our commitment to improving lives beyond clinical research. Volunteering offers a way to bring compassion, practical support and shared effort into that purpose.",
+      "overview": {
+        "title": "People make the difference.",
+        "highlight": "Together, we can do more.",
+        "paragraphs": [
+          "Our Giving Back commitment brings employees, clients, partners and communities into a shared ambition to strengthen lives and inspire kindness. Employee volunteering is one way to connect personal skills and time with that wider purpose.",
+          "The priorities below highlight community needs described in our charitable commitment. They provide a starting point for conversations about contributing time, sharing skills and supporting trusted organizations."
+        ]
+      },
+      "focusTitle": "Where time and care can help.",
+      "focusDescription": "Discover the wider giving priorities that can inform conversations about volunteering and community support.",
+      "initiativeIds": [
+        "meals-nutrition",
+        "animal-welfare",
+        "disaster-relief"
+      ],
+      "commitment": "As TruMinds Clinical continues to grow, so will our commitment to serving others. We aspire to create a lasting legacy where every milestone we achieve contributes to improving lives beyond clinical research. By working together with our employees, clients, partners, and communities, we hope to inspire kindness, strengthen lives, and build a healthier, more compassionate future for generations to come.",
+      "quote": "By working together with our employees, clients, partners, and communities, we hope to inspire kindness, strengthen lives, and build a healthier, more compassionate future for generations to come.",
+      "ctaTitle": "Bring your interest in giving back.",
+      "ctaDescription": "Share the skills, causes or community needs that matter to you, and start a conversation with our team.",
+      "ctaLabel": "Discuss ways to contribute"
+    },
+    {
+      "slug": "community-outreach",
+      "headline": "Closer communities. Greater compassion.",
+      "heroDescription": "Our responsibility reaches beyond science into the communities where hope, compassion and practical support are needed most. Community outreach gives that commitment a human focus.",
+      "overview": {
+        "title": "Care starts with community.",
+        "highlight": "Dignity belongs to everyone.",
+        "paragraphs": [
+          "Through charitable partnerships and community outreach, our Giving Back commitment focuses on people facing hardship, communities affected by crisis and those who need greater access to care and opportunity.",
+          "Our priorities include food security, safe housing, senior care and humanitarian assistance. Each reflects the belief that improving lives means responding to the needs people experience every day."
+        ]
+      },
+      "focusTitle": "Support for everyday needs.",
+      "focusDescription": "Explore the food, housing, care and humanitarian priorities described in our Giving Back commitment.",
+      "initiativeIds": [
+        "food-banks",
+        "shelters-housing",
+        "senior-adult-care",
+        "disaster-relief"
+      ],
+      "commitment": "Through charitable partnerships and community outreach, we strive to support underprivileged children, homeless individuals and families, food banks, shelters, homeless and abandoned animals, individuals who are blind or visually impaired, senior care homes, and communities affected by natural disasters and humanitarian crises. We believe that every child deserves the opportunity to dream, every senior deserves dignity and care, every individual deserves hope and opportunity, and every animal deserves compassion and a safe home.",
+      "quote": "We believe that every child deserves the opportunity to dream, every senior deserves dignity and care, every individual deserves hope and opportunity, and every animal deserves compassion and a safe home.",
+      "ctaTitle": "Help us understand your community.",
+      "ctaDescription": "Tell us about the local needs or charitable priorities you would like to discuss with our team.",
+      "ctaLabel": "Start a conversation"
+    },
+    {
+      "slug": "mentorship-programs",
+      "headline": "Shared knowledge. New possibilities.",
+      "heroDescription": "Education, practical skills and access to opportunity can change the path ahead. Our mentorship focus connects that belief with our wider commitment to children, learning and independence.",
+      "overview": {
+        "title": "Opportunity grows with guidance.",
+        "highlight": "Knowledge opens doors.",
+        "paragraphs": [
+          "Our Giving Back commitment includes career mentoring and life skills for children, alongside education and digital learning opportunities. It also recognizes the importance of vocational skills and independent living support for individuals who are blind or visually impaired.",
+          "Mentorship brings the focus back to people: sharing experience, encouraging learning and helping others build confidence. The priorities below show how education, skills and access connect within our broader charitable commitment."
+        ]
+      },
+      "focusTitle": "Learning, skills and independence.",
+      "focusDescription": "Explore the education and access priorities that inform our mentorship focus.",
+      "initiativeIds": [
+        "children-education",
+        "blind-visually-impaired"
+      ],
+      "commitment": "As TruMinds Clinical continues to grow, so will our commitment to serving others. We aspire to create a lasting legacy where every milestone we achieve contributes to improving lives beyond clinical research. By working together with our employees, clients, partners, and communities, we hope to inspire kindness, strengthen lives, and build a healthier, more compassionate future for generations to come.",
+      "quote": "Every child deserves the opportunity to dream, learn, and succeed.",
+      "ctaTitle": "Share knowledge. Support possibility.",
+      "ctaDescription": "Tell us about your interest in mentoring, education or skills development and connect with our team.",
+      "ctaLabel": "Discuss mentorship"
+    }
+  ]
+}

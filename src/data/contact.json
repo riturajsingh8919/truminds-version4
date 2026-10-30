@@ -1,0 +1,58 @@
+{
+  "email": "services@trumindsclinical.com",
+  "phone": "+1 (469) 850-1383",
+  "phoneHref": "tel:+14698501383",
+  "offices": [
+    {
+      "id": "texas",
+      "name": "Texas",
+      "country": "United States",
+      "flag": "us",
+      "address": [
+        "14800 Quorum Dr, Suite 550",
+        "Dallas, TX 75254"
+      ]
+    },
+    {
+      "id": "new-jersey",
+      "name": "New Jersey",
+      "country": "United States",
+      "flag": "us",
+      "address": [
+        "80 Cottontail Ln, Suite 451",
+        "Somerset, NJ 08873"
+      ]
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "country": "Canada",
+      "flag": "ca",
+      "address": [
+        "1145 Midland Ave, Suite 9",
+        "Toronto, Ontario, Canada, M1K 4H2."
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "country": "India",
+      "flag": "in",
+      "address": [
+        "Plot No.13, H.No.2-48/13",
+        "Telecom Nagar, Gachibowli",
+        "Hyderabad, Telangana 500032."
+      ]
+    },
+    {
+      "id": "uk",
+      "name": "UK",
+      "country": "United Kingdom",
+      "flag": "gb",
+      "address": [
+        "71-75 Shelton Street, Covent Garden",
+        "London, WC2H 9JQ"
+      ]
+    }
+  ]
+}

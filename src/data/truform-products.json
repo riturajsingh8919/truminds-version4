@@ -1,0 +1,1808 @@
+{
+  "source": {
+    "document": "TruMinds Clinical Website Jul 29th_7105.docx",
+    "coverage": "Dedicated product descriptions in paragraphs 395–454, with supporting capabilities from paragraphs 335–384. All ten products requested are included.",
+    "editorialNotes": [
+      "The later, expanded product descriptions are retained verbatim in each overview.",
+      "Feature summaries and three-stage workflow diagrams organize documented functions; they are not product screenshots or mandated operating procedures.",
+      "Related-product links are discovery paths. They do not imply an integration unless the source explicitly describes one.",
+      "No product pages, routes or catalog entries for ePRO were added because the request lists ten products.",
+      "The homepage carousel titles, image paths, order, numbering and short descriptions are preserved."
+    ]
+  },
+  "ui": {
+    "homeLabel": "Home",
+    "ecosystemLabel": "TruForm ecosystem",
+    "productNavigationLabel": "Explore TruForm products",
+    "capabilitiesAction": "Explore capabilities",
+    "primaryAction": "Talk to our team",
+    "featureDetailsLabel": "Explore this capability",
+    "workflowNavigationLabel": "Product workflow stages",
+    "workflowInputLabel": "Start with",
+    "workflowOutputLabel": "Move toward",
+    "relatedLinkLabel": "Explore product",
+    "backToEcosystemLabel": "Back to the ecosystem"
+  },
+  "products": [
+    {
+      "slug": "truform-edc",
+      "name": "EDC",
+      "fullName": "Electronic Data Capture",
+      "category": "Clinical data collection",
+      "icon": "data",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Intelligent Electronic Data Capture for Modern Clinical Trials",
+        "description": "Capture clinical study data with workflows built for visibility and dependable review.",
+        "tags": [
+          "Configure",
+          "Capture",
+          "Review"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Clear at collection.",
+        "highlight": "Connected throughout.",
+        "paragraphs": [
+          "TruForm™ EDC is a next-generation Electronic Data Capture (EDC) platform engineered to transform the way clinical trial data is collected, managed, and monitored. Designed for sponsors, CROs, biotechnology companies, and research institutions, the platform combines an intuitive user experience with enterprise-grade security, automation, and regulatory compliance to support Phase I-IV clinical studies of any size or complexity.",
+          "The platform enables rapid study startup through configurable electronic Case Report Forms (eCRFs), metadata-driven study design, reusable libraries, and automated validation rules. Built-in edit checks, query management, medical coding integration, and real-time monitoring help ensure high-quality data from the point of entry through database lock.",
+          "TruForm EDC integrates seamlessly with CTMS, RTSM, ePRO, eConsent, laboratory systems, imaging platforms, safety databases, and external data sources, providing a unified ecosystem for clinical trial execution.",
+          "By reducing manual data entry, minimizing queries, and improving data quality, TruForm EDC helps organizations shorten study timelines, reduce operational costs, and accelerate regulatory submissions while maintaining compliance with FDA 21 CFR Part 11, ICH-GCP, GDPR, HIPAA, and global regulatory standards."
+        ],
+        "pillars": [
+          {
+            "icon": "data",
+            "label": "Structured capture"
+          },
+          {
+            "icon": "quality",
+            "label": "Continuous review"
+          },
+          {
+            "icon": "platform",
+            "label": "Connected systems"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Bring study configuration, electronic data capture and clinical data review into a connected workflow.",
+        "items": [
+          {
+            "id": "configure",
+            "icon": "project",
+            "title": "Study configuration",
+            "summary": "Build around the information your protocol needs to collect.",
+            "items": [
+              "Configurable electronic Case Report Forms (eCRFs)",
+              "Metadata-driven study design, reusable libraries and validation rules"
+            ]
+          },
+          {
+            "id": "review",
+            "icon": "quality",
+            "title": "Data review and queries",
+            "summary": "Keep data quality in view from the point of entry.",
+            "items": [
+              "Built-in edit checks and query management",
+              "Medical coding integration and review workflows"
+            ]
+          },
+          {
+            "id": "visibility",
+            "icon": "statistics",
+            "title": "Study visibility",
+            "summary": "Follow clinical data as your study progresses.",
+            "items": [
+              "Real-time monitoring of study information",
+              "Visibility from data entry through database lock"
+            ]
+          },
+          {
+            "id": "connections",
+            "icon": "platform",
+            "title": "Connected trial systems",
+            "summary": "Connect data capture with the wider clinical ecosystem.",
+            "items": [
+              "CTMS, RTSM, ePRO and eConsent connections",
+              "Laboratory, imaging, safety and external data sources"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From study design",
+        "highlight": "to review-ready data.",
+        "description": "Explore how configuration, data review and connected systems work together.",
+        "steps": [
+          {
+            "id": "design",
+            "icon": "project",
+            "title": "Design the study",
+            "description": "Configure collection around the protocol and reusable study standards.",
+            "inputs": [
+              "Protocol requirements",
+              "Study metadata and reusable libraries"
+            ],
+            "action": "Configure eCRFs",
+            "outputs": [
+              "Electronic case report forms",
+              "Edit checks and validation rules"
+            ]
+          },
+          {
+            "id": "review",
+            "icon": "quality",
+            "title": "Capture and review",
+            "description": "Bring captured data into a structured review and query workflow.",
+            "inputs": [
+              "Clinical data entries",
+              "Validation results and open queries"
+            ],
+            "action": "Review clinical data",
+            "outputs": [
+              "Reviewed study records",
+              "Query and data-quality context"
+            ]
+          },
+          {
+            "id": "connect",
+            "icon": "platform",
+            "title": "Connect the study",
+            "description": "Keep reviewed clinical information connected to trial operations and downstream work.",
+            "inputs": [
+              "Reviewed clinical data",
+              "Study progress information"
+            ],
+            "action": "Connect workflows",
+            "outputs": [
+              "Database readiness",
+              "Information for connected clinical systems"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-econsent",
+            "context": "Participant information and digital consent"
+          },
+          {
+            "slug": "truform-ctms",
+            "context": "Study operations and trial oversight"
+          },
+          {
+            "slug": "truform-rtsm",
+            "context": "Randomization and clinical supply"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring clarity to clinical data capture.",
+        "description": "Tell us about your study design, data sources and review workflow.",
+        "label": "Talk about TruForm EDC",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 396,
+        "paragraphs": [
+          397,
+          398,
+          399,
+          400
+        ]
+      }
+    },
+    {
+      "slug": "truform-sdtm",
+      "name": "SDTM",
+      "fullName": "Study Data Tabulation Model",
+      "category": "Clinical data standardization",
+      "icon": "programming",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "AI-Powered CDISC SDTM Automation Platform",
+        "description": "Organize study data into consistent standards for clearer downstream use.",
+        "tags": [
+          "Map",
+          "Standardize",
+          "Validate"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "From source data",
+        "highlight": "to consistent standards.",
+        "paragraphs": [
+          "Preparing submission-ready SDTM datasets remains one of the most resource-intensive activities in clinical programming. TruForm SDTM transforms this process through intelligent automation, metadata-driven programming, and AI-assisted specification generation.",
+          "The platform automatically converts raw clinical trial data from multiple source systems into CDISC SDTM-compliant datasets while maintaining complete traceability throughout the data transformation process.",
+          "Using reusable standards libraries, configurable mapping rules, automated validations, and standardized metadata repositories, TruForm SDTM significantly reduces programming effort while improving consistency, quality, and regulatory readiness.",
+          "Sponsors can accelerate FDA, EMA, PMDA, MHRA, Health Canada, and other global regulatory submissions while reducing development costs and minimizing programming errors."
+        ],
+        "pillars": [
+          {
+            "icon": "data",
+            "label": "Multiple data sources"
+          },
+          {
+            "icon": "programming",
+            "label": "Reusable standards"
+          },
+          {
+            "icon": "quality",
+            "label": "Traceable transformations"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Bring reusable metadata, AI-assisted specifications and validation into the path from raw data to SDTM.",
+        "items": [
+          {
+            "id": "sources",
+            "icon": "data",
+            "title": "Multiple source systems",
+            "summary": "Organize the starting point for clinical data transformation.",
+            "items": [
+              "Raw clinical trial data from multiple systems",
+              "Source context retained through transformation"
+            ]
+          },
+          {
+            "id": "mapping",
+            "icon": "programming",
+            "title": "Intelligent mapping",
+            "summary": "Connect source data to the target SDTM structure.",
+            "items": [
+              "AI-assisted specification generation",
+              "Configurable mapping rules and metadata-driven programming"
+            ]
+          },
+          {
+            "id": "standards",
+            "icon": "platform",
+            "title": "Reusable standards",
+            "summary": "Keep study transformations aligned around shared definitions.",
+            "items": [
+              "Reusable standards libraries",
+              "Standardized metadata repositories"
+            ]
+          },
+          {
+            "id": "validation",
+            "icon": "quality",
+            "title": "Validation and traceability",
+            "summary": "Make the path to submission-ready datasets easier to examine.",
+            "items": [
+              "Automated dataset validation",
+              "Traceability across the data transformation process"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From raw data",
+        "highlight": "to standardized datasets.",
+        "description": "Follow the transformation from source systems through mapping and validation.",
+        "steps": [
+          {
+            "id": "source",
+            "icon": "data",
+            "title": "Bring sources together",
+            "description": "Start with clinical trial data and the context needed to transform it.",
+            "inputs": [
+              "Raw clinical trial data",
+              "Multiple source systems"
+            ],
+            "action": "Organize source data",
+            "outputs": [
+              "Source inputs",
+              "Transformation context"
+            ]
+          },
+          {
+            "id": "map",
+            "icon": "programming",
+            "title": "Apply the standards",
+            "description": "Use shared metadata, specifications and rules to shape SDTM datasets.",
+            "inputs": [
+              "Source inputs",
+              "Reusable standards and specifications"
+            ],
+            "action": "Map to SDTM",
+            "outputs": [
+              "Standardized SDTM domains",
+              "Transformation metadata"
+            ]
+          },
+          {
+            "id": "validate",
+            "icon": "quality",
+            "title": "Validate and trace",
+            "description": "Review the standardized datasets with validation and traceability in view.",
+            "inputs": [
+              "SDTM datasets",
+              "Mapping and transformation records"
+            ],
+            "action": "Validate datasets",
+            "outputs": [
+              "Validation findings",
+              "Traceable submission-ready datasets"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-edc",
+            "context": "Explore the clinical data collection workflow"
+          },
+          {
+            "slug": "truform-adam",
+            "context": "Continue into analysis-ready datasets"
+          },
+          {
+            "slug": "truform-tlf",
+            "context": "Explore downstream statistical reporting"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Make clinical data standards work together.",
+        "description": "Share your source systems, standards and submission needs.",
+        "label": "Talk about TruForm SDTM",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 402,
+        "paragraphs": [
+          403,
+          404,
+          405,
+          406
+        ]
+      }
+    },
+    {
+      "slug": "truform-adam",
+      "name": "ADaM",
+      "fullName": "Analysis Data Model",
+      "category": "Analysis dataset automation",
+      "icon": "statistics",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Intelligent Analysis Dataset Automation",
+        "description": "Shape analysis-ready datasets with a traceable path from source data to insight.",
+        "tags": [
+          "Derive",
+          "Analyze",
+          "Trace"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Analysis-ready data.",
+        "highlight": "A traceable foundation.",
+        "paragraphs": [
+          "TruForm ADaM streamlines the creation of CDISC Analysis Data Model (ADaM) datasets through intelligent automation and reusable programming standards.",
+          "The platform transforms SDTM datasets into analysis-ready datasets required for statistical analyses while preserving complete traceability from raw data to final outputs.",
+          "Automated derivations, reusable metadata libraries, AI-assisted specifications, and standardized programming frameworks reduce development effort and improve consistency across studies.",
+          "Designed for biostatistics and statistical programming teams, TruForm ADaM accelerates study analyses while ensuring compliance with CDISC standards and regulatory expectations."
+        ],
+        "pillars": [
+          {
+            "icon": "programming",
+            "label": "Automated derivations"
+          },
+          {
+            "icon": "platform",
+            "label": "Reusable metadata"
+          },
+          {
+            "icon": "statistics",
+            "label": "Analysis readiness"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Connect SDTM, derivation standards and statistical analysis needs in a traceable dataset workflow.",
+        "items": [
+          {
+            "id": "transform",
+            "icon": "data",
+            "title": "SDTM to ADaM",
+            "summary": "Prepare the datasets required for statistical analysis.",
+            "items": [
+              "SDTM-to-ADaM transformation",
+              "Analysis-ready data structures"
+            ]
+          },
+          {
+            "id": "derive",
+            "icon": "programming",
+            "title": "Reusable derivations",
+            "summary": "Apply common programming and metadata patterns across studies.",
+            "items": [
+              "Automated derivations and reusable metadata libraries",
+              "AI-assisted specifications and standardized frameworks"
+            ]
+          },
+          {
+            "id": "analysis",
+            "icon": "statistics",
+            "title": "Statistical analysis context",
+            "summary": "Support the definitions behind study analyses.",
+            "items": [
+              "Analysis flags and population definitions",
+              "Efficacy and safety analysis datasets"
+            ]
+          },
+          {
+            "id": "trace",
+            "icon": "quality",
+            "title": "Data traceability",
+            "summary": "Keep the relationship between source data and final outputs visible.",
+            "items": [
+              "Traceability from raw data to final outputs",
+              "CDISC standards and regulatory expectations in context"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From standardized data",
+        "highlight": "to analysis readiness.",
+        "description": "Explore how source context, derivations and analysis needs connect.",
+        "steps": [
+          {
+            "id": "source",
+            "icon": "data",
+            "title": "Start with SDTM",
+            "description": "Bring standardized clinical data into the analysis dataset workflow.",
+            "inputs": [
+              "SDTM datasets",
+              "Analysis requirements"
+            ],
+            "action": "Prepare source context",
+            "outputs": [
+              "Standardized inputs",
+              "Dataset definitions"
+            ]
+          },
+          {
+            "id": "derive",
+            "icon": "programming",
+            "title": "Apply derivations",
+            "description": "Use reusable metadata and programming standards to create analysis-ready data.",
+            "inputs": [
+              "Standardized inputs",
+              "Derivation metadata and specifications"
+            ],
+            "action": "Generate ADaM",
+            "outputs": [
+              "Analysis datasets",
+              "Flags and population definitions"
+            ]
+          },
+          {
+            "id": "analyze",
+            "icon": "statistics",
+            "title": "Prepare for analysis",
+            "description": "Keep the resulting datasets connected to source data and statistical use.",
+            "inputs": [
+              "ADaM datasets",
+              "Traceability metadata"
+            ],
+            "action": "Support study analysis",
+            "outputs": [
+              "Efficacy and safety analysis inputs",
+              "Traceable reporting foundation"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-sdtm",
+            "context": "Start with standardized clinical datasets"
+          },
+          {
+            "slug": "truform-tlf",
+            "context": "Continue into tables, listings and figures"
+          },
+          {
+            "slug": "truform-edc",
+            "context": "Explore clinical data collection"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Build a clearer path to analysis.",
+        "description": "Talk through your analysis datasets, derivations and programming standards.",
+        "label": "Talk about TruForm ADaM",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 408,
+        "paragraphs": [
+          409,
+          410,
+          411,
+          412
+        ]
+      }
+    },
+    {
+      "slug": "truform-tlf",
+      "name": "TLF",
+      "fullName": "Tables, Listings & Figures",
+      "category": "Statistical reporting",
+      "icon": "statistics",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "AI-Driven Statistical Reporting Platform",
+        "description": "Bring tables, listings and figures into a clearer, more connected reporting workflow.",
+        "tags": [
+          "Specify",
+          "Generate",
+          "Report"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Consistent reporting.",
+        "highlight": "More time for interpretation.",
+        "paragraphs": [
+          "TruForm TLF automates the production of Tables, Listings, and Figures required for Clinical Study Reports (CSR), Integrated Summary of Safety (ISS), Integrated Summary of Efficacy (ISE), and regulatory submissions.",
+          "Rather than developing repetitive statistical programs for every study, organizations can leverage standardized templates, reusable reporting libraries, metadata-driven automation, and AI-assisted specifications to generate consistent, high-quality reports in significantly less time.",
+          "The platform supports SAS®, R, and hybrid statistical programming environments while producing publication-ready outputs in PDF, Word, RTF, Excel, PowerPoint, and interactive dashboards.",
+          "By automating repetitive reporting tasks, statistical programming teams can focus on scientific interpretation rather than report generation."
+        ],
+        "pillars": [
+          {
+            "icon": "platform",
+            "label": "Reusable templates"
+          },
+          {
+            "icon": "programming",
+            "label": "SAS, R and hybrid workflows"
+          },
+          {
+            "icon": "statistics",
+            "label": "Flexible reporting outputs"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Bring analysis datasets, specifications and reusable reporting libraries into a connected statistical reporting workflow.",
+        "items": [
+          {
+            "id": "templates",
+            "icon": "platform",
+            "title": "Reusable reporting libraries",
+            "summary": "Create a consistent foundation for study outputs.",
+            "items": [
+              "Standardized templates and reusable reporting libraries",
+              "Metadata-driven automation and AI-assisted specifications"
+            ]
+          },
+          {
+            "id": "reports",
+            "icon": "statistics",
+            "title": "Clinical reporting outputs",
+            "summary": "Support the reports required across study reporting and submission.",
+            "items": [
+              "Tables, listings and figures for Clinical Study Reports",
+              "Integrated summaries of safety and efficacy"
+            ]
+          },
+          {
+            "id": "programming",
+            "icon": "programming",
+            "title": "Programming flexibility",
+            "summary": "Work across the statistical environments your team uses.",
+            "items": [
+              "SAS and R statistical programming",
+              "Hybrid programming environments"
+            ]
+          },
+          {
+            "id": "formats",
+            "icon": "regulatory",
+            "title": "Multiple output formats",
+            "summary": "Prepare outputs for the way reviewers and study teams work.",
+            "items": [
+              "PDF, Word, RTF, Excel and PowerPoint",
+              "Publication-ready outputs and interactive dashboards"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From analysis datasets",
+        "highlight": "to reporting deliverables.",
+        "description": "Explore the path from reusable specifications to generated study outputs.",
+        "steps": [
+          {
+            "id": "specify",
+            "icon": "project",
+            "title": "Set the specifications",
+            "description": "Bring the required reports and reusable templates into view.",
+            "inputs": [
+              "Reporting requirements",
+              "Templates and reusable libraries"
+            ],
+            "action": "Define reporting specifications",
+            "outputs": [
+              "Output specifications",
+              "Reusable report structures"
+            ]
+          },
+          {
+            "id": "generate",
+            "icon": "programming",
+            "title": "Generate the outputs",
+            "description": "Apply metadata-driven reporting in SAS, R or hybrid environments.",
+            "inputs": [
+              "Analysis datasets",
+              "Specifications and programming frameworks"
+            ],
+            "action": "Generate TLFs",
+            "outputs": [
+              "Tables and listings",
+              "Figures and reporting outputs"
+            ]
+          },
+          {
+            "id": "deliver",
+            "icon": "regulatory",
+            "title": "Prepare deliverables",
+            "description": "Shape the outputs for study reports, review and regulatory submissions.",
+            "inputs": [
+              "Generated TLFs",
+              "Study reporting requirements"
+            ],
+            "action": "Prepare reporting formats",
+            "outputs": [
+              "CSR, ISS and ISE outputs",
+              "PDF, Word, RTF, Excel and other formats"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-adam",
+            "context": "Prepare the analysis dataset foundation"
+          },
+          {
+            "slug": "truform-sdtm",
+            "context": "Explore the standardized data journey"
+          },
+          {
+            "slug": "truform-docuvault",
+            "context": "Explore clinical document management"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect the path to statistical reporting.",
+        "description": "Share your reporting standards, programming environment and deliverables.",
+        "label": "Talk about TruForm TLF",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 414,
+        "paragraphs": [
+          415,
+          416,
+          417,
+          418
+        ]
+      }
+    },
+    {
+      "slug": "truform-docuvault",
+      "name": "DocuVault",
+      "fullName": "eTMF / Clinical Document Management",
+      "category": "Study document management",
+      "icon": "regulatory",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Enterprise eTMF & Clinical Document Management",
+        "description": "Bring essential study documents into one more organized review workflow.",
+        "tags": [
+          "Organize",
+          "Review",
+          "Retrieve"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Essential documents.",
+        "highlight": "Connected and in view.",
+        "paragraphs": [
+          "Clinical trial documentation is critical to regulatory compliance, inspection readiness, and operational excellence.",
+          "TruForm DocuVault provides a centralized Electronic Trial Master File (eTMF) platform designed to manage every essential document generated throughout the clinical trial lifecycle.",
+          "The platform supports document creation, version control, electronic signatures, configurable workflows, review and approval cycles, quality checks, automated filing, and long-term archiving.",
+          "Real-time completeness metrics, inspection readiness dashboards, and AI-assisted document classification enable organizations to maintain a continuously inspection-ready Trial Master File.",
+          "Whether supporting sponsors or CROs, TruForm DocuVault improves collaboration while reducing administrative burden and regulatory risk."
+        ],
+        "pillars": [
+          {
+            "icon": "regulatory",
+            "label": "Document lifecycle control"
+          },
+          {
+            "icon": "team",
+            "label": "Collaborative review"
+          },
+          {
+            "icon": "quality",
+            "label": "Inspection readiness"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Keep essential study documents connected through creation, review, filing and long-term archiving.",
+        "items": [
+          {
+            "id": "lifecycle",
+            "icon": "regulatory",
+            "title": "Document lifecycle",
+            "summary": "Manage essential documents throughout the clinical trial.",
+            "items": [
+              "Document creation, version control and electronic signatures",
+              "Automated filing and long-term archiving"
+            ]
+          },
+          {
+            "id": "review",
+            "icon": "team",
+            "title": "Review and approval",
+            "summary": "Coordinate the people and steps responsible for document review.",
+            "items": [
+              "Configurable review and approval cycles",
+              "Electronic workflows and document quality checks"
+            ]
+          },
+          {
+            "id": "completeness",
+            "icon": "statistics",
+            "title": "Completeness visibility",
+            "summary": "Keep the status of the Trial Master File easier to follow.",
+            "items": [
+              "Real-time completeness metrics",
+              "AI-assisted document classification"
+            ]
+          },
+          {
+            "id": "inspection",
+            "icon": "quality",
+            "title": "Inspection readiness",
+            "summary": "Bring essential records and their context into view.",
+            "items": [
+              "Inspection readiness dashboards",
+              "Centralized document retrieval and collaboration"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From essential records",
+        "highlight": "to an organized trial file.",
+        "description": "Follow the document journey through organization, review and inspection readiness.",
+        "steps": [
+          {
+            "id": "organize",
+            "icon": "regulatory",
+            "title": "Organize the records",
+            "description": "Create and classify essential clinical trial documentation.",
+            "inputs": [
+              "Essential study documents",
+              "Document classifications"
+            ],
+            "action": "Organize the eTMF",
+            "outputs": [
+              "Filed study records",
+              "Version context"
+            ]
+          },
+          {
+            "id": "review",
+            "icon": "team",
+            "title": "Coordinate review",
+            "description": "Bring documents through configurable review and approval workflows.",
+            "inputs": [
+              "Study documents",
+              "Review and approval requirements"
+            ],
+            "action": "Review and approve",
+            "outputs": [
+              "Approved versions",
+              "Electronic signatures and quality checks"
+            ]
+          },
+          {
+            "id": "prepare",
+            "icon": "quality",
+            "title": "Keep readiness visible",
+            "description": "Follow completeness, retrieve records and prepare long-term archives.",
+            "inputs": [
+              "Approved and filed records",
+              "Completeness information"
+            ],
+            "action": "Support inspection readiness",
+            "outputs": [
+              "Inspection-ready document views",
+              "Retrievable records and archives"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-ctms",
+            "context": "Connect with clinical operations context"
+          },
+          {
+            "slug": "truform-econsent",
+            "context": "Explore participant consent management"
+          },
+          {
+            "slug": "truform-edc",
+            "context": "Explore clinical data capture"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring essential study documents together.",
+        "description": "Tell us about your document workflows and Trial Master File needs.",
+        "label": "Talk about DocuVault",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 420,
+        "paragraphs": [
+          421,
+          422,
+          423,
+          424,
+          425
+        ]
+      }
+    },
+    {
+      "slug": "truform-econsent",
+      "name": "eConsent",
+      "fullName": "Digital Informed Consent",
+      "category": "Participant consent",
+      "icon": "team",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Digital Informed Consent Experience",
+        "description": "Support an informed consent experience that is clear for participants and teams.",
+        "tags": [
+          "Inform",
+          "Consent",
+          "Re-consent"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Clear study information.",
+        "highlight": "An informed experience.",
+        "paragraphs": [
+          "TruForm eConsent transforms informed consent into an engaging digital experience designed to improve participant understanding and study compliance.",
+          "Participants can review multimedia educational content, interactive videos, study procedures, risks, benefits, and frequently asked questions before securely signing consent forms electronically.",
+          "Electronic version control, re-consenting workflows, multilingual support, remote consenting capabilities, and audit trails simplify consent management while improving participant engagement.",
+          "By replacing paper-based processes, TruForm eConsent reduces administrative effort, shortens enrollment timelines, and enhances participant satisfaction."
+        ],
+        "pillars": [
+          {
+            "icon": "team",
+            "label": "Participant understanding"
+          },
+          {
+            "icon": "regulatory",
+            "label": "Electronic consent records"
+          },
+          {
+            "icon": "global",
+            "label": "Remote and multilingual support"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Connect accessible study information with electronic signing, version control and re-consenting workflows.",
+        "items": [
+          {
+            "id": "inform",
+            "icon": "medical",
+            "title": "Study understanding",
+            "summary": "Present study information in an engaging digital format.",
+            "items": [
+              "Multimedia education and interactive videos",
+              "Study procedures, risks, benefits and frequently asked questions"
+            ]
+          },
+          {
+            "id": "consent",
+            "icon": "regulatory",
+            "title": "Electronic consent",
+            "summary": "Support secure electronic consent, including remote participation.",
+            "items": [
+              "Electronic consent form signing",
+              "Remote consenting capabilities"
+            ]
+          },
+          {
+            "id": "versions",
+            "icon": "project",
+            "title": "Version and re-consent control",
+            "summary": "Manage consent as study information changes.",
+            "items": [
+              "Electronic version control",
+              "Re-consenting workflows"
+            ]
+          },
+          {
+            "id": "access",
+            "icon": "global",
+            "title": "Participation and oversight",
+            "summary": "Support participants and teams across consent activities.",
+            "items": [
+              "Multilingual study information",
+              "Consent audit trails and management visibility"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From study information",
+        "highlight": "to current consent records.",
+        "description": "Explore how digital information, electronic consent and version control work together.",
+        "steps": [
+          {
+            "id": "inform",
+            "icon": "medical",
+            "title": "Inform participants",
+            "description": "Make the study information available before consent.",
+            "inputs": [
+              "Study procedures, risks and benefits",
+              "Videos, education and frequently asked questions"
+            ],
+            "action": "Present study information",
+            "outputs": [
+              "Participant study information",
+              "Digital consent context"
+            ]
+          },
+          {
+            "id": "consent",
+            "icon": "team",
+            "title": "Record consent",
+            "description": "Support secure electronic signing, including remote workflows.",
+            "inputs": [
+              "Participant review",
+              "Current consent forms"
+            ],
+            "action": "Capture electronic consent",
+            "outputs": [
+              "Signed consent records",
+              "Electronic audit context"
+            ]
+          },
+          {
+            "id": "maintain",
+            "icon": "regulatory",
+            "title": "Maintain the record",
+            "description": "Follow updates and re-consenting throughout the study.",
+            "inputs": [
+              "Consent records",
+              "New study information and form versions"
+            ],
+            "action": "Manage re-consenting",
+            "outputs": [
+              "Current consent versions",
+              "Consent history and audit trails"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-edc",
+            "context": "Connect consent with data collection"
+          },
+          {
+            "slug": "truform-ctms",
+            "context": "Explore study and enrollment oversight"
+          },
+          {
+            "slug": "truform-docuvault",
+            "context": "Explore essential document workflows"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Create a clearer consent experience.",
+        "description": "Discuss participant information, consent versions and your study workflow.",
+        "label": "Talk about eConsent",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 427,
+        "paragraphs": [
+          428,
+          429,
+          430,
+          431
+        ]
+      }
+    },
+    {
+      "slug": "truform-adjudication",
+      "name": "Adjudication",
+      "fullName": "Clinical Endpoint Adjudication",
+      "category": "Independent endpoint review",
+      "icon": "medical",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Independent Clinical Event Adjudication",
+        "description": "Coordinate independent endpoint review with a more transparent process.",
+        "tags": [
+          "Route",
+          "Review",
+          "Resolve"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Independent review.",
+        "highlight": "A transparent process.",
+        "paragraphs": [
+          "Clinical endpoint adjudication requires accuracy, consistency, transparency, and independence.",
+          "TruForm Adjudication provides a secure platform that enables independent clinical event committees to review, evaluate, and adjudicate suspected endpoint events using configurable workflows.",
+          "Automated case routing, blinded review processes, consensus management, electronic documentation, workflow automation, and comprehensive audit trails improve operational efficiency while maintaining regulatory compliance.",
+          "The platform reduces adjudication turnaround time while ensuring unbiased endpoint evaluation across global multicenter clinical trials."
+        ],
+        "pillars": [
+          {
+            "icon": "medical",
+            "label": "Independent assessment"
+          },
+          {
+            "icon": "project",
+            "label": "Configurable workflows"
+          },
+          {
+            "icon": "regulatory",
+            "label": "Documented decisions"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Coordinate event submissions, independent reviews, consensus and documentation within one adjudication process.",
+        "items": [
+          {
+            "id": "independence",
+            "icon": "medical",
+            "title": "Independent evaluation",
+            "summary": "Support clinical event committees in evaluating suspected endpoint events.",
+            "items": [
+              "Independent clinical event review",
+              "Blinded review processes"
+            ]
+          },
+          {
+            "id": "routing",
+            "icon": "project",
+            "title": "Case routing and workflows",
+            "summary": "Bring cases to the reviewers and review steps they need.",
+            "items": [
+              "Automated case routing",
+              "Configurable evaluation and workflow steps"
+            ]
+          },
+          {
+            "id": "consensus",
+            "icon": "team",
+            "title": "Consensus management",
+            "summary": "Keep adjudication decisions connected to the review process.",
+            "items": [
+              "Committee review coordination",
+              "Consensus management and endpoint evaluation"
+            ]
+          },
+          {
+            "id": "records",
+            "icon": "regulatory",
+            "title": "Documentation and audit trails",
+            "summary": "Maintain context around the information and decisions reviewed.",
+            "items": [
+              "Electronic adjudication documentation",
+              "Comprehensive review audit trails"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From suspected events",
+        "highlight": "to adjudicated endpoints.",
+        "description": "Explore how case routing, independent review and consensus connect.",
+        "steps": [
+          {
+            "id": "prepare",
+            "icon": "project",
+            "title": "Prepare and route",
+            "description": "Bring suspected endpoint event information into the review workflow.",
+            "inputs": [
+              "Suspected endpoint events",
+              "Supporting case documentation"
+            ],
+            "action": "Route cases",
+            "outputs": [
+              "Cases for committee review",
+              "Configured review assignments"
+            ]
+          },
+          {
+            "id": "review",
+            "icon": "medical",
+            "title": "Review independently",
+            "description": "Support blinded assessment by independent clinical event reviewers.",
+            "inputs": [
+              "Assigned cases",
+              "Blinded review information"
+            ],
+            "action": "Evaluate events",
+            "outputs": [
+              "Independent assessments",
+              "Documented reviewer findings"
+            ]
+          },
+          {
+            "id": "resolve",
+            "icon": "team",
+            "title": "Resolve and document",
+            "description": "Coordinate consensus and retain the context behind the adjudication.",
+            "inputs": [
+              "Reviewer assessments",
+              "Committee review and consensus"
+            ],
+            "action": "Complete adjudication",
+            "outputs": [
+              "Adjudicated endpoint evaluations",
+              "Decision records and audit trails"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-edc",
+            "context": "Explore the clinical data foundation"
+          },
+          {
+            "slug": "truform-rbqm",
+            "context": "Explore quality and risk oversight"
+          },
+          {
+            "slug": "truform-ctms",
+            "context": "Explore wider trial operations"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect clinical endpoint review.",
+        "description": "Share your adjudication events, committee structure and review needs.",
+        "label": "Talk about Adjudication",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 433,
+        "paragraphs": [
+          434,
+          435,
+          436,
+          437
+        ]
+      }
+    },
+    {
+      "slug": "truform-rbqm",
+      "name": "RBQM",
+      "fullName": "Risk-Based Quality Management",
+      "category": "Clinical trial quality oversight",
+      "icon": "quality",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "AI-Driven Risk-Based Quality Management",
+        "description": "Focus quality oversight on the signals and risks that matter most.",
+        "tags": [
+          "Identify",
+          "Evaluate",
+          "Focus"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Meaningful signals.",
+        "highlight": "Focused quality oversight.",
+        "paragraphs": [
+          "Modern clinical trials generate enormous volumes of operational and clinical data.",
+          "TruForm RBQM continuously analyzes this information using advanced analytics and artificial intelligence to identify potential study risks before they become critical issues.",
+          "The platform evaluates Key Risk Indicators (KRIs), Key Performance Indicators (KPIs), protocol deviations, enrollment trends, monitoring activities, data quality metrics, and site performance to deliver actionable insights through real-time dashboards.",
+          "Sponsors can proactively manage quality, optimize monitoring resources, reduce operational risk, improve patient safety, and comply with ICH E6(R3) Risk-Based Quality Management guidelines."
+        ],
+        "pillars": [
+          {
+            "icon": "statistics",
+            "label": "Real-time risk insights"
+          },
+          {
+            "icon": "quality",
+            "label": "Risk-based monitoring"
+          },
+          {
+            "icon": "operations",
+            "label": "Study and site visibility"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Bring risk indicators, operational data and quality signals together to inform study oversight.",
+        "items": [
+          {
+            "id": "indicators",
+            "icon": "statistics",
+            "title": "Risk and performance indicators",
+            "summary": "Keep meaningful study indicators in view.",
+            "items": [
+              "Key Risk Indicators (KRIs) and Key Performance Indicators (KPIs)",
+              "Protocol deviations and enrollment trends"
+            ]
+          },
+          {
+            "id": "monitoring",
+            "icon": "operations",
+            "title": "Centralized monitoring context",
+            "summary": "Connect quality review to how the study is progressing.",
+            "items": [
+              "Monitoring activities and data quality metrics",
+              "Site performance information"
+            ]
+          },
+          {
+            "id": "analytics",
+            "icon": "data",
+            "title": "Advanced risk analytics",
+            "summary": "Evaluate operational and clinical information for potential risks.",
+            "items": [
+              "Advanced analytics and artificial intelligence",
+              "Actionable insights through real-time dashboards"
+            ]
+          },
+          {
+            "id": "oversight",
+            "icon": "quality",
+            "title": "Focused quality management",
+            "summary": "Use study signals to guide oversight and monitoring priorities.",
+            "items": [
+              "Risk-based quality and operational review",
+              "Support for ICH E6(R3) quality management principles"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From study signals",
+        "highlight": "to focused oversight.",
+        "description": "Explore how indicators and analytics help teams prioritize quality review.",
+        "steps": [
+          {
+            "id": "collect",
+            "icon": "data",
+            "title": "Bring signals together",
+            "description": "Start with operational and clinical information from the trial.",
+            "inputs": [
+              "Operational and clinical data",
+              "Site performance and monitoring activities"
+            ],
+            "action": "Organize quality signals",
+            "outputs": [
+              "Risk and performance indicators",
+              "Data quality context"
+            ]
+          },
+          {
+            "id": "evaluate",
+            "icon": "statistics",
+            "title": "Evaluate the risks",
+            "description": "Apply analytics to identify and understand potential study risks.",
+            "inputs": [
+              "KRIs, KPIs and protocol deviations",
+              "Enrollment and site trends"
+            ],
+            "action": "Analyze study information",
+            "outputs": [
+              "Risk insights",
+              "Real-time dashboard context"
+            ]
+          },
+          {
+            "id": "focus",
+            "icon": "quality",
+            "title": "Focus the review",
+            "description": "Use the resulting insights to prioritize oversight and monitoring resources.",
+            "inputs": [
+              "Risk insights",
+              "Study quality priorities"
+            ],
+            "action": "Inform quality oversight",
+            "outputs": [
+              "Targeted review priorities",
+              "Monitoring and follow-up context"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-edc",
+            "context": "Explore clinical data collection and review"
+          },
+          {
+            "slug": "truform-ctms",
+            "context": "Explore operational study visibility"
+          },
+          {
+            "slug": "truform-adjudication",
+            "context": "Explore independent endpoint review"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Focus on the quality signals that matter.",
+        "description": "Discuss your quality indicators, monitoring approach and oversight workflow.",
+        "label": "Talk about TruForm RBQM",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 439,
+        "paragraphs": [
+          440,
+          441,
+          442,
+          443
+        ]
+      }
+    },
+    {
+      "slug": "truform-ctms",
+      "name": "CTMS",
+      "fullName": "Clinical Trial Management System",
+      "category": "Clinical trial operations",
+      "icon": "project",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Enterprise Clinical Trial Management System",
+        "description": "Keep study operations, milestones and team activity connected.",
+        "tags": [
+          "Plan",
+          "Coordinate",
+          "Oversee"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "One operational view.",
+        "highlight": "A connected study team.",
+        "paragraphs": [
+          "TruForm CTMS serves as the operational command center for modern clinical trials.",
+          "The platform centralizes study planning, investigator management, site activation, subject enrollment, milestone tracking, budgets, contracts, payments, monitoring visits, regulatory documentation, and operational reporting within a single integrated environment.",
+          "Real-time dashboards provide complete visibility into study performance, enabling project managers and executives to make informed decisions quickly.",
+          "Integrated workflows improve collaboration between sponsors, CROs, research sites, monitors, and clinical operations teams while reducing manual administrative effort."
+        ],
+        "pillars": [
+          {
+            "icon": "project",
+            "label": "Study coordination"
+          },
+          {
+            "icon": "team",
+            "label": "Shared operational context"
+          },
+          {
+            "icon": "statistics",
+            "label": "Performance visibility"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Connect planning, sites, enrollment, budgets and monitoring activities in a shared operational environment.",
+        "items": [
+          {
+            "id": "planning",
+            "icon": "project",
+            "title": "Study and site planning",
+            "summary": "Bring study setup and site activity into one operational view.",
+            "items": [
+              "Study planning and investigator management",
+              "Site activation and regulatory documentation"
+            ]
+          },
+          {
+            "id": "coordination",
+            "icon": "team",
+            "title": "Enrollment and milestones",
+            "summary": "Keep trial activity connected as the study progresses.",
+            "items": [
+              "Subject enrollment and milestone tracking",
+              "Monitoring visits and team workflows"
+            ]
+          },
+          {
+            "id": "finance",
+            "icon": "regulatory",
+            "title": "Financial oversight",
+            "summary": "Keep financial study activities organized alongside operations.",
+            "items": [
+              "Budgets and contracts",
+              "Payments and related operational context"
+            ]
+          },
+          {
+            "id": "visibility",
+            "icon": "statistics",
+            "title": "Dashboards and reporting",
+            "summary": "Make study performance information available to the people who need it.",
+            "items": [
+              "Real-time performance dashboards",
+              "Operational reporting for project managers and executives"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From study plans",
+        "highlight": "to operational visibility.",
+        "description": "Explore how planning, coordination and reporting keep the trial connected.",
+        "steps": [
+          {
+            "id": "plan",
+            "icon": "project",
+            "title": "Plan the study",
+            "description": "Organize the activities and sites needed to begin and manage the study.",
+            "inputs": [
+              "Study plans",
+              "Investigator and site information"
+            ],
+            "action": "Organize study operations",
+            "outputs": [
+              "Study and site plans",
+              "Milestones and responsibilities"
+            ]
+          },
+          {
+            "id": "coordinate",
+            "icon": "team",
+            "title": "Coordinate delivery",
+            "description": "Connect enrollment, monitoring, documents and financial activities.",
+            "inputs": [
+              "Enrollment and site activity",
+              "Budgets, contracts and monitoring visits"
+            ],
+            "action": "Coordinate trial work",
+            "outputs": [
+              "Shared operational context",
+              "Milestone and activity updates"
+            ]
+          },
+          {
+            "id": "oversee",
+            "icon": "statistics",
+            "title": "Oversee performance",
+            "description": "Bring real-time operational information into dashboards and reporting.",
+            "inputs": [
+              "Study performance information",
+              "Operational activity updates"
+            ],
+            "action": "Review study performance",
+            "outputs": [
+              "Operational dashboards",
+              "Reporting for study teams and leadership"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-rtsm",
+            "context": "Connect randomization and clinical supply"
+          },
+          {
+            "slug": "truform-edc",
+            "context": "Connect clinical data workflows"
+          },
+          {
+            "slug": "truform-docuvault",
+            "context": "Explore trial document management"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring your trial operations into view.",
+        "description": "Tell us about your sites, milestones and clinical operations workflows.",
+        "label": "Talk about TruForm CTMS",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 445,
+        "paragraphs": [
+          446,
+          447,
+          448,
+          449
+        ]
+      }
+    },
+    {
+      "slug": "truform-rtsm",
+      "name": "RTSM",
+      "fullName": "Randomization & Trial Supply Management",
+      "category": "Randomization and clinical supply",
+      "icon": "global",
+      "hero": {
+        "eyebrow": "TruForm · Connected eClinical technology",
+        "headline": "Intelligent Randomization & Trial Supply Management",
+        "description": "Connect randomization and trial supply workflows as studies evolve.",
+        "tags": [
+          "Randomize",
+          "Forecast",
+          "Supply"
+        ]
+      },
+      "overview": {
+        "eyebrow": "Built around your clinical workflow",
+        "title": "Study assignments.",
+        "highlight": "Supply in step.",
+        "paragraphs": [
+          "TruForm RTSM automates patient randomization, treatment assignment, investigational product management, inventory forecasting, depot management, shipment planning, and emergency unblinding throughout global clinical trials.",
+          "Advanced algorithms optimize drug supply distribution across participating sites, reducing medication waste while ensuring uninterrupted product availability.",
+          "Flexible randomization methods, adaptive trial support, inventory forecasting, and seamless integration with EDC and CTMS platforms improve operational efficiency while preserving study integrity."
+        ],
+        "pillars": [
+          {
+            "icon": "team",
+            "label": "Treatment assignment"
+          },
+          {
+            "icon": "global",
+            "label": "Clinical supply planning"
+          },
+          {
+            "icon": "quality",
+            "label": "Study integrity"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "Product capabilities",
+        "title": "Purposeful tools.",
+        "highlight": "Connected workflows.",
+        "description": "Connect randomization, investigational product management and supply planning across participating clinical sites.",
+        "items": [
+          {
+            "id": "assignments",
+            "icon": "team",
+            "title": "Patient randomization",
+            "summary": "Support treatment assignment within the clinical trial.",
+            "items": [
+              "Patient randomization and treatment assignment",
+              "Flexible randomization methods and adaptive trial support"
+            ]
+          },
+          {
+            "id": "inventory",
+            "icon": "data",
+            "title": "Product and inventory management",
+            "summary": "Keep investigational product information in view.",
+            "items": [
+              "Investigational product management",
+              "Inventory visibility and forecasting"
+            ]
+          },
+          {
+            "id": "distribution",
+            "icon": "global",
+            "title": "Supply forecasting and distribution",
+            "summary": "Connect supply planning with participating sites and depots.",
+            "items": [
+              "Depot management and shipment planning",
+              "Drug supply distribution across clinical sites"
+            ]
+          },
+          {
+            "id": "integrity",
+            "icon": "quality",
+            "title": "Study integrity workflows",
+            "summary": "Support the controls involved in trial assignment and supply.",
+            "items": [
+              "Emergency unblinding workflows",
+              "Connections with EDC and CTMS platforms"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "eyebrow": "How the workflow connects",
+        "title": "From treatment assignment",
+        "highlight": "to clinical supply.",
+        "description": "Explore how randomization, forecasting and supply planning connect.",
+        "steps": [
+          {
+            "id": "assign",
+            "icon": "team",
+            "title": "Manage assignments",
+            "description": "Support patient randomization and treatment assignments.",
+            "inputs": [
+              "Trial randomization requirements",
+              "Participant assignment needs"
+            ],
+            "action": "Manage randomization",
+            "outputs": [
+              "Treatment assignments",
+              "Randomization records"
+            ]
+          },
+          {
+            "id": "forecast",
+            "icon": "statistics",
+            "title": "Forecast the supply",
+            "description": "Use inventory and site needs to inform clinical supply plans.",
+            "inputs": [
+              "Investigational product inventory",
+              "Participating site needs"
+            ],
+            "action": "Forecast supply",
+            "outputs": [
+              "Supply forecasts",
+              "Depot and distribution context"
+            ]
+          },
+          {
+            "id": "coordinate",
+            "icon": "global",
+            "title": "Coordinate delivery",
+            "description": "Connect supply distribution, shipment planning and trial operations.",
+            "inputs": [
+              "Supply plans",
+              "Site and depot information"
+            ],
+            "action": "Coordinate trial supply",
+            "outputs": [
+              "Shipment and allocation context",
+              "Product availability oversight"
+            ]
+          }
+        ]
+      },
+      "connections": {
+        "eyebrow": "Part of one clinical ecosystem",
+        "title": "Connected capabilities.",
+        "highlight": "A wider view.",
+        "description": "Explore related TruForm tools across the clinical trial lifecycle.",
+        "items": [
+          {
+            "slug": "truform-edc",
+            "context": "Connect clinical trial data"
+          },
+          {
+            "slug": "truform-ctms",
+            "context": "Connect clinical operations"
+          },
+          {
+            "slug": "truform-rbqm",
+            "context": "Explore trial risk and quality oversight"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect randomization and trial supply.",
+        "description": "Share your assignment approach, clinical supply needs and site network.",
+        "label": "Talk about TruForm RTSM",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 451,
+        "paragraphs": [
+          452,
+          453,
+          454
+        ]
+      }
+    }
+  ]
+}

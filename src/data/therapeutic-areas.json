@@ -1,0 +1,1031 @@
+{
+  "source": {
+    "document": "TruMinds Clinical Website Jul 29th_7105.docx",
+    "coverage": "The eight homepage therapeutic areas use their full supplied specialty overviews and all 95 focus items.",
+    "editorialNotes": [
+      "Focus terms retain their source wording; topic groups are editorial navigation aids, not diagnostic classifications or treatment guidance.",
+      "The existing homepage card names, order, descriptions, images and focal positions are preserved.",
+      "Study considerations retain the existing site copy, presented alongside the supplied specialty content.",
+      "Only the eight requested core areas receive pages in this update. No statistics, clinical outcomes, certifications or testimonials have been invented."
+    ]
+  },
+  "ui": {
+    "homeLabel": "Home",
+    "areasLabel": "Therapeutic areas",
+    "primaryAction": "Discuss your program",
+    "focusAction": "Explore our focus",
+    "pageNavigationLabel": "On this page",
+    "overviewLink": "Therapeutic perspective",
+    "focusLink": "Areas of focus",
+    "deliveryLink": "Study support",
+    "focusSearchLabel": "Find a condition or research focus",
+    "focusSearchPlaceholder": "Search within this therapeutic area",
+    "allGroupsLabel": "All focus areas",
+    "groupNavigationLabel": "Filter research focus groups",
+    "clearSearchLabel": "Clear search",
+    "resetLabel": "Reset filters",
+    "resultPrefix": "Showing",
+    "resultOf": "of",
+    "resultSuffix": "focus areas",
+    "resultSingular": "focus area",
+    "emptyTitle": "No matching focus areas",
+    "emptyDescription": "Try a different term or reset the filters to explore the full area.",
+    "servicesTitle": "Connect the support around your study.",
+    "servicesDescription": "Choose the delivery model and capabilities that fit your program.",
+    "atlasEyebrow": "Our core therapeutic expertise",
+    "atlasTitle": "Eight focus areas.",
+    "atlasHighlight": "One connected approach.",
+    "atlasDescription": "Explore the specialties at the heart of our clinical research work.",
+    "atlasNavigationLabel": "Explore our eight therapeutic areas",
+    "atlasLinkLabel": "Explore therapeutic area",
+    "backLabel": "Back to all therapeutic areas"
+  },
+  "deliveryModels": [
+    "full-service-cro",
+    "fsp-services",
+    "clinical-staffing",
+    "truminds-ai"
+  ],
+  "areas": [
+    {
+      "slug": "oncology-hematology",
+      "icon": "oncology",
+      "imageAlt": "Clinician speaking with a patient using a wheelchair",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Connected expertise for complex oncology research.",
+        "description": "Study support for evolving therapies and complex clinical endpoints."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Scientific depth.",
+        "highlight": "A connected perspective.",
+        "paragraphs": [
+          "TruMinds supports pharmaceutical, biotechnology, CRO, and healthcare organizations advancing innovative therapies for cancer and hematologic disorders. Our Oncology & Hematology Clinical Research Services span the entire product lifecycle, from early discovery and clinical development through regulatory affairs, medical affairs, biometrics, pharmacovigilance, quality, and commercialization. With expertise in precision medicine, immuno-oncology, cell and gene therapies, and advanced hematologic treatments, we help clients accelerate development programs and bring innovative therapies to patients worldwide."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore the oncology, hematology and advanced therapy programs our teams support.",
+        "groups": [
+          {
+            "id": "solid-tumors",
+            "title": "Solid tumor programs",
+            "icon": "oncology",
+            "items": [
+              "Solid Tumors",
+              "Breast Cancer",
+              "Lung Cancer",
+              "Colorectal Cancer",
+              "Prostate Cancer",
+              "Ovarian Cancer",
+              "Melanoma"
+            ],
+            "sourceParagraphs": [
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33
+            ]
+          },
+          {
+            "id": "hematology",
+            "title": "Hematologic programs",
+            "icon": "research",
+            "items": [
+              "Leukemia",
+              "Lymphoma",
+              "Multiple Myeloma",
+              "Myelodysplastic Syndromes (MDS)",
+              "Rare Hematologic Disorders"
+            ],
+            "sourceParagraphs": [
+              34,
+              35,
+              36,
+              37,
+              42
+            ]
+          },
+          {
+            "id": "therapies",
+            "title": "Advanced therapy approaches",
+            "icon": "network",
+            "items": [
+              "Cell & Gene Therapy",
+              "CAR-T Therapy",
+              "Precision Oncology",
+              "Immuno-Oncology"
+            ],
+            "sourceParagraphs": [
+              38,
+              39,
+              40,
+              41
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Complex science.",
+        "highlight": "Coordinated research.",
+        "description": "A connected study team can bring clinical operations, data management and specialist review together around the evidence each program needs to build.",
+        "items": [
+          {
+            "icon": "people",
+            "title": "Patient pathways",
+            "text": "Plan study activities around the people and sites involved in complex care."
+          },
+          {
+            "icon": "target",
+            "title": "Endpoint clarity",
+            "text": "Keep assessment definitions and review needs visible across the study."
+          },
+          {
+            "icon": "data",
+            "title": "Connected evidence",
+            "text": "Link clinical observations and data workflows so decisions have context."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect the expertise around your oncology program.",
+        "description": "Share the disease area, development stage and support your study needs.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 24,
+        "overviewParagraph": 25,
+        "focusParagraphs": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          42,
+          38,
+          39,
+          40,
+          41
+        ]
+      }
+    },
+    {
+      "slug": "cardiovascular",
+      "icon": "cardiovascular",
+      "imageAlt": "Clinician holding an anatomical heart model",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Connected research for heart and vascular health.",
+        "description": "Thoughtful trial delivery across heart and vascular health."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Defined questions.",
+        "highlight": "A clear evidence pathway.",
+        "paragraphs": [
+          "Cardiovascular and vascular diseases are among the leading health challenges worldwide. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing innovative treatments and technologies for heart and vascular conditions. Our Cardiovascular & Vascular Diseases Clinical Research Services provide expertise across clinical development, biometrics, regulatory affairs, medical affairs, and pharmacovigilance. We help clients bring new cardiovascular therapies and medical technologies to patients faster."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore heart, vascular, risk-related and medical technology programs within our cardiovascular focus.",
+        "groups": [
+          {
+            "id": "cardiac",
+            "title": "Heart & device programs",
+            "icon": "cardiovascular",
+            "items": [
+              "Heart Failure",
+              "Coronary Artery Disease",
+              "Arrhythmias",
+              "Atrial Fibrillation",
+              "Myocardial Infarction",
+              "Structural Heart Disease",
+              "Cardiovascular Medical Devices"
+            ],
+            "sourceParagraphs": [
+              46,
+              47,
+              50,
+              51,
+              52,
+              57,
+              58
+            ]
+          },
+          {
+            "id": "vascular",
+            "title": "Vascular & risk programs",
+            "icon": "activity",
+            "items": [
+              "Hypertension",
+              "Hyperlipidemia",
+              "Stroke Prevention",
+              "Thrombosis",
+              "Peripheral Artery Disease",
+              "Pulmonary Hypertension"
+            ],
+            "sourceParagraphs": [
+              48,
+              49,
+              53,
+              54,
+              55,
+              56
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Defined outcomes.",
+        "highlight": "Coordinated follow-up.",
+        "description": "Study operations and data review work best when teams share a clear view of assessments, milestones and participant progress.",
+        "items": [
+          {
+            "icon": "target",
+            "title": "Outcome measures",
+            "text": "Align data collection with the clinical questions the study is designed to answer."
+          },
+          {
+            "icon": "network",
+            "title": "Site coordination",
+            "text": "Support consistent execution across participating clinical teams."
+          },
+          {
+            "icon": "data",
+            "title": "Follow-up data",
+            "text": "Keep longitudinal information organized for review and interpretation."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring your cardiovascular program into focus.",
+        "description": "Tell us about your clinical questions, assessments and delivery needs.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 43,
+        "overviewParagraph": 44,
+        "focusParagraphs": [
+          46,
+          47,
+          50,
+          51,
+          52,
+          57,
+          58,
+          48,
+          49,
+          53,
+          54,
+          55,
+          56
+        ]
+      }
+    },
+    {
+      "slug": "neuroscience",
+      "icon": "neuroscience",
+      "imageAlt": "Clinician presenting an anatomical brain model",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Research shaped around the nervous system.",
+        "description": "Clearer evidence pathways for neurological and CNS programs."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Nuanced assessments.",
+        "highlight": "Connected clinical insight.",
+        "paragraphs": [
+          "Neuroscience focuses on diseases affecting the brain, nervous system, and mental health. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing innovative therapies for neurological disorders. Our Neuroscience Clinical Research Services provide expertise across clinical development, biometrics, regulatory affairs, medical affairs, and pharmacovigilance. We help clients advance research and bring new treatments to patients faster."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore the neurological, recovery and specialized CNS programs supported by our teams.",
+        "groups": [
+          {
+            "id": "neurological",
+            "title": "Neurological programs",
+            "icon": "neuroscience",
+            "items": [
+              "Alzheimer's Disease",
+              "Parkinson's Disease",
+              "Multiple Sclerosis",
+              "Epilepsy",
+              "Amyotrophic Lateral Sclerosis (ALS)",
+              "Huntington's Disease"
+            ],
+            "sourceParagraphs": [
+              62,
+              63,
+              64,
+              65,
+              70,
+              71
+            ]
+          },
+          {
+            "id": "recovery",
+            "title": "Pain & recovery programs",
+            "icon": "activity",
+            "items": [
+              "Migraine",
+              "Neuropathic Pain",
+              "Stroke Recovery",
+              "Traumatic Brain Injury"
+            ],
+            "sourceParagraphs": [
+              66,
+              67,
+              68,
+              69
+            ]
+          },
+          {
+            "id": "specialized",
+            "title": "Specialized CNS research",
+            "icon": "research",
+            "items": [
+              "Neuropsychiatric Disorders",
+              "Rare Neurological Diseases"
+            ],
+            "sourceParagraphs": [
+              72,
+              73
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Consistent assessments.",
+        "highlight": "Clearer evidence.",
+        "description": "Thoughtful planning helps clinical and data teams maintain consistency while staying attentive to the patient experience.",
+        "items": [
+          {
+            "icon": "target",
+            "title": "Assessment consistency",
+            "text": "Keep clinical measures clear for the people collecting and reviewing them."
+          },
+          {
+            "icon": "people",
+            "title": "Patient experience",
+            "text": "Consider the practical demands of visits and repeated assessments."
+          },
+          {
+            "icon": "data",
+            "title": "Data continuity",
+            "text": "Preserve context as observations are collected across time and sites."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Shape the support for your neuroscience study.",
+        "description": "Share your assessments, patient population and study requirements.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 59,
+        "overviewParagraph": 60,
+        "focusParagraphs": [
+          62,
+          63,
+          64,
+          65,
+          70,
+          71,
+          66,
+          67,
+          68,
+          69,
+          72,
+          73
+        ]
+      }
+    },
+    {
+      "slug": "immunology",
+      "icon": "immunology",
+      "imageAlt": "Laboratory researcher examining samples",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Connected expertise for immune-mediated disease.",
+        "description": "Adaptive research support for immune-mediated conditions."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Scientific context.",
+        "highlight": "A coordinated study team.",
+        "paragraphs": [
+          "Immunology plays a critical role in developing treatments for autoimmune, inflammatory, and immune-related diseases. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations across all phases of clinical development. Our Immunology Clinical Research Services provide expertise in biologics, immunotherapies, and precision medicine. We support clinical development, biometrics, regulatory affairs, medical affairs, pharmacovigilance, and quality functions. Our experienced team helps clients accelerate the development of innovative therapies and improve patient outcomes."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore immune-mediated conditions, biologic therapies and immunotherapy development programs.",
+        "groups": [
+          {
+            "id": "systemic",
+            "title": "Joint & systemic programs",
+            "icon": "immunology",
+            "items": [
+              "Rheumatoid Arthritis",
+              "Psoriatic Arthritis",
+              "Lupus",
+              "Ankylosing Spondylitis",
+              "Autoimmune Disorders"
+            ],
+            "sourceParagraphs": [
+              77,
+              78,
+              79,
+              80,
+              86
+            ]
+          },
+          {
+            "id": "inflammatory",
+            "title": "Inflammatory programs",
+            "icon": "research",
+            "items": [
+              "Crohn's Disease",
+              "Ulcerative Colitis",
+              "Psoriasis",
+              "Atopic Dermatitis",
+              "Multiple Sclerosis"
+            ],
+            "sourceParagraphs": [
+              81,
+              82,
+              83,
+              84,
+              85
+            ]
+          },
+          {
+            "id": "therapies",
+            "title": "Biologics & immunotherapy",
+            "icon": "network",
+            "items": [
+              "Biologic Therapies",
+              "Immunotherapy Development"
+            ],
+            "sourceParagraphs": [
+              87,
+              88
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Varied conditions.",
+        "highlight": "Aligned expertise.",
+        "description": "A study needs enough structure for consistent evidence, alongside the flexibility to handle the realities of each condition and patient population.",
+        "items": [
+          {
+            "icon": "target",
+            "title": "Study design context",
+            "text": "Keep disease characteristics visible when planning assessments and operations."
+          },
+          {
+            "icon": "activity",
+            "title": "Response measures",
+            "text": "Support clear collection and review of the outcomes that matter to a program."
+          },
+          {
+            "icon": "network",
+            "title": "Team alignment",
+            "text": "Connect scientific, clinical and data perspectives throughout delivery."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect the right team to your immunology program.",
+        "description": "Talk through your condition, outcomes and clinical development needs.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 74,
+        "overviewParagraph": 75,
+        "focusParagraphs": [
+          77,
+          78,
+          79,
+          80,
+          86,
+          81,
+          82,
+          83,
+          84,
+          85,
+          87,
+          88
+        ]
+      }
+    },
+    {
+      "slug": "infectious-diseases",
+      "icon": "infectious",
+      "imageAlt": "Researcher in protective equipment reviewing laboratory samples",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Responsive support for a changing research landscape.",
+        "description": "Agile study operations for infection and vaccine research."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Responsive research.",
+        "highlight": "Connected information.",
+        "paragraphs": [
+          "Infectious diseases remain a major global health concern, requiring continuous innovation in treatments, vaccines, and diagnostic technologies. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing solutions for bacterial, viral, fungal, and emerging infectious diseases. Our Infectious Diseases Clinical Research Services provide expertise across clinical development, biometrics, regulatory affairs, medical affairs, and pharmacovigilance. We help clients accelerate the development of safe and effective therapies that improve patient outcomes worldwide."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore infectious disease, vaccine and global health programs across our research focus.",
+        "groups": [
+          {
+            "id": "viral",
+            "title": "Viral research programs",
+            "icon": "infectious",
+            "items": [
+              "COVID-19",
+              "Influenza",
+              "HIV/AIDS",
+              "Hepatitis",
+              "Viral Therapies"
+            ],
+            "sourceParagraphs": [
+              92,
+              93,
+              94,
+              95,
+              102
+            ]
+          },
+          {
+            "id": "infection",
+            "title": "Infection & resistance",
+            "icon": "research",
+            "items": [
+              "Tuberculosis",
+              "Respiratory Infections",
+              "Hospital-Acquired Infections",
+              "Antimicrobial Resistance"
+            ],
+            "sourceParagraphs": [
+              96,
+              97,
+              98,
+              99
+            ]
+          },
+          {
+            "id": "global-health",
+            "title": "Vaccines & global health",
+            "icon": "global",
+            "items": [
+              "Vaccine Development",
+              "Emerging Infectious Diseases",
+              "Global Health Programs"
+            ],
+            "sourceParagraphs": [
+              100,
+              101,
+              103
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Responsive operations.",
+        "highlight": "Reliable information flow.",
+        "description": "Clear operating plans and reliable information flow help teams act quickly without losing the rigor of the study.",
+        "items": [
+          {
+            "icon": "activity",
+            "title": "Responsive operations",
+            "text": "Adapt site and study activity as conditions change."
+          },
+          {
+            "icon": "data",
+            "title": "Timely data",
+            "text": "Keep important observations available for prompt review."
+          },
+          {
+            "icon": "network",
+            "title": "Coordinated teams",
+            "text": "Maintain alignment across clinical, laboratory and data functions."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Plan the support for your infectious disease study.",
+        "description": "Share your study setting, timelines and coordination requirements.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 89,
+        "overviewParagraph": 90,
+        "focusParagraphs": [
+          92,
+          93,
+          94,
+          95,
+          102,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103
+        ]
+      }
+    },
+    {
+      "slug": "rare-diseases",
+      "icon": "rare",
+      "imageAlt": "Person using a wheelchair with two companions outdoors",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Thoughtful research where every observation matters.",
+        "description": "Careful execution when study populations are small and every data point matters."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Focused research.",
+        "highlight": "People at the centre.",
+        "paragraphs": [
+          "Rare diseases affect millions of patients worldwide and often have limited treatment options. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing innovative therapies for rare and orphan diseases. Our Rare Disease Clinical Research Services provide expertise across all phases of clinical development, from early research through regulatory submission. We help clients accelerate the development of life-changing treatments for patients with unmet medical needs."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore rare disease populations, orphan development and precision medicine approaches.",
+        "groups": [
+          {
+            "id": "genetic",
+            "title": "Genetic & neuromuscular",
+            "icon": "oncology",
+            "items": [
+              "Genetic Disorders",
+              "Lysosomal Storage Diseases",
+              "Muscular Dystrophy"
+            ],
+            "sourceParagraphs": [
+              239,
+              240,
+              241
+            ]
+          },
+          {
+            "id": "populations",
+            "title": "Specialist populations",
+            "icon": "rare",
+            "items": [
+              "Rare Neurological Disorders",
+              "Rare Blood Disorders",
+              "Rare Pediatric Diseases"
+            ],
+            "sourceParagraphs": [
+              242,
+              243,
+              244
+            ]
+          },
+          {
+            "id": "development",
+            "title": "Development approaches",
+            "icon": "network",
+            "items": [
+              "Orphan Drug Development",
+              "Precision Medicine",
+              "Gene Therapy"
+            ],
+            "sourceParagraphs": [
+              238,
+              245,
+              246
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Every participant.",
+        "highlight": "Every data point.",
+        "description": "Every visit and observation carries weight. Thoughtful coordination can help reduce friction for patients and preserve the value of the evidence collected.",
+        "items": [
+          {
+            "icon": "people",
+            "title": "Participant pathways",
+            "text": "Plan around access, travel and the practical experience of taking part."
+          },
+          {
+            "icon": "target",
+            "title": "Focused evidence",
+            "text": "Keep assessments aligned with the condition and the study objectives."
+          },
+          {
+            "icon": "network",
+            "title": "Study continuity",
+            "text": "Support careful follow-up and clear handoffs across a distributed program."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring your rare disease program into focus.",
+        "description": "Tell us about the population, evidence and study support you need.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 235,
+        "overviewParagraph": 236,
+        "focusParagraphs": [
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          238,
+          245,
+          246
+        ]
+      }
+    },
+    {
+      "slug": "endocrinology",
+      "icon": "endocrinology",
+      "imageAlt": "Clinician discussing an anatomical model with a patient",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Evidence-led support for hormonal and metabolic research.",
+        "description": "Evidence-led support for metabolic and hormonal research."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Longitudinal evidence.",
+        "highlight": "A clearer clinical picture.",
+        "paragraphs": [
+          "Endocrinology focuses on disorders affecting the body's hormones and metabolism, including diabetes, obesity, and thyroid diseases. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing innovative therapies for endocrine and metabolic conditions. Our Endocrinology Clinical Research Services provide expertise across clinical development, biometrics, regulatory affairs, medical affairs, and pharmacovigilance. We help clients accelerate research and bring effective treatments to patients worldwide."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore metabolic, thyroid, bone and hormonal research programs within our endocrinology focus.",
+        "groups": [
+          {
+            "id": "metabolic",
+            "title": "Metabolic & bone programs",
+            "icon": "activity",
+            "items": [
+              "Type 1 Diabetes",
+              "Type 2 Diabetes",
+              "Obesity",
+              "Metabolic Syndrome",
+              "Osteoporosis"
+            ],
+            "sourceParagraphs": [
+              107,
+              108,
+              109,
+              110,
+              114
+            ]
+          },
+          {
+            "id": "thyroid",
+            "title": "Thyroid & adrenal programs",
+            "icon": "endocrinology",
+            "items": [
+              "Thyroid Disorders",
+              "Graves' Disease",
+              "Hashimoto's Thyroiditis",
+              "Adrenal Disorders"
+            ],
+            "sourceParagraphs": [
+              111,
+              112,
+              113,
+              116
+            ]
+          },
+          {
+            "id": "hormonal",
+            "title": "Hormonal health programs",
+            "icon": "research",
+            "items": [
+              "Growth Hormone Disorders",
+              "Pituitary Disorders",
+              "Women's Hormonal Health"
+            ],
+            "sourceParagraphs": [
+              115,
+              117,
+              118
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Consistent measures.",
+        "highlight": "A connected view over time.",
+        "description": "Connected collection and review workflows help teams make sense of metabolic and hormonal evidence in the context of each study.",
+        "items": [
+          {
+            "icon": "target",
+            "title": "Consistent measures",
+            "text": "Support reliable collection of clinical and patient-reported information."
+          },
+          {
+            "icon": "people",
+            "title": "Participant routines",
+            "text": "Consider how study requirements fit into everyday care and behavior."
+          },
+          {
+            "icon": "data",
+            "title": "Longitudinal view",
+            "text": "Keep trends and follow-up information clear across the program."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Connect the evidence in your endocrinology study.",
+        "description": "Share your study measures, participant routines and program needs.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 104,
+        "overviewParagraph": 105,
+        "focusParagraphs": [
+          107,
+          108,
+          109,
+          110,
+          114,
+          111,
+          112,
+          113,
+          116,
+          115,
+          117,
+          118
+        ]
+      }
+    },
+    {
+      "slug": "ophthalmology",
+      "icon": "ophthalmology",
+      "imageAlt": "Clinician presenting an anatomical eye model",
+      "hero": {
+        "eyebrow": "Therapeutic expertise · TruMinds Clinical",
+        "headline": "Precision in research. Focus on vision.",
+        "description": "Specialist attention to vision outcomes and precise endpoints."
+      },
+      "overview": {
+        "eyebrow": "The therapeutic perspective",
+        "title": "Precise assessments.",
+        "highlight": "A focus on vision outcomes.",
+        "paragraphs": [
+          "Ophthalmology focuses on diseases and disorders affecting the eyes and vision. TruMinds supports pharmaceutical, biotechnology, CRO, medical device, and healthcare organizations developing innovative therapies, diagnostics, and technologies for eye care. Our Ophthalmology Clinical Research Services provide expertise across all phases of clinical development, from early research through regulatory submission. We help clients bring new ophthalmic treatments and technologies to patients worldwide."
+        ]
+      },
+      "focus": {
+        "eyebrow": "Areas of focus",
+        "title": "Specialist focus.",
+        "highlight": "A wider clinical view.",
+        "description": "Explore eye health, retinal conditions and technologies supporting vision research.",
+        "groups": [
+          {
+            "id": "eye-health",
+            "title": "Eye health programs",
+            "icon": "ophthalmology",
+            "items": [
+              "Glaucoma",
+              "Dry Eye Disease",
+              "Corneal Diseases"
+            ],
+            "sourceParagraphs": [
+              177,
+              179,
+              183
+            ]
+          },
+          {
+            "id": "retinal",
+            "title": "Retinal & lens programs",
+            "icon": "research",
+            "items": [
+              "Cataracts",
+              "Age-Related Macular Degeneration (AMD)",
+              "Diabetic Retinopathy",
+              "Retinal Disorders"
+            ],
+            "sourceParagraphs": [
+              178,
+              180,
+              181,
+              182
+            ]
+          },
+          {
+            "id": "technology",
+            "title": "Technology & restoration",
+            "icon": "network",
+            "items": [
+              "Vision Restoration Technologies",
+              "Ophthalmic Medical Devices"
+            ],
+            "sourceParagraphs": [
+              184,
+              185
+            ]
+          }
+        ]
+      },
+      "delivery": {
+        "eyebrow": "Thoughtful study delivery",
+        "title": "Specialist workflows.",
+        "highlight": "Consistent execution.",
+        "description": "Clear methods, consistent site execution and organized review help teams connect clinical findings to the questions a study needs to answer.",
+        "items": [
+          {
+            "icon": "ophthalmology",
+            "title": "Vision endpoints",
+            "text": "Keep outcome definitions and assessment methods consistent."
+          },
+          {
+            "icon": "network",
+            "title": "Specialist workflows",
+            "text": "Support the practical needs of eye-care sites and study teams."
+          },
+          {
+            "icon": "target",
+            "title": "Review clarity",
+            "text": "Organize findings so changes can be examined with the right context."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bring specialist focus to your ophthalmology program.",
+        "description": "Tell us about your vision endpoints, assessments and site needs.",
+        "label": "Talk to our team",
+        "href": "#contact"
+      },
+      "source": {
+        "headingParagraph": 174,
+        "overviewParagraph": 175,
+        "focusParagraphs": [
+          177,
+          179,
+          183,
+          178,
+          180,
+          181,
+          182,
+          184,
+          185
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Non-profit | TruMinds Clinical",
+    "description": "Explore the people, partnerships and access guiding TruMinds Clinical’s non-profit focus and commitment to improving lives beyond clinical research."
+  },
+  "hero": {
+    "eyebrow": "People, partnership and purpose",
+    "title": "A wider view",
+    "highlight": "of impact.",
+    "description": "Better health depends on more than innovation alone. It also depends on people having the support, knowledge and opportunity to benefit from progress.",
+    "image": "/images/editorial/non-profit.jpg",
+    "imageAlt": "Volunteers organizing food and supplies at a community table",
+    "caption": "Care, connection and opportunity.",
+    "primaryLabel": "Explore our priorities",
+    "secondaryLabel": "Connect with our team"
+  },
+  "overview": {
+    "eyebrow": "Our non-profit focus",
+    "title": "Purpose belongs",
+    "highlight": "in the work.",
+    "description": "Our non-profit focus gives the values behind our work a place to grow. People, partnership and access shape the way we think about progress beyond clinical research.",
+    "values": [
+      { "title": "People", "icon": "community", "text": "Keep the needs and experiences of people at the center of every effort." },
+      { "title": "Partnership", "icon": "relief", "text": "Work with others whose expertise and perspective can make an effort stronger." },
+      { "title": "Access", "icon": "accessibility", "text": "Look for practical ways to broaden opportunity and understanding." }
+    ]
+  },
+  "priorities": {
+    "eyebrow": "Where purpose meets possibility",
+    "title": "Care and dignity.",
+    "highlight": "Opportunity for more lives.",
+    "description": "Explore the charitable priorities within our wider Giving Back commitment, from food and safe housing to education, independence and compassionate care.",
+    "initiativeIds": ["meals-nutrition", "shelters-housing", "animal-welfare", "food-banks", "children-education", "blind-visually-impaired", "senior-adult-care", "disaster-relief"],
+    "linkLabel": "Explore this priority",
+    "allLabel": "Explore Giving Back"
+  },
+  "cta": {
+    "title": "A shared purpose starts with a conversation.",
+    "description": "Tell us about your organization, the causes that matter to you and the community needs you would like to discuss.",
+    "label": "Start a conversation"
+  }
+}

@@ -1,82 +1,86 @@
-export const services = [
-  {
-    slug: "full-service-cro",
-    title: "Full-service CRO",
-    description:
-      "Clinical operations, biometrics, safety and regulatory expertise across the development journey.",
-    hoverDescription:
-      "Bring the essential parts of a clinical program together, from study planning and site operations to biometrics, safety and regulatory support. Connected teams keep decisions clear as your study moves forward.",
-    image: "/services/full-service-cro.jpg",
-    imageAlt: "Healthcare professionals working together in a clinical setting",
-    imagePosition: "50% top",
-    overview:
-      "Clinical programs move through many decisions, disciplines and handoffs. Full-service support brings those parts into one coordinated way of working.",
-    approach:
-      "Our teams connect study operations with the data, safety and regulatory work that informs each milestone. The result is a clearer view of progress and a practical path through changing study needs.",
-    capabilities: [
-      { title: "Clinical operations", text: "Plan and coordinate study activities across sites, teams and milestones." },
-      { title: "Biometrics and data", text: "Keep data collection, management and analysis aligned with study objectives." },
-      { title: "Safety and regulatory", text: "Support the review and documentation needed throughout development." },
-    ],
-  },
-  {
-    slug: "truminds-ai",
-    title: "TruMinds AI",
-    description:
-      "Purposeful technology that helps teams work with clinical data more clearly and efficiently.",
-    hoverDescription:
-      "Turn complex trial information into clearer workflows and more useful insight. Our connected digital capabilities support data capture, review and reporting throughout the study lifecycle.",
-    image: "/services/truminds-ai.jpg",
-    imageAlt: "Researchers working with robotic technology in a laboratory",
-    imagePosition: "50% top",
-    overview:
-      "Clinical technology is most useful when it helps people understand and act on the information in front of them.",
-    approach:
-      "TruMinds AI connects digital capabilities across the study lifecycle so teams can move from capture and review toward analysis and reporting with greater clarity.",
-    capabilities: [
-      { title: "Connected workflows", text: "Bring related study activities into a more coherent digital experience." },
-      { title: "Clearer information", text: "Make trial data easier to find, review and interpret in context." },
-      { title: "Practical automation", text: "Reduce repetitive steps where technology can support better team focus." },
-    ],
-  },
-  {
-    slug: "fsp-services",
-    title: "FSP services",
-    description:
-      "Specialist teams that work alongside yours, with the flexibility to adapt as programs evolve.",
-    hoverDescription:
-      "Add the right expertise where your program needs it most. Our functional service teams work alongside yours, align with existing processes and adapt as study priorities change.",
-    image: "/services/fsp-services.jpg",
-    imageAlt: "Clinician checking a patient's blood pressure",
-    imagePosition: "50% top",
-    overview:
-      "Some programs need focused capability within an existing operating model. Functional service support lets teams expand capacity without losing continuity.",
-    approach:
-      "Specialists work within your processes and collaborate with your people. As workloads shift, the support can be shaped around the functions and timelines that matter most.",
-    capabilities: [
-      { title: "Embedded expertise", text: "Bring specialist skills into the functions that need them." },
-      { title: "Flexible capacity", text: "Adjust support as study activity and program priorities change." },
-      { title: "Shared ways of working", text: "Keep teams aligned with established processes and expectations." },
-    ],
-  },
-  {
-    slug: "clinical-staffing",
-    title: "Clinical staffing",
-    description:
-      "Experienced clinical and technical professionals matched to the work that matters most.",
-    hoverDescription:
-      "Find experienced professionals for the work in front of you. We connect clinical and technical talent with study teams so capacity, continuity and specialist skills stay in step with demand.",
-    image: "/services/clinical-staffing.jpg",
-    imageAlt: "Clinical care team standing together with a clipboard",
-    imagePosition: "50% top",
-    overview:
-      "The right people make complex study work more manageable. Clinical staffing starts with understanding the role, the team and the stage of the program.",
-    approach:
-      "We focus on matching clinical and technical capability to the work ahead, helping teams maintain momentum as staffing needs change.",
-    capabilities: [
-      { title: "Role alignment", text: "Match skills and experience to the responsibilities of each assignment." },
-      { title: "Team continuity", text: "Support smooth collaboration with the people already delivering the study." },
-      { title: "Responsive support", text: "Address capacity needs as programs and timelines evolve." },
-    ],
-  },
-] as const;
+import content from "@/data/services.json";
+
+export type ServiceFeature = {
+  icon: string;
+  title: string;
+  text: string;
+};
+
+export type ServiceCapability = {
+  id: string;
+  title: string;
+  icon: string;
+  image: string;
+  imageAlt: string;
+  imagePosition: string;
+  summary: string;
+  paragraphs: string[];
+  scopeTitle: string;
+  items: string[];
+  href?: string;
+  linkLabel?: string;
+  sourceParagraphs?: number[];
+};
+
+export type Service = {
+  slug: string;
+  title: string;
+  description: string;
+  hoverDescription: string;
+  image: string;
+  imageAlt: string;
+  imagePosition: string;
+  detail: {
+    eyebrow: string;
+    headline: string;
+    heroDescription: string;
+    facts: { label: string; value: string }[];
+    overview: {
+      eyebrow: string;
+      title: string;
+      highlight: string;
+      paragraphs: string[];
+      highlights: ServiceFeature[];
+    };
+    capabilities: {
+      eyebrow: string;
+      title: string;
+      highlight: string;
+      description: string;
+      group: string;
+    };
+    partnership: {
+      eyebrow: string;
+      title: string;
+      highlight: string;
+      description: string;
+      items: ServiceFeature[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      label: string;
+      href: string;
+    };
+  };
+};
+
+export const services: Service[] = content.services;
+export const servicePageCopy = content.ui;
+const capabilities: ServiceCapability[] = content.capabilities;
+const capabilityGroups: Record<string, string[]> = content.capabilityGroups;
+
+export function getServiceBySlug(slug: string) {
+  return services.find((service) => service.slug === slug);
+}
+
+export function getServiceCapabilities(service: Service) {
+  const ids = capabilityGroups[service.detail.capabilities.group];
+  if (!ids) throw new Error(`Missing capability group for ${service.slug}`);
+
+  return ids.map((id) => {
+    const capability = capabilities.find((item) => item.id === id);
+    if (!capability) throw new Error(`Missing service capability: ${id}`);
+    return capability;
+  });
+}

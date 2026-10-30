@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { shell } from "@/lib/site-styles";
+import givingBackCatalog from "@/data/giving-back-catalog.json";
 
 const mainLinks = [
   { label: "About Us", href: "/about-us" },
@@ -14,20 +15,12 @@ const mainLinks = [
   { label: "Products", href: "/#truform" },
   { label: "Giving Back", href: "/giving-back" },
   { label: "Resources", href: "/resources" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
-const givingBackLinks = [
-  {
-    label: "Non-profit Research Organizations",
-    href: "/giving-back#non-profit-research-organizations",
-  },
-  {
-    label: "Employee Volunteer Programs",
-    href: "/giving-back#employee-volunteer-programs",
-  },
-  { label: "Community Outreach", href: "/giving-back#community-outreach" },
-  { label: "Mentorship Programs", href: "/giving-back#mentorship-programs" },
-];
+const givingBackLinks = givingBackCatalog.map(area => ({
+  label: area.title,
+  href: `/giving-back/${area.slug}`,
+}));
 
 export function Header() {
   const [open, setOpen] = useState(false);

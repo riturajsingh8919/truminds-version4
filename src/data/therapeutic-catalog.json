@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "oncology-hematology",
+    "title": "Oncology & Hematology",
+    "image": "/therapeutic/oncology.jpg",
+    "imagePosition": "50% top",
+    "detail": "Study support for evolving therapies and complex clinical endpoints."
+  },
+  {
+    "slug": "cardiovascular",
+    "title": "Cardiovascular",
+    "image": "/therapeutic/cardio.jpg",
+    "imagePosition": "50% center",
+    "detail": "Thoughtful trial delivery across heart and vascular health."
+  },
+  {
+    "slug": "neuroscience",
+    "title": "Neuroscience",
+    "image": "/therapeutic/neuroscience.jpg",
+    "imagePosition": "50% center",
+    "detail": "Clearer evidence pathways for neurological and CNS programs."
+  },
+  {
+    "slug": "immunology",
+    "title": "Immunology",
+    "image": "/therapeutic/immunology.jpg",
+    "imagePosition": "50% top",
+    "detail": "Adaptive research support for immune-mediated conditions."
+  },
+  {
+    "slug": "infectious-diseases",
+    "title": "Infectious Diseases",
+    "image": "/therapeutic/infectious-diseases.jpg",
+    "imagePosition": "50% top",
+    "detail": "Agile study operations for infection and vaccine research."
+  },
+  {
+    "slug": "rare-diseases",
+    "title": "Rare Diseases",
+    "image": "/therapeutic/rare.jpg",
+    "imagePosition": "50% top",
+    "detail": "Careful execution when study populations are small and every data point matters."
+  },
+  {
+    "slug": "endocrinology",
+    "title": "Endocrinology",
+    "image": "/therapeutic/endocrinology.jpg",
+    "imagePosition": "50% center",
+    "detail": "Evidence-led support for metabolic and hormonal research."
+  },
+  {
+    "slug": "ophthalmology",
+    "title": "Ophthalmology",
+    "image": "/therapeutic/ophthalmology.jpg",
+    "imagePosition": "50% center",
+    "detail": "Specialist attention to vision outcomes and precise endpoints."
+  }
+]

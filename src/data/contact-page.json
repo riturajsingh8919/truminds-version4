@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "Contact Us | TruMinds Clinical",
+    "description": "Connect with TruMinds Clinical for clinical research, FSP, clinical staffing and TruForm enquiries. Find our offices in Texas, New Jersey, Canada, India and the UK."
+  },
+  "hero": {
+    "eyebrow": "Contact TruMinds Clinical",
+    "title": "The next step starts",
+    "highlight": "with a conversation.",
+    "description": "Tell us what you are working on. We will help connect you with the right clinical, data or technology expertise.",
+    "emailLabel": "Service & partnership enquiries",
+    "phoneLabel": "Speak with our team",
+    "officeLabel": "Find our offices"
+  },
+  "journey": {
+    "title": "A clear next step",
+    "steps": [
+      { "title": "Share your priorities", "description": "Tell us about your study or question.", "icon": "message" },
+      { "title": "Connect with the right expertise", "description": "We will review your needs with our team.", "icon": "people" },
+      { "title": "Plan what comes next", "description": "Continue the conversation together.", "icon": "next" }
+    ]
+  },
+  "offices": {
+    "eyebrow": "Our global presence",
+    "title": "Connected teams.",
+    "highlight": "Across borders.",
+    "description": "Find TruMinds in the United States, Canada, India and the United Kingdom. Explore our locations and open an address for directions.",
+    "count": "5 offices · 4 countries",
+    "directionsLabel": "View on map",
+    "mapHint": "Hover or focus on a location to explore our connected markets."
+  }
+}
