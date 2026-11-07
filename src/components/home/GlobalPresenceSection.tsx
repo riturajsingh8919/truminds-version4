@@ -1,4 +1,10 @@
-import { ArrowUpRight, Globe2, Layers3, Network, UsersRound } from "lucide-react";
+import {
+  ArrowUpRight,
+  Globe2,
+  Layers3,
+  Network,
+  UsersRound,
+} from "lucide-react";
 import { WorldPresenceMap } from "@/components/home/WorldPresenceMap";
 import { section, shell, title } from "@/lib/site-styles";
 
@@ -6,7 +12,8 @@ const capabilities = [
   {
     icon: Globe2,
     title: "Global perspective",
-    description: "Research experience that travels across markets and study settings.",
+    description:
+      "Research experience that travels across markets and study settings.",
   },
   {
     icon: Layers3,
@@ -32,7 +39,9 @@ export function GlobalPresenceSection() {
       aria-labelledby="global-presence-title"
       className={`${section} copy-on-light relative overflow-hidden border-t border-[#e5eef0] bg-white`}
     >
-      <div className={`${shell} relative grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-18`}>
+      <div
+        className={`${shell} relative grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-12 xl:gap-18`}
+      >
         <div className="relative z-10">
           <h2 id="global-presence-title" className={title}>
             Global <span className="text-[#0068a5]">presence.</span>
@@ -48,7 +57,7 @@ export function GlobalPresenceSection() {
               return (
                 <div
                   key={capability.title}
-                  className="group relative min-h-49 overflow-hidden rounded-[1.5rem] border border-[#dce9ed] bg-[#f3f8f9] p-6 transition-[transform,background-color,border-color,box-shadow] duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-[#b8d9e2] hover:bg-white hover:shadow-[0_20px_45px_rgba(14,57,78,.10)] motion-reduce:transition-none"
+                  className="group relative min-h-49 overflow-hidden rounded-3xl border border-[#dce9ed] bg-[#f3f8f9] p-6 transition-[transform,background-color,border-color,box-shadow] duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-[#b8d9e2] hover:bg-white hover:shadow-[0_20px_45px_rgba(14,57,78,.10)] motion-reduce:transition-none"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span className="grid size-11 place-items-center rounded-2xl border border-[#d1e8ed] bg-white text-[#0068a5] transition-colors duration-500 group-hover:bg-[#0068a5] group-hover:text-white">
@@ -72,7 +81,10 @@ export function GlobalPresenceSection() {
           </div>
         </div>
 
-        <div id="markets-we-serve" className="relative isolate mx-auto w-full scroll-mt-28 lg:mx-0 lg:justify-self-end">
+        <div
+          id="markets-we-serve"
+          className="relative isolate mx-auto w-full scroll-mt-28 lg:mx-0 lg:justify-self-end"
+        >
           <WorldPresenceMap />
         </div>
       </div>
