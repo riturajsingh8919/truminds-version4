@@ -1,0 +1,42 @@
+{
+  "services": {
+    "metadata": { "title": "Services | TruMinds Clinical", "description": "Explore TruMinds Clinical services: full-service CRO, TruMinds AI, FSP services and clinical staffing, with clinical and biometrics expertise across Phase I–IV." },
+    "hero": { "eyebrow": "Clinical expertise, connected", "title": "Services", "headline": "The right expertise, at every stage.", "description": "From full-service delivery to embedded specialist teams and connected technology, we shape our support around the needs of your study.", "image": "/services/full-service-cro.jpg", "imageAlt": "Clinical professionals collaborating on patient care", "imageAspect": "portrait", "primaryLabel": "Explore our services", "primaryHref": "#service-models" },
+    "navigation": [
+      { "label": "Delivery models", "href": "#service-models", "icon": "team" },
+      { "label": "Clinical capabilities", "href": "#clinical-capabilities", "icon": "science" },
+      { "label": "Connected expertise", "href": "#connected-expertise", "icon": "platform" }
+    ],
+    "models": { "eyebrow": "Ways to work together", "title": "Your program.", "highlight": "The right support around it.", "description": "Choose the delivery model that fits your goals, team and stage of development. Explore each service to see how its capabilities connect.", "linkLabel": "Explore service" },
+    "capabilities": { "eyebrow": "Clinical and biometrics expertise", "title": "The capabilities behind", "highlight": "your next milestone.", "description": "Bring clinical operations, data, statistics, safety and regulatory perspectives together across Phase I–IV clinical development.", "linkLabel": "Explore CRO capabilities" },
+    "connections": { "eyebrow": "A connected clinical approach", "title": "Specialist knowledge.", "highlight": "Shared direction.", "description": "Connect the support around your study with therapeutic expertise and clinical technology.", "areasTitle": "Therapeutic expertise", "areasDescription": "Discover the eight specialties at the heart of our clinical research work.", "areasLabel": "Explore therapeutic areas", "productsTitle": "TruForm technology", "productsDescription": "Explore ten connected capabilities across clinical data collection, study operations, standards and reporting.", "productsLabel": "Explore our products" }
+  },
+  "therapeuticAreas": {
+    "metadata": { "title": "Therapeutic Areas | TruMinds Clinical", "description": "Explore TruMinds Clinical’s eight core therapeutic areas, from oncology and hematology to cardiovascular, neuroscience, immunology, infectious and rare diseases, endocrinology and ophthalmology." },
+    "hero": { "eyebrow": "Our core therapeutic expertise", "title": "Therapeutic areas", "headline": "A deeper understanding. A clearer path forward.", "description": "Specialized clinical expertise across eight therapeutic areas. Explore the conditions, research priorities and study considerations that shape our work.", "image": "/therapeutic/oncology.jpg", "imageAlt": "A clinical professional supporting a patient during oncology care", "imageAspect": "portrait", "primaryLabel": "Explore our areas", "primaryHref": "#therapeutic-specialties" },
+    "navigation": [
+      { "label": "Our eight specialties", "href": "#therapeutic-specialties", "icon": "science" },
+      { "label": "Study support", "href": "#therapeutic-support", "icon": "team" },
+      { "label": "Discuss your program", "href": "#contact", "icon": "project" }
+    ],
+    "specialties": { "eyebrow": "Therapeutic areas & specialized domains", "title": "Eight areas of focus.", "highlight": "Every study considered.", "description": "We support pharmaceutical, biotechnology, medical device and CRO organizations throughout the clinical development lifecycle. Select a specialty to explore its full research focus.", "focusLabel": "Focus includes", "linkLabel": "Explore specialty" },
+    "delivery": { "eyebrow": "Expertise around your study", "title": "Clinical understanding.", "highlight": "Connected delivery.", "description": "Bring together the delivery model, specialist people and technology your program needs. Explore the services that support work across our therapeutic areas.", "linkLabel": "Explore service" }
+  },
+  "products": {
+    "metadata": { "title": "Products | TruForm eClinical Platform | TruMinds Clinical", "description": "Explore the TruForm eClinical ecosystem: EDC, SDTM, ADaM, TLF, DocuVault, eConsent, Adjudication, RBQM, CTMS and RTSM." },
+    "hero": { "eyebrow": "TruForm within TruMinds AI", "title": "Products", "headline": "One connected clinical ecosystem.", "description": "Ten TruForm capabilities work together across the clinical trial lifecycle, from study setup and data capture through operations, analysis and reporting.", "image": "/products/truform-edc.jpg", "imageAlt": "A clinician reviewing study information with a patient", "imageAspect": "square", "primaryLabel": "Explore TruForm", "primaryHref": "#capture-participation" },
+    "navigation": [
+      { "label": "Capture & participation", "href": "#capture-participation", "icon": "data" },
+      { "label": "Operations & oversight", "href": "#operations-oversight", "icon": "project" },
+      { "label": "Standards & reporting", "href": "#standards-reporting", "icon": "programming" }
+    ],
+    "groups": [
+      { "id": "capture-participation", "eyebrow": "Study data and participant workflows", "title": "Capture information.", "highlight": "Connect participation.", "description": "Explore data capture, informed consent, randomization and clinical supply workflows.", "slugs": ["truform-edc", "truform-econsent", "truform-rtsm"] },
+      { "id": "operations-oversight", "eyebrow": "Study coordination and quality", "title": "Keep teams aligned.", "highlight": "Make oversight clearer.", "description": "Connect study operations, essential documents, endpoint review and quality oversight.", "slugs": ["truform-ctms", "truform-docuvault", "truform-adjudication", "truform-rbqm"] },
+      { "id": "standards-reporting", "eyebrow": "Clinical data to analysis and reporting", "title": "Build on your data.", "highlight": "Move toward the evidence.", "description": "Explore connected tools for standardized study data, analysis datasets, and tables, listings and figures.", "slugs": ["truform-sdtm", "truform-adam", "truform-tlf"] }
+    ],
+    "linkLabel": "Explore product",
+    "support": { "title": "Technology and people, working together.", "description": "Explore TruMinds AI services to see how clinical expertise and the TruForm platform connect around your program.", "label": "Explore TruMinds AI services", "href": "/services/truminds-ai" }
+  },
+  "ui": { "homeLabel": "Home", "contactLabel": "Talk to our team", "pageNavigationLabel": "On this page", "ctaTitle": "Bring your next question to the right team.", "ctaDescription": "Tell us about your study, priorities and the support you need. We will help connect the expertise around your program.", "ctaLabel": "Discuss your program" }
+}

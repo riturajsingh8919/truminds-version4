@@ -26,7 +26,7 @@ export function ServiceDetailPage({
           <nav aria-label="Breadcrumb" className="py-6 sm:py-8">
             <ol className="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-medium text-[#d2e5eb]">
               <li><Link href="/" className="transition-colors hover:text-[#78ded9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#78ded9]">{servicePageCopy.homeLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/#services" className="transition-colors hover:text-[#78ded9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#78ded9]">{servicePageCopy.servicesLabel}</Link></li>
+              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/services" className="transition-colors hover:text-[#78ded9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#78ded9]">{servicePageCopy.servicesLabel}</Link></li>
               <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><span aria-current="page" className="text-white">{service.title}</span></li>
             </ol>
           </nav>

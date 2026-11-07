@@ -13,7 +13,7 @@ const company = [
   { label: "Contact Us", href: "/contact-us" },
 ];
 const explore = [
-  { label: "Therapeutic Areas", href: "/#therapeutic-areas" },
+  { label: "Therapeutic Areas", href: "/therapeutic-areas" },
   { label: "Resources & Insights", href: "/resources" },
   { label: "Global Presence", href: "/#global-presence" },
   { label: "Leadership Team", href: "/#leadership-team" },
@@ -25,7 +25,7 @@ const serviceLinks = [
   { label: "Technology Solutions", href: "/services/truminds-ai" },
   { label: "Staffing Solutions", href: "/services/clinical-staffing" },
   { label: "TruMinds AI", href: "/services/truminds-ai" },
-  { label: "TruForm Platform", href: "/#truform" },
+  { label: "TruForm Platform", href: "/products" },
 ];
 const legal = [
   { label: "Privacy Policy", href: "/privacy-policy" },

@@ -10,9 +10,9 @@ import givingBackCatalog from "@/data/giving-back-catalog.json";
 
 const mainLinks = [
   { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/#services" },
-  { label: "Therapeutic Areas", href: "/#therapeutic-areas" },
-  { label: "Products", href: "/#truform" },
+  { label: "Services", href: "/services" },
+  { label: "Therapeutic Areas", href: "/therapeutic-areas" },
+  { label: "Products", href: "/products" },
   { label: "Giving Back", href: "/giving-back" },
   { label: "Resources", href: "/resources" },
   { label: "Contact Us", href: "/contact-us" },

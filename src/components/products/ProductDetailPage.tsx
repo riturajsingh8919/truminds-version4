@@ -20,7 +20,7 @@ export function ProductDetailPage({ product }: { product: TruFormProduct }) {
           <nav aria-label="Breadcrumb" className="py-6 sm:py-8">
             <ol className="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-medium text-[#41667b]">
               <li><Link href="/" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{productPageCopy.homeLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/#truform" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{productPageCopy.ecosystemLabel}</Link></li>
+              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/products" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{productPageCopy.ecosystemLabel}</Link></li>
               <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><span aria-current="page" className="text-[#0a2038]">{product.title}</span></li>
             </ol>
           </nav>
@@ -145,7 +145,7 @@ export function ProductDetailPage({ product }: { product: TruFormProduct }) {
             <div className="min-w-0 max-w-200"><h3 className="text-2xl font-semibold tracking-tight text-[#0a2038] sm:text-3xl">{detail.cta.title}</h3><p className="mt-3 text-lg font-medium leading-relaxed text-black">{detail.cta.description}</p></div>
             <div className="max-w-full shrink-0 [&>a]:max-w-full [&>a]:text-center"><AnimatedPillLink href={detail.cta.href} label={detail.cta.label} variant="dark" size="large" /></div>
           </div>
-          <Link href="/#truform" className="mt-7 inline-flex min-h-12 items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-5 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">{productPageCopy.backToEcosystemLabel}<ArrowRight size={19} aria-hidden="true" /></Link>
+          <Link href="/products" className="mt-7 inline-flex min-h-12 items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-5 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">{productPageCopy.backToEcosystemLabel}<ArrowRight size={19} aria-hidden="true" /></Link>
         </div>
       </section>
     </>
