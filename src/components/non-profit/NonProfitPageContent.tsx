@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { GivingBackIcon } from "@/components/giving-back/GivingBackIcon";
 import copy from "@/data/non-profit.json";
@@ -11,19 +11,7 @@ export function NonProfitPageContent() {
   const priorities = getGivingInitiatives(copy.priorities.initiativeIds);
   return (
     <>
-      <section aria-labelledby="non-profit-page-title" className="copy-on-light bg-[#f0f7f9]">
-        <div className={shell}>
-          <nav aria-label="Breadcrumb" className="py-6 sm:py-8"><ol className="flex flex-wrap items-center gap-3 text-lg font-medium text-[#365a70]"><li><Link href="/" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">Home</Link></li><li className="flex items-center gap-3"><ChevronRight size={17} aria-hidden="true" /><span aria-current="page" className="text-[#0a2038]">Non-profit</span></li></ol></nav>
-          <div className="grid items-center gap-10 pt-4 pb-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)] lg:gap-16 lg:pt-6 lg:pb-20 xl:gap-24">
-            <div className="min-w-0"><span className="mb-5 flex items-center gap-3 text-lg font-medium text-[#00818d]"><span className="h-px w-9 shrink-0 bg-[#008995]" aria-hidden="true" />{copy.hero.eyebrow}</span><h1 id="non-profit-page-title" className="text-5xl font-semibold leading-[1.06] tracking-[-.03em] text-[#0a2038] [overflow-wrap:anywhere] sm:text-6xl xl:text-7xl 2xl:text-8xl">{copy.hero.title}<br /><span className="text-[#0068a5]">{copy.hero.highlight}</span></h1><p className="mt-7 max-w-145 text-lg font-medium leading-[1.8] text-black">{copy.hero.description}</p><div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 lg:mt-10"><AnimatedPillLink href="#non-profit-priorities" label={copy.hero.primaryLabel} size="large" /><Link href="#contact" className="group inline-flex min-h-14 items-center gap-3 text-lg font-medium text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{copy.hero.secondaryLabel}<ArrowDownRight size={22} className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 motion-reduce:transform-none" aria-hidden="true" /></Link></div></div>
-            <figure className="relative mx-auto w-full max-w-88">
-              <div className="pointer-events-none absolute -top-2 -right-2 h-1/2 w-1/2 rounded-tr-[40px] border-t border-r border-[#65aebe] sm:-top-3 sm:-right-3" aria-hidden="true" />
-              <div className="relative aspect-2/3 overflow-hidden rounded-3xl border border-[#ccdee5] bg-white"><Image src={copy.hero.image} alt={copy.hero.imageAlt} fill preload sizes="(max-width: 391px) calc(100vw - 40px), 352px" className="object-contain" /></div>
-              <figcaption className="mt-5 flex items-center gap-3 text-lg font-medium leading-relaxed text-[#234f65]"><span className="size-2 shrink-0 rounded-full bg-[#00aaa9]" aria-hidden="true" />{copy.hero.caption}</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+      <InnerPageHero pagePath="/non-profit" titleId="non-profit-page-title" title={copy.hero.title} highlight={copy.hero.highlight} breadcrumbLabel="Non-profit" description={copy.hero.description} imageCaption={copy.hero.caption} eyebrow={copy.hero.eyebrow} parent={{ label: "Home", href: "/" }} actions={<><Link href="#non-profit-priorities" className="inline-flex min-h-11 items-center border-b border-[#0068a5] text-lg font-medium text-[#0068a5] hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{copy.hero.primaryLabel}</Link><Link href="#contact" className="inline-flex min-h-11 items-center text-lg font-medium text-[#234b61] underline underline-offset-4 hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{copy.hero.secondaryLabel}</Link></>} />
 
       <section aria-labelledby="non-profit-overview-title" className={`${section} copy-on-light bg-white`}>
         <div className={shell}>

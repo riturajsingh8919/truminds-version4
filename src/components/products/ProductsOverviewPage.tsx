@@ -12,7 +12,7 @@ export function ProductsOverviewPage() {
   const page = copy.products;
   return (
     <>
-      <OverviewHero hero={page.hero} navigation={page.navigation} light />
+      <OverviewHero pagePath="/products" hero={page.hero} navigation={page.navigation} light />
       {page.groups.map((group, index) => (
         <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className={`${section} copy-on-light scroll-mt-24 border-b border-[#dce9ed] ${index % 2 ? "bg-[#f2f8f9]" : "bg-white"}`}>
           <div className={shell}>

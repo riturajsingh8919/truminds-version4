@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, ChevronRight, Globe2, Mail, MapPin, MessageSquare, Phone, UsersRound } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Globe2, Mail, MapPin, MessageSquare, Phone, UsersRound } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CountryFlag } from "@/components/common/CountryFlag";
 import { WorldPresenceMap } from "@/components/home/WorldPresenceMap";
@@ -13,19 +14,13 @@ export function ContactPageContent() {
   const [emailName, emailDomain] = contactDetails.email.split("@");
   return (
     <>
-      <section aria-labelledby="contact-page-title" className="bg-[#08253d] text-white">
-        <div className={shell}>
-          <nav aria-label="Breadcrumb" className="py-6 sm:py-8"><ol className="flex flex-wrap items-center gap-3 text-lg font-medium text-[#c6dfe7]"><li><Link href="/" className="transition-colors hover:text-[#77dbd7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbd7]">Home</Link></li><li className="flex items-center gap-3"><ChevronRight size={17} aria-hidden="true" /><span aria-current="page" className="text-white">Contact us</span></li></ol></nav>
-          <div className="grid items-start gap-10 pt-4 pb-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,.75fr)] lg:gap-16 lg:pt-6 lg:pb-16 xl:gap-24">
-            <div className="min-w-0"><span className="mb-5 flex items-center gap-3 text-lg font-medium text-[#77dbd7]"><span className="h-px w-9 shrink-0 bg-[#77dbd7]" aria-hidden="true" />{copy.hero.eyebrow}</span><h1 id="contact-page-title" className="max-w-230 text-4xl font-semibold leading-[1.08] tracking-[-.028em] text-white [overflow-wrap:anywhere] sm:text-5xl md:text-6xl xl:text-7xl">{copy.hero.title} <span className="text-[#77dbd7]">{copy.hero.highlight}</span></h1><p className="mt-6 max-w-155 text-lg font-medium leading-[1.8] text-[#e0edf1]">{copy.hero.description}</p></div>
-            <div className="min-w-0 space-y-6 lg:pt-2">
-              <a href={`mailto:${contactDetails.email}`} className="group flex min-w-0 items-start gap-4 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbd7]"><span className="grid size-12 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/5 text-[#77dbd7] transition-colors duration-300 group-hover:bg-white/10 motion-reduce:transition-none"><Mail size={24} strokeWidth={1.65} aria-hidden="true" /></span><span className="min-w-0 pt-0.5"><span className="block text-lg font-medium leading-snug text-[#bcd7e1]">{copy.hero.emailLabel}</span><span className="mt-2 block text-lg font-medium leading-relaxed text-white transition-colors group-hover:text-[#77dbd7]">{emailName}@<wbr />{emailDomain}</span></span></a>
-              <a href={contactDetails.phoneHref} className="group flex items-start gap-4 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbd7]"><span className="grid size-12 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/5 text-[#77dbd7] transition-colors duration-300 group-hover:bg-white/10 motion-reduce:transition-none"><Phone size={24} strokeWidth={1.65} aria-hidden="true" /></span><span className="min-w-0 pt-0.5"><span className="block text-lg font-medium leading-snug text-[#bcd7e1]">{copy.hero.phoneLabel}</span><span className="mt-2 block whitespace-nowrap text-lg font-medium leading-relaxed text-white transition-colors group-hover:text-[#77dbd7]">{contactDetails.phone}</span></span></a>
-              <Link href="#our-offices" className="group inline-flex min-h-12 items-center gap-3 border-b border-[#77dbd7]/60 pb-2 text-lg font-medium text-[#77dbd7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbd7]">{copy.hero.officeLabel}<ArrowDownRight size={21} className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 motion-reduce:transform-none" aria-hidden="true" /></Link>
-            </div>
-          </div>
+      <InnerPageHero pagePath="/contact-us" titleId="contact-page-title" title={copy.hero.title} highlight={copy.hero.highlight} breadcrumbLabel="Contact us" description={copy.hero.description} eyebrow={copy.hero.eyebrow} parent={{ label: "Home", href: "/" }}>
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] lg:gap-8">
+          <a href={`mailto:${contactDetails.email}`} className="group flex min-w-0 items-start gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"><Mail size={23} className="mt-1 shrink-0 text-[#008995]" aria-hidden="true" /><span className="min-w-0"><span className="block text-lg font-medium leading-relaxed text-[#426272]">{copy.hero.emailLabel}</span><span className="mt-1 block text-lg font-medium leading-relaxed text-[#0068a5] group-hover:underline">{emailName}@<wbr />{emailDomain}</span></span></a>
+          <a href={contactDetails.phoneHref} className="group flex min-w-0 items-start gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"><Phone size={23} className="mt-1 shrink-0 text-[#008995]" aria-hidden="true" /><span><span className="block text-lg font-medium leading-relaxed text-[#426272]">{copy.hero.phoneLabel}</span><span className="mt-1 block text-lg font-medium leading-relaxed text-[#0068a5] group-hover:underline">{contactDetails.phone}</span></span></a>
+          <Link href="#our-offices" className="inline-flex min-h-11 w-fit items-center gap-3 text-lg font-medium text-[#0068a5] underline underline-offset-4 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"><MapPin size={23} className="shrink-0" aria-hidden="true" />{copy.hero.officeLabel}</Link>
         </div>
-      </section>
+      </InnerPageHero>
 
       <section id="our-offices" aria-labelledby="contact-offices-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={`${shell} grid items-start gap-10 xl:grid-cols-[minmax(0,.95fr)_minmax(0,1.15fr)] xl:gap-14 2xl:gap-20`}>

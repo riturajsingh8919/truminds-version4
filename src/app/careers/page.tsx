@@ -13,10 +13,10 @@ export default function CareersPage() {
   return (
     <>
       <InteriorHero
+        pagePath="/careers"
+        label="Careers"
         title="Build what comes next."
         description="Join work that brings clinical expertise, technology and care together."
-        image="/images/editorial/hero-team.jpg"
-        imageAlt="Medical professionals working together"
       />
       <InteriorStory
         title="Your expertise can move research forward."

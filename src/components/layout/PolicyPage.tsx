@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
-import { shell, title } from "@/lib/site-styles";
+import { ArrowUpRight, Mail } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { shell } from "@/lib/site-styles";
 
 type PolicySection = {
   heading: string;
@@ -22,21 +23,7 @@ const related = [
 export function PolicyPage({ heading, intro, sections }: PolicyPageProps) {
   return (
     <article className="copy-on-light bg-white text-[#0a2038]">
-      <div className="border-b border-[#e1ebee] bg-[#f3f8f9] py-16 md:py-20">
-        <div className={shell}>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-lg font-medium text-[#0068a5] transition-colors hover:text-[#003f68]"
-          >
-            <ArrowLeft size={16} aria-hidden="true" />
-            Back to home
-          </Link>
-          <h1 className={`${title} mt-7`}>{heading}</h1>
-          <p className="mt-6 max-w-190 text-lg leading-[1.7] text-[#4e6879]">
-            {intro}
-          </p>
-        </div>
-      </div>
+      <InnerPageHero titleId="policy-page-title" title={heading} description={intro} eyebrow="Website policies" parent={{ label: "Home", href: "/" }} />
 
       <div className={`${shell} grid gap-12 py-16 md:py-22 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-20`}>
         <div className="max-w-205 divide-y divide-[#e1ebee]">

@@ -60,10 +60,10 @@ export default function ResourcesPage() {
   return (
     <>
       <InteriorHero
+        pagePath="/resources"
+        label="Resources"
         title="Ideas for better research."
         description="Perspectives on the people, processes and technology behind confident clinical decisions."
-        image="/images/editorial/about-lab.jpg"
-        imageAlt="Scientists working together in a research laboratory"
       />
       <section className="py-20">
         <div className={shell}>

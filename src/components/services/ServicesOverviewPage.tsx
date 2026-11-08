@@ -15,7 +15,7 @@ export function ServicesOverviewPage() {
   const capabilities = getServiceCapabilities(cro);
   return (
     <>
-      <OverviewHero hero={page.hero} navigation={page.navigation} />
+      <OverviewHero pagePath="/services" hero={page.hero} navigation={page.navigation} />
       <section id="service-models" aria-labelledby="service-models-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={shell}>
           <div className="mb-10 grid items-end gap-6 lg:grid-cols-2 lg:gap-16 xl:mb-14"><div><span className="mb-4 block text-lg font-medium text-[#00818d]">{page.models.eyebrow}</span><h2 id="service-models-title" className={title}>{page.models.title}<br /><span className="text-[#0068a5]">{page.models.highlight}</span></h2></div><p className="max-w-145 text-lg font-medium leading-[1.8] text-black">{page.models.description}</p></div>

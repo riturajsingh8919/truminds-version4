@@ -14,7 +14,7 @@ export function TherapeuticOverviewPage() {
   const page = copy.therapeuticAreas;
   return (
     <>
-      <OverviewHero hero={page.hero} navigation={page.navigation} />
+      <OverviewHero pagePath="/therapeutic-areas" hero={page.hero} navigation={page.navigation} />
       <section id="therapeutic-specialties" aria-labelledby="therapeutic-specialties-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={shell}>
           <div className="mb-10 grid items-end gap-6 lg:grid-cols-2 lg:gap-16 xl:mb-14"><div><span className="mb-4 block text-lg font-medium text-[#00818d]">{page.specialties.eyebrow}</span><h2 id="therapeutic-specialties-title" className={title}>{page.specialties.title}<br /><span className="text-[#0068a5]">{page.specialties.highlight}</span></h2></div><p className="max-w-145 text-lg font-medium leading-[1.8] text-black">{page.specialties.description}</p></div>

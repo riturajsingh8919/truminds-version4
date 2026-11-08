@@ -11,7 +11,7 @@ import { section, shell, title } from "@/lib/site-styles";
 export function GivingBackMainPage() {
   return (
     <>
-      <GivingBackHero {...page.hero} />
+      <GivingBackHero pagePath="/giving-back" {...page.hero} />
       <section id="giving-purpose" aria-labelledby="giving-purpose-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={`${shell} grid items-start gap-8 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:gap-16 xl:gap-24`}>
           <div><span className="mb-4 block text-lg font-medium text-[#00818d]">{page.mission.eyebrow}</span><h2 id="giving-purpose-title" className={title}>{page.mission.title}<br /><span className="text-[#0068a5]">{page.mission.highlight}</span></h2></div>

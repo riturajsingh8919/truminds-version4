@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, ChevronRight, Plus } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Plus } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { ProductWorkflow } from "@/components/products/ProductWorkflow";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
@@ -13,55 +13,9 @@ export function ProductDetailPage({ product }: { product: TruFormProduct }) {
 
   return (
     <>
-      <section aria-labelledby="product-title" className="relative isolate overflow-hidden bg-[#f2f8f9]">
-        <div className="pointer-events-none absolute -top-44 -right-36 -z-10 size-180 rounded-full border border-[#c4e1e7]" aria-hidden="true" />
-        <div className="pointer-events-none absolute -right-12 -bottom-40 -z-10 size-150 rounded-full border border-[#c4e1e7]/70" aria-hidden="true" />
-        <div className={shell}>
-          <nav aria-label="Breadcrumb" className="py-6 sm:py-8">
-            <ol className="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-medium text-[#41667b]">
-              <li><Link href="/" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{productPageCopy.homeLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/products" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{productPageCopy.ecosystemLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><span aria-current="page" className="text-[#0a2038]">{product.title}</span></li>
-            </ol>
-          </nav>
-
-          <div className="grid items-center gap-10 pt-5 pb-16 md:gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)] lg:gap-16 lg:pt-7 lg:pb-20 xl:gap-24">
-            <div className="min-w-0">
-              <div className="mb-6 flex items-center gap-3 text-lg font-medium leading-relaxed text-[#00818d]">
-                <span className="grid size-10 shrink-0 place-items-center rounded-xl border border-[#bbdfe4] bg-white/80"><ServiceIcon name={detail.icon} size={23} /></span>
-                {detail.hero.eyebrow}
-              </div>
-              <h1 id="product-title" className="text-4xl leading-[1.06] font-semibold tracking-[-.028em] text-[#0a2038] sm:text-5xl md:text-6xl xl:text-7xl">
-                TruForm <span className="text-[#0068a5]">{detail.name}</span>
-              </h1>
-              <span className="mt-4 block text-lg font-medium leading-relaxed text-[#006b78]">{detail.fullName}</span>
-              <span className="mt-7 block max-w-170 text-2xl leading-snug font-semibold tracking-tight text-[#0a2038] md:text-3xl">{detail.hero.headline}</span>
-              <p className="mt-5 max-w-155 text-lg font-medium leading-[1.75] text-black">{detail.hero.description}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 lg:mt-10">
-                <AnimatedPillLink href={detail.cta.href} label={productPageCopy.primaryAction} variant="dark" size="large" />
-                <Link href="#product-capabilities" className="group inline-flex min-h-14 items-center gap-3 text-lg font-medium text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">
-                  {productPageCopy.capabilitiesAction}<ArrowDownRight size={22} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 motion-reduce:transform-none" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-110 lg:max-w-100 xl:max-w-110">
-              <div className="pointer-events-none absolute -inset-2.5 rounded-[36px] border border-[#acd4dc] sm:-inset-3.5 sm:rounded-[42px]" aria-hidden="true" />
-              <div className="relative overflow-hidden rounded-[28px] bg-[#082b43] shadow-[0_22px_55px_rgba(8,54,77,.12)] sm:rounded-[32px]">
-                <div className="relative aspect-square bg-[#e2eef1]">
-                  <Image src={product.image} alt={product.imageAlt} fill preload sizes="(max-width: 1023px) 440px, (max-width: 1535px) 40vw, 440px" className="object-cover" style={{ objectPosition: product.imagePosition }} />
-                </div>
-                <div className="px-5 py-5 sm:px-7">
-                  <span className="mb-3 block text-lg font-medium text-[#77dbd7]">{detail.category}</span>
-                  <ul className="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-medium text-white">
-                    {detail.hero.tags.map((tag, index) => <li className="flex items-center gap-3" key={tag}>{index > 0 && <ArrowRight size={16} className="text-[#77dbd7]" aria-hidden="true" />}<span>{tag}</span></li>)}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <InnerPageHero pagePath={`/truminds-ai/${product.slug}`} titleId="product-title" title={product.title} concept={detail.hero.headline} description={detail.hero.description} eyebrow={detail.fullName} parent={{ label: productPageCopy.ecosystemLabel, href: "/products" }}>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-lg font-medium"><span className="text-[#416375]">{detail.category}</span><ul className="flex flex-wrap gap-x-4 gap-y-2 text-[#006779]">{detail.hero.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div>
+      </InnerPageHero>
 
       <nav aria-label={productPageCopy.productNavigationLabel} className="border-b border-[#dbe7eb] bg-white">
         <div className={`${shell} overflow-x-auto py-4`}>

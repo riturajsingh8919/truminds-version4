@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDownRight,
   ArrowUpRight,
   BookOpen,
   Building2,
-  ChevronRight,
   Dna,
   FlaskConical,
   Globe2,
@@ -17,7 +15,7 @@ import {
   ScanLine,
   UsersRound,
 } from "lucide-react";
-import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { LeadershipSection } from "@/components/home/LeadershipSection";
 import content from "@/data/about-us.json";
 import { services } from "@/lib/services";
@@ -47,38 +45,8 @@ export function AboutUsContent() {
 
   return (
     <>
-      <section aria-labelledby="about-page-title" className="copy-on-light relative isolate overflow-hidden bg-[#f0f7f9]">
-        <div className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[38%] border-l border-[#dcebef] bg-[#e5f1f4] lg:block" aria-hidden="true" />
-        <div className={shell}>
-          <nav aria-label="Breadcrumb" className="py-6 sm:py-8">
-            <ol className="flex flex-wrap items-center gap-3 text-lg font-medium text-[#365a70]">
-              <li><Link href="/" className="transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">Home</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={17} aria-hidden="true" /><span aria-current="page" className="text-[#0a2038]">About us</span></li>
-            </ol>
-          </nav>
-
-          <div className="grid items-center gap-10 pt-3 pb-12 md:gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)] lg:gap-14 lg:pt-5 lg:pb-16 xl:gap-20 xl:pb-20">
-            <div className="min-w-0">
-              <span className="mb-5 flex items-center gap-3 text-lg font-medium text-[#006d7c]"><span className="h-px w-9 shrink-0 bg-[#008995]" aria-hidden="true" />{hero.eyebrow}</span>
-              <h1 id="about-page-title" className="max-w-210 text-4xl font-semibold leading-[1.08] tracking-[-.03em] text-[#0a2038] [overflow-wrap:anywhere] sm:text-5xl md:text-6xl xl:text-7xl">
-                {hero.title} <span className="text-[#0068a5]">{hero.highlight}</span>
-              </h1>
-              <p className="mt-6 max-w-150 text-lg font-medium leading-[1.8] text-black">{hero.description}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 xl:mt-10">
-                <AnimatedPillLink href="#contact" label={hero.primaryLabel} size="large" />
-                <Link href="#leadership-team" className="group inline-flex min-h-14 items-center gap-3 text-lg font-medium text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{hero.secondaryLabel}<ArrowDownRight size={22} className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 motion-reduce:transform-none" aria-hidden="true" /></Link>
-              </div>
-            </div>
-
-            <figure className="relative mx-auto w-full max-w-120 lg:max-w-none">
-              <div className="pointer-events-none absolute -top-2 -right-2 h-1/2 w-1/2 rounded-tr-[42px] border-t border-r border-[#65aebe] sm:-top-3 sm:-right-3" aria-hidden="true" />
-              <div className="relative aspect-square overflow-hidden rounded-[28px] border border-[#d0e3e8] bg-white sm:rounded-[32px]">
-                <Image src={hero.image} alt={hero.imageAlt} fill preload sizes="(max-width: 519px) calc(100vw - 40px), (max-width: 1023px) 480px, (max-width: 1535px) 42vw, 560px" className="object-contain" />
-              </div>
-              <figcaption className="mt-5 flex items-center gap-3 text-lg font-medium text-[#234f65]"><span className="size-2 shrink-0 rounded-full bg-[#00a7a9]" aria-hidden="true" />{hero.imageCaption}</figcaption>
-            </figure>
-          </div>
-
+      <InnerPageHero pagePath="/about-us" titleId="about-page-title" title={hero.title} highlight={hero.highlight} breadcrumbLabel="About us" description={hero.description} imageCaption={hero.imageCaption} eyebrow={hero.eyebrow} parent={{ label: "Home", href: "/" }} actions={<><Link href="#contact" className="inline-flex min-h-11 items-center border-b border-[#0068a5] text-lg font-medium text-[#0068a5] hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{hero.primaryLabel}</Link><Link href="#leadership-team" className="inline-flex min-h-11 items-center text-lg font-medium text-[#234b61] underline underline-offset-4 hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{hero.secondaryLabel}</Link></>} />
+      <div className="border-b border-[#d5e5e9] bg-white"><div className={shell}>
           <nav aria-label="Explore About TruMinds" className="grid border-t border-[#c8dfe5] sm:grid-cols-2 lg:grid-cols-4">
             {content.navigation.map(item => (
               <Link key={item.href} href={item.href} className="group flex min-h-19 items-center gap-3 border-b border-[#c8dfe5] py-5 text-lg font-medium text-[#173f55] transition-colors hover:text-[#0068a5] focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#0068a5] motion-reduce:transition-none sm:px-5 sm:odd:border-r lg:border-r lg:border-b-0 lg:first:pl-0 lg:last:border-r-0">
@@ -86,8 +54,7 @@ export function AboutUsContent() {
               </Link>
             ))}
           </nav>
-        </div>
-      </section>
+      </div></div>
 
       <section id="our-story" aria-labelledby="our-story-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={shell}>

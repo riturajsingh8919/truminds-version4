@@ -1,48 +1,10 @@
-import Image from "next/image";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { bodyCopy, shell } from "@/lib/site-styles";
 
-export function InteriorHero({
-  title,
-  description,
-  image,
-  imageAlt,
-}: {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-}) {
-  return (
-    <section className="relative isolate overflow-hidden bg-[#07192d] text-white">
-      <div className="absolute inset-0 -z-20 md:left-[38%]">
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,25,45,.25),#07192d_78%)] md:bg-[linear-gradient(90deg,#07192d_0%,#07192d_28%,rgba(7,25,45,.89)_48%,rgba(7,25,45,.24)_100%)]" />
-      <div className={`${shell} py-16 md:py-24`}>
-        <Link
-          href="/"
-          className="mb-12 inline-flex items-center gap-2 text-lg font-medium text-white/80 hover:text-white"
-        >
-          <ArrowLeft size={17} aria-hidden="true" /> Back to home
-        </Link>
-        <h1 className="max-w-200 text-5xl md:text-6xl xl:text-8xl 2xl:text-[104px] leading-[1.02] font-semibold tracking-[-.06em]">
-          {title}
-        </h1>
-        <p className="mt-7 max-w-152.5 text-lg leading-relaxed text-[#d4e4ea]">
-          {description}
-        </p>
-      </div>
-    </section>
-  );
+export function InteriorHero({ title, description, pagePath, label }: { title: string; description: string; pagePath: string; label: string }) {
+  return <InnerPageHero titleId="interior-page-title" title={title} breadcrumbLabel={label} description={description} pagePath={pagePath} eyebrow={label} parent={{ label: "Home", href: "/" }} />;
 }
 
 export function InteriorContact() {

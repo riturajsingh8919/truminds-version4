@@ -10,7 +10,7 @@ import { section, shell, title } from "@/lib/site-styles";
 export function GivingBackDetailPage({ page }: { page: GivingBackPage }) {
   return (
     <>
-      <GivingBackHero title={page.title} headline={page.headline} description={page.heroDescription} image={page.image} imageAlt={page.imageAlt} imageWidth={page.imageWidth} imageHeight={page.imageHeight} icon={page.icon} inner />
+      <GivingBackHero pagePath={`/giving-back/${page.slug}`} title={page.title} headline={page.headline} description={page.heroDescription} image={page.image} imageAlt={page.imageAlt} imageWidth={page.imageWidth} imageHeight={page.imageHeight} icon={page.icon} inner />
       <nav aria-label="Giving Back area navigation" className="border-b border-[#d6e6ea] bg-white">
         <div className={`${shell} grid gap-3 py-5 sm:grid-cols-2 xl:grid-cols-4`}>
           {givingBackAreas.map(area => {

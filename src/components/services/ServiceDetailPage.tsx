@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
 import { ServiceCapabilities } from "@/components/services/ServiceCapabilities";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
+import { getPageHeaderImage } from "@/data/page-header-images";
 import { servicePageCopy, services, type Service, type ServiceCapability } from "@/lib/services";
 import { section, shell, title } from "@/lib/site-styles";
 
@@ -19,67 +21,9 @@ export function ServiceDetailPage({
 
   return (
     <>
-      <section aria-labelledby="service-title" className="relative isolate overflow-hidden bg-[#08253d] text-white">
-        <div className="pointer-events-none absolute -top-48 -right-48 -z-10 size-180 rounded-full border border-white/10" aria-hidden="true" />
-        <div className="pointer-events-none absolute -right-10 bottom-0 -z-10 size-130 rounded-full border border-[#67d5d3]/15" aria-hidden="true" />
-        <div className={shell}>
-          <nav aria-label="Breadcrumb" className="py-6 sm:py-8">
-            <ol className="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-medium text-[#d2e5eb]">
-              <li><Link href="/" className="transition-colors hover:text-[#78ded9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#78ded9]">{servicePageCopy.homeLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><Link href="/services" className="transition-colors hover:text-[#78ded9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#78ded9]">{servicePageCopy.servicesLabel}</Link></li>
-              <li className="flex items-center gap-3"><ChevronRight size={16} aria-hidden="true" /><span aria-current="page" className="text-white">{service.title}</span></li>
-            </ol>
-          </nav>
-
-          <div className="grid items-center gap-10 pt-5 pb-12 sm:pt-7 md:gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)] lg:gap-16 lg:pt-5 lg:pb-16 xl:gap-24">
-            <div className="min-w-0 py-2 lg:py-8">
-              <div className="mb-6 flex items-center gap-3 text-lg font-medium leading-relaxed text-[#77dbd7]">
-                <span className="h-px w-9 shrink-0 bg-[#77dbd7]" aria-hidden="true" />
-                {detail.eyebrow}
-              </div>
-              <h1 id="service-title" className="text-4xl leading-[1.06] font-semibold tracking-[-.028em] sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl">
-                {service.title}
-              </h1>
-              <span className="mt-6 block max-w-160 text-2xl leading-snug font-semibold tracking-tight text-[#77dbd7] md:text-3xl">
-                {detail.headline}
-              </span>
-              <p className="mt-5 max-w-160 text-lg font-medium leading-[1.75] text-[#e0edf1]">
-                {detail.heroDescription}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-5 lg:mt-10">
-                <AnimatedPillLink href={detail.cta.href} label={servicePageCopy.primaryAction} variant="light" size="large" />
-                <Link href="#capabilities" className="group inline-flex min-h-14 items-center gap-3 text-lg font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#77dbd7]">
-                  {servicePageCopy.capabilitiesAction}
-                  <ArrowDownRight size={22} className="text-[#77dbd7] transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 motion-reduce:transform-none" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-            <div className="relative mx-auto w-full max-w-115 lg:max-w-100 xl:max-w-115">
-              <div className="pointer-events-none absolute -inset-2.5 rounded-[36px] border border-white/15 sm:-inset-3.5 sm:rounded-[42px]" aria-hidden="true" />
-              <div className="relative aspect-5/6 overflow-hidden rounded-[28px] bg-[#173c50] sm:rounded-[32px]">
-                <Image
-                  src={service.image}
-                  alt={service.imageAlt}
-                  fill
-                  preload
-                  sizes="(max-width: 1023px) 460px, (max-width: 1535px) 42vw, 560px"
-                  className="object-cover"
-                  style={{ objectPosition: service.imagePosition }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <dl className="grid grid-cols-1 border-t border-white/15 py-3 sm:grid-cols-3 sm:py-6">
-            {detail.facts.map((fact) => (
-              <div className="flex items-center justify-between gap-5 border-b border-white/10 py-4 last:border-b-0 sm:block sm:border-r sm:border-b-0 sm:px-8 sm:first:pl-0 sm:last:border-r-0" key={fact.label}>
-                <dt className="text-lg font-medium text-[#c2d9e2]">{fact.label}</dt>
-                <dd className="text-xl font-semibold tracking-tight text-white sm:mt-1 sm:text-2xl">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+      <InnerPageHero pagePath={`/services/${service.slug}`} titleId="service-title" title={service.title} concept={detail.headline} description={detail.heroDescription} eyebrow={detail.eyebrow} parent={{ label: servicePageCopy.servicesLabel, href: "/services" }}>
+        <dl className="flex flex-wrap gap-x-10 gap-y-4">{detail.facts.map(fact => <div key={fact.label} className="flex flex-wrap items-baseline gap-x-2 gap-y-1"><dt className="text-lg font-medium text-[#416375]">{fact.label}</dt><dd className="text-lg font-semibold text-[#0068a5]">{fact.value}</dd></div>)}</dl>
+      </InnerPageHero>
 
       <nav aria-label={servicePageCopy.serviceNavigationLabel} className="border-b border-[#dbe7eb] bg-white">
         <div className={`${shell} overflow-x-auto py-4`}>
@@ -183,18 +127,22 @@ export function ServiceDetailPage({
             <p className="max-w-140 text-lg font-medium leading-relaxed text-black">{servicePageCopy.relatedDescription}</p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3 xl:mt-14 xl:gap-6">
-            {related.map((item) => (
-              <Link href={`/services/${item.slug}`} key={item.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-3xl border border-[#d8e5e9] bg-white transition-[border-color,box-shadow] duration-300 hover:border-[#8cc7d1] hover:shadow-[0_16px_35px_rgba(5,50,74,.08)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
-                <div className="relative aspect-[1.6] overflow-hidden bg-[#eef4f7]">
-                  <Image src={item.image} alt="" fill sizes="(max-width: 767px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transform-none" style={{ objectPosition: item.imagePosition }} />
-                </div>
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <div className="flex items-center justify-between gap-4"><h3 className="text-2xl font-semibold tracking-tight text-[#0a2038]">{item.title}</h3><ArrowUpRight size={24} className="shrink-0 text-[#0068a5] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transform-none" aria-hidden="true" /></div>
-                  <p className="mt-3 text-lg font-medium leading-relaxed text-black">{item.description}</p>
-                  <span className="mt-auto flex items-center gap-3 pt-6 text-lg font-medium text-[#0068a5]">{servicePageCopy.relatedLinkLabel}<ArrowRight size={19} aria-hidden="true" /></span>
-                </div>
-              </Link>
-            ))}
+            {related.map((item) => {
+              const image = getPageHeaderImage(`/services/${item.slug}`);
+              return (
+                <Link href={`/services/${item.slug}`} key={item.slug} className="group flex min-w-0 flex-col overflow-hidden rounded-3xl border border-[#d8e5e9] bg-white transition-[border-color,box-shadow] duration-300 hover:border-[#8cc7d1] hover:shadow-[0_16px_35px_rgba(5,50,74,.08)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
+                  <div className="bg-[#eef4f7]" data-service-card-image>
+                    <Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes="(max-width: 767px) 100vw, 33vw" className="block h-auto w-full" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6 sm:p-7">
+                    <div className="flex items-center justify-between gap-4"><h3 className="text-3xl font-bold leading-tight tracking-tight text-[#0a2038] xl:text-4xl">{item.title}</h3><ArrowUpRight size={24} className="shrink-0 text-[#0068a5] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transform-none" aria-hidden="true" /></div>
+                    <span className="mt-4 block text-[22px] font-semibold leading-snug text-[#006779] sm:text-2xl">{item.detail.headline}</span>
+                    <p className="mt-3 text-lg font-medium leading-relaxed text-black">{item.description}</p>
+                    <span className="mt-auto flex items-center gap-3 pt-6 text-lg font-medium text-[#0068a5]">{servicePageCopy.relatedLinkLabel}<ArrowRight size={19} aria-hidden="true" /></span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

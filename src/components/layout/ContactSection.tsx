@@ -2,12 +2,14 @@
 
 import { usePathname } from "next/navigation";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { CompactContactSection } from "@/components/contact/CompactContactSection";
 import { Mail, Phone } from "lucide-react";
 import { shell } from "@/lib/site-styles";
 
 export function ContactSection() {
   const pathname = usePathname();
   if (pathname === "/contact-us") return null;
+  if (pathname !== "/") return <CompactContactSection />;
 
   return (
     <section id="contact" aria-labelledby="contact-title" className="scroll-mt-24 bg-[#082b3e] py-16 text-white md:py-20">

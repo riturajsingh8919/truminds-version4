@@ -1,245 +1,131 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
-import { AnimatedPillLink } from "@/components/common/AnimatedPillLink";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { headerNavigation, isHeaderItemActive, type HeaderItem } from "@/data/header-navigation";
 import { shell } from "@/lib/site-styles";
-import givingBackCatalog from "@/data/giving-back-catalog.json";
-
-const mainLinks = [
-  { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/services" },
-  { label: "Therapeutic Areas", href: "/therapeutic-areas" },
-  { label: "Products", href: "/products" },
-  { label: "Giving Back", href: "/giving-back" },
-  { label: "Resources", href: "/resources" },
-  { label: "Contact Us", href: "/contact-us" },
-];
-const givingBackLinks = givingBackCatalog.map(area => ({
-  label: area.title,
-  href: `/giving-back/${area.slug}`,
-}));
+import styles from "./Header.module.css";
 
 export function Header() {
-  const [open, setOpen] = useState(false);
-  const [givingBackOpen, setGivingBackOpen] = useState(false);
-  const [mobileGivingBackOpen, setMobileGivingBackOpen] = useState(false);
-  const givingBackRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  const suppressFocus = useRef(false);
+  const touchActivation = useRef<{ href: string; wasOpen: boolean } | null>(null);
+  const [desktopSection, setDesktopSection] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<string | null>(null);
+
+  function closeMenus() {
+    touchActivation.current = null;
+    setDesktopSection(null);
+    setMobileOpen(false);
+    setMobileSection(null);
+  }
+
   useEffect(() => {
-    function onEscape(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setOpen(false);
-        setGivingBackOpen(false);
-        setMobileGivingBackOpen(false);
+    const navigationBreakpoint = window.matchMedia("(min-width: 768px)");
+    function breakpointChanged() {
+      touchActivation.current = null;
+      setDesktopSection(null);
+      setMobileOpen(false);
+      setMobileSection(null);
+    }
+    function outside(event: PointerEvent) {
+      if (!headerRef.current?.contains(event.target as Node)) {
+        setDesktopSection(null);
+        setMobileOpen(false);
+        setMobileSection(null);
       }
     }
-    function onOutsideClick(event: MouseEvent) {
-      if (!givingBackRef.current?.contains(event.target as Node)) {
-        setGivingBackOpen(false);
-      }
+    function escape(event: globalThis.KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      if (headerRef.current?.querySelector("#mobile-navigation")) mobileToggleRef.current?.focus();
+      setDesktopSection(null);
+      setMobileOpen(false);
+      setMobileSection(null);
     }
-    window.addEventListener("keydown", onEscape);
-    window.addEventListener("click", onOutsideClick);
+    window.addEventListener("pointerdown", outside);
+    window.addEventListener("keydown", escape);
+    navigationBreakpoint.addEventListener("change", breakpointChanged);
     return () => {
-      window.removeEventListener("keydown", onEscape);
-      window.removeEventListener("click", onOutsideClick);
+      window.removeEventListener("pointerdown", outside);
+      window.removeEventListener("keydown", escape);
+      navigationBreakpoint.removeEventListener("change", breakpointChanged);
     };
   }, []);
 
+  function keyboard(event: KeyboardEvent<HTMLDivElement>, item: HeaderItem) {
+    touchActivation.current = null;
+    if (!item.children) return;
+    const parent = event.currentTarget.querySelector<HTMLAnchorElement>("[data-parent-link]");
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      setDesktopSection(null);
+      if (document.activeElement !== parent) {
+        suppressFocus.current = true;
+        parent?.focus();
+      }
+      return;
+    }
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp" && event.key !== "Home" && event.key !== "End") return;
+    const links = Array.from(event.currentTarget.querySelectorAll<HTMLAnchorElement>("[data-submenu] a"));
+    if (!links.length) return;
+    event.preventDefault();
+    setDesktopSection(item.href);
+    const index = links.indexOf(document.activeElement as HTMLAnchorElement);
+    let next = event.key === "ArrowDown" ? (index + 1) % links.length : (index < 0 ? links.length - 1 : (index - 1 + links.length) % links.length);
+    if (event.key === "Home") next = 0;
+    if (event.key === "End") next = links.length - 1;
+    requestAnimationFrame(() => links[next]?.focus());
+  }
+
   return (
-    <header className="sticky top-0 z-80 bg-white shadow-[0_1px_0_#dce8eb]">
-      <div
-        className={`${shell} flex min-h-18.25 items-center justify-between gap-6 sm:min-h-20.5`}
-      >
-        <Link
-          href="/"
-          className="inline-flex shrink-0 items-center"
-          aria-label="TruMinds Clinical home"
-          onClick={() => {
-            setOpen(false);
-            setGivingBackOpen(false);
-          }}
-        >
-          <Image
-            src="/logo.png"
-            alt="TruMinds Clinical"
-            width={205}
-            height={57}
-            priority
-            className="h-auto w-46.25 xl:w-51.25"
-            style={{ height: "auto" }}
-          />
-        </Link>
-        <nav
-          className="hidden flex-1 items-center justify-end gap-3 xl:gap-5 min-[1181px]:flex 2xl:gap-7"
-          aria-label="Main navigation"
-        >
-          {mainLinks.map((item) =>
-            item.label === "Giving Back" ? (
-              <div
-                className="relative flex items-center"
-                key={item.label}
-                ref={givingBackRef}
-                onMouseEnter={() => setGivingBackOpen(true)}
-                onMouseLeave={() => setGivingBackOpen(false)}
-                onFocusCapture={() => setGivingBackOpen(true)}
-                onBlurCapture={(event) => {
-                  if (!event.currentTarget.contains(event.relatedTarget)) {
-                    setGivingBackOpen(false);
+    <header ref={headerRef} className="sticky top-0 z-80 bg-white shadow-[0_1px_0_#dce8eb]">
+      <div className={`${shell} ${styles.bar} flex min-h-18.25 items-center justify-between gap-6 sm:min-h-20.5`}>
+        <Link href="/" aria-label="TruMinds Clinical home" onClick={closeMenus} className="inline-flex shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008995]"><Image src="/logo.png" alt="TruMinds Clinical" width={205} height={57} priority className={`${styles.logo} h-auto w-46.25 xl:w-51.25`} style={{ height: "auto" }} /></Link>
+        <nav aria-label="Main navigation" className={`${styles.desktopNav} hidden flex-1 items-center justify-end md:flex`}>
+          {headerNavigation.map((item, index) => {
+            const active = isHeaderItemActive(pathname, item);
+            const expanded = desktopSection === item.href;
+            const menuId = `desktop-nav-${index}`;
+            return (
+              <div key={item.href} className="relative" onMouseEnter={() => setDesktopSection(item.children ? item.href : null)} onMouseLeave={event => { if (!event.currentTarget.contains(document.activeElement)) setDesktopSection(null); }} onFocusCapture={() => {
+                if (suppressFocus.current) { suppressFocus.current = false; return; }
+                setDesktopSection(item.children ? item.href : null);
+              }} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setDesktopSection(null); }} onKeyDown={event => keyboard(event, item)}>
+                <Link href={item.href} data-parent-link data-active={active} aria-current={pathname === item.href ? "page" : active ? "true" : undefined} aria-expanded={item.children ? expanded : undefined} aria-controls={item.children ? menuId : undefined} onPointerDown={event => {
+                  touchActivation.current = event.pointerType === "touch" ? { href: item.href, wasOpen: expanded } : null;
+                }} onClick={event => {
+                  const touch = touchActivation.current;
+                  touchActivation.current = null;
+                  // First touch opens the dropdown; a second touch follows its parent page.
+                  if (item.children && touch?.href === item.href && !touch.wasOpen) {
+                    event.preventDefault();
+                    setDesktopSection(item.href);
+                    return;
                   }
-                }}
-              >
-                <Link
-                  className={`${givingBackOpen ? "text-[#007e91]" : "text-[#1f4055]"} whitespace-nowrap text-lg font-medium tracking-[.015em] transition-colors hover:text-[#007e91]`}
-                  href={item.href}
-                  onClick={() => setGivingBackOpen(false)}
-                >
-                  {item.label}
-                </Link>
-                <button
-                  type="button"
-                  className="ml-1 flex size-11 items-center justify-center rounded-full text-[#1f4055] transition-colors hover:bg-[#e9f5f5] hover:text-[#007e91] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008b9c]"
-                  aria-label="Toggle Giving Back menu"
-                  aria-expanded={givingBackOpen}
-                  aria-controls="giving-back-submenu"
-                  onClick={() => setGivingBackOpen(!givingBackOpen)}
-                >
-                  <ChevronDown
-                    size={20}
-                    className={`transition-transform duration-300 motion-reduce:transition-none ${givingBackOpen ? "rotate-180" : ""}`}
-                    aria-hidden="true"
-                  />
-                </button>
-                <div
-                  id="giving-back-submenu"
-                  aria-hidden={!givingBackOpen}
-                  className={`${givingBackOpen ? "visible translate-y-0 scale-100 opacity-100" : "pointer-events-none invisible translate-y-2 scale-[.97] opacity-0"} absolute top-full left-1/2 z-10 w-105 -translate-x-1/2 pt-4 transition-[opacity,transform,visibility] duration-300 ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none`}
-                >
-                  <div className="overflow-hidden rounded-xl border border-[#dce8eb] bg-white/95 p-2 shadow-[0_22px_55px_rgba(7,35,55,.17)] ring-1 ring-white/80 backdrop-blur-xl">
-                    {givingBackLinks.map((subitem) => (
-                      <Link
-                        className="group relative flex min-h-14 items-center gap-3 rounded-lg px-4 py-2.5 text-lg font-medium leading-snug text-[#173b50] transition-[background-color,color] duration-250 hover:bg-[#edf7f7] hover:text-[#007c8b] focus-visible:bg-[#edf7f7] focus-visible:outline-2 focus-visible:outline-[#008b9c] motion-reduce:transition-none"
-                        href={subitem.href}
-                        key={subitem.label}
-                        onClick={() => setGivingBackOpen(false)}
-                      >
-                        <span className="absolute inset-y-2 left-0 w-0.5 origin-center scale-y-0 rounded-full bg-[#00a3a3] transition-transform duration-250 group-hover:scale-y-100 group-focus-visible:scale-y-100 motion-reduce:transition-none" />
-                        <span className="flex-1 transition-transform duration-250 group-hover:translate-x-1 group-focus-visible:translate-x-1 motion-reduce:transition-none">
-                          {subitem.label}
-                        </span>
-                        <ArrowUpRight
-                          className="shrink-0 -translate-x-1 translate-y-1 text-[#008995] opacity-0 transition-[opacity,transform] duration-250 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none"
-                          size={16}
-                          aria-hidden="true"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                  closeMenus();
+                }} className={`${styles.topLink} ${item.href === "/contact-us" ? styles.contactLink : ""} whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008995]`}>{item.label}</Link>
+                {item.children && <div id={menuId} data-submenu hidden={!expanded} className={`${item.href === "/services" ? styles.leadingMenu : ""} absolute top-full right-0 z-10 w-80 max-w-[calc(100vw-40px)] pt-2`}><div className={`${styles.menuPanel} max-h-[calc(100dvh-7rem)] overflow-y-auto rounded-xl border border-[#d3e4e9] bg-white p-2 shadow-[0_16px_40px_rgba(8,43,67,.14)]`}>{item.children.map(child => <Link key={child.href} href={child.href} aria-current={pathname === child.href ? "page" : undefined} onClick={closeMenus} className={`${styles.submenuLink} focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#008995]`}>{child.label}</Link>)}</div></div>}
               </div>
-            ) : item.label === "Contact Us" ? (
-              <AnimatedPillLink
-                key={item.label}
-                href={item.href}
-                label={item.label}
-                variant="dark"
-              />
-            ) : (
-              <Link
-                className="whitespace-nowrap text-lg font-medium tracking-[.015em] text-[#1f4055] transition-colors hover:text-[#007e91]"
-                href={item.href}
-                key={item.label}
-              >
-                {item.label}
-              </Link>
-            ),
-          )}
+            );
+          })}
         </nav>
-        <button
-          className="inline-flex size-11 items-center justify-center border border-[#cfdee2] bg-white text-[#063a53] min-[1181px]:hidden"
-          type="button"
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          aria-expanded={open}
-          aria-controls="mobile-navigation"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? (
-            <X size={24} aria-hidden="true" />
-          ) : (
-            <Menu size={24} aria-hidden="true" />
-          )}
-        </button>
+        <button ref={mobileToggleRef} type="button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => { setMobileOpen(!mobileOpen); setMobileSection(null); }} className="grid size-11 cursor-pointer place-items-center rounded-xl border border-[#cfdee2] bg-white text-[#173b50] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#008995] md:hidden">{mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}</button>
       </div>
-      {open && (
-        <nav
-          id="mobile-navigation"
-          className="absolute inset-x-0 top-full max-h-[calc(100vh-88px)] overflow-y-auto bg-white px-5 pt-3.5 pb-8 shadow-[0_20px_35px_rgba(6,38,55,.15)]"
-          aria-label="Mobile navigation"
-        >
-          {mainLinks.map((item, index) => (
-            <div key={item.label}>
-              <div className="flex min-h-13 items-center border-b border-[#e5eef0]">
-                <Link
-                  className="flex min-h-13 flex-1 items-center gap-4 text-lg font-medium text-[#153950]"
-                  href={item.href}
-                  onClick={() => {
-                    setOpen(false);
-                    setMobileGivingBackOpen(false);
-                  }}
-                >
-                  <span className="text-lg font-medium tracking-wider text-[#009a9e]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  {item.label}
-                  {item.label !== "Giving Back" && (
-                    <ArrowRight
-                      className="ml-auto"
-                      size={18}
-                      aria-hidden="true"
-                    />
-                  )}
-                </Link>
-                {item.label === "Giving Back" && (
-                  <button
-                    type="button"
-                    className="flex size-11 shrink-0 items-center justify-center text-[#153950]"
-                    aria-label="Toggle Giving Back menu"
-                    aria-expanded={mobileGivingBackOpen}
-                    aria-controls="mobile-giving-back-submenu"
-                    onClick={() =>
-                      setMobileGivingBackOpen(!mobileGivingBackOpen)
-                    }
-                  >
-                    <ChevronDown size={18} aria-hidden="true" />
-                  </button>
-                )}
-              </div>
-              {item.label === "Giving Back" && (
-                <div
-                  id="mobile-giving-back-submenu"
-                  className={`${mobileGivingBackOpen ? "block" : "hidden"} border-b border-[#e5eef0] bg-[#f2f8f9] py-2 pl-12`}
-                >
-                  {givingBackLinks.map((subitem) => (
-                    <Link
-                      className="block py-3 pr-4 text-lg font-medium text-[#31576a]"
-                      href={subitem.href}
-                      key={subitem.label}
-                      onClick={() => {
-                        setOpen(false);
-                        setMobileGivingBackOpen(false);
-                      }}
-                    >
-                      {subitem.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-      )}
+      {mobileOpen && <nav id="mobile-navigation" aria-label="Mobile navigation" className="absolute inset-x-0 top-full max-h-[calc(100dvh-88px)] overflow-y-auto border-t border-[#dce8eb] bg-white px-5 pt-2 pb-6 shadow-[0_18px_35px_rgba(8,43,67,.12)] md:hidden">
+        {headerNavigation.map((item, index) => {
+          const active = isHeaderItemActive(pathname, item);
+          const expanded = mobileSection === item.href;
+          const menuId = `mobile-nav-${index}`;
+          return <div key={item.href} className="border-b border-[#e0ebef]"><div className="flex items-center justify-between gap-4 py-1"><Link href={item.href} data-active={active} aria-current={pathname === item.href ? "page" : active ? "true" : undefined} onClick={closeMenus} className={`${styles.topLink} min-w-0 flex-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}>{item.label}</Link>{item.children && <button type="button" aria-label={`${expanded ? "Hide" : "View"} ${item.label} pages`} aria-expanded={expanded} aria-controls={menuId} onClick={() => setMobileSection(expanded ? null : item.href)} className={`${styles.disclosure} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}>{expanded ? "Hide" : "View"}</button>}</div>{item.children && <div id={menuId} hidden={!expanded} className="mb-2 rounded-xl border border-[#dbe9ed] bg-[#f5fafb] p-1.5">{item.children.map(child => <Link key={child.href} href={child.href} aria-current={pathname === child.href ? "page" : undefined} onClick={closeMenus} className={`${styles.submenuLink} focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#008995]`}>{child.label}</Link>)}</div>}</div>;
+        })}
+      </nav>}
     </header>
   );
 }
