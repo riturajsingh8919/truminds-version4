@@ -83,7 +83,7 @@ export function ServiceDetailPage({
             </div>
             <p className="max-w-145 text-lg font-medium leading-[1.75] text-black lg:pb-1">{detail.capabilities.description}</p>
           </div>
-          <ServiceCapabilities capabilities={capabilities} selectLabel={servicePageCopy.capabilitySelectLabel} navigationLabel={servicePageCopy.capabilityNavigationLabel} />
+          <ServiceCapabilities key={service.slug} capabilities={capabilities} selectLabel={servicePageCopy.capabilitySelectLabel} navigationLabel={servicePageCopy.capabilityNavigationLabel} />
         </div>
       </section>
 

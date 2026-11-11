@@ -1,10 +1,12 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { ContactForm } from "@/components/contact/ContactForm";
-import { CompactContactSection } from "@/components/contact/CompactContactSection";
+import dynamic from "next/dynamic";
 import { Mail, Phone } from "lucide-react";
 import { shell } from "@/lib/site-styles";
+
+const ContactForm = dynamic(() => import("@/components/contact/ContactForm").then(module => module.ContactForm));
+const CompactContactSection = dynamic(() => import("@/components/contact/CompactContactSection").then(module => module.CompactContactSection));
 
 export function ContactSection() {
   const pathname = usePathname();

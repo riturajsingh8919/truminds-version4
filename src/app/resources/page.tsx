@@ -6,6 +6,8 @@ import {
   InteriorContact,
   InteriorHero,
 } from "@/components/layout/InteriorPage";
+import { ResourceCategoryGrid } from "@/components/resources/ResourceNavigation";
+import { resourceContent } from "@/lib/resources";
 import { bodyCopy, shell } from "@/lib/site-styles";
 
 export const metadata: Metadata = {
@@ -14,47 +16,7 @@ export const metadata: Metadata = {
     "Perspectives on clinical data, study delivery and technology from TruMinds Clinical.",
 };
 
-const topics = [
-  {
-    id: "clinical-data",
-    number: "01",
-    title: "Making clinical data ready for the next decision",
-    image: "/images/editorial/resources.jpg",
-    alt: "Researcher examining a sample with a microscope",
-    intro:
-      "Useful clinical data is more than information collected on time. It needs a shared structure, clear definitions and a quality process that helps teams understand what the data can support.",
-    paragraphs: [
-      "When data standards are considered early, study teams can reduce avoidable rework later. A clear path from capture through review and analysis helps clinical, data and statistical teams work from the same understanding.",
-      "The practical starting point is alignment: agree on the questions the study needs to answer, define what must be collected and establish how it will be checked. Technology is most valuable when it supports that discipline.",
-    ],
-  },
-  {
-    id: "study-delivery",
-    number: "02",
-    title: "The value of connected clinical operations",
-    image: "/images/editorial/services-fsp.jpg",
-    alt: "Researchers discussing their work in a laboratory",
-    intro:
-      "A clinical program depends on many specialist functions. Strong delivery comes from the way those functions stay connected as plans change and evidence develops.",
-    paragraphs: [
-      "Clear ownership, regular communication and visibility into decisions help teams spot issues earlier. They also make it easier to adjust resources without losing the context behind the work.",
-      "Whether a sponsor needs full-service support or an embedded specialist team, a shared operating rhythm can make collaboration simpler and more predictable.",
-    ],
-  },
-  {
-    id: "technology",
-    number: "03",
-    title: "Where technology can simplify trial work",
-    image: "/images/editorial/services-ai.jpg",
-    alt: "Clinical researchers working at a computer",
-    intro:
-      "The most useful technology solves a specific problem for the people doing the work. In clinical research, that often means reducing repeated manual steps and making information easier to trace.",
-    paragraphs: [
-      "Connected workflows can help study teams move between data capture, management, analysis and reporting with fewer handoffs. The opportunity is not automation for its own sake; it is more time for review, interpretation and decisions.",
-      "Teams should start with a clear process, identify where friction occurs and select tools that fit the clinical and operational context.",
-    ],
-  },
-];
+const topics = resourceContent.legacyInsights;
 
 export default function ResourcesPage() {
   return (
@@ -62,10 +24,11 @@ export default function ResourcesPage() {
       <InteriorHero
         pagePath="/resources"
         label="Resources"
-        title="Ideas for better research."
-        description="Perspectives on the people, processes and technology behind confident clinical decisions."
+        title={resourceContent.hub.title}
+        description={resourceContent.hub.description}
       />
-      <section className="py-20">
+      <ResourceCategoryGrid />
+      <section id="insights" className="scroll-mt-40 py-20">
         <div className={shell}>
           <h2 className="sr-only">Explore perspectives</h2>
           <div className="grid gap-3 md:grid-cols-3">

@@ -1,0 +1,7 @@
+[
+  { "slug": "insights", "title": "Insights", "description": "Perspectives on clinical data, connected study delivery and purposeful technology.", "icon": "insights" },
+  { "slug": "case-studies", "title": "Case Studies", "description": "Explore practical applications of our clinical and technology capabilities.", "icon": "cases" },
+  { "slug": "white-papers", "title": "White Papers", "description": "In-depth guides to planning connected clinical research workflows.", "icon": "papers" },
+  { "slug": "news", "title": "News", "description": "Explore the people, capabilities and platform behind TruMinds Clinical.", "icon": "news" },
+  { "slug": "events", "title": "Events", "description": "Connect around clinical research, data and technology.", "icon": "events" }
+]

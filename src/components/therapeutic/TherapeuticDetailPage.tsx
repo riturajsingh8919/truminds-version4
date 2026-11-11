@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { InnerPageHero } from "@/components/layout/InnerPageHero";
 import { TherapeuticFocusGroups } from "@/components/therapeutic/TherapeuticFocusGroups";
+import { TherapeuticAtlas } from "@/components/therapeutic/TherapeuticAtlas";
 import { TherapeuticIcon } from "@/components/therapeutic/TherapeuticIcon";
-import { therapeuticDeliveryModels, therapeuticPageCopy, therapeuticPages, type TherapeuticPage } from "@/lib/therapeutic-pages";
+import { therapeuticDeliveryModels, therapeuticPageCopy, type TherapeuticPage } from "@/lib/therapeutic-pages";
 import { section, shell, title } from "@/lib/site-styles";
 
 export function TherapeuticDetailPage({ area }: { area: TherapeuticPage }) {
@@ -32,7 +33,7 @@ export function TherapeuticDetailPage({ area }: { area: TherapeuticPage }) {
       <section aria-labelledby="therapeutic-atlas-title" className={`${section} copy-on-light bg-white`}>
         <div className={shell}>
           <div className="grid items-end gap-6 lg:grid-cols-2 lg:gap-16"><div><span className="mb-4 block text-lg font-medium text-[#00818d]">{therapeuticPageCopy.atlasEyebrow}</span><h2 id="therapeutic-atlas-title" className={title}>{therapeuticPageCopy.atlasTitle}<br /><span className="text-[#0068a5]">{therapeuticPageCopy.atlasHighlight}</span></h2></div><p className="max-w-145 text-lg font-medium leading-[1.75] text-black">{therapeuticPageCopy.atlasDescription}</p></div>
-          <nav aria-label={therapeuticPageCopy.atlasNavigationLabel} className="mt-8 grid gap-x-8 sm:grid-cols-2 xl:grid-cols-4">{therapeuticPages.map(item => <Link key={item.slug} href={`/therapeutic-areas/${item.slug}`} aria-current={item.slug === area.slug ? "page" : undefined} className={`border-b border-[#d7e7eb] py-4 text-lg font-medium underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0068a5] ${item.slug === area.slug ? "text-[#0068a5] underline" : "text-[#234b61]"}`}>{item.title}</Link>)}</nav>
+          <TherapeuticAtlas currentSlug={area.slug} />
           <Link href="/therapeutic-areas" className="mt-7 inline-block text-lg font-medium text-[#0068a5] underline underline-offset-4 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">{therapeuticPageCopy.backLabel}</Link>
         </div>
       </section>

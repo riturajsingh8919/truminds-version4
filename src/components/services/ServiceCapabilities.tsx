@@ -1,11 +1,13 @@
 "use client";
 
-import { useId, useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown } from "lucide-react";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
 import type { ServiceCapability } from "@/lib/services";
+import fspNavigation from "@/data/fsp-navigation.json";
+import { useUrlFragment } from "@/lib/use-url-fragment";
 
 export function ServiceCapabilities({
   capabilities,
@@ -16,7 +18,27 @@ export function ServiceCapabilities({
   selectLabel: string;
   navigationLabel: string;
 }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [localIndex, setLocalIndex] = useState(0);
+  const fragment = useUrlFragment();
+  const requestedFsp = fspNavigation.find(item => fragment === `#fsp-${item.slug}`);
+  const requestedId = requestedFsp?.capabilityId ?? (fragment.startsWith("#capability-") ? fragment.slice(12) : "");
+  const hashIndex = capabilities.findIndex(item => item.id === requestedId);
+  const activeIndex = hashIndex >= 0 ? hashIndex : localIndex;
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  function setActiveIndex(index: number) {
+    setLocalIndex(index);
+    const url = new URL(window.location.href);
+    url.hash = `capability-${capabilities[index].id}`;
+    window.history.replaceState(window.history.state, "", url);
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
+  }
+
+  useEffect(() => {
+    if (hashIndex < 0) return;
+    const frame = requestAnimationFrame(() => panelRef.current?.scrollIntoView({ block: "start", behavior: "instant" }));
+    return () => cancelAnimationFrame(frame);
+  }, [fragment, hashIndex]);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const prefix = useId();
   const active = capabilities[activeIndex];
@@ -61,7 +83,7 @@ export function ServiceCapabilities({
               role="tab"
               id={`${prefix}-tab-${item.id}`}
               aria-selected={activeIndex === index}
-              aria-controls={`${prefix}-panel-${item.id}`}
+              aria-controls={`capability-${item.id}`}
               tabIndex={activeIndex === index ? 0 : -1}
               onClick={() => setActiveIndex(index)}
               onKeyDown={(event) => navigateTabs(event, index)}
@@ -75,44 +97,44 @@ export function ServiceCapabilities({
         </div>
       </div>
 
-      {capabilities.map((capability, index) => (
       <div
-        key={capability.id}
-        hidden={index !== activeIndex}
+        ref={panelRef}
         role="tabpanel"
-        id={`${prefix}-panel-${capability.id}`}
-        aria-labelledby={`${prefix}-tab-${capability.id}`}
+        id={`capability-${active.id}`}
+        aria-labelledby={`${prefix}-tab-${active.id}`}
         tabIndex={0}
-        className="min-w-0 overflow-hidden rounded-3xl border border-[#d3e4e9] bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"
+        className="min-w-0 scroll-mt-0 overflow-hidden rounded-3xl border border-[#d3e4e9] bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] md:scroll-mt-3 lg:scroll-mt-0"
       >
+        {requestedFsp && requestedFsp.capabilityId === active.id && <span id={`fsp-${requestedFsp.slug}`} className="block scroll-mt-0 md:scroll-mt-3 lg:scroll-mt-0" aria-hidden="true" />}
         <div className="grid bg-[#082b43] sm:grid-cols-[minmax(0,.38fr)_minmax(0,.62fr)]">
           <div className="relative min-h-52 sm:min-h-64">
             <Image
-              key={capability.image}
-              src={capability.image}
-              alt={capability.imageAlt}
+              key={active.image}
+              src={active.image}
+              alt={active.imageAlt}
               fill
               sizes="(max-width: 639px) 100vw, (max-width: 1023px) 38vw, 350px"
               className="object-cover"
-              style={{ objectPosition: capability.imagePosition }}
+              style={{ objectPosition: active.imagePosition }}
             />
           </div>
           <div className="p-6 sm:p-7 xl:p-9">
-            <ServiceIcon name={capability.icon} size={30} className="mb-5 text-[#77dbd7]" />
-            <h3 id={`${prefix}-heading-${capability.id}`} className="text-2xl leading-tight font-semibold tracking-tight [overflow-wrap:anywhere] text-white xl:text-3xl">
-              {capability.title}
+            <ServiceIcon name={active.icon} size={30} className="mb-5 text-[#77dbd7]" />
+            {requestedFsp && requestedFsp.capabilityId === active.id && requestedFsp.label !== active.title && <span className="mb-3 block text-lg font-medium text-[#a4e7e4]">{requestedFsp.label}</span>}
+            <h3 id={`${prefix}-heading-${active.id}`} className="text-2xl leading-tight font-semibold tracking-tight [overflow-wrap:anywhere] text-white xl:text-3xl">
+              {active.title}
             </h3>
-            <p className="mt-4 text-lg font-medium leading-relaxed text-[#d4e9ed]">{capability.summary}</p>
+            <p className="mt-4 text-lg font-medium leading-relaxed text-[#d4e9ed]">{active.summary}</p>
           </div>
         </div>
         <div className="p-6 sm:p-8 xl:p-10">
           <div className="space-y-5">
-            {capability.paragraphs.map((paragraph) => <p className="text-lg font-medium leading-[1.75] text-black" key={paragraph}>{paragraph}</p>)}
+            {active.paragraphs.map((paragraph) => <p className="text-lg font-medium leading-[1.75] text-black" key={paragraph}>{paragraph}</p>)}
           </div>
           <div className="mt-8 border-t border-[#dce8eb] pt-7">
-            <h4 className="text-xl font-semibold text-[#0a2038]">{capability.scopeTitle}</h4>
+            <h4 className="text-xl font-semibold text-[#0a2038]">{active.scopeTitle}</h4>
             <ul className="mt-4 grid gap-x-7 sm:grid-cols-2">
-              {capability.items.map((item) => (
+              {active.items.map((item) => (
                 <li className="flex items-start gap-3 border-b border-[#e6eef0] py-3 text-lg font-medium leading-relaxed text-black" key={item}>
                   <Check size={19} strokeWidth={2} className="mt-1.5 shrink-0 text-[#008995]" aria-hidden="true" />
                   <span>{item}</span>
@@ -120,15 +142,15 @@ export function ServiceCapabilities({
               ))}
             </ul>
           </div>
-          {capability.href && (
-            <Link href={capability.href} className="mt-8 inline-flex min-h-12 items-center gap-4 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-6 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
-              {capability.linkLabel}
+          {active.href && (
+            <Link href={active.href} className="mt-8 inline-flex min-h-12 items-center gap-4 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-6 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">
+              {active.linkLabel}
               <ArrowUpRight size={21} aria-hidden="true" />
             </Link>
           )}
         </div>
       </div>
-      ))}
+      {capabilities.filter(capability => capability.id !== active.id).map(capability => <div key={capability.id} id={`capability-${capability.id}`} role="tabpanel" aria-labelledby={`${prefix}-tab-${capability.id}`} hidden />)}
     </div>
   );
 }

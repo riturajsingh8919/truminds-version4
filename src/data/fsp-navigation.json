@@ -1,0 +1,12 @@
+[
+  { "slug": "clinical-project-management", "label": "Clinical Project Management", "capabilityId": "clinical-project-management" },
+  { "slug": "clinical-operations", "label": "Clinical Operations", "capabilityId": "clinical-operations" },
+  { "slug": "data-management", "label": "Data Management", "capabilityId": "clinical-data-management" },
+  { "slug": "statistical-programming", "label": "Statistical Programming", "capabilityId": "statistical-programming" },
+  { "slug": "biostatistics", "label": "Biostatistics", "capabilityId": "biostatistics" },
+  { "slug": "validation-services", "label": "Validation Services", "capabilityId": "quality-assurance-compliance" },
+  { "slug": "pharmacovigilance", "label": "Pharmacovigilance", "capabilityId": "pharmacovigilance-drug-safety" },
+  { "slug": "drug-safety", "label": "Drug Safety", "capabilityId": "pharmacovigilance-drug-safety" },
+  { "slug": "regulatory-operations", "label": "Regulatory Operations", "capabilityId": "regulatory-affairs" },
+  { "slug": "medical-writing", "label": "Medical Writing", "capabilityId": "medical-affairs" }
+]

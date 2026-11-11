@@ -16,10 +16,13 @@ import {
   UsersRound,
 } from "lucide-react";
 import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { CountryFlag } from "@/components/common/CountryFlag";
 import { LeadershipSection } from "@/components/home/LeadershipSection";
 import content from "@/data/about-us.json";
 import { services } from "@/lib/services";
 import { section, shell, title } from "@/lib/site-styles";
+
+const regionFlags: Record<string, string> = { "United States": "us", Canada: "ca", "United Kingdom": "uk", India: "in" };
 
 const icons = {
   story: BookOpen,
@@ -68,14 +71,14 @@ export function AboutUsContent() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 border-t border-[#d8e8ec] pt-8 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-16 xl:mt-14 xl:gap-24">
-            <div className="flex items-start gap-4"><span className="grid size-12 shrink-0 place-items-center rounded-2xl border border-[#d0e6eb] bg-[#edf7f8] text-[#008995]"><Globe2 size={26} strokeWidth={1.65} aria-hidden="true" /></span><span className="pt-2 text-xl font-semibold text-[#0a2038]">{overview.reachLabel}</span></div>
-            <div>
-              <ul aria-label="Global presence regions" className="flex flex-wrap gap-x-6 gap-y-3">
-                {overview.regions.map(region => <li key={region} className="flex items-center gap-2.5 text-lg font-medium text-[#173f55]"><span className="size-1.5 shrink-0 rounded-full bg-[#00aaa9]" aria-hidden="true" />{region}</li>)}
-              </ul>
-              <Link href={overview.reachLink} className="group mt-6 inline-flex min-h-12 items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-5 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">{overview.reachLinkLabel}<ArrowUpRight size={20} className="shrink-0" aria-hidden="true" /></Link>
+          <div className="mt-10 border-t border-[#d8e8ec] pt-8 xl:mt-14">
+            <div className="flex flex-wrap items-center justify-between gap-5">
+              <div className="flex items-center gap-4"><span className="grid size-12 shrink-0 place-items-center rounded-2xl border border-[#d0e6eb] bg-[#edf7f8] text-[#008995]"><Globe2 size={26} strokeWidth={1.65} aria-hidden="true" /></span><span className="text-xl font-semibold text-[#0a2038]">{overview.reachLabel}</span></div>
+              <Link href={overview.reachLink} className="group inline-flex min-h-12 items-center gap-3 border-b border-[#0068a5] pb-2 text-lg font-medium text-[#0068a5] transition-[gap,color] hover:gap-5 hover:text-[#004a85] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] motion-reduce:transition-none">{overview.reachLinkLabel}<ArrowUpRight size={20} className="shrink-0" aria-hidden="true" /></Link>
             </div>
+            <ul aria-label="Global presence regions" tabIndex={0} className="mt-6 flex w-full flex-nowrap items-center gap-3 overflow-x-auto pb-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5] sm:gap-4" data-country-row>
+              {overview.regions.map(region => <li key={region} className="inline-flex shrink-0 items-center gap-3 whitespace-nowrap rounded-xl border border-[#d7e7eb] bg-[#f7fbfc] px-4 py-3 text-lg font-medium text-[#173f55]"><span className="grid h-6 w-9 shrink-0 place-items-center">{regionFlags[region] ? <CountryFlag code={regionFlags[region]} /> : <Globe2 size={26} className="text-[#008995]" strokeWidth={1.65} aria-hidden="true" />}</span>{region}</li>)}
+            </ul>
           </div>
         </div>
       </section>

@@ -46,7 +46,7 @@ function LinkList({ title, items }: { title: string; items: { label: string; hre
   return (
     <nav aria-label={`${title} links`} className="flex flex-col items-start gap-3.5">
       <h2 className="mb-2 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">{title}</h2>
-      {items.map((item) => <Link key={`${item.label}-${item.href}`} href={item.href} className={linkClass}>{item.label}</Link>)}
+      {items.map((item) => <Link prefetch={false} key={`${item.label}-${item.href}`} href={item.href} className={linkClass}>{item.label}</Link>)}
     </nav>
   );
 }
@@ -57,7 +57,7 @@ export function Footer() {
       <div className={shell}>
         <div className="grid gap-x-8 gap-y-12 py-14 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,.7fr)_minmax(0,.95fr)_minmax(0,1fr)_minmax(20rem,1.4fr)] xl:gap-x-6 xl:py-16 2xl:gap-x-8">
           <div className="min-w-0 sm:col-span-2 lg:col-span-3 xl:col-span-1">
-            <Link href="/" aria-label="TruMinds Clinical home" className="inline-flex focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">
+            <Link prefetch={false} href="/" aria-label="TruMinds Clinical home" className="inline-flex focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]">
               <Image src="/logo.png" alt="TruMinds Clinical" width={205} height={57} className="h-auto w-48" />
             </Link>
             <p className="mt-5 max-w-72 text-lg leading-relaxed text-[#526d7d]">Connected clinical research expertise for the work that matters.</p>
@@ -73,11 +73,11 @@ export function Footer() {
           <LinkList title="Explore" items={explore} />
           <div className="flex flex-col items-start gap-3.5">
             <h2 className="mb-2 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Services</h2>
-            {serviceLinks.map((item) => <Link key={item.label} href={item.href} className={linkClass}>{item.label}</Link>)}
+            {serviceLinks.map((item) => <Link prefetch={false} key={item.label} href={item.href} className={linkClass}>{item.label}</Link>)}
           </div>
           <section aria-labelledby="footer-contact-title" className="min-w-0 sm:col-span-2 lg:col-span-3 xl:col-span-1">
             <h2 id="footer-contact-title" className="mb-5 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Contact</h2>
-            <Link href="/contact-us" className={`${linkClass} group mb-5 inline-flex min-h-8 items-center gap-2`}>Contact Our Team<ArrowUpRight size={19} className="shrink-0 text-[#007f9a] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none" aria-hidden="true" /></Link>
+            <Link prefetch={false} href="/contact-us" className={`${linkClass} group mb-5 inline-flex min-h-8 items-center gap-2`}>Contact Our Team<ArrowUpRight size={19} className="shrink-0 text-[#007f9a] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none" aria-hidden="true" /></Link>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-[minmax(20rem,1.1fr)_minmax(0,.8fr)_minmax(0,1fr)] xl:grid-cols-1">
               <a href="mailto:services@trumindsclinical.com" className={`${linkClass} flex max-w-full items-start gap-3 md:col-span-2 lg:col-span-1`}><Mail className="mt-0.5 shrink-0 text-[#007f9a]" size={20} strokeWidth={1.7} aria-hidden="true" /><span className="min-w-0 break-normal">services@<wbr />trumindsclinical.com</span></a>
               <a href="tel:+14698501383" className={`${linkClass} flex items-start gap-3`}><Phone className="mt-0.5 shrink-0 text-[#007f9a]" size={20} strokeWidth={1.7} aria-hidden="true" /><span className="whitespace-nowrap">+1 (469) 850-1383</span></a>
@@ -88,13 +88,13 @@ export function Footer() {
         <nav aria-label="All service pages" className="border-t border-[#dce7eb] py-9">
           <h2 className="mb-5 text-lg font-semibold tracking-[.08em] text-[#007d93] uppercase">Explore every service and solution</h2>
           <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-            {services.map((item) => <Link key={item.slug} href={`/services/${item.slug}`} className={linkClass}>{item.title}</Link>)}
-            {aiServices.map((item) => <Link key={item.slug} href={`/truminds-ai/${item.slug}`} className={linkClass}>{item.title}</Link>)}
+            {services.map((item) => <Link prefetch={false} key={item.slug} href={`/services/${item.slug}`} className={linkClass}>{item.title}</Link>)}
+            {aiServices.map((item) => <Link prefetch={false} key={item.slug} href={`/truminds-ai/${item.slug}`} className={linkClass}>{item.title}</Link>)}
           </div>
         </nav>
         <div className="flex flex-col gap-4 border-t border-[#dce7eb] py-6 text-lg font-medium text-[#587084] md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} TruMinds Clinical. All rights reserved.</p>
-          <nav aria-label="Legal links" className="flex flex-wrap gap-x-6 gap-y-2">{legal.map((item) => <Link key={item.label} href={item.href} className="font-medium hover:text-[#0068a5]">{item.label}</Link>)}</nav>
+          <nav aria-label="Legal links" className="flex flex-wrap gap-x-6 gap-y-2">{legal.map((item) => <Link prefetch={false} key={item.label} href={item.href} className="font-medium hover:text-[#0068a5]">{item.label}</Link>)}</nav>
         </div>
       </div>
     </footer>

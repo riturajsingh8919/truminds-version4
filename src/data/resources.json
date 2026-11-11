@@ -1,0 +1,1476 @@
+{
+  "hub": {
+    "eyebrow": "Resources",
+    "title": "Ideas for better research.",
+    "description": "Perspectives on the people, processes and technology behind confident clinical decisions.",
+    "categoriesTitle": "Explore our resource library",
+    "categoriesDescription": "Find perspectives, practical guides and applications of our clinical and technology expertise.",
+    "insightsTitle": "Explore perspectives"
+  },
+  "labels": {
+    "read": "Read more",
+    "allResources": "All resources",
+    "categories": "Resource categories",
+    "related": "Continue exploring",
+    "contact": "Discuss this topic",
+    "articleNavigation": "In this article",
+    "categoryNavigation": "Browse resource categories",
+    "readDiscussion": "Read discussion guide"
+  },
+  "legacyInsights": [
+    {
+      "id": "clinical-data",
+      "number": "01",
+      "title": "Making clinical data ready for the next decision",
+      "image": "/images/editorial/resources.jpg",
+      "alt": "Researcher examining a sample with a microscope",
+      "intro": "Useful clinical data is more than information collected on time. It needs a shared structure, clear definitions and a quality process that helps teams understand what the data can support.",
+      "paragraphs": [
+        "When data standards are considered early, study teams can reduce avoidable rework later. A clear path from capture through review and analysis helps clinical, data and statistical teams work from the same understanding.",
+        "The practical starting point is alignment: agree on the questions the study needs to answer, define what must be collected and establish how it will be checked. Technology is most valuable when it supports that discipline."
+      ]
+    },
+    {
+      "id": "study-delivery",
+      "number": "02",
+      "title": "The value of connected clinical operations",
+      "image": "/images/editorial/services-fsp.jpg",
+      "alt": "Researchers discussing their work in a laboratory",
+      "intro": "A clinical program depends on many specialist functions. Strong delivery comes from the way those functions stay connected as plans change and evidence develops.",
+      "paragraphs": [
+        "Clear ownership, regular communication and visibility into decisions help teams spot issues earlier. They also make it easier to adjust resources without losing the context behind the work.",
+        "Whether a sponsor needs full-service support or an embedded specialist team, a shared operating rhythm can make collaboration simpler and more predictable."
+      ]
+    },
+    {
+      "id": "technology",
+      "number": "03",
+      "title": "Where technology can simplify trial work",
+      "image": "/images/editorial/services-ai.jpg",
+      "alt": "Clinical researchers working at a computer",
+      "intro": "The most useful technology solves a specific problem for the people doing the work. In clinical research, that often means reducing repeated manual steps and making information easier to trace.",
+      "paragraphs": [
+        "Connected workflows can help study teams move between data capture, management, analysis and reporting with fewer handoffs. The opportunity is not automation for its own sake; it is more time for review, interpretation and decisions.",
+        "Teams should start with a clear process, identify where friction occurs and select tools that fit the clinical and operational context."
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "clinical-data",
+      "category": "insights",
+      "title": "Making clinical data ready for the next decision",
+      "summary": "Useful clinical data is more than information collected on time. It needs a shared structure, clear definitions and a quality process that helps teams understand what the data can support.",
+      "label": "Insight",
+      "image": "/images/editorial/resources.jpg",
+      "imageAlt": "Researcher examining a sample with a microscope",
+      "sections": [
+        {
+          "title": "A practical perspective",
+          "paragraphs": [
+            "When data standards are considered early, study teams can reduce avoidable rework later. A clear path from capture through review and analysis helps clinical, data and statistical teams work from the same understanding.",
+            "The practical starting point is alignment: agree on the questions the study needs to answer, define what must be collected and establish how it will be checked. Technology is most valuable when it supports that discipline."
+          ]
+        },
+        {
+          "title": "Work backward from the decision",
+          "paragraphs": [
+            "A monitoring review, an interim analysis and a final report ask different questions of the same study data. Begin by naming the decision the team needs to make and the date it needs to make it. Agree which observations the decision depends on, what evidence of review will be available and which missing items would require the discussion to be postponed.",
+            "That conversation makes it easier to define readiness for a specific milestone. A count of completed forms can be useful, but the reviewer also needs to see whether critical values have been clarified and whether the dataset reflects the same cut of the data as the review materials."
+          ]
+        },
+        {
+          "title": "Follow a single observation end to end",
+          "paragraphs": [
+            "Consider a visit date entered by a site. It may be used to check visit windows, summarize follow-up and determine which observations appear in an analysis. At each handoff, the next team should be able to see what the date means, where it came from and how a correction will reach downstream work. TruForm EDC, SDTM and ADaM represent distinct steps in that path."
+          ]
+        },
+        {
+          "title": "Bring these questions to the handoff",
+          "paragraphs": [
+            "Use one representative data point at the next cross-functional review. If the team cannot answer a question, name the person who will resolve it before the next milestone."
+          ],
+          "items": [
+            "Which system and version contain the source observation?",
+            "Where can a reviewer find clarifications, exceptions and their status?",
+            "Who confirms whether a change affects an existing analysis or report?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore our services",
+          "href": "/services"
+        }
+      ],
+      "takeaway": "Start with one decision and trace the observations it depends on from capture through review. Make unresolved questions visible at every handoff."
+    },
+    {
+      "slug": "study-delivery",
+      "category": "insights",
+      "title": "The value of connected clinical operations",
+      "summary": "A clinical program depends on many specialist functions. Strong delivery comes from the way those functions stay connected as plans change and evidence develops.",
+      "label": "Insight",
+      "image": "/images/editorial/services-fsp.jpg",
+      "imageAlt": "Researchers discussing their work in a laboratory",
+      "sections": [
+        {
+          "title": "A practical perspective",
+          "paragraphs": [
+            "Clear ownership, regular communication and visibility into decisions help teams spot issues earlier. They also make it easier to adjust resources without losing the context behind the work.",
+            "Whether a sponsor needs full-service support or an embedded specialist team, a shared operating rhythm can make collaboration simpler and more predictable."
+          ]
+        },
+        {
+          "title": "Use one milestone to connect the work",
+          "paragraphs": [
+            "A site activation date depends on several streams of work. The project lead needs a realistic forecast, the site needs a clear list of outstanding tasks, and document reviewers need to know which records have cleared review. A schedule is useful when it makes those dependencies visible and gives people a way to flag a blocker before the date moves.",
+            "Define one shared milestone record that shows the owner, required inputs, open issues and last review date. TruForm CTMS provides a place to track study and site activity. The team still needs to agree which updates belong in that view and who keeps them current."
+          ]
+        },
+        {
+          "title": "Clarify responsibilities across delivery models",
+          "paragraphs": [
+            "A full-service program can place coordination across several functions with one partner. A Functional Service Provider relationship may bring in a defined team for operations, data management or programming while the sponsor retains other responsibilities. In either model, the people closest to a handoff should agree who prepares the work, who reviews it and who decides when it is complete."
+          ]
+        },
+        {
+          "title": "Review what changed",
+          "paragraphs": [
+            "Use recurring coordination meetings to work through changes and their downstream effects. Keep the meeting focused on exceptions and decisions."
+          ],
+          "items": [
+            "Which milestone moved, and what depends on it?",
+            "Which site, team or partner needs a new instruction?",
+            "Who will update the shared record and confirm the next review date?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore our services",
+          "href": "/services"
+        }
+      ],
+      "takeaway": "Give each milestone an owner, a shared definition of readiness and a clear route for escalating exceptions."
+    },
+    {
+      "slug": "technology",
+      "category": "insights",
+      "title": "Where technology can simplify trial work",
+      "summary": "The most useful technology solves a specific problem for the people doing the work. In clinical research, that often means reducing repeated manual steps and making information easier to trace.",
+      "label": "Insight",
+      "image": "/images/editorial/services-ai.jpg",
+      "imageAlt": "Clinical researchers working at a computer",
+      "sections": [
+        {
+          "title": "A practical perspective",
+          "paragraphs": [
+            "Connected workflows can help study teams move between data capture, management, analysis and reporting with fewer handoffs. The opportunity is not automation for its own sake; it is more time for review, interpretation and decisions.",
+            "Teams should start with a clear process, identify where friction occurs and select tools that fit the clinical and operational context."
+          ]
+        },
+        {
+          "title": "Find the work teams are repeating",
+          "paragraphs": [
+            "Follow a common task from the person who creates the record to the person who acts on it. You might find that the same site status is copied into several trackers, or that reviewers spend time checking which version of a document is current. Write down how the team does the task today, including the informal steps that keep the work moving.",
+            "This baseline gives the team something to compare when it considers a new tool. It also shows where the real problem is an unclear decision or a missing owner, which should be resolved in the workflow design."
+          ]
+        },
+        {
+          "title": "Match the tool to the decision it supports",
+          "paragraphs": [
+            "A site milestone belongs in an operational view. A document approval belongs with the document record. A case review needs access to the relevant materials and a place to record the decision. In TruForm, CTMS, DocuVault and Adjudication address those different tasks. Compare the point at which each team needs information and what it must be able to do next."
+          ]
+        },
+        {
+          "title": "Pilot a complete workflow",
+          "paragraphs": [
+            "Choose one task and ask the people who perform it to try normal, exceptional and repeat-review cases."
+          ],
+          "items": [
+            "Can a new reviewer find the current item and its owner?",
+            "Can the team see what happened when an item was returned for clarification?",
+            "Does the same record give the next team enough context to proceed?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore our services",
+          "href": "/services"
+        }
+      ],
+      "takeaway": "Choose a workflow with a clear owner and a repeatable task. Check whether the change makes that task easier to review as well as easier to perform."
+    },
+    {
+      "slug": "connected-clinical-delivery",
+      "category": "case-studies",
+      "label": "Application scenario",
+      "title": "Connecting clinical operations and data review",
+      "summary": "An illustrative study-delivery scenario showing how clinical operations, project management and data management can work together.",
+      "image": "/pageHeader/fsp-services.jpg",
+      "imageAlt": "Clinical specialists collaborating in a laboratory",
+      "sections": [
+        {
+          "title": "The study context",
+          "paragraphs": [
+            "A sponsor may need several specialist functions around one program. The coordination challenge is to keep responsibilities, data review and study decisions connected as the work develops."
+          ]
+        },
+        {
+          "title": "The capabilities around the program",
+          "paragraphs": [
+            "Keep study activities, teams, vendors and milestones connected.",
+            "Our Clinical Operations team provides comprehensive support throughout the planning, execution, management, and closeout of clinical studies across all phases of development. We partner with sponsors, CROs, and investigative sites to ensure efficient study delivery, regulatory compliance, patient safety, and high-quality data collection.",
+            "Clinical Data Management supports the collection, review and organization of clinical study information. Connected workflows help teams follow data queries, maintain visibility into quality and prepare for downstream analysis."
+          ]
+        },
+        {
+          "title": "A practical starting point",
+          "paragraphs": [
+            "Agree the study priorities, clarify ownership and establish a shared review rhythm. These steps help teams see where full-service delivery or embedded FSP support best fits the program."
+          ]
+        },
+        {
+          "title": "Design the shared review",
+          "paragraphs": [
+            "Start with a small pilot across two illustrative sites. One is preparing to activate, while the other has visits under way. The project lead brings the milestone view, clinical operations brings open site actions and data management brings a short list of records awaiting clarification. Together they agree which issues could affect the next planned review and which can follow the normal query process.",
+            "Each issue gets an owner and a next action. If a site is already preparing a clarification, the project lead can see that progress without sending the same request again. If the issue changes the expected readiness date, the person responsible for the milestone updates the shared plan."
+          ]
+        },
+        {
+          "title": "What a sponsor could review in a pilot",
+          "paragraphs": [
+            "After two review cycles, use real workflow observations to decide whether the arrangement is useful for a wider program."
+          ],
+          "items": [
+            "Can the project lead tell which unresolved issues affect the milestone?",
+            "Are site requests assigned clearly across clinical operations and data management?",
+            "Can the sponsor trace an update from the review record to the person who acted on it?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore FSP services",
+          "href": "/services/fsp-services"
+        },
+        {
+          "label": "Explore full-service CRO",
+          "href": "/services/full-service-cro"
+        }
+      ],
+      "takeaway": "Evaluate whether site updates, open data questions and operational milestones reach the right owner in time for the next review."
+    },
+    {
+      "slug": "clinical-data-to-reporting",
+      "category": "case-studies",
+      "label": "Application scenario",
+      "title": "Connecting clinical data with analysis and reporting",
+      "summary": "An illustrative workflow connecting captured study information with data standards, analysis datasets and clinical reporting.",
+      "image": "/pageHeader/SDTM.jpg",
+      "imageAlt": "Laboratory researchers discussing study information",
+      "sections": [
+        {
+          "title": "The workflow challenge",
+          "paragraphs": [
+            "Data collection, standardization, analysis and reporting involve different specialists. A shared plan helps teams understand how the output of one stage becomes the input to the next."
+          ]
+        },
+        {
+          "title": "A connected approach",
+          "paragraphs": [
+            "Clinical Data Management supports the collection, review and organization of clinical study information. Connected workflows help teams follow data queries, maintain visibility into quality and prepare for downstream analysis.",
+            "Statistical Programming supports the path from raw clinical datasets to standardized SDTM, analysis-ready ADaM and final tables, listings and figures. TruMinds combines experienced programming teams with its proprietary TruForm automation platform.",
+            "Ten TruForm capabilities work together across the clinical trial lifecycle, from study setup and data capture through operations, analysis and reporting."
+          ]
+        },
+        {
+          "title": "What the team needs to align",
+          "paragraphs": [
+            "Start with the study questions, required outputs and data definitions. Agree how information will be reviewed and traced between capture, standardized datasets and reporting."
+          ]
+        },
+        {
+          "title": "Set expectations for the first dry run",
+          "paragraphs": [
+            "In this illustrative scenario, programming and data management choose one planned table and trace a few representative records through the process. They identify the form fields, relevant mappings and analysis rules. An example with a missing observation is useful because it tests how the workflow handles a record that needs review.",
+            "The dry run gives the team a shared set of reference outputs. When a mapping or an analysis rule changes later, the reviewers can compare the new result with the reference and document whether the difference was expected."
+          ]
+        },
+        {
+          "title": "Inspect the handoffs before scaling",
+          "paragraphs": [
+            "A pilot should make decisions easier to review. Look for evidence that the trace works in both directions and that people can identify who owns a change."
+          ],
+          "items": [
+            "Data management can identify the source cut and the status of open queries.",
+            "A standards reviewer can follow the mapping into the SDTM record.",
+            "A programming reviewer can explain the ADaM derivation and the resulting TLF output."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore the TruForm ecosystem",
+          "href": "/products"
+        },
+        {
+          "label": "Explore TruMinds AI",
+          "href": "/services/truminds-ai"
+        }
+      ],
+      "takeaway": "Test traceability from a sample table entry back through the analysis dataset, the standardized record and its source."
+    },
+    {
+      "slug": "planning-connected-clinical-data",
+      "category": "white-papers",
+      "label": "Practical guide",
+      "title": "Planning a connected clinical data workflow",
+      "summary": "A guide to aligning data definitions, review responsibilities and downstream analysis before a study gathers momentum.",
+      "image": "/pageHeader/ADaM.jpg",
+      "imageAlt": "Researchers reviewing clinical information together",
+      "sections": [
+        {
+          "title": "Begin with the questions",
+          "paragraphs": [
+            "Useful clinical data is more than information collected on time. It needs a shared structure, clear definitions and a quality process that helps teams understand what the data can support.",
+            "The practical starting point is alignment: agree on the questions the study needs to answer, define what must be collected and establish how it will be checked. Technology is most valuable when it supports that discipline."
+          ]
+        },
+        {
+          "title": "Make the handoffs explicit",
+          "paragraphs": [
+            "When data standards are considered early, study teams can reduce avoidable rework later. A clear path from capture through review and analysis helps clinical, data and statistical teams work from the same understanding.",
+            "Clinical Data Management supports the collection, review and organization of clinical study information. Connected workflows help teams follow data queries, maintain visibility into quality and prepare for downstream analysis."
+          ]
+        },
+        {
+          "title": "Connect the tools to the process",
+          "paragraphs": [
+            "Teams should start with a clear process, identify where friction occurs and select tools that fit the clinical and operational context.",
+            "Explore connected tools for standardized study data, analysis datasets, and tables, listings and figures."
+          ]
+        },
+        {
+          "title": "Design a traceability exercise",
+          "paragraphs": [
+            "Choose one output that the study team expects to review. Starting with a value in that output, trace it back through the analysis dataset, the standardized record and the original source field. Record the versions and rules used at each step. Ask the downstream reviewer to repeat the exercise independently. A trace that depends on someone recalling a mapping from memory indicates a documentation gap.",
+            "Include a record with a correction or missing value. That example should make it clear whether the change belongs at capture, in a mapping, or in an analysis derivation. Document the rationale where the team owns the rule. A reviewer should be able to tell which changes would require regenerating an output."
+          ]
+        },
+        {
+          "title": "Define what each handoff must contain",
+          "paragraphs": [
+            "Use a short record for each delivery so the receiving team can confirm the scope and decide whether it can start work."
+          ],
+          "items": [
+            "Capture to standards: source cut, form versions, field definitions and the status of unresolved issues.",
+            "Standards to analysis: dataset and mapping versions, known exceptions and the review owner.",
+            "Analysis to reporting: dataset version, derivation decisions, output specifications and the expected review cycle."
+          ]
+        },
+        {
+          "title": "Review the workflow after the first delivery",
+          "paragraphs": [
+            "Compare the actual handoff with what the team expected. Record where a reviewer needed to stop and ask for context, which checks caught a genuine issue and which checks repeated earlier work. Apply changes to the handoff record before the next cycle. TruForm’s EDC, SDTM, ADaM and TLF capabilities provide a way to discuss the stages using the same vocabulary across teams."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore data capture",
+          "href": "/truminds-ai/truform-edc"
+        },
+        {
+          "label": "Explore SDTM",
+          "href": "/truminds-ai/truform-sdtm"
+        },
+        {
+          "label": "Explore ADaM",
+          "href": "/truminds-ai/truform-adam"
+        }
+      ],
+      "takeaway": "Agree on a versioned handoff record and demonstrate traceability on a sample output before committing the team to the full workflow."
+    },
+    {
+      "slug": "choosing-study-support",
+      "category": "white-papers",
+      "label": "Practical guide",
+      "title": "Choosing support around your clinical program",
+      "summary": "A guide to considering full-service delivery, embedded specialist teams and clinical staffing in the context of your study.",
+      "image": "/pageHeader/services.jpg",
+      "imageAlt": "Clinical professionals working together",
+      "sections": [
+        {
+          "title": "Understand the support needed",
+          "paragraphs": [
+            "From full-service delivery to embedded specialist teams and connected technology, we shape our support around the needs of your study.",
+            "A clinical program depends on many specialist functions. Strong delivery comes from the way those functions stay connected as plans change and evidence develops."
+          ]
+        },
+        {
+          "title": "Clarify ownership and communication",
+          "paragraphs": [
+            "Clear ownership, regular communication and visibility into decisions help teams spot issues earlier. They also make it easier to adjust resources without losing the context behind the work.",
+            "Whether a sponsor needs full-service support or an embedded specialist team, a shared operating rhythm can make collaboration simpler and more predictable."
+          ]
+        },
+        {
+          "title": "Connect people and technology",
+          "paragraphs": [
+            "The most useful technology solves a specific problem for the people doing the work. In clinical research, that often means reducing repeated manual steps and making information easier to trace.",
+            "Connected workflows can help study teams move between data capture, management, analysis and reporting with fewer handoffs. The opportunity is not automation for its own sake; it is more time for review, interpretation and decisions."
+          ]
+        },
+        {
+          "title": "Compare scope with a real work package",
+          "paragraphs": [
+            "For a planned reporting milestone, write down the work from data review through delivery of the outputs. Assign a preparation owner, a reviewer and a decision-maker to each step. If the sponsor needs coordination across several functions, evaluate the full-service model. If the need is a defined stream of recurring work, compare FSP arrangements. If the sponsor needs a specialist within an established team, assess the staffing scope."
+          ]
+        },
+        {
+          "title": "Account for changes in timing and volume",
+          "paragraphs": [
+            "Run the same exercise for a delayed source delivery or a larger-than-expected review workload. Clarify who changes the plan, how the updated dates are communicated and what work can proceed independently. Agree when the teams will revisit the arrangement if demand persists beyond a single milestone.",
+            "Document those decisions alongside the scope. A named escalation route and a consistent review schedule are as useful to an embedded specialist as they are to a multi-function delivery team."
+          ]
+        },
+        {
+          "title": "Prepare for the first discussion",
+          "paragraphs": [
+            "A simple package of study information can make the comparison more concrete."
+          ],
+          "items": [
+            "List the study phase, target milestones and the work that already has an owner.",
+            "Name the systems, procedures and approvals that remain with the sponsor.",
+            "Describe the specialist skills, expected workload and criteria for accepting an output."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Compare service models",
+          "href": "/services"
+        },
+        {
+          "label": "Explore clinical staffing",
+          "href": "/services/clinical-staffing"
+        }
+      ],
+      "takeaway": "Choose a model by assigning ownership for real deliverables, then test the arrangement against a milestone and a plausible change in scope."
+    },
+    {
+      "slug": "inside-truform",
+      "category": "news",
+      "label": "Platform spotlight",
+      "title": "Inside the TruForm clinical ecosystem",
+      "summary": "Ten TruForm capabilities work together across the clinical trial lifecycle, from study setup and data capture through operations, analysis and reporting.",
+      "image": "/pageHeader/Products.jpg",
+      "imageAlt": "Clinical research materials and laboratory supplies",
+      "sections": [
+        {
+          "title": "From participation to reporting",
+          "paragraphs": [
+            "Explore data capture, informed consent, randomization and clinical supply workflows.",
+            "Connect study operations, essential documents, endpoint review and quality oversight.",
+            "Explore connected tools for standardized study data, analysis datasets, and tables, listings and figures."
+          ]
+        },
+        {
+          "title": "Technology and people",
+          "paragraphs": [
+            "Explore TruMinds AI services to see how clinical expertise and the TruForm platform connect around your program."
+          ]
+        },
+        {
+          "title": "From collection to study reporting",
+          "paragraphs": [
+            "TruForm EDC supports electronic data capture. SDTM organizes study data in a standard structure for downstream use. ADaM focuses on preparing analysis-ready datasets, while TLF supports work on tables, listings and figures. The product pages describe each part of the workflow and give readers a way to explore the stages individually.",
+            "TruForm eConsent addresses a different part of the study experience. It supports presenting consent information and managing the related records and versions. These tools serve different users and review decisions across the same program."
+          ]
+        },
+        {
+          "title": "Tools for operations and oversight",
+          "paragraphs": [
+            "CTMS tracks study activity and milestones. DocuVault organizes essential study documents, RBQM supports visibility into study and site risks, and Adjudication helps teams coordinate independent endpoint review. RTSM connects randomization and trial supply activities. A program can begin its evaluation by identifying which of these workflows is most relevant to the teams involved."
+          ]
+        },
+        {
+          "title": "Where to look next",
+          "paragraphs": [
+            "The Products page lists all ten TruForm capabilities. The TruMinds AI service page explains how the ecosystem fits into the wider clinical offering. Readers comparing options can open a product page to review the particular workflow it supports and use the service page to understand where clinical teams may also be involved."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore all ten products",
+          "href": "/products"
+        },
+        {
+          "label": "Explore TruMinds AI services",
+          "href": "/services/truminds-ai"
+        }
+      ],
+      "takeaway": "TruForm brings together tools for study setup, capture, operations, oversight, analysis and reporting. Teams can explore the modules by the part of the study they support."
+    },
+    {
+      "slug": "eight-therapeutic-specialties",
+      "category": "news",
+      "label": "Expertise spotlight",
+      "title": "Eight specialties at the heart of our clinical work",
+      "summary": "Specialized clinical expertise across eight therapeutic areas. Explore the conditions, research priorities and study considerations that shape our work.",
+      "image": "/pageHeader/therapeutic-areas.jpg",
+      "imageAlt": "Clinical professionals supporting a patient",
+      "sections": [
+        {
+          "title": "A connected clinical perspective",
+          "paragraphs": [
+            "We support pharmaceutical, biotechnology, medical device and CRO organizations throughout the clinical development lifecycle. Select a specialty to explore its full research focus.",
+            "Bring together the delivery model, specialist people and technology your program needs. Explore the services that support work across our therapeutic areas."
+          ]
+        },
+        {
+          "title": "Across eight focus areas",
+          "paragraphs": [
+            "TruMinds Clinical covers Oncology & Hematology, Cardiovascular, Neuroscience, Immunology, Infectious Diseases, Rare Diseases, Endocrinology and Ophthalmology. The individual pages give readers a more specific view of the research areas within each category. They also show how study teams draw on operational, biometrics and specialist expertise across different kinds of programs.",
+            "For example, the cardiovascular page groups heart and device programs alongside vascular and risk programs. The ophthalmology page focuses on vision outcomes and precise assessments. Those pages provide a starting point for discussing the demands of a specific study."
+          ]
+        },
+        {
+          "title": "How therapeutic expertise connects to study delivery",
+          "paragraphs": [
+            "The delivery model depends on the program and the work involved. A sponsor may need help across functions, a defined specialist function or additional people in an existing team. The Services pages describe those options. The therapeutic pages give readers more context for the areas those teams support, from early development through later stages."
+          ]
+        },
+        {
+          "title": "Explore related specialties",
+          "paragraphs": [
+            "Readers can start with the area closest to their program and use the links on each page to compare adjacent specialties. For a cross-functional study, review both the research focus and the capabilities listed under Services before discussing how the work would be organized."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore therapeutic areas",
+          "href": "/therapeutic-areas"
+        },
+        {
+          "label": "Meet TruMinds Clinical",
+          "href": "/about-us"
+        }
+      ],
+      "takeaway": "The therapeutic directory covers eight areas of clinical research. Each page explains the focus areas and how clinical, data and specialist teams can support the work."
+    },
+    {
+      "slug": "rare-disease-study-handoffs",
+      "category": "insights",
+      "title": "Why study handoffs matter in rare disease research",
+      "summary": "When study populations are small, a missing observation or an unclear handoff can be harder to resolve. Here is how study teams can make those handoffs more visible.",
+      "label": "Insight",
+      "image": "/pageHeader/rare-disease.jpg",
+      "imageAlt": "A medical team examining a child with their family",
+      "sections": [
+        {
+          "title": "Follow the observation across teams",
+          "paragraphs": [
+            "A participant observation can pass from a research site to data management and then to a programming team. The people at each step may use different tools. Agreeing on where the observation and its context live helps a reviewer understand what was collected and what still needs follow-up."
+          ]
+        },
+        {
+          "title": "Give exceptions a clear owner",
+          "paragraphs": [
+            "Walk through a missed visit or a partially completed assessment at a study team meeting. Ask who records the issue, who confirms the context with the site and where the final clarification is recorded. This exercise can reveal gaps that a milestone tracker alone would miss."
+          ]
+        },
+        {
+          "title": "Build the review around an actual visit",
+          "paragraphs": [
+            "In an illustrative rare disease study, participants travel to a small number of specialist sites. Some follow-up may take place outside the planned visit. The site knows why the schedule changed, while data management may first see only a missing field or a later-than-expected date. The programming team will need enough context to interpret the observation consistently with the study plan.",
+            "The review workflow should give each team a place to add the context it is responsible for. Walk through one common visit and one exception before the study is under way. Include the time required for a site to respond when someone needs clarification."
+          ]
+        },
+        {
+          "title": "Carry the clarification forward",
+          "paragraphs": [
+            "When a site response resolves a question, decide whether the underlying record needs a correction, whether an annotation is sufficient or whether the issue remains open for review. The downstream team should be able to see the current status and identify which version it used. That is especially useful when a small group of observations is reviewed repeatedly over the life of a program."
+          ]
+        },
+        {
+          "title": "Rehearse the exception",
+          "paragraphs": [
+            "Take a missed follow-up and identify three separate responsibilities before the next review."
+          ],
+          "items": [
+            "The site confirms what happened and where the explanation is recorded.",
+            "Data management determines whether the relevant record needs an update.",
+            "The analysis team confirms whether the latest dataset and review materials reflect the change."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore rare disease research",
+          "href": "/therapeutic-areas/rare-diseases"
+        },
+        {
+          "label": "Explore clinical data capture",
+          "href": "/truminds-ai/truform-edc"
+        }
+      ],
+      "takeaway": "Treat every missing observation as a handoff question first. Record who has the context, where it belongs and how it reaches the next reviewer."
+    },
+    {
+      "slug": "consent-as-a-conversation",
+      "category": "insights",
+      "title": "Designing digital consent around the participant",
+      "summary": "What can a participant review independently, and when should the site step in? Those questions help define a clear digital consent experience.",
+      "label": "Insight",
+      "image": "/pageHeader/eConsent.jpg",
+      "imageAlt": "A clinician discussing information with a patient",
+      "sections": [
+        {
+          "title": "Make it easy to pause and ask",
+          "paragraphs": [
+            "Think through the experience from the point of view of someone reading about the study for the first time. Clear explanations, time to review and an obvious way to contact the site give participants room to ask questions before making a decision."
+          ]
+        },
+        {
+          "title": "Plan for updates during the study",
+          "paragraphs": [
+            "Consent materials can change while a study is active. TruForm eConsent supports version control and re-consenting workflows. At setup, define how the study team will identify the relevant version, communicate the change and record follow-up."
+          ]
+        },
+        {
+          "title": "Start with the moments that need support",
+          "paragraphs": [
+            "Map the steps a participant sees before they agree to take part. Think about how they would open the material, review it at their own pace and ask a question if a procedure or obligation is unclear. A person joining remotely may need different practical help than someone sitting with the study team at a site.",
+            "TruForm eConsent supports multimedia, multilingual and remote workflows. The site and study team should review the actual materials together and decide which options fit the population and protocol. Walk through what happens if someone has limited device access or wants to discuss the information with a member of the team."
+          ]
+        },
+        {
+          "title": "Treat a version change as its own workflow",
+          "paragraphs": [
+            "An update can create several separate tasks. The study team identifies the affected participants and the relevant version, the site coordinates follow-up, and a reviewer checks which actions are complete. A shared view of version and status helps the teams see where follow-up is still required."
+          ]
+        },
+        {
+          "title": "Test the participant and site experience",
+          "paragraphs": [
+            "Ask a site representative to walk through a first visit and a later update using sample records."
+          ],
+          "items": [
+            "Can the participant easily return to the information and find a contact?",
+            "Can the site tell which materials were presented and when?",
+            "Can a reviewer distinguish completed follow-up from an item still awaiting action?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm eConsent",
+          "href": "/truminds-ai/truform-econsent"
+        },
+        {
+          "label": "Explore clinical operations",
+          "href": "/services/fsp-services#fsp-clinical-operations"
+        }
+      ],
+      "takeaway": "Design the path from first reading to follow-up around participants’ questions, and make the site’s responsibility clear at each step."
+    },
+    {
+      "slug": "cardiovascular-endpoint-review",
+      "category": "case-studies",
+      "title": "Coordinating independent endpoint review in a cardiovascular study",
+      "summary": "An illustrative multicenter study shows how sites and an independent committee could share the information needed for consistent endpoint review.",
+      "label": "Application scenario",
+      "image": "/pageHeader/Cardiovascular.jpg",
+      "imageAlt": "Clinical researchers discussing heart and cardiovascular findings",
+      "sections": [
+        {
+          "title": "The scenario",
+          "paragraphs": [
+            "A cardiovascular study collects suspected endpoint events across several sites. Each site works with its own source records, and reviewers need a consistent way to tell which case materials are ready and which still require clarification."
+          ]
+        },
+        {
+          "title": "How the workflow could work",
+          "paragraphs": [
+            "The study team agrees on the case materials, who checks the packet for completeness and when a case goes to the independent committee. TruForm Adjudication can support configurable routing, blinded review and a record of the committee’s decision. The study team can then see outstanding cases and follow up with the right site."
+          ]
+        },
+        {
+          "title": "Work through an incomplete packet",
+          "paragraphs": [
+            "In the pilot, include a case where the site has reported a suspected event but one requested record has yet to arrive. The coordinator identifies the missing material and returns the request to the site. The record should show that the case is pending rather than ready for committee review. Once the site responds, the coordinator completes the agreed check before routing the packet.",
+            "The committee’s remit, definitions and review rules come from the study’s own materials. Clinical operations coordinates the process and tracks open items. The committee records its determination through the agreed workflow, and the appropriate study team reconciles the result with the study data."
+          ]
+        },
+        {
+          "title": "Questions for a pilot review",
+          "paragraphs": [
+            "Include an example that requires clarification and one that requires another reviewer. Check the workflow with the coordinator and a committee representative."
+          ],
+          "items": [
+            "Which roles can see the source materials and the review decision?",
+            "Can the coordinator explain why a case is still pending?",
+            "How would a revised record reach the committee and the study team?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore cardiovascular research",
+          "href": "/therapeutic-areas/cardiovascular"
+        },
+        {
+          "label": "Explore TruForm Adjudication",
+          "href": "/truminds-ai/truform-adjudication"
+        }
+      ],
+      "takeaway": "Check that the review team receives a complete packet, can request a clarification and can return a documented decision to the appropriate study team."
+    },
+    {
+      "slug": "trial-master-file-across-sites",
+      "category": "case-studies",
+      "title": "Keeping essential documents in view across sites",
+      "summary": "An illustrative study looks at how a sponsor and its sites could coordinate document ownership, review and filing as the study expands.",
+      "label": "Application scenario",
+      "image": "/pageHeader/DocuVault.jpg",
+      "imageAlt": "A laboratory researcher reviewing study information",
+      "sections": [
+        {
+          "title": "The scenario",
+          "paragraphs": [
+            "A study adds new sites while the first sites are already active. Activation records are arriving alongside updates to documents for existing sites. The sponsor needs to see which documents are pending and which versions have been approved."
+          ]
+        },
+        {
+          "title": "How the workflow could work",
+          "paragraphs": [
+            "The team defines the expected documents for each milestone, assigns a filing owner and agrees on when reviewers will check completeness. TruForm DocuVault provides version control and review workflows. An agreed completeness review helps the sponsor identify what still needs attention before the next milestone."
+          ]
+        },
+        {
+          "title": "Plan for activation and ongoing maintenance",
+          "paragraphs": [
+            "Choose one activation milestone and define which documents are expected for a site to reach it. A trial master file owner and a site representative agree which team prepares each document, who reviews it and where it is filed. A version change after activation goes through its own review so the current document remains identifiable.",
+            "Compare the document view with the study team’s operational milestones. The document workflow shows what has cleared review. The operational workflow shows whether the milestone as a whole is ready. TruForm DocuVault and CTMS support those separate views."
+          ]
+        },
+        {
+          "title": "Check the workflow with a reviewer",
+          "paragraphs": [
+            "Use two example sites and a document revised after approval to test how the team handles normal work and an exception."
+          ],
+          "items": [
+            "Can reviewers identify the current version and see the record of approval?",
+            "Can the site coordinator tell which expected items still need attention?",
+            "Does the team know how an unresolved item will affect the milestone decision?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm DocuVault",
+          "href": "/truminds-ai/truform-docuvault"
+        },
+        {
+          "label": "Explore TruForm CTMS",
+          "href": "/truminds-ai/truform-ctms"
+        }
+      ],
+      "takeaway": "Validate the document workflow at one milestone and one later update. Both should make the current version, review status and filing owner clear."
+    },
+    {
+      "slug": "staffing-for-a-study-milestone",
+      "category": "case-studies",
+      "title": "Adding specialist capacity ahead of a study milestone",
+      "summary": "An illustrative scenario shows how a sponsor could scope programming support while keeping review and accountability within its existing team.",
+      "label": "Application scenario",
+      "image": "/pageHeader/clinical-staffing.jpg",
+      "imageAlt": "A multidisciplinary team of healthcare professionals",
+      "sections": [
+        {
+          "title": "The scenario",
+          "paragraphs": [
+            "A sponsor’s biometrics team is preparing for a reporting milestone and expects a temporary increase in programming work. Its internal team will continue to own analysis decisions and final review."
+          ]
+        },
+        {
+          "title": "How the workflow could work",
+          "paragraphs": [
+            "Before adding staff, the team identifies the expected outputs, the review schedule and the skills needed for the assignment. A named internal reviewer gives the specialist a clear route for questions. For recurring work across several milestones, the sponsor could also discuss an FSP model with a defined scope."
+          ]
+        },
+        {
+          "title": "Prepare the assignment before kickoff",
+          "paragraphs": [
+            "Give the incoming programmer a bounded set of outputs with the relevant specifications, examples, review conventions and expected dates. Identify who can answer questions about analysis rules and who can resolve tooling or access issues. The sponsor’s reviewer can set aside time for a small first delivery, while there is still room to clarify the expectations for the larger package.",
+            "If requirements change, the project lead revisits the expected delivery dates and decides which work can move. An agreed process for changes makes it easier to see whether the additional capacity still matches the workload."
+          ]
+        },
+        {
+          "title": "Evaluate the fit at the first handoff",
+          "paragraphs": [
+            "Use the first deliverable to assess the assignment and agree what needs to change before the larger package."
+          ],
+          "items": [
+            "Can the reviewer reproduce or follow the submitted output using the agreed inputs?",
+            "Did open questions reach the right sponsor contact?",
+            "Does the remaining work fit the original scope, or would a defined ongoing function fit better?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore clinical staffing",
+          "href": "/services/clinical-staffing"
+        },
+        {
+          "label": "Explore statistical programming support",
+          "href": "/services/fsp-services#fsp-statistical-programming"
+        }
+      ],
+      "takeaway": "Define the work package and its reviewer before assigning a specialist. Use a sample output to confirm the handoff early."
+    },
+    {
+      "slug": "designing-a-risk-review-workflow",
+      "category": "white-papers",
+      "title": "Designing a risk review workflow for a clinical study",
+      "summary": "A planning guide for linking study risks to useful indicators, review owners and follow-up decisions.",
+      "label": "Practical guide",
+      "image": "/pageHeader/RBQM.jpg",
+      "imageAlt": "Researchers assessing samples and laboratory findings",
+      "sections": [
+        {
+          "title": "Define the decision before the indicator",
+          "paragraphs": [
+            "For each study risk, identify the decision the team may need to make. Then document which observations could inform that decision, where they come from and who can interpret them. A short list with clear owners is easier to discuss at a review meeting."
+          ]
+        },
+        {
+          "title": "Document how a signal becomes an action",
+          "paragraphs": [
+            "Use the same review record for the signal, its context, the person responsible and the agreed follow-up. TruForm RBQM supports visibility into study and site indicators. A linked operational view can help reviewers discuss risk alongside study milestones."
+          ]
+        },
+        {
+          "title": "Write an indicator definition reviewers can use",
+          "paragraphs": [
+            "Define what the indicator counts, where the input comes from and the period it covers. If site enrollment differs substantially, give reviewers enough context to interpret comparisons. Identify changes in reporting that could affect the number. A signal that seems significant may reflect a data entry delay, a workflow change or a different time window.",
+            "Decide who maintains the definition and how an update is communicated to the people who review the indicator. In a pilot, ask two people to interpret the same example using the written definition and compare where they need more context."
+          ]
+        },
+        {
+          "title": "Walk through escalation and closure",
+          "paragraphs": [
+            "At the review, separate what the team observed from the action it chooses to take. If reviewers need more information, record who will request it and when the item will return for discussion. If they agree that follow-up is complete, document what supported that conclusion. A consistent record makes it possible for another reviewer to understand the decision later.",
+            "Use operational information from CTMS alongside the indicator when the timing of a milestone helps explain a trend. The review team should agree how the two sources will be reconciled if they use different dates or definitions."
+          ]
+        },
+        {
+          "title": "Review the design after a pilot",
+          "paragraphs": [
+            "Ask participants where the workflow helped them decide what to do, and where it added work without changing the decision."
+          ],
+          "items": [
+            "Can a reviewer find the source and meaning of the indicator?",
+            "Is there a clear place for comments, assignments and the next review date?",
+            "Can the team distinguish an unresolved signal from a closed action?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm RBQM",
+          "href": "/truminds-ai/truform-rbqm"
+        },
+        {
+          "label": "Explore TruForm CTMS",
+          "href": "/truminds-ai/truform-ctms"
+        }
+      ],
+      "takeaway": "Pilot the review with one familiar signal and one ambiguous signal. Capture the context, the decision, the owner and the next review date."
+    },
+    {
+      "slug": "planning-essential-document-ownership",
+      "category": "white-papers",
+      "title": "Planning ownership for essential trial documents",
+      "summary": "A guide to building a document workflow around the people who create, review, approve and retrieve study records.",
+      "label": "Practical guide",
+      "image": "/pageHeader/DocuVault.jpg",
+      "imageAlt": "A laboratory researcher reviewing study information",
+      "sections": [
+        {
+          "title": "Map the document lifecycle at setup",
+          "paragraphs": [
+            "Choose a common document type and trace it from the first draft to filing. Identify the author, reviewer and approver. Record where the current version is kept and how collaborators can tell whether it is ready for use."
+          ]
+        },
+        {
+          "title": "Connect completeness to milestones",
+          "paragraphs": [
+            "Use upcoming study milestones to decide what the team should check and when. Review missing and outdated items with their owners. TruForm DocuVault supports filing, review and completeness views that teams can use in this workflow."
+          ]
+        },
+        {
+          "title": "Create an ownership map",
+          "paragraphs": [
+            "Choose the documents the team expects at a defined study or site milestone. For each item, identify the expected owner, reviewer, approval step and filing location. Check that the people listed have access to the records they need. Record which version the study team treats as current and who can correct the reference if a new version is approved.",
+            "Keep a separate view of completeness. A document that has been received may still be awaiting review, while a document that is complete for one site may be different from the equivalent record for another site. Use milestone and site context when setting the expectation."
+          ]
+        },
+        {
+          "title": "Rehearse the late and revised items",
+          "paragraphs": [
+            "Walk a late item through the workflow with a site representative and the person responsible for the file. Agree where they see the outstanding task, who can follow up and how the delay is reflected in milestone planning. Then repeat the exercise with a revision. A reviewer should be able to find the current version and understand how it superseded the previous one."
+          ]
+        },
+        {
+          "title": "Use the review to refine the process",
+          "paragraphs": [
+            "A trial master file tool can support the process once ownership and review rules are clear. Validate those rules with the people who perform the work."
+          ],
+          "items": [
+            "Check which document types still lack an accountable owner.",
+            "Confirm how the team will find and report outdated documents.",
+            "Record where an open document issue and its operational impact are reviewed."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm DocuVault",
+          "href": "/truminds-ai/truform-docuvault"
+        },
+        {
+          "label": "Explore quality and validation support",
+          "href": "/services/fsp-services#fsp-validation-services"
+        }
+      ],
+      "takeaway": "Agree who owns each document at each stage, then test the record with both an overdue item and a revision to an approved item."
+    },
+    {
+      "slug": "planning-trial-supply-handoffs",
+      "category": "white-papers",
+      "title": "Planning trial supply handoffs across study teams",
+      "summary": "A guide for connecting enrollment assumptions, site readiness and trial supply responsibilities during study setup.",
+      "label": "Practical guide",
+      "image": "/pageHeader/RTSM.jpg",
+      "imageAlt": "Laboratory researchers reviewing a sample vial",
+      "sections": [
+        {
+          "title": "Agree on which changes trigger a review",
+          "paragraphs": [
+            "Enrollment and site activation plans can change during a study. Identify who communicates those changes to the supply team and which milestones should prompt a review of the current assumptions. Record where the study and supply teams can see the same update."
+          ]
+        },
+        {
+          "title": "Separate visibility from permission",
+          "paragraphs": [
+            "Discuss which roles need operational updates and which roles can see assignment or inventory details. TruForm RTSM connects randomization and trial supply workflows. The study team can use its protocol and defined roles to decide how those workflows should be configured."
+          ]
+        },
+        {
+          "title": "Build a shared view of planning inputs",
+          "paragraphs": [
+            "At setup, document which site and enrollment assumptions the supply team uses, who owns each input and how often it is reviewed. Identify what a date represents. A forecasted site activation and a confirmed activation are different inputs, and teams should be able to tell them apart. Make the source visible so a change can be discussed in context.",
+            "Distinguish routine updates from changes that need a dedicated review. For an illustrative pilot, use one site that opens later than expected and another with a revised enrollment forecast. Ask who communicates each update and which roles need to respond."
+          ]
+        },
+        {
+          "title": "Review access and reconciliation",
+          "paragraphs": [
+            "Walk through the study and supply views with the people who operate them. Review which roles should see an operational update, an inventory detail or a treatment assignment, using the access rules defined for the study. Then agree which team resolves a discrepancy and how other roles will learn when it is resolved.",
+            "TruForm RTSM supports randomization and supply workflows, while CTMS supports study operations. At the planning stage, use the two views to clarify which records each team is responsible for maintaining and what information should be passed between them."
+          ]
+        },
+        {
+          "title": "Review the handoff after a planning change",
+          "paragraphs": [
+            "Use an example from the pilot to check whether responsibilities and source records are clear."
+          ],
+          "items": [
+            "Can a reviewer tell which assumptions are current and who last updated them?",
+            "Did the change reach the right owner with enough context to act?",
+            "Is there a record of how the teams resolved any discrepancy?"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm RTSM",
+          "href": "/truminds-ai/truform-rtsm"
+        },
+        {
+          "label": "Explore study operations with CTMS",
+          "href": "/truminds-ai/truform-ctms"
+        }
+      ],
+      "takeaway": "Decide which changes the supply team needs to see, who owns the update and how the teams reconcile conflicting records."
+    },
+    {
+      "slug": "clinical-delivery-across-borders",
+      "category": "news",
+      "title": "Inside TruMinds Clinical’s global delivery network",
+      "summary": "A closer look at how TruMinds brings together clinical research, biometrics and specialist teams across its markets.",
+      "label": "Company spotlight",
+      "image": "/pageHeader/about.jpg",
+      "imageAlt": "Three healthcare professionals standing together",
+      "sections": [
+        {
+          "title": "Expertise across borders",
+          "paragraphs": [
+            "TruMinds Clinical’s presence spans the United States, Canada, the United Kingdom, Europe and India. The About Us page describes a global delivery approach that brings together clinical operations, data expertise and specialist talent across phases I–IV."
+          ]
+        },
+        {
+          "title": "Support that fits the program",
+          "paragraphs": [
+            "Teams can work with TruMinds through full-service CRO delivery, defined FSP work or clinical staffing. The service pages explain the scope of each model, while the contact page lists office addresses and contact details."
+          ]
+        },
+        {
+          "title": "Where to find the teams",
+          "paragraphs": [
+            "The TruMinds Clinical contact directory lists offices in Dallas, Texas, and Somerset, New Jersey, as well as Toronto, Hyderabad and London. It includes the full addresses and links for directions. The About Us page describes the broader reach of TruMinds across the United States, Canada, the United Kingdom, Europe and India.",
+            "The office directory and the broader regional view answer different questions. The directory shows where the five offices are. About Us gives readers context on how TruMinds describes its reach and the programs its teams support."
+          ]
+        },
+        {
+          "title": "What global delivery can include",
+          "paragraphs": [
+            "TruMinds Clinical brings clinical operations, biometrics and specialist functions together for pharmaceutical, biotechnology, CRO and medical device organizations. The team supports clinical development across phases I–IV. The structure of an engagement depends on the scope, study stage and responsibilities the sponsor or partner wants to retain."
+          ]
+        },
+        {
+          "title": "Start with your program",
+          "paragraphs": [
+            "A prospective partner can review the service models, then use the contact directory to reach the team. Details such as the program’s phase, therapeutic area and next study milestone can help start a more specific conversation about the work and the people involved."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore our global presence",
+          "href": "/about-us"
+        },
+        {
+          "label": "Find our offices",
+          "href": "/contact-us"
+        }
+      ],
+      "takeaway": "The Contact page lists five offices across four countries. About Us describes the wider reach and the types of clinical support TruMinds provides."
+    },
+    {
+      "slug": "inside-functional-service-delivery",
+      "category": "news",
+      "title": "Inside TruMinds Clinical’s FSP offering",
+      "summary": "A closer look at the specialist functions sponsors can bring into their existing study teams.",
+      "label": "Service spotlight",
+      "image": "/pageHeader/fsp-services.jpg",
+      "imageAlt": "A team of clinical specialists working together in a laboratory",
+      "sections": [
+        {
+          "title": "A defined function within an existing team",
+          "paragraphs": [
+            "TruMinds Clinical’s Functional Service Provider offering covers work such as clinical project management, data management, statistical programming and biostatistics. The FSP service page also describes support for safety, regulatory and medical activities."
+          ]
+        },
+        {
+          "title": "Where to explore each capability",
+          "paragraphs": [
+            "The FSP page connects each capability to its scope. Sponsors can use it to identify the functions they want to discuss and clarify how each one would fit with their own teams and processes."
+          ]
+        },
+        {
+          "title": "From study coordination to biometrics",
+          "paragraphs": [
+            "Clinical project management and clinical operations support the organization of study work, while data management, statistical programming and biostatistics address different parts of the evidence workflow. Those capabilities can be discussed individually or as connected responsibilities around a program. The service page describes how they fit within the FSP model.",
+            "The capability list also includes validation services, pharmacovigilance, drug safety, regulatory operations and medical writing. These areas involve different deliverables and review responsibilities, which is why the site gives readers a direct route to the relevant service description."
+          ]
+        },
+        {
+          "title": "When to consider a defined function",
+          "paragraphs": [
+            "Sponsors with established internal oversight can discuss bringing in a specialist function for a particular workstream or a recurring set of activities. For a discussion about a broader program, the full-service CRO page describes a different scope. Clinical Staffing focuses on matching experienced people to specific roles and teams."
+          ]
+        },
+        {
+          "title": "Finding the relevant capability",
+          "paragraphs": [
+            "From Services, open FSP Services and choose the capability closest to the work. The page opens the corresponding description. Use it to prepare questions about expected deliverables, existing tools, how the work will be reviewed and how the FSP team would coordinate with the sponsor’s team."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore FSP services",
+          "href": "/services/fsp-services"
+        },
+        {
+          "label": "Explore clinical project management",
+          "href": "/services/fsp-services#fsp-clinical-project-management"
+        }
+      ],
+      "takeaway": "The FSP offering covers defined clinical functions and specialist work. The capability menu takes readers directly to the relevant areas of the service page."
+    },
+    {
+      "slug": "mentorship-and-knowledge-sharing",
+      "category": "news",
+      "title": "How mentorship fits into Giving Back",
+      "summary": "A closer look at TruMinds Clinical’s focus on sharing knowledge and supporting practical learning.",
+      "label": "Community spotlight",
+      "image": "/pageHeader/mentorship.jpg",
+      "imageAlt": "Clinical colleagues sharing knowledge in a team discussion",
+      "sections": [
+        {
+          "title": "A focus on practical learning",
+          "paragraphs": [
+            "The Giving Back program includes mentorship alongside employee volunteering, community outreach and nonprofit partnerships. Its mentorship page describes an emphasis on sharing knowledge, supporting education and helping learners build practical skills."
+          ]
+        },
+        {
+          "title": "Explore the wider commitment",
+          "paragraphs": [
+            "The Giving Back pages explain how these areas fit together. Readers interested in contributing time or discussing a potential collaboration can learn about the different programs and contact the TruMinds team."
+          ]
+        },
+        {
+          "title": "Where mentorship fits",
+          "paragraphs": [
+            "TruMinds Clinical describes Giving Back as a commitment that reaches beyond the work of a study. Its four program areas cover nonprofit research organizations, employee volunteering, community outreach and mentorship. The mentorship page focuses on knowledge sharing and helping people develop practical skills they can apply to their own goals.",
+            "That focus connects with the collaborative work of clinical research, where people routinely learn how adjacent roles contribute to a study. Someone exploring clinical data may want to understand how a site records information, while someone interested in operations may want to learn how data questions are handled across teams."
+          ]
+        },
+        {
+          "title": "Ways to explore the program",
+          "paragraphs": [
+            "The Giving Back overview links to each program so readers can see which area is most relevant to their interests. A person looking for an introduction to career paths can start with the mentorship page and the related Resources discussion guide. An organization interested in a wider collaboration can review the nonprofit and community outreach pages."
+          ]
+        },
+        {
+          "title": "Continue the conversation",
+          "paragraphs": [
+            "The mentorship discussion guide offers questions that a learner or mentor can bring to a first conversation, including how to set a manageable learning goal and choose a follow-up activity. Readers can use the contact form to ask the TruMinds team about mentorship or other ways to get involved."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore mentorship programs",
+          "href": "/giving-back/mentorship-programs"
+        },
+        {
+          "label": "Explore Giving Back",
+          "href": "/giving-back"
+        }
+      ],
+      "takeaway": "Mentorship is one of four areas of Giving Back, alongside nonprofit research partnerships, employee volunteering and community outreach."
+    },
+    {
+      "slug": "clinical-data-and-standards",
+      "category": "events",
+      "title": "Discussion guide: from data capture to analysis",
+      "summary": "Conversation prompts for teams considering how electronic data capture, standards and analysis fit together in a clinical program.",
+      "label": "Discussion guide",
+      "image": "/pageHeader/SDTM.jpg",
+      "imageAlt": "Laboratory researchers discussing study findings at a computer",
+      "sections": [
+        {
+          "title": "Where does the handoff get difficult?",
+          "paragraphs": [
+            "Choose a data point that moves from electronic data capture to a standardized dataset and then to analysis. Ask how a reviewer would find its origin, the mapping decisions and the latest version of the dataset."
+          ]
+        },
+        {
+          "title": "What to bring to the conversation",
+          "paragraphs": [
+            "A simple workflow diagram or a de-identified example can show where ownership changes. Use it to compare how teams currently review data mappings, communicate changes and plan reporting outputs."
+          ]
+        },
+        {
+          "title": "Open with a shared example",
+          "paragraphs": [
+            "Invite people who work at each stage of the workflow to describe what they receive and what they produce. Start with a sample visit record. Ask the person responsible for capture what the fields mean and where a correction would appear. Ask the standards and analysis teams how they would see the correction and identify the versions they received.",
+            "Keep the example small enough that the group can follow it together. A diagram with three or four steps is usually enough for the first conversation. Add more detail where the group finds a handoff that depends on an informal message or an undocumented assumption."
+          ]
+        },
+        {
+          "title": "Discussion prompts",
+          "paragraphs": [
+            "Use these questions to turn observations into next steps."
+          ],
+          "items": [
+            "Who can identify the source and the applicable mapping rule?",
+            "How would the group know that an updated record reached downstream work?",
+            "Which missing detail would stop a reviewer from deciding whether the output is ready?"
+          ]
+        },
+        {
+          "title": "Close with a handoff to test",
+          "paragraphs": [
+            "Agree on one handoff to test before the next discussion. Write down who will prepare the example, who will review it and what would count as a successful trace. If the exercise reveals an open decision about source versions or mappings, name the person who can resolve it."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Read the connected data workflow guide",
+          "href": "/resources/white-papers/planning-connected-clinical-data"
+        },
+        {
+          "label": "Explore TruForm SDTM",
+          "href": "/truminds-ai/truform-sdtm"
+        }
+      ],
+      "takeaway": "Bring a simple workflow sketch, a fabricated sample record and one question about the handoff your team finds hardest to review."
+    },
+    {
+      "slug": "choosing-a-delivery-model",
+      "category": "events",
+      "title": "Discussion guide: choosing a study delivery model",
+      "summary": "Conversation prompts for sponsors comparing full-service delivery, FSP support and clinical staffing.",
+      "label": "Discussion guide",
+      "image": "/pageHeader/services.jpg",
+      "imageAlt": "Clinical professionals collaborating in a healthcare setting",
+      "sections": [
+        {
+          "title": "What should your team continue to own?",
+          "paragraphs": [
+            "Identify the decisions, systems and deliverables your team wants to retain. Then list the work that needs additional specialist capacity or shared coordination. This gives the conversation a concrete starting point."
+          ]
+        },
+        {
+          "title": "What should be settled at kickoff?",
+          "paragraphs": [
+            "Compare the models using a specific study milestone. Discuss who would own the work, how progress would be reviewed and what should happen if the scope changes. Bring your anticipated timelines and the functions involved."
+          ]
+        },
+        {
+          "title": "Invite the people who own the work",
+          "paragraphs": [
+            "Include the person accountable for the milestone and a representative from the function that needs support. Ask each to describe what is already covered and where work is likely to queue. If a systems or approval dependency affects the proposed scope, include someone who can explain how it works today.",
+            "Use the same milestone when comparing full-service CRO, FSP and clinical staffing. The conversation will be clearer if each option is evaluated against the same work, timeline and review expectations."
+          ]
+        },
+        {
+          "title": "Compare the options using the same prompts",
+          "paragraphs": [
+            "Capture answers for each model so the team can review them together after the discussion."
+          ],
+          "items": [
+            "Who coordinates work across the functions involved?",
+            "Who provides day-to-day direction and reviews the deliverable?",
+            "Which responsibilities stay with the sponsor if the scope changes?"
+          ]
+        },
+        {
+          "title": "Leave with a draft scope",
+          "paragraphs": [
+            "Write a short description of the work, the accountable owner, the expected output and the first review date. Record any information that still needs to be confirmed. A draft scope gives the team something specific to test with its internal stakeholders or discuss with the TruMinds team."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Compare clinical service models",
+          "href": "/services"
+        },
+        {
+          "label": "Read the study support guide",
+          "href": "/resources/white-papers/choosing-study-support"
+        }
+      ],
+      "takeaway": "Bring one planned milestone, a list of responsibilities your team wants to retain and the work that currently needs additional support."
+    },
+    {
+      "slug": "study-quality-and-oversight",
+      "category": "events",
+      "title": "Discussion guide: study quality and risk oversight",
+      "summary": "Conversation prompts for clinical operations, monitoring and data teams preparing to review study risks together.",
+      "label": "Discussion guide",
+      "image": "/pageHeader/RBQM.jpg",
+      "imageAlt": "Researchers assessing samples and laboratory findings",
+      "sections": [
+        {
+          "title": "What needs joint review?",
+          "paragraphs": [
+            "Select a signal that more than one function would interpret, such as repeated delays in data entry. Discuss what each team sees and what context would help them decide whether follow-up is needed."
+          ]
+        },
+        {
+          "title": "How will the decision be recorded?",
+          "paragraphs": [
+            "Ask where the review outcome will live, who will own any action and when the group will revisit it. Consider whether current dashboards and meeting notes make those responsibilities easy to find."
+          ]
+        },
+        {
+          "title": "Start with the context behind the signal",
+          "paragraphs": [
+            "Ask each function to describe what it sees and what it still needs to know. Clinical operations may know about a site change that affects interpretation. Data management may be able to explain a delay in the data entering the view. Monitoring may have information about earlier follow-up. Put those observations together before deciding which action is appropriate.",
+            "Use a fictional example if the discussion group has no reason to see actual study records. The exercise should reveal who needs to talk to whom, what context to bring and where the decision should be captured."
+          ]
+        },
+        {
+          "title": "Questions for a joint review",
+          "paragraphs": [
+            "Use these prompts to give everyone the same starting point."
+          ],
+          "items": [
+            "Does the indicator describe the same time period and sites for everyone?",
+            "What additional information could change the group’s interpretation?",
+            "Who will follow up and how will the group know the action is complete?"
+          ]
+        },
+        {
+          "title": "Agree what to carry forward",
+          "paragraphs": [
+            "Record the decision, its rationale, the owner and the next review point. If the group needs more information, write down what it needs and who can provide it. At the next discussion, check whether the record allowed a colleague who missed the first meeting to understand the action."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Read the risk review guide",
+          "href": "/resources/white-papers/designing-a-risk-review-workflow"
+        },
+        {
+          "label": "Explore TruForm RBQM",
+          "href": "/truminds-ai/truform-rbqm"
+        }
+      ],
+      "takeaway": "Bring one example indicator, its source and definition, and a recent operational change that could affect how the group interprets it."
+    },
+    {
+      "slug": "participant-facing-workflows",
+      "category": "events",
+      "title": "Discussion guide: designing participant-facing workflows",
+      "summary": "Conversation prompts for teams planning how study information, consent and site follow-up work for participants.",
+      "label": "Discussion guide",
+      "image": "/pageHeader/eConsent.jpg",
+      "imageAlt": "A clinician discussing information with a patient",
+      "sections": [
+        {
+          "title": "Walk through a participant’s first visit",
+          "paragraphs": [
+            "List the moments when the participant needs information, time to consider it or access to a member of the study team. Discuss how language, device access and remote participation affect the experience."
+          ]
+        },
+        {
+          "title": "Consider what happens after an update",
+          "paragraphs": [
+            "Use a change to study information as a discussion example. Ask how the site identifies the relevant consent version, contacts affected participants and records completed follow-up."
+          ]
+        },
+        {
+          "title": "Walk through the experience together",
+          "paragraphs": [
+            "Ask a site representative to describe a first visit from the participant’s point of view. Include how the participant sees study information, has time to consider it and contacts the site when something is unclear. Then ask how the journey changes for someone reviewing materials remotely or using a different language.",
+            "Give the group one concrete update to walk through. For example, the study team issues revised information and asks sites to coordinate follow-up. Discuss what each person needs to see and what someone reviewing completion would need to know."
+          ]
+        },
+        {
+          "title": "Questions to ask the group",
+          "paragraphs": [
+            "Consider what the team can do at each stage to make the process clearer for the participant."
+          ],
+          "items": [
+            "How does the participant find the correct information and a way to ask a question?",
+            "Who at the site can explain what happens after a change?",
+            "How does the study team see which version was used and whether follow-up is complete?"
+          ]
+        },
+        {
+          "title": "Decide what to try before launch",
+          "paragraphs": [
+            "Choose one participant-facing step and rehearse it with sample records and the people who would support it at the site. Ask them to note where instructions are unclear or a decision owner is missing. Use those observations to refine the workflow before reviewing it with the wider team."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore TruForm eConsent",
+          "href": "/truminds-ai/truform-econsent"
+        },
+        {
+          "label": "Read the participant consent insight",
+          "href": "/resources/insights/consent-as-a-conversation"
+        }
+      ],
+      "takeaway": "Bring a sample participant journey and a scenario where study information changes after the first visit."
+    },
+    {
+      "slug": "mentorship-and-career-conversations",
+      "category": "events",
+      "title": "Discussion guide: mentorship in clinical research",
+      "summary": "Conversation prompts for people sharing knowledge or exploring careers in clinical operations, data and technology.",
+      "label": "Discussion guide",
+      "image": "/pageHeader/mentorship.jpg",
+      "imageAlt": "Clinical colleagues sharing knowledge in a team discussion",
+      "sections": [
+        {
+          "title": "Start with a concrete learning goal",
+          "paragraphs": [
+            "A learner might want to understand how a study team works, what a data management role involves or how colleagues from different disciplines collaborate. Agree on one goal for the conversation and an example that illustrates it."
+          ]
+        },
+        {
+          "title": "Give the learner something to try",
+          "paragraphs": [
+            "Consider a small follow-up, such as mapping the roles in a study workflow or comparing job descriptions across two disciplines. Discuss what they learned at the next conversation and which skills they want to build next."
+          ]
+        },
+        {
+          "title": "Connect a role to a real task",
+          "paragraphs": [
+            "Ask the mentor to describe one task from a clinical research workflow using a generic example. A project manager might explain how teams prepare for a study milestone. A data manager could describe how a query moves from review to site follow-up. The goal is to see how people work together and what a newcomer could learn first.",
+            "Ask which decisions belong to the role and which depend on colleagues in another function. This often makes a career path easier to understand than a list of job titles, especially for someone comparing operations, data and programming work."
+          ]
+        },
+        {
+          "title": "Prompts for a first conversation",
+          "paragraphs": [
+            "Use the learner’s goals to choose one or two questions, then leave time for follow-up."
+          ],
+          "items": [
+            "What skills would you look for when someone is starting in this role?",
+            "Which part of the work requires the most collaboration?",
+            "What small exercise could help me see whether this work interests me?"
+          ]
+        },
+        {
+          "title": "Choose a follow-up activity",
+          "paragraphs": [
+            "A learner can sketch the roles in a generic study workflow, compare two job descriptions or prepare questions for someone in an adjacent discipline. Set a manageable goal and agree what to discuss at the next conversation. The activity should help the learner make a clearer decision about what to explore next."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore mentorship programs",
+          "href": "/giving-back/mentorship-programs"
+        },
+        {
+          "label": "Explore careers at TruMinds Clinical",
+          "href": "/careers"
+        }
+      ],
+      "takeaway": "Bring one role you are curious about, one example of work you would like to understand and a question about the skills it uses."
+    }
+  ],
+  "events": {
+    "status": "No upcoming events are currently listed.",
+    "topicsTitle": "Discussion guides"
+  },
+  "categoryIntroductions": {
+    "insights": "Explore perspectives on the people, processes and technology behind clinical research.",
+    "case-studies": "Illustrative scenarios show how sponsors, sites and specialist teams could organize the work in a clinical study. Each scenario includes questions a team can use to evaluate the approach.",
+    "white-papers": "Explore practical guides built around the clinical, data and technology workflows our teams support.",
+    "news": "Explore company and platform spotlights from across TruMinds Clinical.",
+    "events": "Explore discussion guides for clinical research teams, study partners and people interested in mentorship."
+  }
+}
