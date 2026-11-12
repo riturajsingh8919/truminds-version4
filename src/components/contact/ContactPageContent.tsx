@@ -14,7 +14,7 @@ export function ContactPageContent() {
   const [emailName, emailDomain] = contactDetails.email.split("@");
   return (
     <>
-      <InnerPageHero pagePath="/contact-us" titleId="contact-page-title" title={copy.hero.title} highlight={copy.hero.highlight} breadcrumbLabel="Contact us" description={copy.hero.description} eyebrow={copy.hero.eyebrow} parent={{ label: "Home", href: "/" }}>
+      <InnerPageHero pagePath="/contact-us" titleId="contact-page-title" title={copy.hero.title} highlight={copy.hero.highlight} breadcrumbLabel="Contact us" description={copy.hero.description}>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] lg:gap-8">
           <a href={`mailto:${contactDetails.email}`} className="group flex min-w-0 items-start gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"><Mail size={23} className="mt-1 shrink-0 text-[#008995]" aria-hidden="true" /><span className="min-w-0"><span className="block text-lg font-medium leading-relaxed text-[#426272]">{copy.hero.emailLabel}</span><span className="mt-1 block text-lg font-medium leading-relaxed text-[#0068a5] group-hover:underline">{emailName}@<wbr />{emailDomain}</span></span></a>
           <a href={contactDetails.phoneHref} className="group flex min-w-0 items-start gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068a5]"><Phone size={23} className="mt-1 shrink-0 text-[#008995]" aria-hidden="true" /><span><span className="block text-lg font-medium leading-relaxed text-[#426272]">{copy.hero.phoneLabel}</span><span className="mt-1 block text-lg font-medium leading-relaxed text-[#0068a5] group-hover:underline">{contactDetails.phone}</span></span></a>

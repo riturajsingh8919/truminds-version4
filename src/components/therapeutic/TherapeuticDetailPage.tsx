@@ -10,7 +10,7 @@ export function TherapeuticDetailPage({ area }: { area: TherapeuticPage }) {
   const { content } = area;
   return (
     <>
-      <InnerPageHero pagePath={`/therapeutic-areas/${area.slug}`} titleId="therapeutic-title" title={area.title} concept={content.hero.headline} description={content.hero.description} eyebrow={therapeuticPageCopy.areasLabel} parent={{ label: therapeuticPageCopy.areasLabel, href: "/therapeutic-areas" }} />
+      <InnerPageHero pagePath={`/therapeutic-areas/${area.slug}`} titleId="therapeutic-title" title={area.title} description={content.hero.description} ancestors={[{ label: therapeuticPageCopy.areasLabel, href: "/therapeutic-areas" }]} />
       <section id="therapeutic-overview" aria-labelledby="therapeutic-overview-title" className={`${section} copy-on-light scroll-mt-24 bg-white`}>
         <div className={`${shell} grid items-start gap-8 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-16 xl:gap-24`}>
           <div><span className="mb-4 block text-lg font-medium text-[#00818d]">{content.overview.eyebrow}</span><h2 id="therapeutic-overview-title" className={title}>{content.overview.title}<br /><span className="text-[#0068a5]">{content.overview.highlight}</span></h2></div>

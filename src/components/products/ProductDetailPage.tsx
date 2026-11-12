@@ -13,8 +13,8 @@ export function ProductDetailPage({ product }: { product: TruFormProduct }) {
 
   return (
     <>
-      <InnerPageHero pagePath={`/truminds-ai/${product.slug}`} titleId="product-title" title={product.title} concept={detail.hero.headline} description={detail.hero.description} eyebrow={detail.fullName} parent={{ label: productPageCopy.ecosystemLabel, href: "/products" }}>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-lg font-medium"><span className="text-[#416375]">{detail.category}</span><ul className="flex flex-wrap gap-x-4 gap-y-2 text-[#006779]">{detail.hero.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div>
+      <InnerPageHero pagePath={`/truminds-ai/${product.slug}`} titleId="product-title" title={product.title} description={detail.hero.description} ancestors={[{ label: "Products", href: "/products" }]}>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-lg font-medium"><span className="font-semibold text-[#173f55]">{detail.fullName}</span><span className="text-[#416375]">{detail.category}</span><ul className="flex flex-wrap gap-x-4 gap-y-2 text-[#006779]">{detail.hero.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div>
       </InnerPageHero>
 
       <nav aria-label={productPageCopy.productNavigationLabel} className="border-b border-[#dbe7eb] bg-white">

@@ -1,0 +1,99 @@
+.hero {
+  border-bottom: 3px solid #04a6aa;
+}
+
+.content {
+  min-height: 430px;
+}
+
+.media {
+  container-type: size;
+}
+
+.backdrop {
+  object-position: center;
+  filter: blur(25px) saturate(.85);
+  opacity: .86;
+  transform: scale(1.11);
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(100cqw, calc(100cqh * var(--photo-ratio)));
+  aspect-ratio: var(--photo-ratio);
+  translate: -50% -50%;
+}
+
+.photo {
+  object-position: center;
+  transform-origin: center;
+  mask-image:
+    linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent),
+    linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent);
+  mask-composite: intersect;
+}
+
+.scrim {
+  background: linear-gradient(
+    180deg,
+    rgb(5 30 49 / 85%),
+    rgb(6 40 60 / 54%) 31%,
+    rgb(6 37 57 / 85%) 70%,
+    rgb(5 30 49 / 95%)
+  );
+}
+
+.description {
+  color: #edf7fa;
+}
+
+@media (min-width: 640px) {
+  .content {
+    min-height: 490px;
+  }
+
+  .scrim {
+    background:
+      linear-gradient(180deg, rgb(5 28 48 / 61%), transparent 38%),
+      linear-gradient(90deg, #08283f 0%, rgb(8 39 61 / 92%) 34%, rgb(8 49 71 / 79%) 67%, rgb(4 37 58 / 26%) 100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    min-height: 550px;
+  }
+
+  .scrim {
+    background:
+      linear-gradient(180deg, rgb(5 28 48 / 67%), transparent 34%),
+      linear-gradient(93deg, #08283f 0%, rgb(8 39 61 / 91%) 25%, rgb(8 49 71 / 72%) 56%, rgb(4 37 58 / 20%) 83%, rgb(4 37 58 / 14%) 100%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    min-height: 590px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .content {
+    min-height: 630px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .photo {
+    animation: settle-photo 2.55s both;
+  }
+}
+
+@keyframes settle-photo {
+  0% { transform: scale(.965); animation-timing-function: ease-out; }
+  27% { transform: scale(1); animation-timing-function: cubic-bezier(.2, .65, .22, 1); }
+  63% { transform: scale(.985); animation-timing-function: ease-out; }
+  100% { transform: scale(1); }
+}

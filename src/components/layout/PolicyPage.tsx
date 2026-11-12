@@ -22,10 +22,10 @@ const related = [
 
 export function PolicyPage({ heading, intro, sections }: PolicyPageProps) {
   return (
-    <article className="copy-on-light bg-white text-[#0a2038]">
-      <InnerPageHero titleId="policy-page-title" title={heading} description={intro} eyebrow="Website policies" parent={{ label: "Home", href: "/" }} />
+    <article className="bg-white text-[#0a2038]">
+      <InnerPageHero titleId="policy-page-title" title={heading} description={intro} />
 
-      <div className={`${shell} grid gap-12 py-16 md:py-22 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-20`}>
+      <div className={`${shell} copy-on-light grid gap-12 py-16 md:py-22 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-20`}>
         <div className="max-w-205 divide-y divide-[#e1ebee]">
           {sections.map((section) => (
             <section key={section.heading} className="py-7 first:pt-0">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
 import { headerNavigation, isHeaderItemActive, type HeaderItem } from "@/data/header-navigation";
 import { useUrlFragment } from "@/lib/use-url-fragment";
 import { shell } from "@/lib/site-styles";
@@ -35,7 +35,15 @@ export function Header() {
     else hoverTimer.current = window.setTimeout(() => {
       hoverTimer.current = null;
       setDesktopSection(next);
-    }, 200);
+    }, 115);
+  }
+
+  function leaveNavigation() {
+    cancelHover();
+    hoverTimer.current = window.setTimeout(() => {
+      hoverTimer.current = null;
+      setDesktopSection(null);
+    }, 140);
   }
 
   function closeMenus() {
@@ -62,6 +70,11 @@ export function Header() {
 
   useEffect(() => {
     const breakpoint = window.matchMedia("(min-width: 768px)");
+    const header = headerRef.current;
+    const resize = new ResizeObserver(() => {
+      if (header) header.style.setProperty("--navigation-height", `${header.offsetHeight}px`);
+    });
+    if (header) resize.observe(header);
     function reset() {
       if (hoverTimer.current !== null) window.clearTimeout(hoverTimer.current);
       hoverTimer.current = null;
@@ -86,31 +99,9 @@ export function Header() {
       window.removeEventListener("pointerdown", outside);
       window.removeEventListener("keydown", escape);
       breakpoint.removeEventListener("change", reset);
+      resize.disconnect();
     };
   }, []);
-
-  useLayoutEffect(() => {
-    if (!desktopSection) return;
-    const popup = headerRef.current?.querySelector<HTMLElement>("[data-submenu]:not([hidden])");
-    const parent = popup?.parentElement;
-    if (!popup || !parent) return;
-
-    function align() {
-      if (!popup || !parent) return;
-      // Keep the parent's right edge unless it would clip the menu on the left.
-      const inset = Math.min(0, parent.getBoundingClientRect().right - popup.offsetWidth - 16);
-      popup.style.setProperty("--submenu-right", `${inset}px`);
-    }
-
-    align();
-    const observer = new ResizeObserver(align);
-    observer.observe(parent);
-    window.addEventListener("resize", align);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("resize", align);
-    };
-  }, [desktopSection]);
 
   function keyboard(event: KeyboardEvent<HTMLDivElement>, item: HeaderItem) {
     cancelHover();
@@ -147,13 +138,21 @@ export function Header() {
     <header ref={headerRef} className="sticky top-0 z-80 bg-white shadow-[0_1px_0_#dce8eb]">
       <div className={`${shell} ${styles.bar} flex min-h-18.25 items-center justify-between gap-6 sm:min-h-20.5`}>
         <Link href="/" prefetch={false} aria-label="TruMinds Clinical home" onClick={closeMenus} className="inline-flex shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008995]"><Image src="/logo.png" alt="TruMinds Clinical" width={205} height={57} priority className={`${styles.logo} h-auto w-46.25 xl:w-51.25`} style={{ height: "auto" }} /></Link>
-        <nav aria-label="Main navigation" className={`${styles.desktopNav} hidden flex-1 items-center justify-end md:flex`} onMouseLeave={event => { cancelHover(); if (!event.currentTarget.contains(document.activeElement)) setDesktopSection(null); }}>
+        <nav
+          aria-label="Main navigation"
+          className={`${styles.desktopNav} hidden flex-1 self-stretch justify-end md:flex`}
+          onPointerLeave={event => {
+            if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) leaveNavigation();
+          }}
+        >
           {headerNavigation.map((item, index) => {
             const active = isHeaderItemActive(pathname, item);
             const expanded = desktopSection === item.href;
             const menuId = `desktop-nav-${index}`;
             return (
-              <div key={item.href} className="relative" onMouseEnter={() => hover(item)} onFocusCapture={() => {
+              <div key={item.href} className="flex items-center" onPointerEnter={event => {
+                if (event.pointerType === "mouse") hover(item);
+              }} onFocusCapture={() => {
                 cancelHover();
                 if (suppressFocus.current) { suppressFocus.current = false; return; }
                 setDesktopSection(item.children ? item.href : null);
@@ -177,9 +176,9 @@ export function Header() {
                   {item.label}
                   {item.children && <ChevronDown size={15} className={styles.parentCaret} aria-hidden="true" />}
                 </Link>
-                {item.children && <div id={menuId} data-submenu hidden={!expanded} className={`${styles.menuPosition} absolute top-full z-10 pt-2`} onMouseEnter={cancelHover} onPointerDown={event => { if (event.target === event.currentTarget) closeMenus(); }}>
+                {item.children && <div id={menuId} data-submenu hidden={!expanded} className="absolute inset-x-0 top-full z-10" onPointerEnter={cancelHover}>
                   {expanded && <div data-dropdown-panel className={styles.menuPanel}>
-                    <DropdownLinks links={item.children} idPrefix={menuId} pathname={pathname} fragment={fragment} onNavigate={navigate} />
+                    <DropdownLinks item={item} idPrefix={menuId} pathname={pathname} fragment={fragment} onNavigate={navigate} />
                   </div>}
                 </div>}
               </div>
@@ -188,12 +187,12 @@ export function Header() {
         </nav>
         <button ref={mobileToggleRef} type="button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => { setMobileOpen(!mobileOpen); setMobileSection(null); }} className="grid size-11 cursor-pointer place-items-center rounded-xl border border-[#cfdee2] bg-white text-[#173b50] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#008995] md:hidden">{mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}</button>
       </div>
-      {mobileOpen && <nav id="mobile-navigation" aria-label="Mobile navigation" className="absolute inset-x-0 top-full max-h-[calc(100dvh-88px)] overflow-y-auto border-t border-[#dce8eb] bg-white px-5 pt-2 pb-6 shadow-[0_18px_35px_rgba(8,43,67,.12)] md:hidden">
+      {mobileOpen && <nav id="mobile-navigation" aria-label="Mobile navigation" className={`${styles.mobileDrawer} absolute inset-x-0 top-full border-t border-[#dce8eb] bg-white px-5 pt-2 pb-6 shadow-[0_18px_35px_rgba(8,43,67,.12)] md:hidden`}>
         {headerNavigation.map((item, index) => {
           const active = isHeaderItemActive(pathname, item);
           const expanded = mobileSection === item.href;
           const menuId = `mobile-nav-${index}`;
-          return <div key={item.href} className="border-b border-[#e0ebef]"><div className="flex items-center justify-between gap-4 py-1"><Link href={item.href} prefetch={false} data-active={active} aria-current={pathname === item.href ? "page" : active ? "true" : undefined} onClick={event => navigate(event, item.href)} className={`${styles.topLink} min-w-0 flex-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}>{item.label}</Link>{item.children && <button type="button" aria-label={`${expanded ? "Hide" : "View"} ${item.label} pages`} aria-expanded={expanded} aria-controls={menuId} onClick={() => setMobileSection(expanded ? null : item.href)} className={`${styles.disclosure} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}><ChevronDown size={20} aria-hidden="true" /></button>}</div>{item.children && <div id={menuId} hidden={!expanded} className={styles.mobileSubmenu}>{expanded && <DropdownLinks links={item.children} idPrefix={menuId} pathname={pathname} fragment={fragment} onNavigate={navigate} />}</div>}</div>;
+          return <div key={item.href} className="border-b border-[#e0ebef]"><div className="flex items-center justify-between gap-4 py-1"><Link href={item.href} prefetch={false} data-active={active} aria-current={pathname === item.href ? "page" : active ? "true" : undefined} onClick={event => navigate(event, item.href)} className={`${styles.topLink} min-w-0 flex-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}>{item.label}</Link>{item.children && <button type="button" aria-label={`${expanded ? "Hide" : "View"} ${item.label} pages`} aria-expanded={expanded} aria-controls={menuId} onClick={() => setMobileSection(expanded ? null : item.href)} className={`${styles.disclosure} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008995]`}><ChevronDown size={20} aria-hidden="true" /></button>}</div>{item.children && <div id={menuId} hidden={!expanded} className={styles.mobileSubmenu}>{expanded && <DropdownLinks item={item} mobile idPrefix={menuId} pathname={pathname} fragment={fragment} onNavigate={navigate} />}</div>}</div>;
         })}
       </nav>}
     </header>

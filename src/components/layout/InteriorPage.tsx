@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { bodyCopy, shell } from "@/lib/site-styles";
 
 export function InteriorHero({ title, description, pagePath, label }: { title: string; description: string; pagePath: string; label: string }) {
-  return <InnerPageHero titleId="interior-page-title" title={title} breadcrumbLabel={label} description={description} pagePath={pagePath} eyebrow={label} parent={{ label: "Home", href: "/" }} />;
+  return <InnerPageHero titleId="interior-page-title" title={title} breadcrumbLabel={label} description={description} pagePath={pagePath} />;
 }
 
 export function InteriorContact() {

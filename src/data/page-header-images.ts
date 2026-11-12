@@ -57,7 +57,7 @@ export const pageHeaderImages: Record<string, PageHeaderImage> = {
     "height": 3687
   },
   "/therapeutic-areas/neuroscience": {
-    "src": "/pageHeader/Neuroscience.JPG",
+    "src": "/pageHeader/Neuroscience.jpg",
     "alt": "Researchers reviewing brain scans on a digital display",
     "width": 6000,
     "height": 4000
@@ -75,7 +75,7 @@ export const pageHeaderImages: Record<string, PageHeaderImage> = {
     "height": 4000
   },
   "/therapeutic-areas/rare-diseases": {
-    "src": "/pageHeader/rare-disease.JPG",
+    "src": "/pageHeader/rare-disease.jpg",
     "alt": "A medical team examining a child with their family",
     "width": 5616,
     "height": 3744

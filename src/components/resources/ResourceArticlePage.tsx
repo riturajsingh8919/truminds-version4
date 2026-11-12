@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, ClipboardList, FileText, MessagesSquare } from "lucide-react";
+import { ArrowRight, BookOpen, ClipboardList, MessagesSquare } from "lucide-react";
+import { InnerPageHero } from "@/components/layout/InnerPageHero";
+import { pageHeaderImages } from "@/data/page-header-images";
 import { ResourceNavigation } from "./ResourceNavigation";
 import {
-  ResourceAction, ResourceBreadcrumb, ResourcePhoto, ResourceStoryLink,
-  resourceBody, resourceFocus, resourceTitle,
+  ResourceAction, ResourceStoryLink, resourceBody, resourceFocus,
 } from "./ResourceEditorial";
 import {
   getResourceArticles, resourceContent, type ResourceArticle, type ResourceCategory, type ResourceSection,
@@ -11,16 +12,7 @@ import {
 import { shell } from "@/lib/site-styles";
 
 type Story = { article: ResourceArticle; category: ResourceCategory };
-
-function Intro({ article, dark = false }: { article: ResourceArticle; dark?: boolean }) {
-  return (
-    <>
-      <span className={`mb-4 block text-lg font-semibold ${dark ? "text-[#a5ece7]" : "text-[#006779]"}`}>{article.label}</span>
-      <h1 className={`${resourceTitle} text-balance`}>{article.title}</h1>
-      <p className={`mt-5 max-w-3xl ${resourceBody} ${dark ? "text-[#e2f3f5]" : "text-black"}`}>{article.summary}</p>
-    </>
-  );
-}
+type StoryBody = Pick<Story, "article">;
 
 function SectionCopy({ section }: { section: ResourceSection }) {
   return (
@@ -55,15 +47,10 @@ function Takeaway({ article, title, className = "" }: { article: ResourceArticle
   );
 }
 
-function InsightStory({ article, category }: Story) {
+function InsightStory({ article }: StoryBody) {
   return (
     <article data-article-layout="insights" className={`${shell} copy-on-light py-12 md:py-16`}>
-      <ResourceBreadcrumb category={category} detail />
-      <header className="mx-auto max-w-4xl text-center [&>p]:mx-auto">
-        <Intro article={article} />
-      </header>
-      <ResourcePhoto article={article} className="mx-auto mt-8 aspect-[16/9] max-w-5xl rounded-2xl md:mt-10" sizes="(max-width: 1023px) 92vw, 1024px" />
-      <div className="mx-auto mt-8 max-w-3xl space-y-8 md:mt-10 md:space-y-10">
+      <div className="mx-auto max-w-3xl space-y-8 md:space-y-10">
         {article.sections.map((part, index) => <StorySection key={part.title} part={part} index={index} />)}
         <Takeaway article={article} title="Key takeaway" />
       </div>
@@ -71,18 +58,9 @@ function InsightStory({ article, category }: Story) {
   );
 }
 
-function CaseStory({ article, category }: Story) {
+function CaseStory({ article }: StoryBody) {
   return (
     <article data-article-layout="case-studies" className="bg-[#f3f8f9]">
-      <header className="bg-[#0a293d] py-12 text-white md:py-16">
-        <div className={shell}>
-          <ResourceBreadcrumb category={category} detail dark />
-          <div className="grid items-center gap-7 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
-            <div><Intro article={article} dark /></div>
-            <ResourcePhoto article={article} className="aspect-[3/2] rounded-2xl" sizes="(max-width: 1023px) 92vw, 42vw" />
-          </div>
-        </div>
-      </header>
       <div className={`${shell} copy-on-light grid items-start gap-7 py-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,.65fr)] lg:gap-10 lg:py-14`}>
         <ol className="divide-y divide-[#d7e6e9] rounded-2xl border border-[#d7e6e9] bg-white px-5 sm:px-8">
           {article.sections.map((part, index) => (
@@ -100,15 +78,10 @@ function CaseStory({ article, category }: Story) {
   );
 }
 
-function PaperStory({ article, category }: Story) {
+function PaperStory({ article }: StoryBody) {
   return (
     <article data-article-layout="white-papers" className={`${shell} copy-on-light py-12 md:py-16`}>
-      <ResourceBreadcrumb category={category} detail />
-      <header className="border-l-4 border-[#00a3a5] pl-5 sm:pl-8">
-        <FileText size={34} className="mb-5 text-[#007989]" aria-hidden="true" />
-        <Intro article={article} />
-      </header>
-      <div className="mt-9 grid items-start gap-8 lg:grid-cols-[minmax(0,.55fr)_minmax(0,1.5fr)] lg:gap-14">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,.55fr)_minmax(0,1.5fr)] lg:gap-14">
         <nav aria-label="Chapters" className="rounded-xl border border-[#d3e5e9] bg-[#f2f8f9] p-5 lg:sticky lg:top-28">
           <h2 className="text-xl font-semibold text-[#0a263c]">In this guide</h2>
           <ol className="mt-4 space-y-3">
@@ -128,16 +101,12 @@ function PaperStory({ article, category }: Story) {
   );
 }
 
-function NewsStory({ article, category }: Story) {
+function NewsStory({ article }: StoryBody) {
   return (
     <article data-article-layout="news" className={`${shell} copy-on-light py-12 md:py-16`}>
-      <ResourceBreadcrumb category={category} detail />
-      <header className="grid gap-7 border-y-2 border-[#0a293d] py-7 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-10">
-        <div><Intro article={article} /></div>
-        <ResourcePhoto article={article} className="aspect-[16/10] rounded-xl" sizes="(max-width: 767px) 92vw, 41vw" />
-      </header>
-      <div className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,.65fr)] lg:gap-14">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,.65fr)] lg:gap-14">
         <div className="space-y-8">
+          <p className="border-b-2 border-[#0a293d] pb-4 text-lg font-semibold">{article.label}</p>
           {article.sections.map((part, index) => <StorySection key={part.title} part={part} index={index} />)}
         </div>
         <Takeaway article={article} title="At a glance" />
@@ -146,21 +115,20 @@ function NewsStory({ article, category }: Story) {
   );
 }
 
-function EventStory({ article, category }: Story) {
+function EventStory({ article }: StoryBody) {
   return (
     <article data-article-layout="events" className="bg-[#eff7f8] py-12 md:py-16">
       <div className={shell}>
-        <ResourceBreadcrumb category={category} detail />
         <div className="grid items-start gap-7 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-10">
-          <header className="rounded-2xl bg-[#0a293d] p-6 text-white sm:p-8 lg:sticky lg:top-28">
+          <aside className="rounded-2xl bg-[#0a293d] p-6 text-white sm:p-8 lg:sticky lg:top-28">
             <MessagesSquare size={36} className="mb-5 text-[#8ce1de]" aria-hidden="true" />
-            <Intro article={article} dark />
+            <h2 className="text-2xl font-semibold">What to bring</h2>
+            <p className={`mt-3 ${resourceBody} text-[#d7edf0]`}>{article.takeaway}</p>
             <Link href="#contact" prefetch={false} className={`mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#a5ece7] px-4 text-lg font-semibold text-[#0a293d] hover:bg-white ${resourceFocus}`}>
               Discuss this topic <ArrowRight size={18} aria-hidden="true" />
             </Link>
-          </header>
+          </aside>
           <div className="copy-on-light space-y-4">
-            <Takeaway article={article} title="What to bring" />
             {article.sections.map((part, index) => (
               <div key={part.title} className="rounded-xl border border-[#d2e6e9] bg-white p-5 sm:p-7">
                 <div className="mb-4 text-[#007989]"><ClipboardList size={23} aria-hidden="true" /></div>
@@ -174,7 +142,7 @@ function EventStory({ article, category }: Story) {
   );
 }
 
-const stories: Record<string, (props: Story) => React.ReactNode> = {
+const stories: Record<string, (props: StoryBody) => React.ReactNode> = {
   insights: InsightStory, "case-studies": CaseStory, "white-papers": PaperStory, news: NewsStory, events: EventStory,
 };
 
@@ -208,10 +176,22 @@ function RelatedReading({ article, category }: Story) {
 
 export function ResourceArticlePage({ article, category }: Story) {
   const StoryLayout = stories[category.slug];
+  const photo = Object.values(pageHeaderImages).find(image => image.src === article.image)
+    ?? { src: article.image, width: 1200, height: 800 };
   return (
     <>
+      <InnerPageHero
+        photo={photo}
+        titleId="resource-article-title"
+        title={article.title}
+        description={article.summary}
+        ancestors={[
+          { label: "Resources", href: "/resources" },
+          { label: category.title, href: `/resources/${category.slug}` },
+        ]}
+      />
       <ResourceNavigation current={category.slug} />
-      <StoryLayout article={article} category={category} />
+      <StoryLayout article={article} />
       <RelatedReading article={article} category={category} />
     </>
   );

@@ -21,7 +21,7 @@ export function ServiceDetailPage({
 
   return (
     <>
-      <InnerPageHero pagePath={`/services/${service.slug}`} titleId="service-title" title={service.title} concept={detail.headline} description={detail.heroDescription} eyebrow={detail.eyebrow} parent={{ label: servicePageCopy.servicesLabel, href: "/services" }}>
+      <InnerPageHero pagePath={`/services/${service.slug}`} titleId="service-title" title={service.title} description={detail.heroDescription} ancestors={[{ label: servicePageCopy.servicesLabel, href: "/services" }]}>
         <dl className="flex flex-wrap gap-x-10 gap-y-4">{detail.facts.map(fact => <div key={fact.label} className="flex flex-wrap items-baseline gap-x-2 gap-y-1"><dt className="text-lg font-medium text-[#416375]">{fact.label}</dt><dd className="text-lg font-semibold text-[#0068a5]">{fact.value}</dd></div>)}</dl>
       </InnerPageHero>
 
